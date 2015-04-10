@@ -4,7 +4,7 @@ from arches_hip.settings import *
 
 PACKAGE_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 PACKAGE_NAME = PACKAGE_ROOT.split(os.sep)[-1]
-DATABASES['default']['NAME'] = 'arches_%s' % (PACKAGE_NAME)
+DATABASES['default']['NAME'] = 'template_postgis_21'
 ROOT_URLCONF = '%s.urls' % (PACKAGE_NAME)
 
 INSTALLED_APPS = INSTALLED_APPS + (PACKAGE_NAME,)
@@ -15,11 +15,11 @@ TEMPLATE_DIRS = (os.path.join(PACKAGE_ROOT, 'templates'),os.path.join(PACKAGE_RO
 #RESOURCE_MODEL = {'default': 'crip.models.resource.Resource'}
 
 
-# DEFAULT_MAP_X = -13179347.3099
-# DEFAULT_MAP_Y = 4031285.8349
-# DEFAULT_MAP_ZOOM = 10
-# MAP_MIN_ZOOM = 9
-# MAP_MAX_ZOOM = 19
+DEFAULT_MAP_X = -10362191
+DEFAULT_MAP_Y = 3731083 
+DEFAULT_MAP_ZOOM = 10
+MAP_MIN_ZOOM = 7
+MAP_MAX_ZOOM = 19
 # MAP_EXTENT = '-13228037.69691764,3981296.0184014924,-13123624.71628009,4080358.407059081'
 
 
@@ -68,12 +68,12 @@ TEMPLATE_DIRS = (os.path.join(PACKAGE_ROOT, 'templates'),os.path.join(PACKAGE_RO
 
 #GEOCODING_PROVIDER = ''
 
-# RESOURCE_GRAPH_LOCATIONS = (
-#     # Put strings here, like "/home/data/resource_graphs" or "C:/data/resource_graphs".
-#     # Always use forward slashes, even on Windows.
-#     # Don't forget to use absolute paths, not relative paths.
-#     os.path.join(PACKAGE_ROOT, 'source_data', 'resource_graphs'),
-# )
+RESOURCE_GRAPH_LOCATIONS = (
+     # Put strings here, like "/home/data/resource_graphs" or "C:/data/resource_graphs".
+     # Always use forward slashes, even on Windows.
+     # Don't forget to use absolute paths, not relative paths.
+     os.path.join(PACKAGE_ROOT, 'source_data', 'resource_graphs'),
+ )
 
 
 
@@ -83,7 +83,7 @@ CONCEPT_SCHEME_LOCATIONS = (
     # Don't forget to use absolute paths, not relative paths.
     
     #'absolute/path/to/authority_files',
-    # os.path.normpath(os.path.join(PACKAGE_ROOT, 'source_data', 'concepts', 'authority_files')),
+     os.path.normpath(os.path.join(PACKAGE_ROOT, 'source_data', 'concepts', 'authority_files')),
 )
 
 BUSISNESS_DATA_FILES = (
@@ -93,7 +93,7 @@ BUSISNESS_DATA_FILES = (
     # os.path.normpath(os.path.join(PACKAGE_ROOT, 'source_data', 'business_data', 'sample.arches')),
 )
 
-APP_NAME = 'crip'
+APP_NAME = 'Cane River Heritage Inventory and Map'
 
 LOGGING = {
     'version': 1,
@@ -119,7 +119,7 @@ LOGGING = {
     },
 }
 
-#EXPORT_CONFIG = os.path.normpath(os.path.join(PACKAGE_ROOT, 'source_data', 'business_data', 'resource_export_mappings.json'))
+EXPORT_CONFIG = os.path.normpath(os.path.join(PACKAGE_ROOT, 'source_data', 'business_data', 'resource_export_mappings.json'))
 
 try:
     from settings_local import *
