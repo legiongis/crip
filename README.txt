@@ -1,7 +1,7 @@
-# Welcome to the Arches Project!
+~~ Welcome to the Cane River Inventory Package ~~
 
-Arches is a new, open-source, web-based, geospatial information system for cultural heritage inventory and management. Arches is purpose-built for the international cultural heritage field, and it is designed to record all types of immovable heritage, including archaeological sites, buildings and other historic structures, landscapes, and heritage ensembles or districts.
+This app is an adaptation of the Heritage Inventory Package, developed for the Historic Places LA installation of Arches v3.  A template for historic basemaps have been added, and some basic rebranding has been carried out for the Cane River National Heritage Area.
 
-Please see the [project page](http://archesproject.org/) for more information on the Arches project.
+To install use this app with Arches v3, follow the normal Arches HIP installation instructions, but instead of using the "arches-app create" command, clone this repository.
 
-The Arches Installation Guide and Arches User Guide are available [here](http://archesproject.org/documentation/).
+Questions, feedback, or help: mr.adamcox@gmail.com
