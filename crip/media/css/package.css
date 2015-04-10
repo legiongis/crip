@@ -1,1 +1,16 @@
 /*put package specific styles here...*/
+
+.headline {
+  display: block;
+  margin: 10px 0 25px 0;
+  border-bottom: 1.5px dotted white;
+}
+
+.headline h2, 
+.headline h3, 
+.headline h4 {
+  margin: 0 0 -2px 0;
+  padding-bottom: 3px;
+  display: inline-block;
+  color: white;
+}

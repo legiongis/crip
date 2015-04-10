@@ -6,18 +6,21 @@
     <div class="topbar">
         <div class="container">
             
-            <!-- Topbar Message -->
+            <!-- Topbar Message DON'T THINK I NEED THIS
             <div class="arches-loginbar pull-left">
                 
                 <a href="http://www.archesproject.org" class="">{% trans "Arches" %} </a> 
                 <span class="hidden-xs">{% trans "Cultural Heritage Inventory" %}</span>
 
             </div>
+             -->
 
             <!-- Topbar Navigation -->
             <ul class="loginbar pull-right">
                 <li>
+                    <!-- REMOVE LITTLE GLOBE ICON FOR NOW
                     <i class="fa fa-globe"></i>
+                    -->
                     <a>{% trans "Languages" %}</a>
                     <ul class="lenguages">
                         <li class="active">
@@ -49,10 +52,10 @@
                     <span class="fa fa-bars"></span>
                 </button>
                 <a class="navbar-brand" href="{% url 'home' %}">
-                    <img id="logo-header" class="arches-logo" src="{{ STATIC_URL }}img/arches_logo.png" alt="Logo">
+                    <img id="logo-header" class="main-logo" src="{{ STATIC_URL }}img/crnha_topbar_logo.png" alt="Logo">
                 </a>
             </div>
-
+<!-- class="arches-logo"-->
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-responsive-collapse">
                 <ul class="nav navbar-nav">
@@ -73,13 +76,25 @@
                     </li>
                     <!-- End Search-->
 
-                    <!-- Map-->
+                    <!-- Map -->
                     <li class="{% if active_page = 'Map' %}active{% endif %}">
                         <a href="{% url 'map' %}">
-                            {% trans "Map View" %}
+                            {% trans "Map" %}
                         </a>
                     </li>
                     <!-- End Map-->
+                    
+                    <!-- Map  THIS WAS AN OLD IDEA TO HAVE A DROPDOWN FOR 2 DIFFERENT MAP VIEWS
+                    <li class="dropdown {% if active_page = 'Map' %}active{% endif %}">
+                        <a href="{% url 'map' %}">
+                            {% trans "Map" %}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'map' %}"><i class="fa fa-tasks"></i>Full</a></li>
+                            <li><a href="{% url 'search_home' %}"><i class="fa fa-tasks"></i>Cemetery</a></li>
+                        </ul>
+                    </li>
+                    End Map-->
 
                     {% if user_can_edit %}
                     <!-- Resource Editor-->
@@ -104,13 +119,13 @@
                     <!-- End RDM-->
                     {% endif %}
 
-                    <!-- Search Block -->
+                    <!-- Search Block NOT FUNCTIONAL AT THE MOMENT, PROBABLY NOT NECESSARY
                     <li>
                         <i class="search fa fa-search search-btn"></i>
                         <div class="search-open arches-search">
 
                             <div class="input-group animated fadeInDown">
-                                <!-- Project Dropdown -->
+                                <!-- Project Dropdown
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <div class="input-group" id="simple-search">
@@ -119,7 +134,7 @@
                                         </div>
                                     </div>
                                 </div>  
-                                <!-- End Project Dropdown -->
+                                <!-- End Project Dropdown
                             </div>
                         </div>    
                     </li>
