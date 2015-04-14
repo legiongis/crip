@@ -27,7 +27,7 @@ define([
             url: 'http://54.148.201.140:8080/geoserver/raster/wms/',
             params: {
                 //'LAYERS': 'confed_parish:sheet42_full',
-                'LAYERS': 'raster:sanborn1914_blk',
+                'LAYERS': 'raster:sanborn1914_red',
                 'TILED': true,
                 },
             serverType: 'geoserver'   
