@@ -4,6 +4,47 @@ define([
     'underscore',
     'arches'
 ], function($, ol, _, arches) {
+
+    // sanborn map 1914
+    var sanborn1914black_Lyr = new ol.layer.Tile({
+        source: new ol.source.TileWMS({
+            //url: 'http://199.184.68.66:8080/geoserver/confed_parish/wms/',
+            url: 'http://54.148.201.140:8080/geoserver/raster/wms/',
+            params: {
+                //'LAYERS': 'confed_parish:sheet42_full',
+                'LAYERS': 'raster:sanborn1914_blk',
+                'TILED': true,
+                },
+            serverType: 'geoserver'   
+        }),
+        visible: false,
+    });
+    
+    // transparent confederate map (for altlayer)
+    var sanborn1914red_Lyr = new ol.layer.Tile({
+        source: new ol.source.TileWMS({
+            //url: 'http://199.184.68.66:8080/geoserver/confed_parish/wms/',
+            url: 'http://54.148.201.140:8080/geoserver/raster/wms/',
+            params: {
+                //'LAYERS': 'confed_parish:sheet42_full',
+                'LAYERS': 'raster:sanborn1914_blk',
+                'TILED': true,
+                },
+            serverType: 'geoserver'   
+        }),
+        visible: false,
+    });
+    
+    var sanborn1914 = {
+        id: 'sanborn1914',
+        name: 'Sanborn&copy; Fire Insurance Maps (1914)',
+        icon: arches.urls.media + 'img/map/thb_san1914.png',
+        layer: sanborn1914black_Lyr,
+        altlayer: sanborn1914red_Lyr,
+        showInfo: 'Sanborn&copy; Fire Insurance Maps (1914 series) show structures in Natchitoches and information useful for insurance agencies.  The original map sheets have been stitched together here to show a single seamless layer for the whole year.',
+    }
+    confed.layer.matchid = sanborn1914.id;
+    confed.altlayer.matchid = sanborn1914.id;
  
     // full confederate map
     var confed_fullLyr = new ol.layer.Tile({
@@ -125,7 +166,7 @@ define([
         platmaps,
         confed,
         roadmap,
-        map174,       
+        sanborn1914,       
     ]  
    
     return historicLayers;
