@@ -5,6 +5,46 @@ define([
     'arches'
 ], function($, ol, _, arches) {
 
+    // sanborn map 1892
+    var sanborn1892black_Lyr = new ol.layer.Tile({
+        source: new ol.source.TileWMS({
+            //url: 'http://199.184.68.66:8080/geoserver/confed_parish/wms/',
+            url: 'http://54.148.201.140:8080/geoserver/raster/wms/',
+            params: {
+                //'LAYERS': 'confed_parish:sheet42_full',
+                'LAYERS': 'raster:sanborn1892_blk',
+                'TILED': true,
+                },
+            serverType: 'geoserver'   
+        }),
+        visible: false,
+    });
+    
+    // sanborn 1892 in red (for overlays?)
+    var sanborn1892red_Lyr = new ol.layer.Tile({
+        source: new ol.source.TileWMS({
+            //url: 'http://199.184.68.66:8080/geoserver/confed_parish/wms/',
+            url: 'http://54.148.201.140:8080/geoserver/raster/wms/',
+            params: {
+                'LAYERS': 'raster:sanborn1892_red',
+                'TILED': true,
+                },
+            serverType: 'geoserver'   
+        }),
+        visible: false,
+    });
+    
+    var sanborn1892 = {
+        id: 'sanborn1892',
+        name: 'Sanborn\u00A9 Maps (1892)',
+        icon: arches.urls.media + 'img/map/thb_san1892.png',
+        layer: sanborn1892black_Lyr,
+        altlayer: sanborn1892red_Lyr,
+        showInfo: 'Sanborn\u00A9 Fire Insurance Maps (1892 series) show structures in Natchitoches and information useful for insurance agencies.  The original map sheets have been stitched together here to show a single seamless layer for the whole year.',
+    }
+    sanborn1914.layer.matchid = sanborn1914.id;
+    sanborn1914.altlayer.matchid = sanborn1914.id;
+
     // sanborn map 1914
     var sanborn1914black_Lyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
@@ -20,7 +60,7 @@ define([
         visible: false,
     });
     
-    // transparent confederate map (for altlayer)
+    // sanborn 1914 in red (for overlays?)
     var sanborn1914red_Lyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
             //url: 'http://199.184.68.66:8080/geoserver/confed_parish/wms/',
@@ -166,7 +206,8 @@ define([
         platmaps,
         confed,
         roadmap,
-        sanborn1914,       
+        sanborn1914,
+        sanborn1892,        
     ]  
    
     return historicLayers;
