@@ -1,8 +1,8 @@
 conceptid,PrefLabel,AltLabels,ParentConceptid,ConceptType,Provider 
-NAME_TYPE:1,1 Primary,,NAME_TYPE_AUTHORITY_DOCUMENT.csv,Index,GCI
-NAME_TYPE:2,2 Alternative,,NAME_TYPE_AUTHORITY_DOCUMENT.csv,Index,GCI
-NAME_TYPE:3,4 Designation Names,,NAME_TYPE_AUTHORITY_DOCUMENT.csv,Collector,GCI
+NAME_TYPE:1,Primary,,NAME_TYPE_AUTHORITY_DOCUMENT.csv,Index,GCI
+NAME_TYPE:2,Alternative,,NAME_TYPE_AUTHORITY_DOCUMENT.csv,Index,GCI
+NAME_TYPE:3,Designation Names,,NAME_TYPE_AUTHORITY_DOCUMENT.csv,Collector,GCI
 NAME_TYPE:4,National Register of Historic Places,,NAME_TYPE:3,Index,GCI
 NAME_TYPE:5,National Historic Landmark,,NAME_TYPE:3,Index,GCI
 NAME_TYPE:6,National Monument,,NAME_TYPE:3,Index,GCI
-NAME_TYPE:7,3 Historic,,NAME_TYPE_AUTHORITY_DOCUMENT.csv,Index,GCI
+NAME_TYPE:7,Historic,,NAME_TYPE_AUTHORITY_DOCUMENT.csv,Index,GCI
