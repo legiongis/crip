@@ -42,8 +42,8 @@ define([
         altlayer: sanborn1892red_Lyr,
         showInfo: 'Sanborn\u00A9 Fire Insurance Maps (1892 series) show structures in Natchitoches and information useful for insurance agencies.  The original map sheets have been stitched together here to show a single seamless layer for the whole year.',
     }
-    sanborn1914.layer.matchid = sanborn1914.id;
-    sanborn1914.altlayer.matchid = sanborn1914.id;
+    sanborn1892.layer.matchid = sanborn1892.id;
+    sanborn1892.altlayer.matchid = sanborn1892.id;
 
     // sanborn map 1914
     var sanborn1914black_Lyr = new ol.layer.Tile({
