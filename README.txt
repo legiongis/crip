@@ -1,4 +1,4 @@
-~~ Welcome to the Cane River Inventory Package ~~
+# ~~ Welcome to the Cane River Inventory Package ~~
 
 This app is an adaptation of the Heritage Inventory Package, developed for the Historic Places LA installation of Arches v3.  A template for historic basemaps have been added, and some basic rebranding has been carried out for the Cane River National Heritage Area.
 
