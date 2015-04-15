@@ -55,6 +55,19 @@
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
+.tools-panel-filter {
+    margin-top: -410px;
+    height: 375px; 
+    width: 299px;     
+    margin-left: 15px;
+    background: #ffffff; 
+    border: 1px solid rgba(0,0,0,.15); 
+    opacity: 1.0; 
+    border-top-left-radius: 3px; 
+    border-top-right-radius: 3px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
 /* Inventory Map Tools Buttons and panels*/
 .arches-map-tools {
     width: 150px;

@@ -405,13 +405,6 @@ require([
                 //$("#inventory-historicmaps").css("border-bottom-right-radius", "1px");
             };
             
-            function selectBasemap() {
-                $('ul.bar#bmlist button.layer').on('click', function() {
-                    $('ul.bar#bmlist button').removeClass('selected');
-                    $(this).addClass('selected');
-                });
-            }
-            
             // if the zoom goes too far in, switch from relief or usgs basemap to
             // the basic roads basemap. switch back when zoomed back out.
             var switched = 'undefined';
@@ -455,19 +448,6 @@ require([
                 });
                 hideAllPanels();
             });
-            
-            // $(".basemap").click(function (){
-                // var basemap = $(this).attr('id');
-                // _.each(map.baseLayers, function(baseLayer){
-                    // baseLayer.layer.setVisible(!baseLayer.layer.getVisible());
-                    // if (baseLayer.id == basemap){
-                        // $(baseLayer.id).css("background","#eaeaea");   
-                    // } else {
-                        // $(baseLayer.id).css("background","");
-                    // }   
-                // });
-                // hideAllPanels();
-            // });
             
             // activate historic map when button is clicked, stays on until clicked again
             // historic map panel doesn't close automatically
@@ -589,7 +569,7 @@ require([
                 }
             });
 
-            
+            // show disclaimer modal first time the historic map button is clicked
             $("#inventory-historicmaps").click(function (){
                 if(typeof(Storage) !== "undefined") {
                     if (sessionStorage.clickcount) {
