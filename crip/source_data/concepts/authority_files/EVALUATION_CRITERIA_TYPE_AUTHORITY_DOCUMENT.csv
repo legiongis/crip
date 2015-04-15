@@ -1,0 +1,1477 @@
+ConceptID,PrefLabel,AltLabels,ParentConceptID,ConceptType,Provider
+CTP:1,"Architecture and Engineering, 1850-1980",,EVALUATION_CRITERIA_TYPE_AUTHORITY_DOCUMENT.csv,collector,GCI
+CTP:2,"Engineering, 1900-1985",,CTP:1,collector,GCI
+CTP:3,"Technological Developments in Construction, 1900-1985",,CTP:2,collector,GCI
+CTP:4,"Hill Houses, 1920-1985",,CTP:3,collector,GCI
+CTP:5,Residential,,CTP:4,collector,GCI
+CTP:6,District,,CTP:5,index,GCI
+CTP:7,Multi-Family Residence,,CTP:5,index,GCI
+CTP:8,Single-Family Residence,,CTP:5,index,GCI
+CTP:9,"L.A. Modernism, 1919-1980",,CTP:1,collector,GCI
+CTP:10,"Late Modernism, 1966-1980",,CTP:9,collector,GCI
+CTP:11,"Brutalism, 1966-1980",,CTP:10,collector,GCI
+CTP:12,Commercial,,CTP:11,index,GCI
+CTP:13,Institutional,,CTP:11,index,GCI
+CTP:14,"High Tech (Structural Expressionism), 1966-1980",,CTP:10,collector,GCI
+CTP:15,Commercial,,CTP:14,index,GCI
+CTP:16,Industrial,,CTP:14,index,GCI
+CTP:17,Institutional,,CTP:14,index,GCI
+CTP:18,Commercial,,CTP:10,index,GCI
+CTP:19,Institutional,,CTP:10,index,GCI
+CTP:20,Residential,,CTP:10,index,GCI
+CTP:21,"Sculptural (Glass Skin), 1966-1980",,CTP:10,collector,GCI
+CTP:22,Commercial,,CTP:21,index,GCI
+CTP:23,Industrial,,CTP:21,index,GCI
+CTP:24,"Post-War Modernism, 1946-1976",,CTP:9,collector,GCI
+CTP:25,"A-Frame Houses, 1950-1975",,CTP:24,collector,GCI
+CTP:26,Residential,,CTP:25,collector,GCI
+CTP:27,Single-Family Residence,,CTP:26,index,GCI
+CTP:28,"Corporate International, 1946-1976",,CTP:24,collector,GCI
+CTP:29,Commercial,,CTP:28,index,GCI
+CTP:30,District,,CTP:28,index,GCI
+CTP:31,Institutional,,CTP:28,index,GCI
+CTP:32,"Googie, 1935-1969",,CTP:24,collector,GCI
+CTP:33,Commercial,,CTP:32,index,GCI
+CTP:34,"Mid-Century Modernism, 1945-1970",,CTP:24,collector,GCI
+CTP:35,Commercial,,CTP:34,index,GCI
+CTP:36,District,,CTP:34,index,GCI
+CTP:37,Industrial,,CTP:34,index,GCI
+CTP:38,Institutional,,CTP:34,index,GCI
+CTP:39,Residential,,CTP:34,index,GCI
+CTP:40,"New Formalism, 1955-1976",,CTP:24,collector,GCI
+CTP:41,Commercial,,CTP:40,index,GCI
+CTP:42,District,,CTP:40,index,GCI
+CTP:43,Industrial,,CTP:40,index,GCI
+CTP:44,Institutional,,CTP:40,index,GCI
+CTP:45,"Pre-War Modernism, 1919-1945",,CTP:9,collector,GCI
+CTP:46,"Early Modernism, 1919-1945",,CTP:45,collector,GCI
+CTP:47,Institutional,,CTP:46,index,GCI
+CTP:48,Residential,,CTP:46,collector,GCI
+CTP:49,Multi-Family Residence,,CTP:48,index,GCI
+CTP:50,Single-Family Residence,,CTP:48,index,GCI
+CTP:51,"International Style, 1920-1960",,CTP:45,collector,GCI
+CTP:52,Commercial,,CTP:51,index,GCI
+CTP:53,Institutional,,CTP:51,index,GCI
+CTP:54,Residential,,CTP:51,index,GCI
+CTP:55,"Related Responses to Modernism, 1926-1970",,CTP:9,collector,GCI
+CTP:56,"Art Deco, 1926-1939",,CTP:55,collector,GCI
+CTP:57,Commercial,,CTP:56,index,GCI
+CTP:58,Industrial,,CTP:56,index,GCI
+CTP:59,Institutional,,CTP:56,index,GCI
+CTP:60,Residential,,CTP:56,index,GCI
+CTP:61,"Hollywood Regency, 1935-1955",,CTP:55,collector,GCI
+CTP:62,Commercial,,CTP:61,index,GCI
+CTP:63,Industrial,,CTP:61,index,GCI
+CTP:64,Institutional,,CTP:61,index,GCI
+CTP:65,Residential,,CTP:61,index,GCI
+CTP:66,"Late Hollywood Regency, 1956-1970",,CTP:55,collector,GCI
+CTP:67,Commercial,,CTP:66,index,GCI
+CTP:68,Residential,,CTP:66,index,GCI
+CTP:69,"Late Moderne, 1936-1960",,CTP:55,collector,GCI
+CTP:70,Commercial,,CTP:69,index,GCI
+CTP:71,Industrial,,CTP:69,index,GCI
+CTP:72,Institutional,,CTP:69,index,GCI
+CTP:73,"PWA Moderne, 1928-1945",,CTP:55,collector,GCI
+CTP:74,Commercial,,CTP:73,index,GCI
+CTP:75,Institutional,,CTP:73,index,GCI
+CTP:76,"Streamline Moderne, 1934-1945",,CTP:55,collector,GCI
+CTP:77,Commercial,,CTP:76,index,GCI
+CTP:78,Industrial,,CTP:76,index,GCI
+CTP:79,Institutional,,CTP:76,index,GCI
+CTP:80,Residential,,CTP:76,index,GCI
+CTP:81,"American Colonial Revival, 1895-1960",,CTP:1,collector,GCI
+CTP:82,"American Colonial Revival, Early, 1895-1940",,CTP:81,collector,GCI
+CTP:83,Commercial,,CTP:82,index,GCI
+CTP:84,Residential,,CTP:82,index,GCI
+CTP:85,"American Colonial Revival, Late, 1940-1960",,CTP:81,collector,GCI
+CTP:86,Commercial,,CTP:85,index,GCI
+CTP:87,Industrial,,CTP:85,index,GCI
+CTP:88,Institutional,,CTP:85,index,GCI
+CTP:89,Residential,,CTP:85,index,GCI
+CTP:90,"Dutch Colonial Revival, 1895-1940",,CTP:81,collector,GCI
+CTP:91,Residential,,CTP:90,index,GCI
+CTP:92,"Georgian Revival, 1895 -1940",,CTP:81,collector,GCI
+CTP:93,Commercial,,CTP:92,index,GCI
+CTP:94,Residential,,CTP:92,index,GCI
+CTP:95,"Architecture after Statehood, 1850-1884",,CTP:1,collector,GCI
+CTP:96,"Gothic Revival, 1850-1884",,CTP:95,collector,GCI
+CTP:97,Institutional,,CTP:96,collector,GCI
+CTP:98,Church,,CTP:97,index,GCI
+CTP:99,Residential,,CTP:96,collector,GCI
+CTP:100,Single-Family Residence,,CTP:99,index,GCI
+CTP:101,"Greek Revival, 1850-1884",,CTP:95,collector,GCI
+CTP:102,Residential,,CTP:101,collector,GCI
+CTP:103,Single-Family Residence,,CTP:102,index,GCI
+CTP:104,"Italianate, 1850-1884",,CTP:95,collector,GCI
+CTP:105,Commercial,,CTP:104,collector,GCI
+CTP:106,Hotel,,CTP:105,index,GCI
+CTP:107,Office Building,,CTP:105,index,GCI
+CTP:108,Retail Building,,CTP:105,index,GCI
+CTP:109,Institutional,,CTP:104,collector,GCI
+CTP:110,Club Building,,CTP:109,index,GCI
+CTP:111,Residential,,CTP:104,collector,GCI
+CTP:112,Single-Family Residence,,CTP:111,index,GCI
+CTP:113,"Late Adobe, 1850-1884",,CTP:95,collector,GCI
+CTP:114,Residential,,CTP:113,collector,GCI
+CTP:115,Single-Family Residence,,CTP:114,index,GCI
+CTP:116,"Second Empire, 1850-1884",,CTP:95,collector,GCI
+CTP:117,Residential,,CTP:116,collector,GCI
+CTP:118,Single-Family Residence,,CTP:117,index,GCI
+CTP:119,"Stick Style, 1850-1884",,CTP:95,collector,GCI
+CTP:120,Residential,,CTP:119,collector,GCI
+CTP:121,Single-Family Residence,,CTP:120,index,GCI
+CTP:122,"Arts and Crafts Movement, 1895-1930",,CTP:1,collector,GCI
+CTP:123,"American Foursquares or Prairie Boxes, 1895-1914",,CTP:122,collector,GCI
+CTP:124,Residential,,CTP:123,collector,GCI
+CTP:125,Multi-Family Residence,,CTP:124,index,GCI
+CTP:126,Single-Family Residence,,CTP:124,index,GCI
+CTP:127,"Arroyo Stone Buildings, 1898-1930",,CTP:122,collector,GCI
+CTP:128,Institutional,,CTP:127,collector,GCI
+CTP:129,Club Building,,CTP:128,index,GCI
+CTP:130,Residential,,CTP:127,collector,GCI
+CTP:131,Single-Family Residence,,CTP:130,index,GCI
+CTP:132,"Craftsman, 1905-1930",,CTP:122,collector,GCI
+CTP:133,Institutional,,CTP:132,collector,GCI
+CTP:134,Church,,CTP:133,index,GCI
+CTP:135,Club Building,,CTP:133,index,GCI
+CTP:136,Residential,,CTP:132,collector,GCI
+CTP:137,Multi-Family Residence,,CTP:136,index,GCI
+CTP:138,Single-Family Residence,,CTP:136,index,GCI
+CTP:139,"Prairie Style, 1905-1924",,CTP:122,collector,GCI
+CTP:140,Institutional,,CTP:139,collector,GCI
+CTP:141,Club Building,,CTP:140,index,GCI
+CTP:142,Residential,,CTP:139,collector,GCI
+CTP:143,Multi-Family Residence,,CTP:142,index,GCI
+CTP:144,Single-Family Residence,,CTP:142,index,GCI
+CTP:145,"Tudor Revival, 1895-1929",,CTP:122,collector,GCI
+CTP:146,Commercial,,CTP:145,collector,GCI
+CTP:147,Other,,CTP:146,index,GCI
+CTP:148,Retail Building,,CTP:146,index,GCI
+CTP:149,Institutional,,CTP:145,index,GCI
+CTP:150,Residential,,CTP:145,collector,GCI
+CTP:151,Multi-Family Residence,,CTP:150,index,GCI
+CTP:152,Single-Family Residence,,CTP:150,index,GCI
+CTP:153,"Exotic Revivals, 1900-1980",,CTP:1,collector,GCI
+CTP:154,"Byzantine Revival, 1910-1952",,CTP:153,collector,GCI
+CTP:155,Commercial - Office,,CTP:154,collector,GCI
+CTP:156,Office Building,,CTP:155,index,GCI
+CTP:157,Institutional - Government,,CTP:154,collector,GCI
+CTP:158,Administration Building,,CTP:157,index,GCI
+CTP:159,City Hall,,CTP:157,index,GCI
+CTP:160,Institutional - Religion/Spirituality,,CTP:154,collector,GCI
+CTP:161,Church,,CTP:160,index,GCI
+CTP:162,Other,,CTP:160,index,GCI
+CTP:163,Plaza,,CTP:160,index,GCI
+CTP:164,Temple,,CTP:160,index,GCI
+CTP:165,"East Asian Eclectic, 1938-1980",,CTP:153,collector,GCI
+CTP:166,Commercial - Auto Related,,CTP:165,collector,GCI
+CTP:167,Gas/Service Station,,CTP:166,index,GCI
+CTP:168,Commercial - District,,CTP:165,index,GCI
+CTP:169,Commercial - Entertainment,,CTP:165,collector,GCI
+CTP:170,Movie Theater,,CTP:169,index,GCI
+CTP:171,Theater,,CTP:169,index,GCI
+CTP:172,Commercial - Finance,,CTP:165,collector,GCI
+CTP:173,Bank/Saving & Loan,,CTP:172,index,GCI
+CTP:174,Other,,CTP:172,index,GCI
+CTP:175,Commercial - Food,,CTP:165,collector,GCI
+CTP:176,Bar/Lounge,,CTP:175,index,GCI
+CTP:177,Fast Food Restaurant,,CTP:175,index,GCI
+CTP:178,Restaurant,,CTP:175,index,GCI
+CTP:179,Commercial - Lodging,,CTP:165,collector,GCI
+CTP:180,Motel,,CTP:179,index,GCI
+CTP:181,Commercial - Office,,CTP:165,collector,GCI
+CTP:182,Office Building,,CTP:181,index,GCI
+CTP:183,Commercial - Retail,,CTP:165,collector,GCI
+CTP:184,Neighborhood Market,,CTP:183,index,GCI
+CTP:185,Produce Market,,CTP:183,index,GCI
+CTP:186,Retail Building,,CTP:183,index,GCI
+CTP:187,Strip Mall,,CTP:183,index,GCI
+CTP:188,Industrial,,CTP:165,index,GCI
+CTP:189,Institutional - Politics,,CTP:165,collector,GCI
+CTP:190,Organization Headquarters,,CTP:189,index,GCI
+CTP:191,Institutional - Religion/Spirituality,,CTP:165,collector,GCI
+CTP:192,Church,,CTP:191,index,GCI
+CTP:193,Mortuary/Funeral Home,,CTP:191,index,GCI
+CTP:194,Religious School,,CTP:191,index,GCI
+CTP:195,Temple,,CTP:191,index,GCI
+CTP:196,Institutional - Social Clubs/Meeting Halls,,CTP:165,collector,GCI
+CTP:197,Clubhouse,,CTP:196,index,GCI
+CTP:198,Lodge,,CTP:196,index,GCI
+CTP:199,Meeting Hall,,CTP:196,index,GCI
+CTP:200,Other,,CTP:196,index,GCI
+CTP:201,Mixed-Use Residential and Commercial,,CTP:165,index,GCI
+CTP:202,Residential,,CTP:165,collector,GCI
+CTP:203,Multi-Family Residence,,CTP:202,index,GCI
+CTP:204,Single-Family Residence,,CTP:202,index,GCI
+CTP:205,"Egyptian Revival, 1922-1939",,CTP:153,collector,GCI
+CTP:206,Commercial,,CTP:205,collector,GCI
+CTP:207,Other,,CTP:206,index,GCI
+CTP:208,Commercial - Auto Related,,CTP:205,collector,GCI
+CTP:209,Car Wash,,CTP:208,index,GCI
+CTP:210,Commercial - Entertainment,,CTP:205,collector,GCI
+CTP:211,Movie Theater,,CTP:210,index,GCI
+CTP:212,Theater,,CTP:210,index,GCI
+CTP:213,Commercial - Retail,,CTP:205,collector,GCI
+CTP:214,Retail Building,,CTP:213,index,GCI
+CTP:215,Institutional - Government,,CTP:205,collector,GCI
+CTP:216,Library,,CTP:215,index,GCI
+CTP:217,Institutional - Social Clubs/Meeting Halls,,CTP:205,collector,GCI
+CTP:218,Clubhouse,,CTP:217,index,GCI
+CTP:219,Residential,,CTP:205,collector,GCI
+CTP:220,Multi-Family Residence,,CTP:219,index,GCI
+CTP:221,Single-Family Residence,,CTP:219,index,GCI
+CTP:222,"Mayan Revival, 1912-1951",,CTP:153,collector,GCI
+CTP:223,Commercial - Entertainment,,CTP:222,collector,GCI
+CTP:224,Movie Theater,,CTP:223,index,GCI
+CTP:225,Theater,,CTP:223,index,GCI
+CTP:226,Industrial,,CTP:222,index,GCI
+CTP:227,Institutional,,CTP:222,collector,GCI
+CTP:228,Other,,CTP:227,index,GCI
+CTP:229,Institutional - Infrastructure,,CTP:222,collector,GCI
+CTP:230,Tunnel,,CTP:229,index,GCI
+CTP:231,Institutional - Religion/Spirituality,,CTP:222,collector,GCI
+CTP:232,Temple,,CTP:231,index,GCI
+CTP:233,Institutional - Social Clubs/Meeting Halls,,CTP:222,collector,GCI
+CTP:234,Lodge,,CTP:233,index,GCI
+CTP:235,Meeting Hall,,CTP:233,index,GCI
+CTP:236,Residential,,CTP:222,collector,GCI
+CTP:237,Single-Family Residence,,CTP:236,index,GCI
+CTP:238,"Moorish Revival, 1906-1940",,CTP:153,collector,GCI
+CTP:239,Commercial - Entertainment,,CTP:238,collector,GCI
+CTP:240,Movie Theater,,CTP:239,index,GCI
+CTP:241,Theater,,CTP:239,index,GCI
+CTP:242,Commercial - Lodging,,CTP:238,collector,GCI
+CTP:243,Hotel,,CTP:242,index,GCI
+CTP:244,Institutional - Recreation,,CTP:238,index,GCI
+CTP:245,Institutional - Religion/Spirituality,,CTP:238,collector,GCI
+CTP:246,Temple,,CTP:245,index,GCI
+CTP:247,Institutional - Visual and Performing Arts,,CTP:238,collector,GCI
+CTP:248,Auditorium,,CTP:247,index,GCI
+CTP:249,Residential,,CTP:238,collector,GCI
+CTP:250,Multi-Family Residence,,CTP:249,index,GCI
+CTP:251,Single-Family Residence,,CTP:249,index,GCI
+CTP:252,"Tiki/Polynesian, 1948-1969",,CTP:153,collector,GCI
+CTP:253,Commercial - Food,,CTP:252,collector,GCI
+CTP:254,Bar/Lounge,,CTP:253,index,GCI
+CTP:255,Restaurant,,CTP:253,index,GCI
+CTP:256,Commercial - Lodging,,CTP:252,collector,GCI
+CTP:257,Motel,,CTP:256,index,GCI
+CTP:258,Commercial - Retail,,CTP:252,index,GCI
+CTP:259,Residential,,CTP:252,collector,GCI
+CTP:260,Multi-Family Residence,,CTP:259,index,GCI
+CTP:261,Single-Family Residence,,CTP:259,index,GCI
+CTP:262,"Housing the Masses, 1880-1975",,CTP:1,collector,GCI
+CTP:263,"Arts and Crafts Neighborhoods, 1890-1930",,CTP:262,collector,GCI
+CTP:264,Residential Suburb,,CTP:263,collector,GCI
+CTP:265,Hillside Community,,CTP:264,index,GCI
+CTP:266,Neighborhood,,CTP:264,index,GCI
+CTP:267,Subdivision,,CTP:264,index,GCI
+CTP:268,"Late 19th and Early 20th Century Residential Neighborhoods, 1880-1910",,CTP:262,collector,GCI
+CTP:269,Streetcar Suburb,,CTP:268,collector,GCI
+CTP:270,Neighborhood,,CTP:269,index,GCI
+CTP:271,Subdivision,,CTP:269,index,GCI
+CTP:272,"Period Revival Multi-Family Residential Neighborhoods, 1918-1942",,CTP:262,collector,GCI
+CTP:273,Residential-Multi Family,,CTP:272,collector,GCI
+CTP:274,Multi-Family District,,CTP:273,index,GCI
+CTP:275,"Period Revival Neighborhoods, 1918-1942",,CTP:262,collector,GCI
+CTP:276,Automobile Suburb,,CTP:275,collector,GCI
+CTP:277,Hillside Community,,CTP:276,index,GCI
+CTP:278,Neighborhood,,CTP:276,index,GCI
+CTP:279,Planned Community,,CTP:276,index,GCI
+CTP:280,Subdivision,,CTP:276,index,GCI
+CTP:281,"Ranch House Neighborhoods, 1938-1975",,CTP:262,collector,GCI
+CTP:282,Post-War Suburb,,CTP:281,collector,GCI
+CTP:283,Hillside Community,,CTP:282,index,GCI
+CTP:284,Neighborhood,,CTP:282,index,GCI
+CTP:285,Planned Community,,CTP:282,index,GCI
+CTP:286,Subdivision,,CTP:282,index,GCI
+CTP:287,"Late 19th and Early 20th Century Architecture, 1865-1950",,CTP:1,collector,GCI
+CTP:288,"Beaux Arts Classicism, 1895-1930",,CTP:287,collector,GCI
+CTP:289,Commercial,,CTP:288,index,GCI
+CTP:290,"Chateauesque, 1885-1910",,CTP:287,collector,GCI
+CTP:291,Residential,,CTP:290,collector,GCI
+CTP:292,Single-Family Residence,,CTP:291,index,GCI
+CTP:293,"Chicago School, 1895-1930",,CTP:287,collector,GCI
+CTP:294,Commercial,,CTP:293,index,GCI
+CTP:295,"Early 20th Century Commercial Vernacular, 1900-1950",,CTP:287,collector,GCI
+CTP:296,Commercial,,CTP:295,collector,GCI
+CTP:297,Enframed Window Wall,,CTP:296,index,GCI
+CTP:298,One-part Commercial Block,,CTP:296,index,GCI
+CTP:299,Two-part Commercial Block,,CTP:296,index,GCI
+CTP:300,"Eastlake, 1885-1905",,CTP:287,collector,GCI
+CTP:301,Residential,,CTP:300,collector,GCI
+CTP:302,Single-Family Residence,,CTP:301,index,GCI
+CTP:303,"Folk Victorian, 1885-1905",,CTP:287,collector,GCI
+CTP:304,Residential,,CTP:303,collector,GCI
+CTP:305,Single-Family Residence,,CTP:304,index,GCI
+CTP:306,"Late 19th Century Commercial Vernacular, 1865-1900",,CTP:287,collector,GCI
+CTP:307,Commercial,,CTP:306,collector,GCI
+CTP:308,Two-part Commercial Block,,CTP:307,index,GCI
+CTP:309,"Neoclassical, 1885-1927",,CTP:287,collector,GCI
+CTP:310,Commercial,,CTP:309,collector,GCI
+CTP:311,Bank,,CTP:310,index,GCI
+CTP:312,Office Building,,CTP:310,index,GCI
+CTP:313,Institutional,,CTP:309,collector,GCI
+CTP:314,Church,,CTP:313,index,GCI
+CTP:315,Clubhouse,,CTP:313,index,GCI
+CTP:316,Residential,,CTP:309,collector,GCI
+CTP:317,Multi-Family Residence,,CTP:316,index,GCI
+CTP:318,Single-Family Residence,,CTP:316,index,GCI
+CTP:319,"Queen Anne, 1885-1905",,CTP:287,collector,GCI
+CTP:320,Institutional,,CTP:319,collector,GCI
+CTP:321,Church,,CTP:320,index,GCI
+CTP:322,Residential,,CTP:319,collector,GCI
+CTP:323,Single-Family Residence,,CTP:322,index,GCI
+CTP:324,"Richardsonian Romanesque, 1885-1905",,CTP:287,collector,GCI
+CTP:325,Institutional,,CTP:324,collector,GCI
+CTP:326,Educational Building,,CTP:325,index,GCI
+CTP:327,Other,,CTP:325,index,GCI
+CTP:328,Religious Building,,CTP:325,index,GCI
+CTP:329,Residential,,CTP:324,collector,GCI
+CTP:330,Single-Family Residence,,CTP:329,index,GCI
+CTP:331,"Shingle Style, 1885-1905",,CTP:287,collector,GCI
+CTP:332,Residential,,CTP:331,collector,GCI
+CTP:333,Single-Family Residence,,CTP:332,index,GCI
+CTP:334,"Vernacular Gabled Cottage, 1885-1905",,CTP:287,collector,GCI
+CTP:335,Residential,,CTP:334,collector,GCI
+CTP:336,Single-Family Residence,,CTP:335,index,GCI
+CTP:337,"Vernacular Hipped Cottage, 1885-1905",,CTP:287,collector,GCI
+CTP:338,Residential,,CTP:337,collector,GCI
+CTP:339,Multi-Family Residence,,CTP:338,index,GCI
+CTP:340,Single-Family Residence,,CTP:338,index,GCI
+CTP:341,"Mediterranean and Indigenous Revival Architecture, 1887-1952",,CTP:1,collector,GCI
+CTP:342,"Adobe Revival, 1894-1948",,CTP:341,collector,GCI
+CTP:343,Residential,,CTP:342,index,GCI
+CTP:344,"Churrigueresque, 1915-1942",,CTP:341,collector,GCI
+CTP:345,Commercial,,CTP:344,index,GCI
+CTP:346,Institutional,,CTP:344,index,GCI
+CTP:347,Residential,,CTP:344,collector,GCI
+CTP:348,Apartment House,,CTP:347,index,GCI
+CTP:349,Single-Family Residence,,CTP:347,index,GCI
+CTP:350,"Mediterranean Revival, 1887-1942",,CTP:341,collector,GCI
+CTP:351,Commercial,,CTP:350,index,GCI
+CTP:352,Institutional,,CTP:350,index,GCI
+CTP:353,Residential,,CTP:350,index,GCI
+CTP:354,"Mission Revival, 1887-1942",,CTP:341,collector,GCI
+CTP:355,Commercial,,CTP:354,index,GCI
+CTP:356,Institutional,,CTP:354,index,GCI
+CTP:357,Residential,,CTP:354,index,GCI
+CTP:358,"Monterey Revival, 1929-1942",,CTP:341,collector,GCI
+CTP:359,Commercial,,CTP:358,index,GCI
+CTP:360,Residential,,CTP:358,collector,GCI
+CTP:361,Multi-Family Residence,,CTP:360,index,GCI
+CTP:362,Single-Family Residence,,CTP:360,index,GCI
+CTP:363,"Pueblo Revival, 1894-1942",,CTP:341,collector,GCI
+CTP:364,Residential,,CTP:363,collector,GCI
+CTP:365,Multi-Family Residence,,CTP:364,index,GCI
+CTP:366,Single-Family Residence,,CTP:364,index,GCI
+CTP:367,"Renaissance Revival, 1895-1935",,CTP:341,collector,GCI
+CTP:368,Commercial,,CTP:367,index,GCI
+CTP:369,Other,,CTP:367,index,GCI
+CTP:370,Residential,,CTP:367,collector,GCI
+CTP:371,Multi-Family Residence,,CTP:370,index,GCI
+CTP:372,Single-Family Residence,,CTP:370,index,GCI
+CTP:373,"Romanesque Revival, 1910-1940",,CTP:341,collector,GCI
+CTP:374,Commercial - Entertainment,,CTP:373,collector,GCI
+CTP:375,Theater,,CTP:374,index,GCI
+CTP:376,Commercial - Office,,CTP:373,collector,GCI
+CTP:377,Office Building,,CTP:376,index,GCI
+CTP:378,Industrial,,CTP:373,index,GCI
+CTP:379,Institutional - Education,,CTP:373,collector,GCI
+CTP:380,College/University,,CTP:379,index,GCI
+CTP:381,High School,,CTP:379,index,GCI
+CTP:382,Middle School,,CTP:379,index,GCI
+CTP:383,Other,,CTP:379,index,GCI
+CTP:384,Institutional - Religion/Spirituality,,CTP:373,collector,GCI
+CTP:385,Church,,CTP:384,index,GCI
+CTP:386,"Spanish Colonial Revival, 1915-1942",,CTP:341,collector,GCI
+CTP:387,Commercial - Auto Related,,CTP:386,collector,GCI
+CTP:388,Automobile Showroom,,CTP:387,index,GCI
+CTP:389,Gas/Service Station,,CTP:387,index,GCI
+CTP:390,Other,,CTP:387,index,GCI
+CTP:391,Commercial - Entertainment,,CTP:386,collector,GCI
+CTP:392,Other,,CTP:391,index,GCI
+CTP:393,Theater,,CTP:391,index,GCI
+CTP:394,Commercial - Finance,,CTP:386,collector,GCI
+CTP:395,Bank/Saving & Loan,,CTP:394,index,GCI
+CTP:396,Other,,CTP:394,index,GCI
+CTP:397,Commercial - Food,,CTP:386,collector,GCI
+CTP:398,Other,,CTP:397,index,GCI
+CTP:399,Restaurant,,CTP:397,index,GCI
+CTP:400,Commercial - Lodging,,CTP:386,collector,GCI
+CTP:401,Hotel,,CTP:400,index,GCI
+CTP:402,Motel,,CTP:400,index,GCI
+CTP:403,Other,,CTP:400,index,GCI
+CTP:404,Commercial - Office,,CTP:386,collector,GCI
+CTP:405,Office Building,,CTP:404,index,GCI
+CTP:406,Other,,CTP:404,index,GCI
+CTP:407,Commercial - Retail,,CTP:386,collector,GCI
+CTP:408,Other,,CTP:407,index,GCI
+CTP:409,Retail Building,,CTP:407,index,GCI
+CTP:410,Institutional,,CTP:386,collector,GCI
+CTP:411,Office Building,,CTP:410,index,GCI
+CTP:412,Institutional - Education,,CTP:386,collector,GCI
+CTP:413,Campus - College,,CTP:412,index,GCI
+CTP:414,Campus - Elementary School,,CTP:412,index,GCI
+CTP:415,Campus - High School,,CTP:412,index,GCI
+CTP:416,Campus - Middle School,,CTP:412,index,GCI
+CTP:417,Campus - Other,,CTP:412,index,GCI
+CTP:418,Campus - University,,CTP:412,index,GCI
+CTP:419,Educational Building,,CTP:412,index,GCI
+CTP:420,Other,,CTP:412,index,GCI
+CTP:421,Institutional - Government,,CTP:386,collector,GCI
+CTP:422,City Hall,,CTP:421,index,GCI
+CTP:423,Civic Auditorium,,CTP:421,index,GCI
+CTP:424,Community Center,,CTP:421,index,GCI
+CTP:425,Court Building,,CTP:421,index,GCI
+CTP:426,Fire Station,,CTP:421,index,GCI
+CTP:427,Library,,CTP:421,index,GCI
+CTP:428,Other,,CTP:421,index,GCI
+CTP:429,Police Station,,CTP:421,index,GCI
+CTP:430,Post Office/Postal Facility,,CTP:421,index,GCI
+CTP:431,Public Utility Building,,CTP:421,index,GCI
+CTP:432,Social Services/Welfare,,CTP:421,index,GCI
+CTP:433,Institutional - Health/Medicine,,CTP:386,collector,GCI
+CTP:434,Hospital,,CTP:433,index,GCI
+CTP:435,Hospital Campus,,CTP:433,index,GCI
+CTP:436,Medical Building,,CTP:433,index,GCI
+CTP:437,Medical Clinic,,CTP:433,index,GCI
+CTP:438,Other,,CTP:433,index,GCI
+CTP:439,Sanitorium,,CTP:433,index,GCI
+CTP:440,Institutional - Recreation,,CTP:386,index,GCI
+CTP:441,Institutional - Religion/Spirituality,,CTP:386,collector,GCI
+CTP:442,Church,,CTP:441,index,GCI
+CTP:443,Mortuary/Funeral Home,,CTP:441,index,GCI
+CTP:444,Other,,CTP:441,index,GCI
+CTP:445,Parsonage,,CTP:441,index,GCI
+CTP:446,Institutional - Social Clubs/Meeting Halls,,CTP:386,collector,GCI
+CTP:447,Other,,CTP:446,index,GCI
+CTP:448,Social Club,,CTP:446,index,GCI
+CTP:449,Social Hall,,CTP:446,index,GCI
+CTP:450,Institutional - Visual and Performing Arts,,CTP:386,collector,GCI
+CTP:451,Auditorium,,CTP:450,index,GCI
+CTP:452,Museum,,CTP:450,index,GCI
+CTP:453,Institutional - Visual and Performing Arts,,CTP:386,index,GCI
+CTP:454,Other,,CTP:450,index,GCI
+CTP:455,Residential,,CTP:386,collector,GCI
+CTP:456,Apartment House,,CTP:455,index,GCI
+CTP:457,Apartment Tower,,CTP:455,index,GCI
+CTP:458,Bungalow Court,,CTP:455,index,GCI
+CTP:459,Courtyard Apartment,,CTP:455,index,GCI
+CTP:460,Duplex,,CTP:455,index,GCI
+CTP:461,Single-Family Residence,,CTP:455,index,GCI
+CTP:462,"Period Revival, 1919-1950",,CTP:1,collector,GCI
+CTP:463,"Chateauesque, 1919-1940",,CTP:462,collector,GCI
+CTP:464,Residential,,CTP:463,collector,GCI
+CTP:465,Apartment Hotel,,CTP:464,index,GCI
+CTP:466,Apartment Tower,,CTP:464,index,GCI
+CTP:467,Multi-Family Residence,,CTP:464,index,GCI
+CTP:468,Single-Family Residence,,CTP:464,index,GCI
+CTP:469,"French Norman, 1919-1950",,CTP:462,collector,GCI
+CTP:470,Commercial,,CTP:469,index,GCI
+CTP:471,Residential,,CTP:469,collector,GCI
+CTP:472,Multi-Family Residence,,CTP:471,index,GCI
+CTP:473,Single-Family Residence,,CTP:471,index,GCI
+CTP:474,"Late Gothic Revival, 1919-1939",,CTP:462,collector,GCI
+CTP:475,Commercial,,CTP:474,index,GCI
+CTP:476,Institutional - Education,,CTP:474,collector,GCI
+CTP:477,College/University,,CTP:476,index,GCI
+CTP:478,High School,,CTP:476,index,GCI
+CTP:479,Middle School,,CTP:476,index,GCI
+CTP:480,Other,,CTP:476,index,GCI
+CTP:481,Institutional - Health/Medicine,,CTP:474,collector,GCI
+CTP:482,Hospital,,CTP:481,index,GCI
+CTP:483,Hospital-Mental Health,,CTP:481,index,GCI
+CTP:484,Other,,CTP:481,index,GCI
+CTP:485,Institutional - Religion/Spirituality,,CTP:474,collector,GCI
+CTP:486,Church,,CTP:485,index,GCI
+CTP:487,"Late Hollywood Regency, 1956-1970",,CTP:462,collector,GCI
+CTP:488,Commercial,,CTP:487,index,GCI
+CTP:489,Institutional,,CTP:487,index,GCI
+CTP:490,"Storybook, 1919-1949",,CTP:462,collector,GCI
+CTP:491,Residential,,CTP:490,collector,GCI
+CTP:492,Bungalow Court,,CTP:491,index,GCI
+CTP:493,Multi-Family Residence,,CTP:491,index,GCI
+CTP:494,Single-Family Residence,,CTP:491,index,GCI
+CTP:495,"Tudor Revival, 1930-1950",,CTP:462,collector,GCI
+CTP:496,Commercial,,CTP:495,index,GCI
+CTP:497,Institutional,,CTP:495,index,GCI
+CTP:498,Residential,,CTP:495,collector,GCI
+CTP:499,Multi-Family Residence,,CTP:498,index,GCI
+CTP:500,Single-Family Residence,,CTP:498,index,GCI
+CTP:501,"Post-Modernism, 1965-1980",,CTP:1,collector,GCI
+CTP:502,Commercial,,CTP:501,index,GCI
+CTP:503,Industrial,,CTP:501,index,GCI
+CTP:504,Institutional,,CTP:501,index,GCI
+CTP:505,Residential,,CTP:501,index,GCI
+CTP:506,"The Ranch House, 1930-1975",,CTP:1,collector,GCI
+CTP:507,"Commercial and Institutional Ranch House Style, 1930-1975",,CTP:506,collector,GCI
+CTP:508,Commercial,,CTP:507,collector,GCI
+CTP:509,Gas/Service Station,,CTP:508,index,GCI
+CTP:510,Motel,,CTP:508,index,GCI
+CTP:511,Other,,CTP:508,index,GCI
+CTP:512,Restaurant,,CTP:508,index,GCI
+CTP:513,Shopping Center,,CTP:508,index,GCI
+CTP:514,Supermarket,,CTP:508,index,GCI
+CTP:515,Institutional,,CTP:507,index,GCI
+CTP:516,Multi-Family Residential,,CTP:507,collector,GCI
+CTP:517,Apartment,,CTP:516,index,GCI
+CTP:518,"Contemporary Custom Ranch House, 1930-1975",,CTP:506,collector,GCI
+CTP:519,Residential,,CTP:518,collector,GCI
+CTP:520,Single-Family Residence,,CTP:519,index,GCI
+CTP:521,"Traditional Custom Ranch House, 1930-1975",,CTP:506,collector,GCI
+CTP:522,Residential,,CTP:521,collector,GCI
+CTP:523,Single-Family Residence,,CTP:522,index,GCI
+CTP:524,"Commercial Development, 1850-1980",,EVALUATION_CRITERIA_TYPE_AUTHORITY_DOCUMENT.csv,collector,GCI
+CTP:525,"Banks and Financial Institutions, 1870-1980",,CTP:524,collector,GCI
+CTP:526,Commercial - Finance,,CTP:525,collector,GCI
+CTP:527,"Bank, Drive-in",,CTP:526,index,GCI
+CTP:528,Bank/Saving & Loan,,CTP:526,index,GCI
+CTP:529,Other,,CTP:526,index,GCI
+CTP:530,"Commercial Development and the Automobile, 1910-1980",,CTP:524,collector,GCI
+CTP:531,"Commercial Drive-thru, 1920-1980",,CTP:530,collector,GCI
+CTP:532,Commercial - Auto Related,,CTP:531,collector,GCI
+CTP:533,Drive-thru Bank,,CTP:532,index,GCI
+CTP:534,Drive-thru Cleaners,,CTP:532,index,GCI
+CTP:535,Drive-thru Coffee Shop,,CTP:532,index,GCI
+CTP:536,Drive-thru Dairy,,CTP:532,index,GCI
+CTP:537,Drive-thru Liquor,,CTP:532,index,GCI
+CTP:538,Drive-thru Other,,CTP:532,index,GCI
+CTP:539,Drive-thru Pharmacy,,CTP:532,index,GCI
+CTP:540,Drive-thru Restaurant,,CTP:532,index,GCI
+CTP:541,"Programmatic/Mimetic, 1918-1950",,CTP:530,collector,GCI
+CTP:542,Commercial,,CTP:541,index,GCI
+CTP:543,"The Car and Car Services, 1910-1960s",,CTP:530,collector,GCI
+CTP:544,Commercial - Auto Related,,CTP:543,collector,GCI
+CTP:545,Car Repair,,CTP:544,index,GCI
+CTP:546,Car Showroom,,CTP:544,index,GCI
+CTP:547,Car Wash,,CTP:544,index,GCI
+CTP:548,Gas/Service Station,,CTP:544,index,GCI
+CTP:549,Other,,CTP:544,index,GCI
+CTP:550,Parking Structure,,CTP:544,index,GCI
+CTP:551,"Commercial Identity, 1850-1980",,CTP:524,collector,GCI
+CTP:552,Commercial,,CTP:551,collector,GCI
+CTP:553,Historic District,,CTP:552,index,GCI
+CTP:554,Commercial,,CTP:551,index,GCI
+CTP:555,"Commercial Merchants, Leaders and Builders, 1850-1980",,CTP:524,collector,GCI
+CTP:556,Commercial,,CTP:555,index,GCI
+CTP:557,Residential,,CTP:555,collector,GCI
+CTP:558,Multi-Family Residence,,CTP:557,index,GCI
+CTP:559,Single-Family Residence,,CTP:557,index,GCI
+CTP:560,"Commercial Signs, 1906-1980",,CTP:524,collector,GCI
+CTP:561,"Marquee Signs, 1900-1980",,CTP:560,collector,GCI
+CTP:562,Commercial - Sign,,CTP:561,collector,GCI
+CTP:563,Marquee,,CTP:562,index,GCI
+CTP:564,"Projecting Blade Signs, 1906-1980",,CTP:560,collector,GCI
+CTP:565,Commercial - Sign,,CTP:564,collector,GCI
+CTP:566,Projecting Blade Sign,,CTP:565,index,GCI
+CTP:567,"Pylons, Poles, Stantions, and Billboards, 1920-1980",,CTP:560,collector,GCI
+CTP:568,Commercial - Sign,,CTP:567,collector,GCI
+CTP:569,Freestanding Billboard,,CTP:568,index,GCI
+CTP:570,Freestanding Pole,,CTP:568,index,GCI
+CTP:571,Freestanding Pylon,,CTP:568,index,GCI
+CTP:572,Freestanding Stantion,,CTP:568,index,GCI
+CTP:573,Freestanding Tower,,CTP:568,index,GCI
+CTP:574,Integrated Pylon,,CTP:568,index,GCI
+CTP:575,"Rooftop Signs, 1906-1980",,CTP:560,collector,GCI
+CTP:576,Commercial - Sign,,CTP:575,collector,GCI
+CTP:577,Rooftop,,CTP:576,index,GCI
+CTP:578,"Wall Mounted and Facade Signs, 1850-1980",,CTP:560,collector,GCI
+CTP:579,Commercial - Sign,,CTP:578,collector,GCI
+CTP:580,"Inscribed Fascia, Cornice and Cornerstone",,CTP:579,index,GCI
+CTP:581,Institutional - Sign,,CTP:578,collector,GCI
+CTP:582,"Inscribed Fascia, Cornice and Cornerstone",,CTP:581,index,GCI
+CTP:583,"Department Stores, 1920-1980",,CTP:524,collector,GCI
+CTP:584,Commercial - Retail,,CTP:583,collector,GCI
+CTP:585,Department Store,,CTP:584,index,GCI
+CTP:586,"Hotels, 1880-1980",,CTP:524,collector,GCI
+CTP:587,Commercial - Lodging,,CTP:586,collector,GCI
+CTP:588,Apartment Hotel,,CTP:587,index,GCI
+CTP:589,Hotel,,CTP:587,index,GCI
+CTP:590,"Markets, 1880-1980",,CTP:524,collector,GCI
+CTP:591,Commercial,,CTP:590,collector,GCI
+CTP:592,Drive-in Market,,CTP:591,index,GCI
+CTP:593,Neighborhood Market,,CTP:591,index,GCI
+CTP:594,Other,,CTP:591,index,GCI
+CTP:595,Produce Market,,CTP:591,index,GCI
+CTP:596,Supermarket,,CTP:591,index,GCI
+CTP:597,"Mortuaries and Funeral Homes, 1920-1980",,CTP:524,collector,GCI
+CTP:598,Commercial,,CTP:597,collector,GCI
+CTP:599,Mortuary/Funeral Home,,CTP:598,index,GCI
+CTP:600,"Motels, 1925-1970",,CTP:524,collector,GCI
+CTP:601,Commercial - Lodging,,CTP:600,collector,GCI
+CTP:602,Motel,,CTP:601,index,GCI
+CTP:603,"Neighborhood Commercial Development, 1875-1960",,CTP:524,collector,GCI
+CTP:604,"Early Neighborhood Commercial Development, 1880-1930",,CTP:603,collector,GCI
+CTP:605,Commercial,,CTP:604,index,GCI
+CTP:606,"Neighborhood Commercial Centers, 1875-1960",,CTP:603,collector,GCI
+CTP:607,Neighborhood/Village Commercial Center,,CTP:606,index,GCI
+CTP:608,"Neighborhood Theaters, Pre-WWII, 1915-1942",,CTP:524,collector,GCI
+CTP:609,Commercial - Entertainment,,CTP:608,collector,GCI
+CTP:610,Neighborhood Theater,,CTP:609,index,GCI
+CTP:611,"Post World War II Commercial Recreation, 1940-1975",,CTP:524,collector,GCI
+CTP:612,Commercial - Recreation,,CTP:611,collector,GCI
+CTP:613,Bowling Alley,,CTP:612,index,GCI
+CTP:614,Miniature Golf,,CTP:612,index,GCI
+CTP:615,Other,,CTP:612,index,GCI
+CTP:616,Skating Rink,,CTP:612,index,GCI
+CTP:617,"Regional Commercial Centers and Corridors, 1875-1980",,CTP:524,collector,GCI
+CTP:618,"Commercial Corridors, 1875-1980",,CTP:617,collector,GCI
+CTP:619,Commercial Corridor,,CTP:618,index,GCI
+CTP:620,"Regional Commercial Centers, 1875-1980",,CTP:617,collector,GCI
+CTP:621,Regional Commercial Center,,CTP:620,index,GCI
+CTP:622,"Restaurants, 1880-1980",,CTP:524,collector,GCI
+CTP:623,Commercial - Food,,CTP:622,collector,GCI
+CTP:624,Bar/Lounge,,CTP:623,index,GCI
+CTP:625,Cafeteria,,CTP:623,index,GCI
+CTP:626,Diner,,CTP:623,index,GCI
+CTP:627,Drive-in Restaurant,,CTP:623,index,GCI
+CTP:628,Drive-thru Restaurant,,CTP:623,index,GCI
+CTP:629,Other,,CTP:623,index,GCI
+CTP:630,Restaurant,,CTP:623,index,GCI
+CTP:631,Walk-up/Stand,,CTP:623,index,GCI
+CTP:632,"Streetcar Commercial Development, 1873-1934",,CTP:524,collector,GCI
+CTP:633,Commercial,,CTP:632,collector,GCI
+CTP:634,Mixed-use Commercial Strip,,CTP:633,index,GCI
+CTP:635,Commercial - Retail,,CTP:632,collector,GCI
+CTP:636,One-story Commercial Strip,,CTP:635,index,GCI
+CTP:637,Mixed-Use Residential and Commercial,,CTP:632,index,GCI
+CTP:638,Streetcar Commercial District,,CTP:632,index,GCI
+CTP:639,"The Rise of Corporations and Corporate Types, 1945 - 1980",,CTP:524,collector,GCI
+CTP:640,"Corporate Office Buildings, 1945-1980",,CTP:639,collector,GCI
+CTP:641,Commercial - Office,,CTP:640,collector,GCI
+CTP:642,High Rise Office,,CTP:641,index,GCI
+CTP:643,"Variety Stores, 1880-1980",,CTP:524,collector,GCI
+CTP:644,Commercial - Retail,,CTP:643,collector,GCI
+CTP:645,J.J. Newberry's,,CTP:644,index,GCI
+CTP:646,Other,,CTP:644,index,GCI
+CTP:647,S.H. Kress Company,,CTP:644,index,GCI
+CTP:648,Woolworth's,,CTP:644,index,GCI
+CTP:649,"Cultural Landscapes, 1875-1980",,EVALUATION_CRITERIA_TYPE_AUTHORITY_DOCUMENT.csv,collector,GCI
+CTP:650,"Designed Landscapes, 1875-1980",,CTP:649,collector,GCI
+CTP:651,"Botanica California, 1888-1910",,CTP:650,collector,GCI
+CTP:652,"Early Horticultural Experimentation and Displays, 1888-1910",,CTP:651,collector,GCI
+CTP:653,Landscape,,CTP:652,collector,GCI
+CTP:654,Arboretum,,CTP:653,index,GCI
+CTP:655,Horticultural Display,,CTP:653,index,GCI
+CTP:656,"Burial and Memory, 1877-1980",,CTP:650,collector,GCI
+CTP:657,Landscape,,CTP:656,collector,GCI
+CTP:658,Cemetery,,CTP:657,index,GCI
+CTP:659,"Ecological Landscapes, 1962-1980",,CTP:650,collector,GCI
+CTP:660,Landscape,,CTP:659,collector,GCI
+CTP:661,Environmental Garden,,CTP:660,index,GCI
+CTP:662,"Japanese Style Gardens, 1946-1969",,CTP:650,collector,GCI
+CTP:663,Landscape,,CTP:662,collector,GCI
+CTP:664,Japanese Style Garden,,CTP:663,index,GCI
+CTP:665,"Monumental Civic Improvements, 1916-1940",,CTP:650,collector,GCI
+CTP:666,Landscape,,CTP:665,collector,GCI
+CTP:667,Boulevard,,CTP:666,index,GCI
+CTP:668,Landscaped Median,,CTP:666,index,GCI
+CTP:669,Other,,CTP:666,index,GCI
+CTP:670,Parcel/Subdivision Planting(s),,CTP:666,index,GCI
+CTP:671,Streetscape Plantings,,CTP:666,index,GCI
+CTP:672,"Old World/New World Estate Gardens, 1907-1939",,CTP:650,collector,GCI
+CTP:673,Landscape,,CTP:672,collector,GCI
+CTP:674,Residential Garden,,CTP:673,index,GCI
+CTP:675,"Post-World War II Landscape Architecture and Design, 1948-1966",,CTP:650,collector,GCI
+CTP:676,"Post WWII Public, Civic, Institutional and Commercial Plazas, 1948-1966",,CTP:675,collector,GCI
+CTP:677,Landscape,,CTP:676,collector,GCI
+CTP:678,Plaza,,CTP:677,index,GCI
+CTP:679,"Post WWII Residential Gardens, 1948-1966",,CTP:675,collector,GCI
+CTP:680,Landscape,,CTP:679,collector,GCI
+CTP:681,Residential Garden,,CTP:680,index,GCI
+CTP:682,"Private Recreational Facilities, 1880-1980",,CTP:650,collector,GCI
+CTP:683,"Golf Courses, 1880-1980",,CTP:682,collector,GCI
+CTP:684,Landscape,,CTP:683,collector,GCI
+CTP:685,Golf Course,,CTP:684,index,GCI
+CTP:686,"Natural Features, 1850-1980",,CTP:649,collector,GCI
+CTP:687,Natural Feature,,CTP:686,index,GCI
+CTP:688,"Vernacular Landscapes, 1850-1980",,CTP:649,collector,GCI
+CTP:689,Vernacular landscape,,CTP:688,index,GCI
+CTP:690,"Entertainment Industry, 1908-1980",,EVALUATION_CRITERIA_TYPE_AUTHORITY_DOCUMENT.csv,collector,GCI
+CTP:691,"Commercial Properties Associated with the Entertainment Industry, 1908-1980",,CTP:690,collector,GCI
+CTP:692,"Awards Ceremonies Associated with the Entertainment Industry, 1929-1980",,CTP:691,collector,GCI
+CTP:693,Commercial,,CTP:692,collector,GCI
+CTP:694,Auditorium,,CTP:693,index,GCI
+CTP:695,Hotel,,CTP:693,index,GCI
+CTP:696,Other,,CTP:693,index,GCI
+CTP:697,Theater,,CTP:693,index,GCI
+CTP:698,"Movie Theaters Associated with the Entertainment Industry, 1918-1949",,CTP:691,collector,GCI
+CTP:699,Commercial,,CTP:698,collector,GCI
+CTP:700,Movie Theater,,CTP:699,index,GCI
+CTP:701,"Office Buildings Associated with the Entertainment Industry, 1908-1980",,CTP:691,collector,GCI
+CTP:702,Commercial,,CTP:701,collector,GCI
+CTP:703,Office Building,,CTP:702,index,GCI
+CTP:704,"Social Scene Associated with the Entertainment Industry, 1908-1980",,CTP:691,collector,GCI
+CTP:705,Commercial,,CTP:704,collector,GCI
+CTP:706,Bar,,CTP:705,index,GCI
+CTP:707,Hotel,,CTP:705,index,GCI
+CTP:708,Music Club/Night Club,,CTP:705,index,GCI
+CTP:709,Other,,CTP:705,index,GCI
+CTP:710,Restaurant,,CTP:705,index,GCI
+CTP:711,"Support Services Associated with the Entertainment Industry, 1908-1980",,CTP:691,collector,GCI
+CTP:712,Commercial,,CTP:711,collector,GCI
+CTP:713,Support Service Facility,,CTP:712,index,GCI
+CTP:714,Support Services District,,CTP:712,index,GCI
+CTP:715,"Filming Locations Associated with the Motion Picture and Television Broadcasting, 1908-1980",,CTP:690,collector,GCI
+CTP:716,Site,,CTP:715,collector,GCI
+CTP:717,Filming Location,,CTP:716,index,GCI
+CTP:718,"Industrial Properties Associated with the Entertainment Industry, 1908-1980",,CTP:690,collector,GCI
+CTP:719,"Motion Picture Industry - Independent Studios and Rental Plants, 1919-1980",,CTP:718,collector,GCI
+CTP:720,Industrial,,CTP:719,collector,GCI
+CTP:721,Motion Picture Studio,,CTP:720,index,GCI
+CTP:722,Major Motion Picture Studio,,CTP:720,index,GCI
+CTP:723,"Origins of the Motion Picture Industry, 1908-1919",,CTP:718,collector,GCI
+CTP:724,Industrial,,CTP:723,collector,GCI
+CTP:725,Early Motion Picture Studio,,CTP:724,index,GCI
+CTP:726,"Radio Broadcasting Industry, 1922-1945",,CTP:718,collector,GCI
+CTP:727,Industrial,,CTP:726,collector,GCI
+CTP:728,Radio Station/Broadcasting Facility,,CTP:727,index,GCI
+CTP:729,Radio Transmission Facility (Antenna),,CTP:727,index,GCI
+CTP:730,"Recording Industry, 1925-1980",,CTP:718,collector,GCI
+CTP:731,Industrial,,CTP:730,collector,GCI
+CTP:732,Recording Studio,,CTP:731,index,GCI
+CTP:733,"Support Services Associated with the Entertainment Industry, 1908-1980",,CTP:718,collector,GCI
+CTP:734,Industrial,,CTP:733,collector,GCI
+CTP:735,Support Service Facility,,CTP:734,index,GCI
+CTP:736,Support Services District,,CTP:734,index,GCI
+CTP:737,"Television Broadcasting Industry, 1931-1980",,CTP:718,collector,GCI
+CTP:738,Industrial,,CTP:737,collector,GCI
+CTP:739,Television Station/Broadcasting Facility,,CTP:738,index,GCI
+CTP:740,"Institutional Properties Associated with the Entertainment Industry, 1919-1980",,CTP:690,collector,GCI
+CTP:741,Institutional,,CTP:740,collector,GCI
+CTP:742,Labor Organization,,CTP:741,index,GCI
+CTP:743,Professional Organization,,CTP:741,index,GCI
+CTP:744,Trade Organization,,CTP:741,index,GCI
+CTP:745,"Residential Properties Associated with the Entertainment Industry, 1908-1980",,CTP:690,collector,GCI
+CTP:746,"Entertainment Industry Housing and Neighborhoods, 1908-1949",,CTP:745,collector,GCI
+CTP:747,Residential,,CTP:746,collector,GCI
+CTP:748,Multi-Family Residence,,CTP:747,index,GCI
+CTP:749,Residential District,,CTP:747,index,GCI
+CTP:750,Single-Family Residence,,CTP:747,index,GCI
+CTP:751,"Residential Properties Associated with Significant Persons in the Entertainment Industry, 1908-1980",,CTP:745,collector,GCI
+CTP:752,Residential,,CTP:751,collector,GCI
+CTP:753,Multi-Family Residence,,CTP:752,index,GCI
+CTP:754,Single-Family Residence,,CTP:752,index,GCI
+CTP:755,"Industrial Development, 1850-1980",,EVALUATION_CRITERIA_TYPE_AUTHORITY_DOCUMENT.csv,collector,GCI
+CTP:756,"Manufacturing for the Masses, 1883-1989",,CTP:755,collector,GCI
+CTP:757,"Automobile Production, 1920-1965",,CTP:756,collector,GCI
+CTP:758,"Automobile Parts Manufacturing, 1920-1965",,CTP:757,collector,GCI
+CTP:759,Industrial,,CTP:758,collector,GCI
+CTP:760,Automobile Parts Factory,,CTP:759,index,GCI
+CTP:761,"Custom Automakers, 1920-1965",,CTP:757,collector,GCI
+CTP:762,Industrial,,CTP:761,collector,GCI
+CTP:763,Custom Auto Shop,,CTP:762,index,GCI
+CTP:764,"Aviation and Aerospace, 1911-1989",,CTP:756,collector,GCI
+CTP:765,"Aerospace, 1946-1989",,CTP:764,collector,GCI
+CTP:766,Industrial,,CTP:765,collector,GCI
+CTP:767,Aerospace Plant,,CTP:766,index,GCI
+CTP:768,"Aircraft Manufacturing, 1919-1980",,CTP:764,collector,GCI
+CTP:769,Industrial,,CTP:768,collector,GCI
+CTP:770,Aircraft Ancillary Equipment Factory,,CTP:769,index,GCI
+CTP:771,Aircraft Manufacturer,,CTP:769,index,GCI
+CTP:772,"Factories, 1887-1980",,CTP:756,collector,GCI
+CTP:773,Industrial,,CTP:772,collector,GCI
+CTP:774,Factory,,CTP:773,index,GCI
+CTP:775,Manufacturing District,,CTP:773,index,GCI
+CTP:776,"Food Processing, 1883-1965",,CTP:756,collector,GCI
+CTP:777,"Bakeries, 1887-1965",,CTP:776,collector,GCI
+CTP:778,Industrial,,CTP:777,collector,GCI
+CTP:779,Bakery,,CTP:778,index,GCI
+CTP:780,"Bottling Plants, 1887-1955",,CTP:776,collector,GCI
+CTP:781,Industrial,,CTP:780,collector,GCI
+CTP:782,Bottling Plant,,CTP:781,index,GCI
+CTP:783,"Flour Mills, 1887-1955",,CTP:776,collector,GCI
+CTP:784,Industrial,,CTP:783,collector,GCI
+CTP:785,Flour Mill,,CTP:784,index,GCI
+CTP:786,"Garments and Textiles, 1896-1980",,CTP:756,collector,GCI
+CTP:787,Industrial,,CTP:786,collector,GCI
+CTP:788,Garment Factory,,CTP:787,index,GCI
+CTP:789,Garment Industry Historic District,,CTP:787,index,GCI
+CTP:790,Textile Mill,,CTP:787,index,GCI
+CTP:791,"Agricultural Roots, 1850-1965",,CTP:755,collector,GCI
+CTP:792,"Cash Crops for Export, 1870-1945",,CTP:791,collector,GCI
+CTP:793,Agricultural,,CTP:792,collector,GCI
+CTP:794,Grove/Orchard,,CTP:793,index,GCI
+CTP:795,Olive Vat/Brining Tank,,CTP:793,index,GCI
+CTP:796,Packing House,,CTP:793,index,GCI
+CTP:797,Commercial,,CTP:792,collector,GCI
+CTP:798,Cooperative Association Office,,CTP:797,index,GCI
+CTP:799,Grove/Orchard,,CTP:792,index,GCI
+CTP:800,Olive Vat/Brining Tank,,CTP:792,index,GCI
+CTP:801,"From Farm to Market, 1900-1960",,CTP:791,collector,GCI
+CTP:802,Commercial,,CTP:801,collector,GCI
+CTP:803,Consolidated Produce Market,,CTP:802,index,GCI
+CTP:804,Produce Brokerage,,CTP:802,index,GCI
+CTP:805,Industrial,,CTP:801,collector,GCI
+CTP:806,Cold Storage Warehouse,,CTP:805,index,GCI
+CTP:807,Fish Processing Plants,,CTP:805,index,GCI
+CTP:808,Industrial and Commercial,,CTP:801,collector,GCI
+CTP:809,Historic Market District,,CTP:808,index,GCI
+CTP:810,"Ranching and Dairies, 1850-1965",,CTP:791,collector,GCI
+CTP:811,Agricultural,,CTP:810,collector,GCI
+CTP:812,Barn/Stable,,CTP:811,index,GCI
+CTP:813,Dairy,,CTP:811,index,GCI
+CTP:814,Ranch House,,CTP:811,index,GCI
+CTP:815,Vernacular Agricultural Landscape,,CTP:811,index,GCI
+CTP:816,"Truck Farming and Local Markets, 1850-1945",,CTP:791,collector,GCI
+CTP:817,Agricultural,,CTP:816,collector,GCI
+CTP:818,Barn/Stable,,CTP:817,index,GCI
+CTP:819,Farm House,,CTP:817,index,GCI
+CTP:820,Vernacular Agricultural Landscape,,CTP:817,index,GCI
+CTP:821,"Building the City, 1876-1965",,CTP:755,collector,GCI
+CTP:822,"Building Materials, 1900-1965",,CTP:821,collector,GCI
+CTP:823,Industrial,,CTP:822,collector,GCI
+CTP:824,Carpentry Shop,,CTP:823,index,GCI
+CTP:825,Concrete Ready Mix Plant,,CTP:823,index,GCI
+CTP:826,Metal Shop,,CTP:823,index,GCI
+CTP:827,Stone and Masonry Fabricator,,CTP:823,index,GCI
+CTP:828,"Early Industrial Development, 1880-1945",,CTP:755,collector,GCI
+CTP:829,Industrial,,CTP:828,index,GCI
+CTP:830,"Freight Rail Transportation, 1876-1920",,CTP:755,collector,GCI
+CTP:831,Freight Rail Property,,CTP:830,index,GCI
+CTP:832,"Industrial Design and Engineering, 1887-1965",,CTP:755,collector,GCI
+CTP:833,Industrial,,CTP:832,collector,GCI
+CTP:834,Controlled Conditions Factory,,CTP:833,index,GCI
+CTP:835,Daylight Factory,,CTP:833,index,GCI
+CTP:836,Industrial Loft,,CTP:833,index,GCI
+CTP:837,Industrial Park,,CTP:833,index,GCI
+CTP:838,Quonset Hut,,CTP:833,index,GCI
+CTP:839,"Industrial Giants, 1870-1980",,CTP:755,collector,GCI
+CTP:840,Commercial,,CTP:839,index,GCI
+CTP:841,Industrial,,CTP:839,index,GCI
+CTP:842,Other,,CTP:839,index,GCI
+CTP:843,Residential,,CTP:839,index,GCI
+CTP:844,"Oil and Petroleum Products, 1892-1965",,CTP:755,collector,GCI
+CTP:845,Commercial - Office,,CTP:844,collector,GCI
+CTP:846,Oil Company Office,,CTP:845,index,GCI
+CTP:847,Industrial,,CTP:844,collector,GCI
+CTP:848,Natural Gas Plant,,CTP:847,index,GCI
+CTP:849,Oil Derrick,,CTP:847,index,GCI
+CTP:850,Oil Industry Production and Repair Facility,,CTP:847,index,GCI
+CTP:851,Oil Refinery Complex,,CTP:847,index,GCI
+CTP:852,"Other Context, 1850-1980",,EVALUATION_CRITERIA_TYPE_AUTHORITY_DOCUMENT.csv,collector,GCI
+CTP:853,"Design/Construction, 1850-1980",,CTP:852,collector,GCI
+CTP:854,Commercial,,CTP:853,collector,GCI
+CTP:855,District,,CTP:854,index,GCI
+CTP:856,Commercial,,CTP:853,index,GCI
+CTP:857,Industrial,,CTP:853,collector,GCI
+CTP:858,District,,CTP:857,index,GCI
+CTP:859,Industrial,,CTP:853,index,GCI
+CTP:860,Institutional,,CTP:853,collector,GCI
+CTP:861,District,,CTP:860,index,GCI
+CTP:862,Institutional,,CTP:853,index,GCI
+CTP:863,Other,,CTP:853,index,GCI
+CTP:864,Residential,,CTP:853,collector,GCI
+CTP:865,District,,CTP:864,index,GCI
+CTP:866,Multi-Family Residence,,CTP:864,index,GCI
+CTP:867,Single-Family Residence,,CTP:864,index,GCI
+CTP:868,"Event or Series of Events, 1850-1980",,CTP:852,collector,GCI
+CTP:869,Commercial,,CTP:868,collector,GCI
+CTP:870,District,,CTP:869,index,GCI
+CTP:871,Commercial,,CTP:868,index,GCI
+CTP:872,Industrial,,CTP:868,collector,GCI
+CTP:873,District,,CTP:872,index,GCI
+CTP:874,Industrial,,CTP:868,index,GCI
+CTP:875,Institutional,,CTP:868,collector,GCI
+CTP:876,District,,CTP:875,index,GCI
+CTP:877,Institutional,,CTP:868,index,GCI
+CTP:878,Other,,CTP:868,index,GCI
+CTP:879,Residential,,CTP:868,collector,GCI
+CTP:880,District,,CTP:879,index,GCI
+CTP:881,Multi-Family Residence,,CTP:879,index,GCI
+CTP:882,Single-Family Residence,,CTP:879,index,GCI
+CTP:883,"Historic/Prehistoric Archaeology, 1850-1980",,CTP:852,collector,GCI
+CTP:884,Archaeological District,,CTP:883,index,GCI
+CTP:885,Archaeological Site,,CTP:883,index,GCI
+CTP:886,Other,,CTP:883,index,GCI
+CTP:887,"Important Persons/Individuals, 1850-1980",,CTP:852,collector,GCI
+CTP:888,Commercial,,CTP:887,collector,GCI
+CTP:889,District,,CTP:888,index,GCI
+CTP:890,Commercial,,CTP:887,index,GCI
+CTP:891,Industrial,,CTP:887,collector,GCI
+CTP:892,District,,CTP:891,index,GCI
+CTP:893,Industrial,,CTP:887,index,GCI
+CTP:894,Institutional,,CTP:887,collector,GCI
+CTP:895,District,,CTP:894,index,GCI
+CTP:896,Institutional,,CTP:887,index,GCI
+CTP:897,Other,,CTP:887,index,GCI
+CTP:898,Residential,,CTP:887,collector,GCI
+CTP:899,District,,CTP:898,index,GCI
+CTP:900,Multi-Family Residence,,CTP:898,index,GCI
+CTP:901,Single-Family Residence,,CTP:898,index,GCI
+CTP:902,"Pre-Consolidation Communities of Los Angeles, 1850-1932",,EVALUATION_CRITERIA_TYPE_AUTHORITY_DOCUMENT.csv,collector,GCI
+CTP:903,"Barnes City, 1850-1927",,CTP:902,collector,GCI
+CTP:904,"Important Events in Barnes City History, 1850-1927",,CTP:903,collector,GCI
+CTP:905,Commercial,,CTP:904,index,GCI
+CTP:906,Industrial,,CTP:904,index,GCI
+CTP:907,Institutional,,CTP:904,index,GCI
+CTP:908,Other,,CTP:904,index,GCI
+CTP:909,Residential,,CTP:904,index,GCI
+CTP:910,"Important Persons in Barnes City History, 1850-1927",,CTP:903,collector,GCI
+CTP:911,Commercial,,CTP:910,index,GCI
+CTP:912,Industrial,,CTP:910,index,GCI
+CTP:913,Institutional,,CTP:910,index,GCI
+CTP:914,Other,,CTP:910,index,GCI
+CTP:915,Residential,,CTP:910,index,GCI
+CTP:916,"Eagle Rock, 1850-1923",,CTP:902,collector,GCI
+CTP:917,"Important Events in Eagle Rock History, 1850-1923",,CTP:916,collector,GCI
+CTP:918,Commercial,,CTP:917,index,GCI
+CTP:919,Industrial,,CTP:917,index,GCI
+CTP:920,Institutional,,CTP:917,index,GCI
+CTP:921,Other,,CTP:917,index,GCI
+CTP:922,Residential,,CTP:917,index,GCI
+CTP:923,"Important Persons in Eagle Rock History, 1850-1923",,CTP:916,collector,GCI
+CTP:924,Commercial,,CTP:923,index,GCI
+CTP:925,Industrial,,CTP:923,index,GCI
+CTP:926,Institutional,,CTP:923,index,GCI
+CTP:927,Other,,CTP:923,index,GCI
+CTP:928,Residential,,CTP:923,index,GCI
+CTP:929,"Hollywood, 1850-1910",,CTP:902,collector,GCI
+CTP:930,"Important Events in Hollywood History, 1850-1910",,CTP:929,collector,GCI
+CTP:931,Commercial,,CTP:930,index,GCI
+CTP:932,Industrial,,CTP:930,index,GCI
+CTP:933,Institutional,,CTP:930,index,GCI
+CTP:934,Other,,CTP:930,index,GCI
+CTP:935,Residential,,CTP:930,index,GCI
+CTP:936,"Important Persons in Hollywood History, 1850-1910",,CTP:929,collector,GCI
+CTP:937,Commercial,,CTP:936,index,GCI
+CTP:938,Industrial,,CTP:936,index,GCI
+CTP:939,Institutional,,CTP:936,index,GCI
+CTP:940,Other,,CTP:936,index,GCI
+CTP:941,Residential,,CTP:936,index,GCI
+CTP:942,"Hyde Park, 1850-1923",,CTP:902,collector,GCI
+CTP:943,"Important Events in Hyde Park History, 1850-1923",,CTP:942,collector,GCI
+CTP:944,Commercial,,CTP:943,index,GCI
+CTP:945,Industrial,,CTP:943,index,GCI
+CTP:946,Institutional,,CTP:943,index,GCI
+CTP:947,Other,,CTP:943,index,GCI
+CTP:948,Residential,,CTP:943,index,GCI
+CTP:949,"Important Persons in Hyde Park History, 1850-1923",,CTP:942,collector,GCI
+CTP:950,Commercial,,CTP:949,index,GCI
+CTP:951,Industrial,,CTP:949,index,GCI
+CTP:952,Institutional,,CTP:949,index,GCI
+CTP:953,Other,,CTP:949,index,GCI
+CTP:954,Residential,,CTP:949,index,GCI
+CTP:955,"San Pedro, 1850-1909",,CTP:902,collector,GCI
+CTP:956,"Important Events in San Pedro History, 1850-1909",,CTP:955,collector,GCI
+CTP:957,Commercial,,CTP:956,index,GCI
+CTP:958,Industrial,,CTP:956,index,GCI
+CTP:959,Institutional,,CTP:956,index,GCI
+CTP:960,Other,,CTP:956,index,GCI
+CTP:961,Residential,,CTP:956,index,GCI
+CTP:962,"Important Persons in San Pedro History, 1850-1909",,CTP:955,collector,GCI
+CTP:963,Commercial,,CTP:962,index,GCI
+CTP:964,Industrial,,CTP:962,index,GCI
+CTP:965,Institutional,,CTP:962,index,GCI
+CTP:966,Other,,CTP:962,index,GCI
+CTP:967,Residential,,CTP:962,index,GCI
+CTP:968,"Sawtelle, 1850-1922",,CTP:902,collector,GCI
+CTP:969,"Important Events in Sawtelle History, 1850-1922",,CTP:968,collector,GCI
+CTP:970,Commercial,,CTP:969,index,GCI
+CTP:971,Industrial,,CTP:969,index,GCI
+CTP:972,Institutional,,CTP:969,index,GCI
+CTP:973,Other,,CTP:969,index,GCI
+CTP:974,Residential,,CTP:969,index,GCI
+CTP:975,"Important Persons in Sawtelle History, 1850-1922",,CTP:968,collector,GCI
+CTP:976,Commercial,,CTP:975,index,GCI
+CTP:977,Industrial,,CTP:975,index,GCI
+CTP:978,Institutional,,CTP:975,index,GCI
+CTP:979,Other,,CTP:975,index,GCI
+CTP:980,Residential,,CTP:975,index,GCI
+CTP:981,"Tujunga, 1850-1932",,CTP:902,collector,GCI
+CTP:982,"Important Events in Tujunga History, 1850-1932",,CTP:981,collector,GCI
+CTP:983,Commercial,,CTP:982,index,GCI
+CTP:984,Industrial,,CTP:982,index,GCI
+CTP:985,Institutional,,CTP:982,index,GCI
+CTP:986,Other,,CTP:982,index,GCI
+CTP:987,Residential,,CTP:982,index,GCI
+CTP:988,"Important Persons in Tujunga History, 1850-1932",,CTP:981,collector,GCI
+CTP:989,Commercial,,CTP:988,index,GCI
+CTP:990,Industrial,,CTP:988,index,GCI
+CTP:991,Institutional,,CTP:988,index,GCI
+CTP:992,Other,,CTP:988,index,GCI
+CTP:993,Residential,,CTP:988,index,GCI
+CTP:994,"Venice, 1850-1925",,CTP:902,collector,GCI
+CTP:995,"Important Events in Venice History, 1850-1925",,CTP:994,collector,GCI
+CTP:996,Commercial,,CTP:995,index,GCI
+CTP:997,Industrial,,CTP:995,index,GCI
+CTP:998,Institutional,,CTP:995,index,GCI
+CTP:999,Other,,CTP:995,index,GCI
+CTP:1000,Residential,,CTP:995,index,GCI
+CTP:1001,"Important Persons in Venice History, 1850-1925",,CTP:994,collector,GCI
+CTP:1002,Commercial,,CTP:1001,index,GCI
+CTP:1003,Industrial,,CTP:1001,index,GCI
+CTP:1004,Institutional,,CTP:1001,index,GCI
+CTP:1005,Other,,CTP:1001,index,GCI
+CTP:1006,Residential,,CTP:1001,index,GCI
+CTP:1007,"Watts, 1850-1926",,CTP:902,collector,GCI
+CTP:1008,"Important Events in Watts History, 1850-1926",,CTP:1007,collector,GCI
+CTP:1009,Commercial,,CTP:1008,index,GCI
+CTP:1010,Industrial,,CTP:1008,index,GCI
+CTP:1011,Institutional,,CTP:1008,index,GCI
+CTP:1012,Other,,CTP:1008,index,GCI
+CTP:1013,Residential,,CTP:1008,index,GCI
+CTP:1014,"Important Persons in Watts History, 1850-1926",,CTP:1007,collector,GCI
+CTP:1015,Commercial,,CTP:1014,index,GCI
+CTP:1016,Industrial,,CTP:1014,index,GCI
+CTP:1017,Institutional,,CTP:1014,index,GCI
+CTP:1018,Other,,CTP:1014,index,GCI
+CTP:1019,Residential,,CTP:1014,index,GCI
+CTP:1020,"Wilmington, 1850-1909",,CTP:902,collector,GCI
+CTP:1021,"Important Events in Wilmington History, 1850-1909",,CTP:1020,collector,GCI
+CTP:1022,Commercial,,CTP:1021,index,GCI
+CTP:1023,Industrial,,CTP:1021,index,GCI
+CTP:1024,Institutional,,CTP:1021,index,GCI
+CTP:1025,Other,,CTP:1021,index,GCI
+CTP:1026,Residential,,CTP:1021,index,GCI
+CTP:1027,"Important Persons in Wilmington History, 1850-1909",,CTP:1020,collector,GCI
+CTP:1028,Commercial,,CTP:1027,index,GCI
+CTP:1029,Industrial,,CTP:1027,index,GCI
+CTP:1030,Institutional,,CTP:1027,index,GCI
+CTP:1031,Other,,CTP:1027,index,GCI
+CTP:1032,Residential,,CTP:1027,index,GCI
+CTP:1033,"Public and Private Institutional Development, 1850-1980",,EVALUATION_CRITERIA_TYPE_AUTHORITY_DOCUMENT.csv,collector,GCI
+CTP:1034,"Civil Rights Movement - Ethnic and Gender Equality, 1942-1980",,CTP:1033,collector,GCI
+CTP:1035,"African-American Civil Rights Movement, 1955-1968",,CTP:1034,collector,GCI
+CTP:1036,"Important Events and Institutions in the African-American Civil Rights Movement, 1955-1968",,CTP:1035,collector,GCI
+CTP:1037,Commercial,,CTP:1036,index,GCI
+CTP:1038,Industrial,,CTP:1036,index,GCI
+CTP:1039,Institutional,,CTP:1036,index,GCI
+CTP:1040,Other,,CTP:1036,index,GCI
+CTP:1041,Residential,,CTP:1036,index,GCI
+CTP:1042,Site,,CTP:1036,index,GCI
+CTP:1043,"Important Persons in the African American Civil Rights Movement, 1955-1968",,CTP:1035,collector,GCI
+CTP:1044,Commercial,,CTP:1043,index,GCI
+CTP:1045,Industrial,,CTP:1043,index,GCI
+CTP:1046,Institutional,,CTP:1043,index,GCI
+CTP:1047,Other,,CTP:1043,index,GCI
+CTP:1048,Residential,,CTP:1043,index,GCI
+CTP:1049,"Chicano Civil Rights Movement, 1949-1970",,CTP:1034,collector,GCI
+CTP:1050,"Important Events and Institutions in the Chicano Civil Rights Movement, 1949-1970",,CTP:1049,collector,GCI
+CTP:1051,Commercial,,CTP:1050,index,GCI
+CTP:1052,Industrial,,CTP:1050,index,GCI
+CTP:1053,Institutional,,CTP:1050,index,GCI
+CTP:1054,Other,,CTP:1050,index,GCI
+CTP:1055,Residential,,CTP:1050,index,GCI
+CTP:1056,Site,,CTP:1050,index,GCI
+CTP:1057,"Important Persons in the Chicano Civil Rights Movement, 1949-1970",,CTP:1049,collector,GCI
+CTP:1058,Commercial,,CTP:1057,index,GCI
+CTP:1059,Commercial - Lodging,,CTP:1057,collector,GCI
+CTP:1060,Motel,,CTP:1059,index,GCI
+CTP:1061,Other,,CTP:1059,index,GCI
+CTP:1062,Industrial,,CTP:1057,index,GCI
+CTP:1063,Institutional,,CTP:1057,index,GCI
+CTP:1064,Other,,CTP:1057,index,GCI
+CTP:1065,Residential,,CTP:1057,collector,GCI
+CTP:1066,Multi-Family Residence,,CTP:1065,index,GCI
+CTP:1067,Single-Family Residence,,CTP:1065,index,GCI
+CTP:1068,Site,,CTP:1057,index,GCI
+CTP:1069,"Gay Civil Rights Movement, 1942-1965",,CTP:1034,collector,GCI
+CTP:1070,"Important Events and Institutions in the Gay Civil Rights Movement, 1942-1965",,CTP:1069,collector,GCI
+CTP:1071,Commercial,,CTP:1070,index,GCI
+CTP:1072,Industrial,,CTP:1070,index,GCI
+CTP:1073,Institutional,,CTP:1070,index,GCI
+CTP:1074,Other,,CTP:1070,index,GCI
+CTP:1075,Residential,,CTP:1070,index,GCI
+CTP:1076,Site,,CTP:1070,index,GCI
+CTP:1077,"Important Persons in the Gay Civil Rights Movement, 1942-1965",,CTP:1069,collector,GCI
+CTP:1078,Commercial,,CTP:1077,index,GCI
+CTP:1079,Industrial,,CTP:1077,index,GCI
+CTP:1080,Institutional,,CTP:1077,index,GCI
+CTP:1081,Other,,CTP:1077,index,GCI
+CTP:1082,Residential,,CTP:1077,index,GCI
+CTP:1083,Site,,CTP:1077,index,GCI
+CTP:1084,"Communications, 1875-1980",,CTP:1033,collector,GCI
+CTP:1085,"Telephone History and Development, 1881-1950",,CTP:1084,collector,GCI
+CTP:1086,"Telephone Exchange Buildings and Pay Stations, 1881-1950",,CTP:1085,collector,GCI
+CTP:1087,Institutional - Communications,,CTP:1086,collector,GCI
+CTP:1088,Telephone Exchange Building,,CTP:1087,index,GCI
+CTP:1089,Telephone Pay Station,,CTP:1087,index,GCI
+CTP:1090,"Cultural Development and Institutions, 1850-1980",,CTP:1033,collector,GCI
+CTP:1091,"Folk Art, 1850-1980",,CTP:1090,collector,GCI
+CTP:1092,Folk Art,,CTP:1091,index,GCI
+CTP:1093,"Literature, 1850-1980",,CTP:1090,collector,GCI
+CTP:1094,"Writers and Residency in L.A., 1850-1980",,CTP:1093,collector,GCI
+CTP:1095,Commercial,,CTP:1094,collector,GCI
+CTP:1096,Hotel,,CTP:1095,index,GCI
+CTP:1097,Motel,,CTP:1095,index,GCI
+CTP:1098,Other,,CTP:1095,index,GCI
+CTP:1099,Residential,,CTP:1094,collector,GCI
+CTP:1100,Multi-Family Residence,,CTP:1099,index,GCI
+CTP:1101,Single-Family Residence,,CTP:1099,index,GCI
+CTP:1102,"Literature, Music and Art, 1920-1970",,CTP:1090,collector,GCI
+CTP:1103,"Bohemians, Beats and Hippies: Gathering Places, 1920-1970",,CTP:1102,collector,GCI
+CTP:1104,Commercial,,CTP:1103,index,GCI
+CTP:1105,Industrial,,CTP:1103,index,GCI
+CTP:1106,Institutional,,CTP:1103,index,GCI
+CTP:1107,Residential,,CTP:1103,index,GCI
+CTP:1108,"Performing Arts, 1870-1980",,CTP:1090,collector,GCI
+CTP:1109,"Performing Artists in L.A., 1870-1980",,CTP:1108,collector,GCI
+CTP:1110,Commercial,,CTP:1109,collector,GCI
+CTP:1111,Hotel,,CTP:1110,index,GCI
+CTP:1112,Motel,,CTP:1110,index,GCI
+CTP:1113,Other,,CTP:1110,index,GCI
+CTP:1114,Studio,,CTP:1110,index,GCI
+CTP:1115,Residential,,CTP:1109,collector,GCI
+CTP:1116,Multi-Family Residence,,CTP:1115,index,GCI
+CTP:1117,Single-Family Residence,,CTP:1115,index,GCI
+CTP:1118,"Performing Arts Venues, 1870-1980",,CTP:1108,collector,GCI
+CTP:1119,Commercial,,CTP:1118,collector,GCI
+CTP:1120,Studio,,CTP:1119,index,GCI
+CTP:1121,Institutional,,CTP:1118,collector,GCI
+CTP:1122,Amphitheater,,CTP:1121,index,GCI
+CTP:1123,Auditorium,,CTP:1121,index,GCI
+CTP:1124,Concert Hall,,CTP:1121,index,GCI
+CTP:1125,Other,,CTP:1121,index,GCI
+CTP:1126,Theater,,CTP:1121,index,GCI
+CTP:1127,"Public Art, 1900-1980",,CTP:1090,collector,GCI
+CTP:1128,"Community Mural Movement, 1969-1980",,CTP:1127,collector,GCI
+CTP:1129,Mural,,CTP:1128,index,GCI
+CTP:1130,"Murals, 1920-1980",,CTP:1127,collector,GCI
+CTP:1131,Mural,,CTP:1130,index,GCI
+CTP:1132,"Sculpture, 1900-1980",,CTP:1127,collector,GCI
+CTP:1133,Sculpture,,CTP:1132,index,GCI
+CTP:1134,"Visual Arts, 1888-1980",,CTP:1090,collector,GCI
+CTP:1135,"Producing, Displaying and Supporting Visual Arts, 1888-1980",,CTP:1134,collector,GCI
+CTP:1136,Commercial,,CTP:1135,index,GCI
+CTP:1137,Industrial,,CTP:1135,index,GCI
+CTP:1138,Institutional - Visual and Performing Arts,,CTP:1135,index,GCI
+CTP:1139,Residential,,CTP:1135,index,GCI
+CTP:1140,"Visual Artists in L.A., 1888-1980",,CTP:1134,collector,GCI
+CTP:1141,Commercial,,CTP:1140,index,GCI
+CTP:1142,Industrial,,CTP:1140,index,GCI
+CTP:1143,Institutional,,CTP:1140,index,GCI
+CTP:1144,Residential,,CTP:1140,collector,GCI
+CTP:1145,Multi-Family Residence,,CTP:1144,index,GCI
+CTP:1146,Other,,CTP:1144,index,GCI
+CTP:1147,Single-Family Residence,,CTP:1144,index,GCI
+CTP:1148,"Education, 1876-1980",,CTP:1033,collector,GCI
+CTP:1149,"Campus Planning and Design, 1876-1980",,CTP:1148,collector,GCI
+CTP:1150,Institutional - Education,,CTP:1149,collector,GCI
+CTP:1151,Campus - College,,CTP:1150,index,GCI
+CTP:1152,Campus - Elementary School,,CTP:1150,index,GCI
+CTP:1153,Campus - High School,,CTP:1150,index,GCI
+CTP:1154,Campus - Middle School,,CTP:1150,index,GCI
+CTP:1155,Campus - Other,,CTP:1150,index,GCI
+CTP:1156,Campus - University,,CTP:1150,index,GCI
+CTP:1157,"Education and Ethnic/Cultural Associations, 1876-1980",,CTP:1148,collector,GCI
+CTP:1158,Institutional - Education,,CTP:1157,collector,GCI
+CTP:1159,Administration Building,,CTP:1158,index,GCI
+CTP:1160,Boarding School,,CTP:1158,index,GCI
+CTP:1161,College/University,,CTP:1158,index,GCI
+CTP:1162,Dormitory,,CTP:1158,index,GCI
+CTP:1163,Elementary School,,CTP:1158,index,GCI
+CTP:1164,Fraternity,,CTP:1158,index,GCI
+CTP:1165,High School,,CTP:1158,index,GCI
+CTP:1166,Language School,,CTP:1158,index,GCI
+CTP:1167,Middle School,,CTP:1158,index,GCI
+CTP:1168,Other,,CTP:1158,index,GCI
+CTP:1169,Pre-School,,CTP:1158,index,GCI
+CTP:1170,Reform School,,CTP:1158,index,GCI
+CTP:1171,Sorority,,CTP:1158,index,GCI
+CTP:1172,"Educational Development, 1900-1980",,CTP:1148,collector,GCI
+CTP:1173,Institutional - Education,,CTP:1172,index,GCI
+CTP:1174,"Important Persons in L.A.'s Education History, 1876-1980",,CTP:1148,collector,GCI
+CTP:1175,Institutional - Education,,CTP:1174,collector,GCI
+CTP:1176,Administration Building,,CTP:1175,index,GCI
+CTP:1177,Boarding School,,CTP:1175,index,GCI
+CTP:1178,College/University,,CTP:1175,index,GCI
+CTP:1179,Dormitory,,CTP:1175,index,GCI
+CTP:1180,Elementary School,,CTP:1175,index,GCI
+CTP:1181,Fraternity,,CTP:1175,index,GCI
+CTP:1182,High School,,CTP:1175,index,GCI
+CTP:1183,Language School,,CTP:1175,index,GCI
+CTP:1184,Middle School,,CTP:1175,index,GCI
+CTP:1185,Other,,CTP:1175,index,GCI
+CTP:1186,Pre-School,,CTP:1175,index,GCI
+CTP:1187,Reform School,,CTP:1175,index,GCI
+CTP:1188,Sorority,,CTP:1175,index,GCI
+CTP:1189,"Public Schools and the LAUSD, 1876-1980",,CTP:1148,collector,GCI
+CTP:1190,"Nineteenth Century Schoolhouses, 1876-1894",,CTP:1189,collector,GCI
+CTP:1191,Institutional - Education,,CTP:1190,collector,GCI
+CTP:1192,Wooden Schoolhouse,,CTP:1191,index,GCI
+CTP:1193,"Post WWII Schools, 1946-1966",,CTP:1189,collector,GCI
+CTP:1194,Institutional - Education,,CTP:1193,collector,GCI
+CTP:1195,Campus - Elementary School,,CTP:1194,index,GCI
+CTP:1196,Campus - High School,,CTP:1194,index,GCI
+CTP:1197,Campus - Other,,CTP:1194,index,GCI
+CTP:1198,Elementary School,,CTP:1194,index,GCI
+CTP:1199,High School,,CTP:1194,index,GCI
+CTP:1200,Magnet School,,CTP:1194,index,GCI
+CTP:1201,Middle School,,CTP:1194,index,GCI
+CTP:1202,Other,,CTP:1194,index,GCI
+CTP:1203,"Post-1933 Long Beach Earthquake, 1933-1945",,CTP:1189,collector,GCI
+CTP:1204,Institutional - Education,,CTP:1203,collector,GCI
+CTP:1205,Campus - Elementary School,,CTP:1204,index,GCI
+CTP:1206,Campus - High School,,CTP:1204,index,GCI
+CTP:1207,Campus - Middle School,,CTP:1204,index,GCI
+CTP:1208,Campus - Other,,CTP:1204,index,GCI
+CTP:1209,Elementary School,,CTP:1204,index,GCI
+CTP:1210,High School,,CTP:1204,index,GCI
+CTP:1211,Magnet School,,CTP:1204,index,GCI
+CTP:1212,Middle School,,CTP:1204,index,GCI
+CTP:1213,Other,,CTP:1204,index,GCI
+CTP:1214,"Pre-1933 Long Beach Earthquake, 1912-1933",,CTP:1189,collector,GCI
+CTP:1215,Institutional - Education,,CTP:1214,collector,GCI
+CTP:1216,Campus - Elementary School,,CTP:1215,index,GCI
+CTP:1217,Campus - High School,,CTP:1215,index,GCI
+CTP:1218,Campus - Middle School,,CTP:1215,index,GCI
+CTP:1219,Campus - Other,,CTP:1215,index,GCI
+CTP:1220,Elementary School,,CTP:1215,index,GCI
+CTP:1221,High School,,CTP:1215,index,GCI
+CTP:1222,Magnet School,,CTP:1215,index,GCI
+CTP:1223,Middle School,,CTP:1215,index,GCI
+CTP:1224,Other,,CTP:1215,index,GCI
+CTP:1225,"Government Infrastructure and Services, 1850-1980",,CTP:1033,collector,GCI
+CTP:1226,"Federal Infrastructure and Services, 1850-1980",,CTP:1225,collector,GCI
+CTP:1227,"U.S. Postal Services and Post Office Construction, 1850-1980",,CTP:1226,collector,GCI
+CTP:1228,Post Office/Postal Facility,,CTP:1227,index,GCI
+CTP:1229,"Government Administration Buildings and Centers, 1904-1970",,CTP:1225,collector,GCI
+CTP:1230,"Post WWII Branch City Halls and Administration Centers, 1957-1970",,CTP:1229,collector,GCI
+CTP:1231,Institutional - Government,,CTP:1230,collector,GCI
+CTP:1232,Branch City Hall/Administrative Center,,CTP:1231,index,GCI
+CTP:1233,"Libraries, 1930-1980",,CTP:1225,collector,GCI
+CTP:1234,"Los Angeles Public Library System, 1930-1980",,CTP:1233,collector,GCI
+CTP:1235,Institutional - Government,,CTP:1234,collector,GCI
+CTP:1236,Library,,CTP:1235,index,GCI
+CTP:1237,"Municipal Fire Stations, 1900-1980",,CTP:1225,collector,GCI
+CTP:1238,"Post WWII Fire Stations, 1947-1960",,CTP:1237,collector,GCI
+CTP:1239,Institutional - Government,,CTP:1238,collector,GCI
+CTP:1240,Fire Station,,CTP:1239,index,GCI
+CTP:1241,"Municipal Parks, Recreation, and Leisure, 1886-1978",,CTP:1225,collector,GCI
+CTP:1242,"Municipal Parks, 1904-1931",,CTP:1241,collector,GCI
+CTP:1243,Institutional - Recreation,,CTP:1242,collector,GCI
+CTP:1244,Municipal Park,,CTP:1243,index,GCI
+CTP:1245,"Municipal Recreational Facilities, 1932-1978",,CTP:1241,collector,GCI
+CTP:1246,Institutional - Recreation,,CTP:1245,collector,GCI
+CTP:1247,Municipal Recreational Facility,,CTP:1246,index,GCI
+CTP:1248,"Pleasure Grounds, 1886-1903",,CTP:1241,collector,GCI
+CTP:1249,Institutional - Recreation,,CTP:1248,collector,GCI
+CTP:1250,Pleasure Ground,,CTP:1249,index,GCI
+CTP:1251,"Municipal Water and Power, 1916-1980",,CTP:1225,collector,GCI
+CTP:1252,"Distributing and Receiving Stations, 1916-1980",,CTP:1251,collector,GCI
+CTP:1253,Institutional - Infrastructure,,CTP:1252,collector,GCI
+CTP:1254,Distributing Station,,CTP:1253,index,GCI
+CTP:1255,Receiving Station,,CTP:1253,index,GCI
+CTP:1256,Office and Administration Buildings 1916-1980,,CTP:1251,collector,GCI
+CTP:1257,Institutional - Infrastructure,,CTP:1256,collector,GCI
+CTP:1258,Administration Building,,CTP:1257,index,GCI
+CTP:1259,Office Building,,CTP:1257,index,GCI
+CTP:1260,"Power Generation, 1916-1980",,CTP:1251,collector,GCI
+CTP:1261,Institutional - Infrastructure,,CTP:1260,collector,GCI
+CTP:1262,Hydroelectric Facility,,CTP:1261,index,GCI
+CTP:1263,Steam Power Plant,,CTP:1261,index,GCI
+CTP:1264,"Reservoirs, Dams and Water Supply Infrastructure, 1916-1980",,CTP:1251,collector,GCI
+CTP:1265,Institutional - Infrastructure,,CTP:1264,collector,GCI
+CTP:1266,Dam,,CTP:1265,index,GCI
+CTP:1267,Other,,CTP:1265,index,GCI
+CTP:1268,Pump House,,CTP:1265,index,GCI
+CTP:1269,Pumping Plant,,CTP:1265,index,GCI
+CTP:1270,Reservoir,,CTP:1265,index,GCI
+CTP:1271,Utility Building,,CTP:1265,index,GCI
+CTP:1272,Water Tank/Tower,,CTP:1265,index,GCI
+CTP:1273,Water Treatment Plant,,CTP:1265,index,GCI
+CTP:1274,"Public Works, 1900-1980",,CTP:1225,collector,GCI
+CTP:1275,"Street Lights and the Bureau of Street Lighting, 1900-1980",,CTP:1274,collector,GCI
+CTP:1276,Institutional - Infrastructure,,CTP:1275,collector,GCI
+CTP:1277,Street Light(s),,CTP:1276,index,GCI
+CTP:1278,"Transportation Infrastructure, 1880-1980",,CTP:1225,collector,GCI
+CTP:1279,"Pedestrian Tunnels, 1918-1960",,CTP:1278,collector,GCI
+CTP:1280,Pedestrian Tunnel,,CTP:1279,index,GCI
+CTP:1281,"Military Institutions and Activities, 1850-1980",,CTP:1033,collector,GCI
+CTP:1282,"Air Raid Sirens and Civil Defense, 1939-1960",,CTP:1281,collector,GCI
+CTP:1283,Institutional - Military,,CTP:1282,collector,GCI
+CTP:1284,Air Raid Siren,,CTP:1283,index,GCI
+CTP:1285,"New Deal Programs, 1933-1938",,CTP:1033,collector,GCI
+CTP:1286,"WPA, 1933-1938",,CTP:1285,collector,GCI
+CTP:1287,Institutional,,CTP:1286,index,GCI
+CTP:1288,Other,,CTP:1286,index,GCI
+CTP:1289,"Private Recreation, 1880-1980",,CTP:1033,collector,GCI
+CTP:1290,"Private Recreation Facilities, 1880-1980",,CTP:1289,collector,GCI
+CTP:1291,"Country Clubs, 1880-1980",,CTP:1290,collector,GCI
+CTP:1292,Institutional - Recreation,,CTP:1291,collector,GCI
+CTP:1293,Country Club,,CTP:1292,index,GCI
+CTP:1294,"Riding Clubs, 1880-1980",,CTP:1290,collector,GCI
+CTP:1295,Institutional - Recreation,,CTP:1294,collector,GCI
+CTP:1296,Riding Club,,CTP:1295,index,GCI
+CTP:1297,"Swimming Clubs, 1880-1980",,CTP:1290,collector,GCI
+CTP:1298,Institutional - Recreation,,CTP:1297,collector,GCI
+CTP:1299,Swimming Club,,CTP:1298,index,GCI
+CTP:1300,"Tennis Clubs, 1880-1980",,CTP:1290,collector,GCI
+CTP:1301,Institutional - Recreation,,CTP:1300,collector,GCI
+CTP:1302,Tennis Club,,CTP:1301,index,GCI
+CTP:1303,"Public and Private Health and Medicine, 1850-1980",,CTP:1033,collector,GCI
+CTP:1304,"Important Persons in L.A.'s Medical History, 1850-1980",,CTP:1303,collector,GCI
+CTP:1305,Institutional - Health/Medicine,,CTP:1304,collector,GCI
+CTP:1306,Hospital,,CTP:1305,index,GCI
+CTP:1307,Hospital-Mental Health,,CTP:1305,index,GCI
+CTP:1308,Medical Clinic,,CTP:1305,index,GCI
+CTP:1309,Other,,CTP:1305,index,GCI
+CTP:1310,Sanitorium,,CTP:1305,index,GCI
+CTP:1311,"Medical Building Types, 1850-1980",,CTP:1303,collector,GCI
+CTP:1312,Institutional - Health/Medicine,,CTP:1311,collector,GCI
+CTP:1313,Hospital,,CTP:1312,index,GCI
+CTP:1314,Hospital-Mental Health,,CTP:1312,index,GCI
+CTP:1315,Medical Building,,CTP:1312,index,GCI
+CTP:1316,Other,,CTP:1312,index,GCI
+CTP:1317,Sanitorium,,CTP:1312,index,GCI
+CTP:1318,"Public Healthcare/Social Medicine, 1850-1980",,CTP:1303,collector,GCI
+CTP:1319,Institutional - Health/Medicine,,CTP:1318,collector,GCI
+CTP:1320,Hospital,,CTP:1319,index,GCI
+CTP:1321,Hospital-Mental Health,,CTP:1319,index,GCI
+CTP:1322,Medical Building,,CTP:1319,index,GCI
+CTP:1323,Medical Clinic,,CTP:1319,index,GCI
+CTP:1324,Other,,CTP:1319,index,GCI
+CTP:1325,Sanitorium,,CTP:1319,index,GCI
+CTP:1326,"Religion and Spirituality, 1850-1980",,CTP:1033,collector,GCI
+CTP:1327,"Important Persons in Religious History, 1850-1980",,CTP:1326,collector,GCI
+CTP:1328,Institutional - Religion/Spirituality,,CTP:1327,collector,GCI
+CTP:1329,Religious Building,,CTP:1328,index,GCI
+CTP:1330,Religious Campus,,CTP:1328,index,GCI
+CTP:1331,"Religion and Spirituality and Ethnic/Cultural Associations, 1850-1980",,CTP:1326,collector,GCI
+CTP:1332,Institutional - Religion/Spirituality,,CTP:1331,collector,GCI
+CTP:1333,Religious Building,,CTP:1332,index,GCI
+CTP:1334,Religious Campus,,CTP:1332,index,GCI
+CTP:1335,"Religious Property Types, 1850-1980",,CTP:1326,collector,GCI
+CTP:1336,Institutional - Religion/Spirituality,,CTP:1335,collector,GCI
+CTP:1337,Religious Building,,CTP:1336,index,GCI
+CTP:1338,Religious Campus,,CTP:1336,index,GCI
+CTP:1339,"Social Clubs and Organizations, 1850-1980",,CTP:1033,collector,GCI
+CTP:1340,"Fraternal Clubs and Organizations, 1850-1980",,CTP:1339,collector,GCI
+CTP:1341,Institutional - Social Clubs/Meeting Halls,,CTP:1340,collector,GCI
+CTP:1342,Social Club,,CTP:1341,index,GCI
+CTP:1343,"Social Clubs and Ethnic/Cultural Associations, 1850-1980",,CTP:1339,collector,GCI
+CTP:1344,Institutional - Social Clubs/Meeting Halls,,CTP:1343,collector,GCI
+CTP:1345,Social Club,,CTP:1344,index,GCI
+CTP:1346,"Women's Clubs and Organizations, 1850-1980",,CTP:1339,collector,GCI
+CTP:1347,Institutional - Social Clubs/Meeting Halls,,CTP:1346,collector,GCI
+CTP:1348,Social Club,,CTP:1347,index,GCI
+CTP:1349,"Residential Development and Suburbanization, 1850-1980",,EVALUATION_CRITERIA_TYPE_AUTHORITY_DOCUMENT.csv,collector,GCI
+CTP:1350,"Multi-Family Residential Development, 1910-1980",,CTP:1349,collector,GCI
+CTP:1351,"Multi-Family Residential, 1910-1980",,CTP:1350,collector,GCI
+CTP:1352,"Apartment Houses, 1910-1980",,CTP:1351,collector,GCI
+CTP:1353,Residential,,CTP:1352,collector,GCI
+CTP:1354,Apartment House,,CTP:1353,index,GCI
+CTP:1355,Apartment Tower,,CTP:1353,index,GCI
+CTP:1356,Duplex,,CTP:1353,index,GCI
+CTP:1357,"Courtyard Apartments, 1910-1980",,CTP:1351,collector,GCI
+CTP:1358,Residential,,CTP:1357,collector,GCI
+CTP:1359,1920s-1930s Courtyard Apartment,,CTP:1358,index,GCI
+CTP:1360,1940s Courtyard Apartment,,CTP:1358,index,GCI
+CTP:1361,1950s-1960s Courtyard Apartment,,CTP:1358,index,GCI
+CTP:1362,"Mid-Century, One-Story Court",,CTP:1358,index,GCI
+CTP:1363,"Garden Apartments, 1938-1960",,CTP:1351,collector,GCI
+CTP:1364,Residential-Multi Family,,CTP:1363,collector,GCI
+CTP:1365,Garden Apartment,,CTP:1364,index,GCI
+CTP:1366,Garden Apartment Complex,,CTP:1364,index,GCI
+CTP:1367,"Multi-Family Residential District, 1910-1980",,CTP:1351,collector,GCI
+CTP:1368,Residential-Multi Family,,CTP:1367,collector,GCI
+CTP:1369,Multi-Family District,,CTP:1368,index,GCI
+CTP:1370,"Public & Defense Housing, 1939-1945",,CTP:1351,collector,GCI
+CTP:1371,Residential,,CTP:1370,collector,GCI
+CTP:1372,Public Housing Complex,,CTP:1371,index,GCI
+CTP:1373,"The Bungalow Court, 1910-1939",,CTP:1351,collector,GCI
+CTP:1374,Residential,,CTP:1373,collector,GCI
+CTP:1375,Bungalow Court,,CTP:1374,index,GCI
+CTP:1376,"The Stucco Box/Dingbat, 1954-1968",,CTP:1351,collector,GCI
+CTP:1377,Multi-Family Residential,,CTP:1376,collector,GCI
+CTP:1378,Stucco Box/Dingbat,,CTP:1377,index,GCI
+CTP:1379,Residential-Multi Family,,CTP:1376,collector,GCI
+CTP:1380,Stucco Box/Dingbat,,CTP:1379,index,GCI
+CTP:1381,"Automobile Suburbanization, 1908-1937",,CTP:1349,collector,GCI
+CTP:1382,"Suburban Planning and Development, 1908-1937",,CTP:1381,collector,GCI
+CTP:1383,Automobile Suburb,,CTP:1382,collector,GCI
+CTP:1384,Hillside Community,,CTP:1383,index,GCI
+CTP:1385,Multi-Family District,,CTP:1383,index,GCI
+CTP:1386,Neighborhood,,CTP:1383,index,GCI
+CTP:1387,Planned Community,,CTP:1383,index,GCI
+CTP:1388,Subdivision,,CTP:1383,index,GCI
+CTP:1389,Tract/subdivision feature,,CTP:1382,collector,GCI
+CTP:1390,Entrance Gate(s),,CTP:1389,index,GCI
+CTP:1391,Entrance Pillar(s),,CTP:1389,index,GCI
+CTP:1392,Fountain,,CTP:1389,index,GCI
+CTP:1393,Lamp Post(s),,CTP:1389,index,GCI
+CTP:1394,Landscaped Median,,CTP:1389,index,GCI
+CTP:1395,Other,,CTP:1389,index,GCI
+CTP:1396,Planter,,CTP:1389,index,GCI
+CTP:1397,Public Stairway,,CTP:1389,index,GCI
+CTP:1398,Retaining Wall,,CTP:1389,index,GCI
+CTP:1399,Sign,,CTP:1389,index,GCI
+CTP:1400,Street tree(s),,CTP:1389,index,GCI
+CTP:1401,"Company Built Worker Housing, 1910-1945",,CTP:1349,collector,GCI
+CTP:1402,Worker Housing,,CTP:1401,index,GCI
+CTP:1403,"Deed Restriction and Segregation, 1915-1970",,CTP:1349,collector,GCI
+CTP:1404,Residential Neighborhood,,CTP:1403,index,GCI
+CTP:1405,"Developers and the Development Process, 1888-1975",,CTP:1349,collector,GCI
+CTP:1406,"Community and Operative Builders, 1888-1940",,CTP:1405,collector,GCI
+CTP:1407,Residential Suburb,,CTP:1406,collector,GCI
+CTP:1408,Hillside Community,,CTP:1407,index,GCI
+CTP:1409,Multi-Family Neighborhood,,CTP:1407,index,GCI
+CTP:1410,Neighborhood,,CTP:1407,index,GCI
+CTP:1411,Planned Community,,CTP:1407,index,GCI
+CTP:1412,Subdivision,,CTP:1407,index,GCI
+CTP:1413,"Merchant Builders, 1940-1975",,CTP:1405,collector,GCI
+CTP:1414,Residential Suburb,,CTP:1413,collector,GCI
+CTP:1415,Planned Community,,CTP:1414,index,GCI
+CTP:1416,Subdivision(s),,CTP:1414,index,GCI
+CTP:1417,"Early Residential Development, 1880-1930",,CTP:1349,collector,GCI
+CTP:1418,"Early Multi-Family Residential Development, 1880-1930",,CTP:1417,collector,GCI
+CTP:1419,Residential,,CTP:1418,collector,GCI
+CTP:1420,Multi-Family Residence,,CTP:1419,index,GCI
+CTP:1421,"Early Single-Family Residential Development, 1880-1930",,CTP:1417,collector,GCI
+CTP:1422,Residential,,CTP:1421,collector,GCI
+CTP:1423,Carriage House,,CTP:1422,index,GCI
+CTP:1424,Single-Family Residence,,CTP:1422,index,GCI
+CTP:1425,"Ethnic Enclaves, 1880-1980",,CTP:1349,collector,GCI
+CTP:1426,Residential Neighborhood,,CTP:1425,index,GCI
+CTP:1427,"Post-War Suburbanization, 1938-1975",,CTP:1349,collector,GCI
+CTP:1428,"Suburban Planning and Development, 1938-1975",,CTP:1427,collector,GCI
+CTP:1429,Post-War Suburb,,CTP:1428,collector,GCI
+CTP:1430,Multi-Family District,,CTP:1429,index,GCI
+CTP:1431,Planned Community,,CTP:1429,index,GCI
+CTP:1432,Subdivision(s),,CTP:1429,index,GCI
+CTP:1433,Tract/subdivision feature,,CTP:1428,collector,GCI
+CTP:1434,Entrance Gate(s),,CTP:1433,index,GCI
+CTP:1435,Entrance Pillar(s),,CTP:1433,index,GCI
+CTP:1436,Fountain,,CTP:1433,index,GCI
+CTP:1437,Lamp Post(s),,CTP:1433,index,GCI
+CTP:1438,Landscaped Median,,CTP:1433,index,GCI
+CTP:1439,Other,,CTP:1433,index,GCI
+CTP:1440,Planter,,CTP:1433,index,GCI
+CTP:1441,Public Stairway,,CTP:1433,index,GCI
+CTP:1442,Retaining Wall,,CTP:1433,index,GCI
+CTP:1443,Sign,,CTP:1433,index,GCI
+CTP:1444,Street tree(s),,CTP:1433,index,GCI
+CTP:1445,"Streetcar Suburbanization, 1888-1933",,CTP:1349,collector,GCI
+CTP:1446,"Suburban Planning and Development, 1888-1933",,CTP:1445,collector,GCI
+CTP:1447,Streetcar Suburb,,CTP:1446,collector,GCI
+CTP:1448,Multi-Family District,,CTP:1447,index,GCI
+CTP:1449,Neighborhood,,CTP:1447,index,GCI
+CTP:1450,Planned Community,,CTP:1447,index,GCI
+CTP:1451,Subdivision,,CTP:1447,index,GCI
+CTP:1452,Tract/subdivision feature,,CTP:1446,collector,GCI
+CTP:1453,Entrance Gate(s),,CTP:1452,index,GCI
+CTP:1454,Entrance Pillar(s),,CTP:1452,index,GCI
+CTP:1455,Fountain,,CTP:1452,index,GCI
+CTP:1456,Lamp Post(s),,CTP:1452,index,GCI
+CTP:1457,Landscaped Median,,CTP:1452,index,GCI
+CTP:1458,Other,,CTP:1452,index,GCI
+CTP:1459,Planter,,CTP:1452,index,GCI
+CTP:1460,Public Stairway,,CTP:1452,index,GCI
+CTP:1461,Retaining Wall,,CTP:1452,index,GCI
+CTP:1462,Sign,,CTP:1452,index,GCI
+CTP:1463,Street tree(s),,CTP:1452,index,GCI
+CTP:1464,"Spanish Colonial and Mexican Era Settlement of Los Angeles, 1781-1849",,EVALUATION_CRITERIA_TYPE_AUTHORITY_DOCUMENT.csv,collector,GCI
+CTP:1465,"Important Events in Early Settlement of L.A., 1781-1849",,CTP:1464,collector,GCI
+CTP:1466,Commercial,,CTP:1465,index,GCI
+CTP:1467,Industrial,,CTP:1465,index,GCI
+CTP:1468,Institutional,,CTP:1465,index,GCI
+CTP:1469,Other,,CTP:1465,index,GCI
+CTP:1470,Residential,,CTP:1465,index,GCI
+CTP:1471,"Important Persons In Early Settlement of Los Angeles, 1781-1849",,CTP:1464,collector,GCI
+CTP:1472,Commercial,,CTP:1471,index,GCI
+CTP:1473,Industrial,,CTP:1471,index,GCI
+CTP:1474,Institutional,,CTP:1471,index,GCI
+CTP:1475,Other,,CTP:1471,index,GCI
+CTP:1476,Residential,,CTP:1471,index,GCI

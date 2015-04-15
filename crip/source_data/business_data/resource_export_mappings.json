@@ -1,0 +1,58 @@
+
+{
+    "csv": {
+        "NAME": "HistoricPlacesLA_Search_Results_Export",
+        "SCHEMA": [
+            {"field_name":"PRIMARY NAME", "source":"primaryname"},
+            {"field_name":"OTHER NAMES", "source":"alternatename"},
+            {"field_name":"ARCHES ID", "source":"entityid"},
+            {"field_name":"ARCHES RESOURCE TYPE", "source":"resource_name"},
+            {"field_name":"TYPE", "source":"field_map"},
+            {"field_name":"PRIMARY ADDRESS/LOCATION DESCRIPTION", "source":"field_map"},
+            {"field_name":"DESIGNATIONS", "source":"field_map"}
+        ],
+        "RESOURCE_TYPES" : {
+            "ACTIVITY.E7": {
+                "FIELD_MAP": [
+                    [{"field_name":"TYPE","entitytypeid":"ACTIVITY_TYPE.E55"}],
+                    [{"field_name":"PRIMARY ADDRESS/LOCATION DESCRIPTION","entitytypeid":"PLACE_ADDRESS.E45","value_type":"e4f5bd2f-56b7-4b8d-ac48-7e6d90e530ae", "alternate_entitytypeid":"DESCRIPTION_OF_LOCATION.E62"}]
+                ]
+            },
+            "ACTOR.E39": {
+                "FIELD_MAP": [
+                    [{"field_name":"TYPE","entitytypeid":"ACTOR_TYPE.E55"}],
+                    [{"field_name":"PRIMARY ADDRESS/LOCATION DESCRIPTION","entitytypeid":"PLACE_ADDRESS.E45","value_type":"e4f5bd2f-56b7-4b8d-ac48-7e6d90e530ae", "alternate_entitytypeid":"DESCRIPTION_OF_LOCATION.E62"}]
+                ]
+            },
+            "HERITAGE_RESOURCE.E18": {
+                "FIELD_MAP": [
+                    [{"field_name":"TYPE","entitytypeid":"HERITAGE_RESOURCE_TYPE.E55"}],
+                    [{"field_name":"PRIMARY ADDRESS/LOCATION DESCRIPTION","entitytypeid":"PLACE_ADDRESS.E45","value_type":"e4f5bd2f-56b7-4b8d-ac48-7e6d90e530ae", "alternate_entitytypeid":"DESCRIPTION_OF_LOCATION.E62"}],
+                    [{"field_name":"DESIGNATIONS","entitytypeid":"TYPE_OF_DESIGNATION_OR_PROTECTION.E55"}]
+
+                ]
+            },
+            "HERITAGE_RESOURCE_GROUP.E27": {
+                "FIELD_MAP": [
+                    [{"field_name":"TYPE","entitytypeid":"HERITAGE_RESOURCE_GROUP_TYPE.E55"}],
+                    [{"field_name":"PRIMARY ADDRESS/LOCATION DESCRIPTION","entitytypeid":"PLACE_ADDRESS.E45","value_type":"e4f5bd2f-56b7-4b8d-ac48-7e6d90e530ae", "alternate_entitytypeid":"DESCRIPTION_OF_LOCATION.E62"}],
+                    [{"field_name":"DESIGNATIONS","entitytypeid":"TYPE_OF_DESIGNATION_OR_PROTECTION.E55"}]
+                ]
+            },
+            "HISTORICAL_EVENT.E5": {
+                "FIELD_MAP": [
+                    [{"field_name":"TYPE","entitytypeid":"HERITAGE_EVENT_TYPE.E55"}],
+                    [{"field_name":"PRIMARY ADDRESS/LOCATION DESCRIPTION","entitytypeid":"PLACE_ADDRESS.E45","value_type":"e4f5bd2f-56b7-4b8d-ac48-7e6d90e530ae", "alternate_entitytypeid":"DESCRIPTION_OF_LOCATION.E62"}]
+
+                ]
+            },
+            "INFORMATION_RESOURCE.E73": {
+                "FIELD_MAP": [
+                    [{"field_name":"TYPE","entitytypeid":"INFORMATION_RESOURCE_TYPE.E55"}],
+                    [{"field_name":"PRIMARY ADDRESS/LOCATION DESCRIPTION","entitytypeid":"PLACE_ADDRESS.E45","value_type":"e4f5bd2f-56b7-4b8d-ac48-7e6d90e530ae", "alternate_entitytypeid":"DESCRIPTION_OF_LOCATION.E62"}]
+
+                ]
+            }
+        }
+    }
+}

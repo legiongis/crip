@@ -1,0 +1,205 @@
+﻿<!--
+ARCHES - a program developed to inventory and manage immovable cultural heritage.
+Copyright (C) 2013 J. Paul Getty Trust and World Monuments Fund
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+{% extends "base.htm" %}
+{% load staticfiles %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'plugins/layer_slider/css/layerslider.css' %}" type="text/css">
+{{ block.super }}
+{% endblock css %}
+
+{% block content %}
+<!--=== Slider ===-->
+<div class="layer_slider">
+    <div id="layerslider-container-fw">        
+        <div id="layerslider" style="width: 100%; height: 500px; margin: 0px auto; ">
+            
+            <!--First Slide
+            <div class="ls-layer" style="">
+
+                <!-- Background 
+                <img src="{% static 'img/arches_splash/CANEslide03.jpg' %}" class="ls-s1" style="top: 0px; left: 0px; durationin: 0;" alt="Slide background">
+
+                <!-- Text 
+                <span class="ls-s-1" style="line-height: 42px; font-size:22px; font-weight: 200; color:#fff; top:100px; left: 10px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;">
+                Arches Includes
+                </span>
+
+                <span class="ls-s-1" style="line-height: 42px; font-size:42px; font-weight: 200; color:#fff; top:140px; left: 10px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;">
+                Activities and </br>
+                Important Historic Events
+                </span>
+
+                <!-- Photo Credit 
+                <span class="ls-s-1" style="line-height: 16px; font-size:12px; color:#fff; top:470px; left: 750px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;">
+                Photo: Image Caption, <a href="javascript:void(0);">Photographer Name</a>
+                </span>
+
+             </div>
+            <!--End First Slide-->
+
+            <!--Second Slide-->
+            <div class="ls-layer" style="">
+
+                <!-- Background -->
+                <img src="{% static 'img/arches_splash/CANEslide04_resize.jpg' %}" class="ls-s1" style="top: 0px; left: -200px; durationin: 0;" alt="Slide background">
+
+                <!-- Text -->
+                <span class="ls-s-1" style="line-height: 42px; font-size:22px; font-weight: 200; color:#fff; top:100px; left: 10px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;">
+                Cane River is...
+                </span>
+
+                <!-- Text -->
+                <span class="ls-s-1" style="line-height: 42px; font-size:42px; font-weight: 200; color:#fff; top:140px; left: 10px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;">
+                Historic Plantations and Homesteads
+                </span>
+
+                <!-- Photo Credit -->
+                <span class="ls-s-1" style="line-height: 16px; font-size:12px; color:#fff; top:470px; left: 750px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;">
+                <!--Slave Quarters, Magnolia Plantation remove for now <a href="javascript:void(0);">Photographer Name</a>-->
+                </span>
+
+             </div>
+            <!--End Second Slide-->
+
+            <!--Third Slide-->
+            <div class="ls-layer" style="">
+
+                <!-- Background -->
+                <img src="{% static 'img/arches_splash/CANEslide05_resize.jpg' %}" class="ls-s1" style="top: 0px; left: -200px; durationin: 0;" alt="Slide background">
+
+                <!-- Text -->
+                <span class="ls-s-1" style="line-height: 42px; font-size:22px; font-weight: 200; color:#fff; top:100px; left: 10px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;">
+                Cane River is...
+                </span>
+
+                <!-- Text -->
+                <span class="ls-s-1" style="line-height: 42px; font-size:42px; font-weight: 200; color:#fff; top:140px; left: 10px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;">
+                Vibrant Communities
+                </span>
+
+                <!-- Photo Credit -->
+                <span class="ls-s-1" style="line-height: 16px; font-size:12px; color:#fff; top:470px; left: 750px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;">
+                <!--Cloutierville Mardis Gras Parade (?) <a href="javascript:void(0);">Photographer Name</a> -->
+                </span>
+
+             </div>
+            <!--End Third Slide-->
+
+            <!--Fourth Slide-->
+            <div class="ls-layer" style="">
+
+                <!-- Background -->
+                <img src="{% static 'img/arches_splash/CANEslide07_resize.jpg' %}" class="ls-s1" style="top: 0px; left: -200px; durationin: 0;" alt="Slide background">
+
+                <!-- Text -->
+                <span class="ls-s-1" style="line-height: 42px; font-size:22px; font-weight: 200; color:#fff; top:100px; left: 10px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;">
+                Cane River is...
+                </span>
+
+                <!-- Text -->
+                <span class="ls-s-1" style="line-height: 42px; font-size:42px; font-weight: 200; color:#fff; top:140px; left: 10px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;">
+                Beautiful Landscapes
+                </span>
+
+                <!-- Photo Credit -->
+                <span class="ls-s-1" style="line-height: 16px; font-size:12px; color:#fff; top:470px; left: 750px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;">
+                <!--Photo: Image Caption, <a href="javascript:void(0);">Photographer Name</a>-->
+                </span>
+
+             </div>
+            <!--End Fourth Slide-->
+
+        </div>         
+    </div>
+</div>
+<!--=== End Slider ===-->
+
+
+<!--=== HIP Title Block ===-->
+<div class="purchase">
+    <div class="container">
+        <div class="row">
+            <!-- REMOVE LOGO FROM HERE FOR NOW
+            <div class="col-md-3 animated fadeInRight" style="float:right;margin-left:auto;margin-right:auto;">
+                <img src="{% static 'img/crnha_logo.png' %}" height="160">
+            </div>
+            -->
+            <div class="col-md-12 animated fadeInLeft" style="float:left;">
+                <span>Cane River Heritage Inventory and Map</span>
+                <p>The <a href="http://www.canerivernha.org" target="_blank">Cane River National Heritage Area</a> has created this database to serve everyone interested in the unique history of the Cane River and its environs.  The inventory includes audio interviews, historic maps, photos, and information on local historic resources.  Support for the ongoing maintenance of the inventory comes from the <a href="http://ncptt.nps.gov/" target="_blank">National Center for Preservation Technology and Training</a>.</p>
+            </div>  
+            <!-- DONT THINK I NEED THIS
+            <div class="col-md-3 btn-buy animated fadeInRight">
+                <a href="javascript:void(0);" class="btn-u btn-u-lg"><i class="fa fa-plus-square"></i> Learn More</a>
+            </div>
+            -->
+            
+        </div>
+    </div>
+</div><!--/row-->
+<!-- End HIP Title Block -->
+
+<!-- don't really need this content at this point
+<!--=== Content Part ===
+<div class="block-description">
+    <div class="container content padding-top-20">
+
+        <!--Title Box       
+        <div class="title-box no-border margin-top-minus-10" style="border-bottom-color: #dcdcdc;">
+            <div class="title-box-text"><span class="color-green">Featured Heritage</span></div>
+            <p>These are some of the interesting cultural heritage stories in Los Angeles</p>
+        </div>
+        <!-- End Title Box   
+
+        <!-- Promo Box   
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="servive-block servive-block-default" style="background: #ffffff;">
+                    <i class="icon-custom rounded-x icon-bg-dark fa fa-trophy"></i>
+                    <a class="" href="javascript:void(0);"><h2 class="txt-color-blue">Street Cars and Suburbanization</h2></a>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium qui officia deserunt mollitia anim</p>                        
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="servive-block servive-block-default" style="background: #ffffff;">
+                    <i class="icon-custom rounded-x icon-bg-dark fa fa-trophy"></i>
+                    <a class="" href="javascript:void(0);"><h2 class="txt-color-blue">The Entertainment Industry 1908-1928</h2></a>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium qui officia deserunt mollitia anim</p>                        
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="servive-block servive-block-default" style="background: #ffffff;">
+                    <i class="icon-custom rounded-x icon-bg-dark fa fa-camera"></i>
+                    <a class="" href="javascript:void(0);"><h2 class="txt-color-blue">A Visual History of West LA 1900-1945</h2></a>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium qui officia deserunt mollitia anim</p>                        
+                </div>
+            </div>
+        </div>
+        <!-- End Promo Box
+
+
+
+
+    </div>
+</div>
+<!-- End Content Part
+-->
+{% endblock %}
