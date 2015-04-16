@@ -1,254 +1,268 @@
-"conceptid","PrefLabel","AltLabels","ParentConceptid","ConceptType","Provider"
-"COMPONENT_TYPE:1","Chimney","Chimney","COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv","Index","SurveyLA"
-"COMPONENT_TYPE:2","Chimney-Interior","Interior","COMPONENT_TYPE:1","Index","SurveyLA"
-"COMPONENT_TYPE:3","Chimney-Exterior","Exterior","COMPONENT_TYPE:1","Index","SurveyLA"
-"COMPONENT_TYPE:4","Chimney-Brick","Brick","COMPONENT_TYPE:1","Index","SurveyLA"
-"COMPONENT_TYPE:5","Chimney-Concrete block","Concrete block","COMPONENT_TYPE:1","Index","SurveyLA"
-"COMPONENT_TYPE:6","Chimney-Pipe","Pipe","COMPONENT_TYPE:1","Index","SurveyLA"
-"COMPONENT_TYPE:7","Chimney-Stone","Stone","COMPONENT_TYPE:1","Index","SurveyLA"
-"COMPONENT_TYPE:8","Chimney-Stucco","Stucco","COMPONENT_TYPE:1","Index","SurveyLA"
-"COMPONENT_TYPE:9","Chimney-Wood","Wood","COMPONENT_TYPE:1","Index","SurveyLA"
-"COMPONENT_TYPE:10","Chimney-Unknown","Unknown","COMPONENT_TYPE:1","Index","SurveyLA"
-"COMPONENT_TYPE:11","Cladding","Cladding","COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv","Index","SurveyLA"
-"COMPONENT_TYPE:12","Details","Details","COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv","Index","SurveyLA"
-"COMPONENT_TYPE:13","Details-Applied decoration","Applied decoration","COMPONENT_TYPE:12","Index","SurveyLA"
-"COMPONENT_TYPE:14","Details-Balconette","Balconette","COMPONENT_TYPE:12","Index","SurveyLA"
-"COMPONENT_TYPE:15","Details-Belt course","Belt course","COMPONENT_TYPE:12","Index","SurveyLA"
-"COMPONENT_TYPE:16","Details-Bris soleil","Bris soleil","COMPONENT_TYPE:12","Index","SurveyLA"
-"COMPONENT_TYPE:17","Details-Buttresses","Buttresses","COMPONENT_TYPE:12","Index","SurveyLA"
-"COMPONENT_TYPE:18","Details-Dingbats","Dingbats","COMPONENT_TYPE:12","Index","SurveyLA"
-"COMPONENT_TYPE:19","Details-Grilles","Grilles","COMPONENT_TYPE:12","Index","SurveyLA"
-"COMPONENT_TYPE:20","Details-Light Fixtures","Light Fixtures","COMPONENT_TYPE:12","Index","SurveyLA"
-"COMPONENT_TYPE:21","Details-Loading Dock","Loading Dock","COMPONENT_TYPE:12","Index","SurveyLA"
-"COMPONENT_TYPE:22","Details-Pierced screens","Pierced screens","COMPONENT_TYPE:12","Index","SurveyLA"
-"COMPONENT_TYPE:23","Details-Pilasters","Pilasters","COMPONENT_TYPE:12","Index","SurveyLA"
-"COMPONENT_TYPE:24","Details-Planters","Planters","COMPONENT_TYPE:12","Index","SurveyLA"
-"COMPONENT_TYPE:25","Details-Quoins","Quoins","COMPONENT_TYPE:12","Index","SurveyLA"
-"COMPONENT_TYPE:26","Details-Sign","Sign","COMPONENT_TYPE:12","Index","SurveyLA"
-"COMPONENT_TYPE:27","Details-String course","String course","COMPONENT_TYPE:12","Index","SurveyLA"
-"COMPONENT_TYPE:28","Details-Tile","Tile","COMPONENT_TYPE:12","Index","SurveyLA"
-"COMPONENT_TYPE:29","Door","Door","COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv","Index","SurveyLA"
-"COMPONENT_TYPE:30","Door-Single","Single","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:31","Door-Double","Double","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:32","Door-French doors","French doors","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:33","Door-Roll-up","Roll-up","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:34","Door-Security door","Security door","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:35","Door-Sliding","Sliding","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:36","Door-Unknown","Unknown","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:37","Door-Arched opening, round","Arched opening, round","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:38","Door-Arched opening, pointed","Arched opening, pointed","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:39","Door-Arched opening, segmental","Arched opening, segmental","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:40","Door-Divided lights","Divided lights","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:41","Door-Glazed, fully","Glazed, fully","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:42","Door-Glazed, partially","Glazed, partially","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:43","Door-Metal screen","Metal screen","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:44","Door-Paneled","Paneled","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:45","Door-Wood screen","Wood screen","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:46","Door-Awning","Awning","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:47","Door-Canopy","Canopy","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:48","Door-Decorative Hardware","Decorative Hardware","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:49","Door-Decorative surround","Decorative surround","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:50","Door-Fanlight","Fanlight","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:51","Door-Pediment","Pediment","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:52","Door-Pilasters","Pilasters","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:53","Door-Sidelights","Sidelights","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:54","Door-Transom","Transom","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:55","Entryway","Entryway","COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv","Index","SurveyLA"
-"COMPONENT_TYPE:56","Entryway-Atrium","Atrium","COMPONENT_TYPE:55","Index","SurveyLA"
-"COMPONENT_TYPE:57","Entryway-Balcony","Balcony","COMPONENT_TYPE:55","Index","SurveyLA"
-"COMPONENT_TYPE:58","Entryway-Colonnade/arcade","Colonnade/arcade","COMPONENT_TYPE:55","Index","SurveyLA"
-"COMPONENT_TYPE:59","Entryway-Courtyard","Courtyard","COMPONENT_TYPE:55","Index","SurveyLA"
-"COMPONENT_TYPE:60","Entryway-Patio","Patio","COMPONENT_TYPE:55","Index","SurveyLA"
-"COMPONENT_TYPE:61","Entryway-Portico","Portico","COMPONENT_TYPE:55","Index","SurveyLA"
-"COMPONENT_TYPE:62","Entryway-Projecting","Projecting","COMPONENT_TYPE:55","Index","SurveyLA"
-"COMPONENT_TYPE:63","Entryway-Recessed","Recessed","COMPONENT_TYPE:55","Index","SurveyLA"
-"COMPONENT_TYPE:64","Entryway-Stoop","Stoop","COMPONENT_TYPE:55","Index","SurveyLA"
-"COMPONENT_TYPE:65","Entryway-Subterranean","Subterranean","COMPONENT_TYPE:55","Index","SurveyLA"
-"COMPONENT_TYPE:66","Entryway-Vehicular entry","Vehicular entry","COMPONENT_TYPE:55","Index","SurveyLA"
-"COMPONENT_TYPE:67","Entryway-Arches","Arches","COMPONENT_TYPE:55","Index","SurveyLA"
-"COMPONENT_TYPE:68","Entryway-Awning(s)","Awning(s)","COMPONENT_TYPE:55","Index","SurveyLA"
-"COMPONENT_TYPE:69","Entryway-Balustrade","Balustrade","COMPONENT_TYPE:55","Index","SurveyLA"
-"COMPONENT_TYPE:70","Entryway-Canopy","Canopy","COMPONENT_TYPE:55","Index","SurveyLA"
-"COMPONENT_TYPE:71","Entryway-Columns","Columns","COMPONENT_TYPE:55","Index","SurveyLA"
-"COMPONENT_TYPE:72","Entryway-Marquee","Marquee","COMPONENT_TYPE:55","Index","SurveyLA"
-"COMPONENT_TYPE:73","Entryway-Pilasters","Pilasters","COMPONENT_TYPE:55","Index","SurveyLA"
-"COMPONENT_TYPE:74","Entryway-Wall","Wall","COMPONENT_TYPE:55","Index","SurveyLA"
-"COMPONENT_TYPE:75","Fa+ºade","Fa+ºade","COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv","Index","SurveyLA"
-"COMPONENT_TYPE:76","Fa+ºade-Asymmetrical","Asymmetrical","COMPONENT_TYPE:75","Index","SurveyLA"
-"COMPONENT_TYPE:77","Fa+ºade-Symmetrical","Symmetrical","COMPONENT_TYPE:75","Index","SurveyLA"
-"COMPONENT_TYPE:78","Plan","Plan","COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv","Index","SurveyLA"
-"COMPONENT_TYPE:79","Plan-Circular","Circular","COMPONENT_TYPE:78","Index","SurveyLA"
-"COMPONENT_TYPE:80","Plan-H-shaped","H-shaped","COMPONENT_TYPE:78","Index","SurveyLA"
-"COMPONENT_TYPE:81","Plan-Irregular","Irregular","COMPONENT_TYPE:78","Index","SurveyLA"
-"COMPONENT_TYPE:82","Plan-L-shaped","L-shaped","COMPONENT_TYPE:78","Index","SurveyLA"
-"COMPONENT_TYPE:83","Plan-Octagonal","Octagonal","COMPONENT_TYPE:78","Index","SurveyLA"
-"COMPONENT_TYPE:84","Plan-Rectangular","Rectangular","COMPONENT_TYPE:78","Index","SurveyLA"
-"COMPONENT_TYPE:85","Plan-Square","Square","COMPONENT_TYPE:78","Index","SurveyLA"
-"COMPONENT_TYPE:86","Plan-T-shaped","T-shaped","COMPONENT_TYPE:78","Index","SurveyLA"
-"COMPONENT_TYPE:87","Plan-U-shaped","U-shaped","COMPONENT_TYPE:78","Index","SurveyLA"
-"COMPONENT_TYPE:88","Plan-Triangular","Triangular","COMPONENT_TYPE:78","Index","SurveyLA"
-"COMPONENT_TYPE:89","Plan-Unknown","Unknown","COMPONENT_TYPE:78","Index","SurveyLA"
-"COMPONENT_TYPE:90","Porch","Porch","COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv","Index","SurveyLA"
-"COMPONENT_TYPE:91","Porch-Entrance porch/stoop","Entrance porch/stoop","COMPONENT_TYPE:90","Index","SurveyLA"
-"COMPONENT_TYPE:92","Porch-Full width","Full width","COMPONENT_TYPE:90","Index","SurveyLA"
-"COMPONENT_TYPE:93","Porch-Partial width","Partial width","COMPONENT_TYPE:90","Index","SurveyLA"
-"COMPONENT_TYPE:94","Porch-Projecting","Projecting","COMPONENT_TYPE:90","Index","SurveyLA"
-"COMPONENT_TYPE:95","Porch-Recessed","Recessed","COMPONENT_TYPE:90","Index","SurveyLA"
-"COMPONENT_TYPE:96","Porch-Wraparound","Wraparound","COMPONENT_TYPE:90","Index","SurveyLA"
-"COMPONENT_TYPE:97","Porch-Roof, flat","Roof, flat","COMPONENT_TYPE:90","Index","SurveyLA"
-"COMPONENT_TYPE:98","Porch-Roof, gable","Roof, gable","COMPONENT_TYPE:90","Index","SurveyLA"
-"COMPONENT_TYPE:99","Porch-Roof, hipped","Roof, hipped","COMPONENT_TYPE:90","Index","SurveyLA"
-"COMPONENT_TYPE:100","Porch-Roof, mansard","Roof, mansard","COMPONENT_TYPE:90","Index","SurveyLA"
-"COMPONENT_TYPE:101","Porch-Roof, parapet","Roof, parapet","COMPONENT_TYPE:90","Index","SurveyLA"
-"COMPONENT_TYPE:102","Porch-Roof, shed","Roof, shed","COMPONENT_TYPE:90","Index","SurveyLA"
-"COMPONENT_TYPE:103","Porch Rail","Porch Rail","COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv","Index","SurveyLA"
-"COMPONENT_TYPE:104","Porch Rail-Balustrade","Balustrade","COMPONENT_TYPE:103","Index","SurveyLA"
-"COMPONENT_TYPE:105","Porch Rail-Wall","Wall","COMPONENT_TYPE:103","Index","SurveyLA"
-"COMPONENT_TYPE:106","Porch Rail-Wall, low","Wall, low","COMPONENT_TYPE:103","Index","SurveyLA"
-"COMPONENT_TYPE:107","Porch Rail-Stair rail","Stair rail","COMPONENT_TYPE:103","Index","SurveyLA"
-"COMPONENT_TYPE:108","Porch Rail-Brick","Brick","COMPONENT_TYPE:103","Index","SurveyLA"
-"COMPONENT_TYPE:109","Porch Rail-Handrail","Handrail","COMPONENT_TYPE:103","Index","SurveyLA"
-"COMPONENT_TYPE:110","Porch Rail-Concrete","Concrete","COMPONENT_TYPE:103","Index","SurveyLA"
-"COMPONENT_TYPE:111","Porch Rail-Stone","Stone","COMPONENT_TYPE:103","Index","SurveyLA"
-"COMPONENT_TYPE:112","Porch Rail-Stone, arroyo","Stone, arroyo","COMPONENT_TYPE:103","Index","SurveyLA"
-"COMPONENT_TYPE:113","Porch Rail-Stone, cast","Stone, cast","COMPONENT_TYPE:103","Index","SurveyLA"
-"COMPONENT_TYPE:114","Porch Rail-Stone, cut","Stone, cut","COMPONENT_TYPE:103","Index","SurveyLA"
-"COMPONENT_TYPE:115","Porch Rail-Stone, natural","Stone, natural","COMPONENT_TYPE:103","Index","SurveyLA"
-"COMPONENT_TYPE:116","Porch Rail-Stone, simulated","Stone, simulated","COMPONENT_TYPE:103","Index","SurveyLA"
-"COMPONENT_TYPE:117","Porch Rail-Stucco","Stucco","COMPONENT_TYPE:103","Index","SurveyLA"
-"COMPONENT_TYPE:118","Porch Rail-Terra cotta","Terra cotta","COMPONENT_TYPE:103","Index","SurveyLA"
-"COMPONENT_TYPE:119","Porch Rail-Wood","Wood","COMPONENT_TYPE:103","Index","SurveyLA"
-"COMPONENT_TYPE:120","Porch Rail-Wrought iron","Wrought iron","COMPONENT_TYPE:103","Index","SurveyLA"
-"COMPONENT_TYPE:121","Porch Supports","Porch Supports","COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv","Index","SurveyLA"
-"COMPONENT_TYPE:122","Porch Supports-Arches","Arches","COMPONENT_TYPE:121","Index","SurveyLA"
-"COMPONENT_TYPE:123","Porch Supports-Brackets","Brackets","COMPONENT_TYPE:121","Index","SurveyLA"
-"COMPONENT_TYPE:124","Porch Supports-Columns","Columns","COMPONENT_TYPE:121","Index","SurveyLA"
-"COMPONENT_TYPE:125","Porch Supports-Piers","Piers","COMPONENT_TYPE:121","Index","SurveyLA"
-"COMPONENT_TYPE:126","Porch Supports-Posts","Posts","COMPONENT_TYPE:121","Index","SurveyLA"
-"COMPONENT_TYPE:127","Porch Supports-Spindles/turned posts","Spindles/turned posts","COMPONENT_TYPE:121","Index","SurveyLA"
-"COMPONENT_TYPE:128","Porch Supports-With Pedestals","With Pedestals","COMPONENT_TYPE:121","Index","SurveyLA"
-"COMPONENT_TYPE:129","Roof","Roof","COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv","Index","SurveyLA"
-"COMPONENT_TYPE:130","Roof-Bargeboards","Bargeboards","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:131","Roof-Brackets","Brackets","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:132","Roof-Clay tile coping","Clay tile coping","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:133","Roof-Cornice","Cornice","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:134","Roof-Cupola","Cupola","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:135","Roof-Dentils","Dentils","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:136","Roof-Dormer","Dormer","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:137","Roof-Dovecote","Dovecote","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:138","Roof-Eaves, boxed","Eaves, boxed","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:139","Roof-Eaves, flared","Eaves, flared","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:140","Roof-Eaves, open","Eaves, open","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:141","Roof-Eaves, rolled","Eaves, rolled","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:142","Roof-Eaves, wide","Eaves, wide","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:143","Roof-Exposed purlins","Exposed purlins","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:144","Roof-Exposed rafters","Exposed rafters","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:145","Roof-Finial","Finial","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:146","Roof-Parapet, curved","Parapet, curved","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:147","Roof-Parapet, flat","Parapet, flat","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:148","Roof-Parapet, stepped","Parapet, stepped","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:149","Roof-Skylight","Skylight","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:150","Roof-Tower","Tower","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:151","Roof-Turret","Turret","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:152","Roof-Weathervane","Weathervane","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:153","Roof-A-frame","A-frame","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:154","Roof-Barrel vaulted","Barrel vaulted","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:155","Roof-Butterfly","Butterfly","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:156","Roof-Combination","Combination","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:157","Roof-Flat","Flat","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:158","Roof-Folded Plate","Folded Plate","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:159","Roof-Gable, crossed","Gable, crossed","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:160","Roof-Gable, front","Gable, front","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:161","Roof-Gable, side","Gable, side","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:162","Roof-Gambrel","Gambrel","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:163","Roof-Hipped","Hipped","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:164","Roof-Hipped, pyramidal","Hipped, pyramidal","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:165","Roof-Jerkinhead","Jerkinhead","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:166","Roof-Mansard","Mansard","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:167","Roof-Monitor","Monitor","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:168","Roof-Pent","Pent","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:169","Roof-Saddle","Saddle","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:170","Roof-Sawtooth","Sawtooth","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:171","Roof-Shed","Shed","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:172","Roof-Skirt","Skirt","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:173","Storefront","Storefront","COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv","Index","SurveyLA"
-"COMPONENT_TYPE:174","Storefront-Awning(s)","Awning(s)","COMPONENT_TYPE:173","Index","SurveyLA"
-"COMPONENT_TYPE:175","Storefront-Canopy","Canopy","COMPONENT_TYPE:173","Index","SurveyLA"
-"COMPONENT_TYPE:176","Storefront-Entry paving, brick","Entry paving, brick","COMPONENT_TYPE:173","Index","SurveyLA"
-"COMPONENT_TYPE:177","Storefront-Entry paving, terazzo","Entry paving, terazzo","COMPONENT_TYPE:173","Index","SurveyLA"
-"COMPONENT_TYPE:178","Storefront-Entry paving, tile","Entry paving, tile","COMPONENT_TYPE:173","Index","SurveyLA"
-"COMPONENT_TYPE:179","Storefront-Ghost sign","Ghost sign","COMPONENT_TYPE:173","Index","SurveyLA"
-"COMPONENT_TYPE:180","Storefront-Lighting","Lighting","COMPONENT_TYPE:173","Index","SurveyLA"
-"COMPONENT_TYPE:181","Storefront-Entry paving, tile","Entry paving, tile","COMPONENT_TYPE:173","Index","SurveyLA"
-"COMPONENT_TYPE:182","Storefront-Security gate/screen","Security gate/screen","COMPONENT_TYPE:173","Index","SurveyLA"
-"COMPONENT_TYPE:183","Storefront-Sign","Sign","COMPONENT_TYPE:173","Index","SurveyLA"
-"COMPONENT_TYPE:184","Storefront-Bulkhead","Bulkhead","COMPONENT_TYPE:173","Index","SurveyLA"
-"COMPONENT_TYPE:185","Storefront-Capitals","Capitals","COMPONENT_TYPE:173","Index","SurveyLA"
-"COMPONENT_TYPE:186","Storefront-Frieze","Frieze","COMPONENT_TYPE:173","Index","SurveyLA"
-"COMPONENT_TYPE:187","Storefront-Piers","Piers","COMPONENT_TYPE:173","Index","SurveyLA"
-"COMPONENT_TYPE:188","Storefront-Pilasters","Pilasters","COMPONENT_TYPE:173","Index","SurveyLA"
-"COMPONENT_TYPE:189","Storefront-Planters","Planters","COMPONENT_TYPE:173","Index","SurveyLA"
-"COMPONENT_TYPE:190","Storefront-Recessed","Recessed","COMPONENT_TYPE:173","Index","SurveyLA"
-"COMPONENT_TYPE:191","Storefront-Flush","Flush","COMPONENT_TYPE:173","Index","SurveyLA"
-"COMPONENT_TYPE:192","Storefront-Corner","Corner","COMPONENT_TYPE:173","Index","SurveyLA"
-"COMPONENT_TYPE:193","Storefront-Angled","Angled","COMPONENT_TYPE:173","Index","SurveyLA"
-"COMPONENT_TYPE:194","Storefront-Canted","Canted","COMPONENT_TYPE:173","Index","SurveyLA"
-"COMPONENT_TYPE:195","Storefront-Multiple","Multiple","COMPONENT_TYPE:173","Index","SurveyLA"
-"COMPONENT_TYPE:196","Window","Window","COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv","Index","SurveyLA"
-"COMPONENT_TYPE:197","Window-Awning","Awning","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:198","Window-Decorative surround","Decorative surround","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:199","Window-Security bars","Security bars","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:200","Window-Shutters","Shutters","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:201","Window-Arched opening, pointed","Arched opening, pointed","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:202","Window-Arched opening, round","Arched opening, round","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:203","Window-Arched opening, segmental","Arched opening, segmental","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:204","Window-Butted glass","Butted glass","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:205","Window-Diamond pane","Diamond pane","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:206","Window-Divided lights","Divided lights","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:207","Window-Divided lights, top sash","Divided lights, top sash","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:208","Window-Leaded glass","Leaded glass","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:209","Window-Obscure glass","Obscure glass","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:210","Window-Stained glass","Stained glass","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:211","Window-Transom","Transom","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:212","Window-Single","Single","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:213","Window-Paired","Paired","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:214","Window-Grouped","Grouped","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:215","Window-Bay, bowed","Bay, bowed","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:216","Window-Bay, canted","Bay, canted","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:217","Window-Bay, rounded","Bay, rounded","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:218","Window-Bay, squared","Bay, squared","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:219","Window-Clerestory","Clerestory","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:220","Window-Corner","Corner","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:221","Window-Display","Display","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:222","Window-Oriel","Oriel","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:223","Window-Palladian","Palladian","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:224","Window-Ribbon","Ribbon","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:225","Window-Sawtooth","Sawtooth","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:226","Window-Storefront","Storefront","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:227","Window-Tripartite","Tripartite","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:228","Window-Awning","Awning","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:229","Window-Casement","Casement","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:230","Window-Double-hung","Double-hung","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:231","Window-Fixed","Fixed","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:232","Window-Floor-to-ceiling","Floor-to-ceiling","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:233","Window-Hopper","Hopper","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:234","Window-Jalousie/louver","Jalousie/louver","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:235","Window-Pivot","Pivot","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:236","Window-Porthole","Porthole","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:237","Window-Single-hung","Single-hung","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:238","Window-Sliding","Sliding","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:239","Window-Vent","Vent","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:240","Window-Unknown","Unknown","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:241","Porch Rail-Metal","Metal","COMPONENT_TYPE:103","Index","SurveyLA"
-"COMPONENT_TYPE:242","Porch Rail-Other","Other","COMPONENT_TYPE:103","Index","SurveyLA"
-"COMPONENT_TYPE:243","Porch Rail-Iron","Iron","COMPONENT_TYPE:103","Index","SurveyLA"
-"COMPONENT_TYPE:244","Roof-Parapet","Parapet","COMPONENT_TYPE:129","Index","SurveyLA"
-"COMPONENT_TYPE:245","Window-Arched opening","Arched opening","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:246","Window-Historic Surround","Historic Surround","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:247","Window-Multi-light","Multi-light","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:248","Window-Multi-light top sash","Multi-light top sash","COMPONENT_TYPE:196","Index","SurveyLA"
-"COMPONENT_TYPE:249","Door-Arched","Arched","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:250","Door-Fully glazed","Fully glazed","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:251","Door-Historic hardware","Historic hardware","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:252","Door-Historic surround","Historic Surround","COMPONENT_TYPE:29","Index","SurveyLA"
-"COMPONENT_TYPE:253","Door-Partially glazed","Partially glazed","COMPONENT_TYPE:29","Index","SurveyLA"
+conceptid,PrefLabel,AltLabels,ParentConceptid,ConceptType,Provider
+COMPONENT_TYPE:1,Chimney,Chimney,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Index,SurveyLA
+COMPONENT_TYPE:2,Chimney-Interior,Interior,COMPONENT_TYPE:1,Index,SurveyLA
+COMPONENT_TYPE:3,Chimney-Exterior,Exterior,COMPONENT_TYPE:1,Index,SurveyLA
+COMPONENT_TYPE:4,Chimney-Brick,Brick,COMPONENT_TYPE:1,Index,SurveyLA
+COMPONENT_TYPE:5,Chimney-Concrete block,Concrete block,COMPONENT_TYPE:1,Index,SurveyLA
+COMPONENT_TYPE:6,Chimney-Pipe,Pipe,COMPONENT_TYPE:1,Index,SurveyLA
+COMPONENT_TYPE:7,Chimney-Stone,Stone,COMPONENT_TYPE:1,Index,SurveyLA
+COMPONENT_TYPE:8,Chimney-Stucco,Stucco,COMPONENT_TYPE:1,Index,SurveyLA
+COMPONENT_TYPE:9,Chimney-Wood,Wood,COMPONENT_TYPE:1,Index,SurveyLA
+COMPONENT_TYPE:10,Chimney-Unknown,Unknown,COMPONENT_TYPE:1,Index,SurveyLA
+COMPONENT_TYPE:11,Cladding,Cladding,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Index,SurveyLA
+COMPONENT_TYPE:12,Details,Details,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Index,SurveyLA
+COMPONENT_TYPE:13,Details-Applied decoration,Applied decoration,COMPONENT_TYPE:12,Index,SurveyLA
+COMPONENT_TYPE:14,Details-Balconette,Balconette,COMPONENT_TYPE:12,Index,SurveyLA
+COMPONENT_TYPE:15,Details-Belt course,Belt course,COMPONENT_TYPE:12,Index,SurveyLA
+COMPONENT_TYPE:16,Details-Bris soleil,Bris soleil,COMPONENT_TYPE:12,Index,SurveyLA
+COMPONENT_TYPE:17,Details-Buttresses,Buttresses,COMPONENT_TYPE:12,Index,SurveyLA
+COMPONENT_TYPE:18,Details-Dingbats,Dingbats,COMPONENT_TYPE:12,Index,SurveyLA
+COMPONENT_TYPE:19,Details-Grilles,Grilles,COMPONENT_TYPE:12,Index,SurveyLA
+COMPONENT_TYPE:20,Details-Light Fixtures,Light Fixtures,COMPONENT_TYPE:12,Index,SurveyLA
+COMPONENT_TYPE:21,Details-Loading Dock,Loading Dock,COMPONENT_TYPE:12,Index,SurveyLA
+COMPONENT_TYPE:22,Details-Pierced screens,Pierced screens,COMPONENT_TYPE:12,Index,SurveyLA
+COMPONENT_TYPE:23,Details-Pilasters,Pilasters,COMPONENT_TYPE:12,Index,SurveyLA
+COMPONENT_TYPE:24,Details-Planters,Planters,COMPONENT_TYPE:12,Index,SurveyLA
+COMPONENT_TYPE:25,Details-Quoins,Quoins,COMPONENT_TYPE:12,Index,SurveyLA
+COMPONENT_TYPE:26,Details-Sign,Sign,COMPONENT_TYPE:12,Index,SurveyLA
+COMPONENT_TYPE:27,Details-String course,String course,COMPONENT_TYPE:12,Index,SurveyLA
+COMPONENT_TYPE:28,Details-Tile,Tile,COMPONENT_TYPE:12,Index,SurveyLA
+COMPONENT_TYPE:29,Door,Door,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Index,SurveyLA
+COMPONENT_TYPE:30,Door-Single,Single,COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:31,Door-Double,Double,COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:32,Door-French doors,French doors,COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:33,Door-Roll-up,Roll-up,COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:34,Door-Security door,Security door,COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:35,Door-Sliding,Sliding,COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:36,Door-Unknown,Unknown,COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:37,"Door-Arched opening, round","Arched opening, round",COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:38,"Door-Arched opening, pointed","Arched opening, pointed",COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:39,"Door-Arched opening, segmental","Arched opening, segmental",COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:40,Door-Divided lights,Divided lights,COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:41,"Door-Glazed, fully","Glazed, fully",COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:42,"Door-Glazed, partially","Glazed, partially",COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:43,Door-Metal screen,Metal screen,COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:44,Door-Paneled,Paneled,COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:45,Door-Wood screen,Wood screen,COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:46,Door-Awning,Awning,COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:47,Door-Canopy,Canopy,COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:48,Door-Decorative Hardware,Decorative Hardware,COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:49,Door-Decorative surround,Decorative surround,COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:50,Door-Fanlight,Fanlight,COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:51,Door-Pediment,Pediment,COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:52,Door-Pilasters,Pilasters,COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:53,Door-Sidelights,Sidelights,COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:54,Door-Transom,Transom,COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:55,Entryway,Entryway,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Index,SurveyLA
+COMPONENT_TYPE:56,Entryway-Atrium,Atrium,COMPONENT_TYPE:55,Index,SurveyLA
+COMPONENT_TYPE:57,Entryway-Balcony,Balcony,COMPONENT_TYPE:55,Index,SurveyLA
+COMPONENT_TYPE:58,Entryway-Colonnade/arcade,Colonnade/arcade,COMPONENT_TYPE:55,Index,SurveyLA
+COMPONENT_TYPE:59,Entryway-Courtyard,Courtyard,COMPONENT_TYPE:55,Index,SurveyLA
+COMPONENT_TYPE:60,Entryway-Patio,Patio,COMPONENT_TYPE:55,Index,SurveyLA
+COMPONENT_TYPE:61,Entryway-Portico,Portico,COMPONENT_TYPE:55,Index,SurveyLA
+COMPONENT_TYPE:62,Entryway-Projecting,Projecting,COMPONENT_TYPE:55,Index,SurveyLA
+COMPONENT_TYPE:63,Entryway-Recessed,Recessed,COMPONENT_TYPE:55,Index,SurveyLA
+COMPONENT_TYPE:64,Entryway-Stoop,Stoop,COMPONENT_TYPE:55,Index,SurveyLA
+COMPONENT_TYPE:65,Entryway-Subterranean,Subterranean,COMPONENT_TYPE:55,Index,SurveyLA
+COMPONENT_TYPE:66,Entryway-Vehicular entry,Vehicular entry,COMPONENT_TYPE:55,Index,SurveyLA
+COMPONENT_TYPE:67,Entryway-Arches,Arches,COMPONENT_TYPE:55,Index,SurveyLA
+COMPONENT_TYPE:68,Entryway-Awning(s),Awning(s),COMPONENT_TYPE:55,Index,SurveyLA
+COMPONENT_TYPE:69,Entryway-Balustrade,Balustrade,COMPONENT_TYPE:55,Index,SurveyLA
+COMPONENT_TYPE:70,Entryway-Canopy,Canopy,COMPONENT_TYPE:55,Index,SurveyLA
+COMPONENT_TYPE:71,Entryway-Columns,Columns,COMPONENT_TYPE:55,Index,SurveyLA
+COMPONENT_TYPE:72,Entryway-Marquee,Marquee,COMPONENT_TYPE:55,Index,SurveyLA
+COMPONENT_TYPE:73,Entryway-Pilasters,Pilasters,COMPONENT_TYPE:55,Index,SurveyLA
+COMPONENT_TYPE:74,Entryway-Wall,Wall,COMPONENT_TYPE:55,Index,SurveyLA
+COMPONENT_TYPE:75,Fa+ºade,Fa+ºade,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Index,SurveyLA
+COMPONENT_TYPE:76,Fa+ºade-Asymmetrical,Asymmetrical,COMPONENT_TYPE:75,Index,SurveyLA
+COMPONENT_TYPE:77,Fa+ºade-Symmetrical,Symmetrical,COMPONENT_TYPE:75,Index,SurveyLA
+COMPONENT_TYPE:78,Plan,Plan,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Index,SurveyLA
+COMPONENT_TYPE:79,Plan-Circular,Circular,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:80,Plan-H-shaped,H-shaped,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:81,Plan-Irregular,Irregular,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:82,Plan-L-shaped,L-shaped,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:83,Plan-Octagonal,Octagonal,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:84,Plan-Rectangular,Rectangular,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:85,Plan-Square,Square,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:86,Plan-T-shaped,T-shaped,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:87,Plan-U-shaped,U-shaped,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:88,Plan-Triangular,Triangular,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:89,Plan-Unknown,Unknown,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:90,Porch,Porch,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Index,SurveyLA
+COMPONENT_TYPE:91,Porch-Entrance porch/stoop,Entrance porch/stoop,COMPONENT_TYPE:90,Index,SurveyLA
+COMPONENT_TYPE:92,Porch-Full width,Full width,COMPONENT_TYPE:90,Index,SurveyLA
+COMPONENT_TYPE:93,Porch-Partial width,Partial width,COMPONENT_TYPE:90,Index,SurveyLA
+COMPONENT_TYPE:94,Porch-Projecting,Projecting,COMPONENT_TYPE:90,Index,SurveyLA
+COMPONENT_TYPE:95,Porch-Recessed,Recessed,COMPONENT_TYPE:90,Index,SurveyLA
+COMPONENT_TYPE:96,Porch-Wraparound,Wraparound,COMPONENT_TYPE:90,Index,SurveyLA
+COMPONENT_TYPE:97,"Porch-Roof, flat","Roof, flat",COMPONENT_TYPE:90,Index,SurveyLA
+COMPONENT_TYPE:98,"Porch-Roof, gable","Roof, gable",COMPONENT_TYPE:90,Index,SurveyLA
+COMPONENT_TYPE:99,"Porch-Roof, hipped","Roof, hipped",COMPONENT_TYPE:90,Index,SurveyLA
+COMPONENT_TYPE:100,"Porch-Roof, mansard","Roof, mansard",COMPONENT_TYPE:90,Index,SurveyLA
+COMPONENT_TYPE:101,"Porch-Roof, parapet","Roof, parapet",COMPONENT_TYPE:90,Index,SurveyLA
+COMPONENT_TYPE:102,"Porch-Roof, shed","Roof, shed",COMPONENT_TYPE:90,Index,SurveyLA
+COMPONENT_TYPE:103,Porch Rail,Porch Rail,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Index,SurveyLA
+COMPONENT_TYPE:104,Porch Rail-Balustrade,Balustrade,COMPONENT_TYPE:103,Index,SurveyLA
+COMPONENT_TYPE:105,Porch Rail-Wall,Wall,COMPONENT_TYPE:103,Index,SurveyLA
+COMPONENT_TYPE:106,"Porch Rail-Wall, low","Wall, low",COMPONENT_TYPE:103,Index,SurveyLA
+COMPONENT_TYPE:107,Porch Rail-Stair rail,Stair rail,COMPONENT_TYPE:103,Index,SurveyLA
+COMPONENT_TYPE:108,Porch Rail-Brick,Brick,COMPONENT_TYPE:103,Index,SurveyLA
+COMPONENT_TYPE:109,Porch Rail-Handrail,Handrail,COMPONENT_TYPE:103,Index,SurveyLA
+COMPONENT_TYPE:110,Porch Rail-Concrete,Concrete,COMPONENT_TYPE:103,Index,SurveyLA
+COMPONENT_TYPE:111,Porch Rail-Stone,Stone,COMPONENT_TYPE:103,Index,SurveyLA
+COMPONENT_TYPE:112,"Porch Rail-Stone, arroyo","Stone, arroyo",COMPONENT_TYPE:103,Index,SurveyLA
+COMPONENT_TYPE:113,"Porch Rail-Stone, cast","Stone, cast",COMPONENT_TYPE:103,Index,SurveyLA
+COMPONENT_TYPE:114,"Porch Rail-Stone, cut","Stone, cut",COMPONENT_TYPE:103,Index,SurveyLA
+COMPONENT_TYPE:115,"Porch Rail-Stone, natural","Stone, natural",COMPONENT_TYPE:103,Index,SurveyLA
+COMPONENT_TYPE:116,"Porch Rail-Stone, simulated","Stone, simulated",COMPONENT_TYPE:103,Index,SurveyLA
+COMPONENT_TYPE:117,Porch Rail-Stucco,Stucco,COMPONENT_TYPE:103,Index,SurveyLA
+COMPONENT_TYPE:118,Porch Rail-Terra cotta,Terra cotta,COMPONENT_TYPE:103,Index,SurveyLA
+COMPONENT_TYPE:119,Porch Rail-Wood,Wood,COMPONENT_TYPE:103,Index,SurveyLA
+COMPONENT_TYPE:120,Porch Rail-Wrought iron,Wrought iron,COMPONENT_TYPE:103,Index,SurveyLA
+COMPONENT_TYPE:121,Porch Supports,Porch Supports,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Index,SurveyLA
+COMPONENT_TYPE:122,Porch Supports-Arches,Arches,COMPONENT_TYPE:121,Index,SurveyLA
+COMPONENT_TYPE:123,Porch Supports-Brackets,Brackets,COMPONENT_TYPE:121,Index,SurveyLA
+COMPONENT_TYPE:124,Porch Supports-Columns,Columns,COMPONENT_TYPE:121,Index,SurveyLA
+COMPONENT_TYPE:125,Porch Supports-Piers,Piers,COMPONENT_TYPE:121,Index,SurveyLA
+COMPONENT_TYPE:126,Porch Supports-Posts,Posts,COMPONENT_TYPE:121,Index,SurveyLA
+COMPONENT_TYPE:127,Porch Supports-Spindles/turned posts,Spindles/turned posts,COMPONENT_TYPE:121,Index,SurveyLA
+COMPONENT_TYPE:128,Porch Supports-With Pedestals,With Pedestals,COMPONENT_TYPE:121,Index,SurveyLA
+COMPONENT_TYPE:129,Roof,Roof,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Index,SurveyLA
+COMPONENT_TYPE:130,Roof-Bargeboards,Bargeboards,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:131,Roof-Brackets,Brackets,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:132,Roof-Clay tile coping,Clay tile coping,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:133,Roof-Cornice,Cornice,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:134,Roof-Cupola,Cupola,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:135,Roof-Dentils,Dentils,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:136,Roof-Dormer,Dormer,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:137,Roof-Dovecote,Dovecote,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:138,"Roof-Eaves, boxed","Eaves, boxed",COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:139,"Roof-Eaves, flared","Eaves, flared",COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:140,"Roof-Eaves, open","Eaves, open",COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:141,"Roof-Eaves, rolled","Eaves, rolled",COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:142,"Roof-Eaves, wide","Eaves, wide",COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:143,Roof-Exposed purlins,Exposed purlins,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:144,Roof-Exposed rafters,Exposed rafters,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:145,Roof-Finial,Finial,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:146,"Roof-Parapet, curved","Parapet, curved",COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:147,"Roof-Parapet, flat","Parapet, flat",COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:148,"Roof-Parapet, stepped","Parapet, stepped",COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:149,Roof-Skylight,Skylight,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:150,Roof-Tower,Tower,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:151,Roof-Turret,Turret,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:152,Roof-Weathervane,Weathervane,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:153,Roof-A-frame,A-frame,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:154,Roof-Barrel vaulted,Barrel vaulted,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:155,Roof-Butterfly,Butterfly,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:156,Roof-Combination,Combination,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:157,Roof-Flat,Flat,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:158,Roof-Folded Plate,Folded Plate,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:159,"Roof-Gable, crossed","Gable, crossed",COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:160,"Roof-Gable, front","Gable, front",COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:161,"Roof-Gable, side","Gable, side",COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:162,Roof-Gambrel,Gambrel,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:163,Roof-Hipped,Hipped,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:164,"Roof-Hipped, pyramidal","Hipped, pyramidal",COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:165,Roof-Jerkinhead,Jerkinhead,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:166,Roof-Mansard,Mansard,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:167,Roof-Monitor,Monitor,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:168,Roof-Pent,Pent,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:169,Roof-Saddle,Saddle,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:170,Roof-Sawtooth,Sawtooth,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:171,Roof-Shed,Shed,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:172,Roof-Skirt,Skirt,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:173,Storefront,Storefront,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Index,SurveyLA
+COMPONENT_TYPE:174,Storefront-Awning(s),Awning(s),COMPONENT_TYPE:173,Index,SurveyLA
+COMPONENT_TYPE:175,Storefront-Canopy,Canopy,COMPONENT_TYPE:173,Index,SurveyLA
+COMPONENT_TYPE:176,"Storefront-Entry paving, brick","Entry paving, brick",COMPONENT_TYPE:173,Index,SurveyLA
+COMPONENT_TYPE:177,"Storefront-Entry paving, terazzo","Entry paving, terazzo",COMPONENT_TYPE:173,Index,SurveyLA
+COMPONENT_TYPE:178,"Storefront-Entry paving, tile","Entry paving, tile",COMPONENT_TYPE:173,Index,SurveyLA
+COMPONENT_TYPE:179,Storefront-Ghost sign,Ghost sign,COMPONENT_TYPE:173,Index,SurveyLA
+COMPONENT_TYPE:180,Storefront-Lighting,Lighting,COMPONENT_TYPE:173,Index,SurveyLA
+COMPONENT_TYPE:181,"Storefront-Entry paving, tile","Entry paving, tile",COMPONENT_TYPE:173,Index,SurveyLA
+COMPONENT_TYPE:182,Storefront-Security gate/screen,Security gate/screen,COMPONENT_TYPE:173,Index,SurveyLA
+COMPONENT_TYPE:183,Storefront-Sign,Sign,COMPONENT_TYPE:173,Index,SurveyLA
+COMPONENT_TYPE:184,Storefront-Bulkhead,Bulkhead,COMPONENT_TYPE:173,Index,SurveyLA
+COMPONENT_TYPE:185,Storefront-Capitals,Capitals,COMPONENT_TYPE:173,Index,SurveyLA
+COMPONENT_TYPE:186,Storefront-Frieze,Frieze,COMPONENT_TYPE:173,Index,SurveyLA
+COMPONENT_TYPE:187,Storefront-Piers,Piers,COMPONENT_TYPE:173,Index,SurveyLA
+COMPONENT_TYPE:188,Storefront-Pilasters,Pilasters,COMPONENT_TYPE:173,Index,SurveyLA
+COMPONENT_TYPE:189,Storefront-Planters,Planters,COMPONENT_TYPE:173,Index,SurveyLA
+COMPONENT_TYPE:190,Storefront-Recessed,Recessed,COMPONENT_TYPE:173,Index,SurveyLA
+COMPONENT_TYPE:191,Storefront-Flush,Flush,COMPONENT_TYPE:173,Index,SurveyLA
+COMPONENT_TYPE:192,Storefront-Corner,Corner,COMPONENT_TYPE:173,Index,SurveyLA
+COMPONENT_TYPE:193,Storefront-Angled,Angled,COMPONENT_TYPE:173,Index,SurveyLA
+COMPONENT_TYPE:194,Storefront-Canted,Canted,COMPONENT_TYPE:173,Index,SurveyLA
+COMPONENT_TYPE:195,Storefront-Multiple,Multiple,COMPONENT_TYPE:173,Index,SurveyLA
+COMPONENT_TYPE:196,Window,Window,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Index,SurveyLA
+COMPONENT_TYPE:197,Window-Awning,Awning,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:198,Window-Decorative surround,Decorative surround,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:199,Window-Security bars,Security bars,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:200,Window-Shutters,Shutters,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:201,"Window-Arched opening, pointed","Arched opening, pointed",COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:202,"Window-Arched opening, round","Arched opening, round",COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:203,"Window-Arched opening, segmental","Arched opening, segmental",COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:204,Window-Butted glass,Butted glass,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:205,Window-Diamond pane,Diamond pane,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:206,Window-Divided lights,Divided lights,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:207,"Window-Divided lights, top sash","Divided lights, top sash",COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:208,Window-Leaded glass,Leaded glass,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:209,Window-Obscure glass,Obscure glass,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:210,Window-Stained glass,Stained glass,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:211,Window-Transom,Transom,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:212,Window-Single,Single,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:213,Window-Paired,Paired,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:214,Window-Grouped,Grouped,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:215,"Window-Bay, bowed","Bay, bowed",COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:216,"Window-Bay, canted","Bay, canted",COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:217,"Window-Bay, rounded","Bay, rounded",COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:218,"Window-Bay, squared","Bay, squared",COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:219,Window-Clerestory,Clerestory,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:220,Window-Corner,Corner,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:221,Window-Display,Display,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:222,Window-Oriel,Oriel,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:223,Window-Palladian,Palladian,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:224,Window-Ribbon,Ribbon,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:225,Window-Sawtooth,Sawtooth,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:226,Window-Storefront,Storefront,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:227,Window-Tripartite,Tripartite,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:228,Window-Awning,Awning,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:229,Window-Casement,Casement,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:230,Window-Double-hung,Double-hung,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:231,Window-Fixed,Fixed,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:232,Window-Floor-to-ceiling,Floor-to-ceiling,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:233,Window-Hopper,Hopper,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:234,Window-Jalousie/louver,Jalousie/louver,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:235,Window-Pivot,Pivot,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:236,Window-Porthole,Porthole,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:237,Window-Single-hung,Single-hung,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:238,Window-Sliding,Sliding,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:239,Window-Vent,Vent,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:240,Window-Unknown,Unknown,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:241,Porch Rail-Metal,Metal,COMPONENT_TYPE:103,Index,SurveyLA
+COMPONENT_TYPE:242,Porch Rail-Other,Other,COMPONENT_TYPE:103,Index,SurveyLA
+COMPONENT_TYPE:243,Porch Rail-Iron,Iron,COMPONENT_TYPE:103,Index,SurveyLA
+COMPONENT_TYPE:244,Roof-Parapet,Parapet,COMPONENT_TYPE:129,Index,SurveyLA
+COMPONENT_TYPE:245,Window-Arched opening,Arched opening,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:246,Window-Historic Surround,Historic Surround,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:247,Window-Multi-light,Multi-light,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:248,Window-Multi-light top sash,Multi-light top sash,COMPONENT_TYPE:196,Index,SurveyLA
+COMPONENT_TYPE:249,Door-Arched,Arched,COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:250,Door-Fully glazed,Fully glazed,COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:251,Door-Historic hardware,Historic hardware,COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:252,Door-Historic surround,Historic Surround,COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:253,Door-Partially glazed,Partially glazed,COMPONENT_TYPE:29,Index,SurveyLA
+COMPONENT_TYPE:254,Grave Component,,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Index,CRNHA
+COMPONENT_TYPE:255,Basal marker,,COMPONENT_TYPE:254,Index,CRNHA
+COMPONENT_TYPE:256,Bedstead marker,,COMPONENT_TYPE:254,Index,CRNHA
+COMPONENT_TYPE:257,Pedestal column,,COMPONENT_TYPE:254,Index,CRNHA
+COMPONENT_TYPE:258,Footstone,,COMPONENT_TYPE:254,Index,CRNHA
+COMPONENT_TYPE:259,Funeral home plaque,,COMPONENT_TYPE:254,Index,CRNHA
+COMPONENT_TYPE:260,Family marker,,COMPONENT_TYPE:254,Index,CRNHA
+COMPONENT_TYPE:261,Headstone,,COMPONENT_TYPE:254,Index,CRNHA
+COMPONENT_TYPE:262,Mausoleum,,COMPONENT_TYPE:254,Index,CRNHA
+COMPONENT_TYPE:263,Pedestal obelisk,,COMPONENT_TYPE:254,Index,CRNHA
+COMPONENT_TYPE:264,Ground tablet,,COMPONENT_TYPE:254,Index,CRNHA
+COMPONENT_TYPE:265,Woodmen of the world,,COMPONENT_TYPE:254,Index,CRNHA
+COMPONENT_TYPE:266,Cross,,COMPONENT_TYPE:254,Index,CRNHA
+COMPONENT_TYPE:267,Veteran Plaque,,COMPONENT_TYPE:254,Index,CRNHA
