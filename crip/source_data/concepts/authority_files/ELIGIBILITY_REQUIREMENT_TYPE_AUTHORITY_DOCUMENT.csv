@@ -1,2 +1,5 @@
-conceptid	PrefLabel	AltLabels	ParentConceptid	ConceptType	Provider
-Eligibility Type:1	this is the only eligibility requirement available.		ELIGIBILITY_REQUIREMENT_TYPE_AUTHORITY_DOCUMENT.csv	index	GCI
+conceptid,PrefLabel, AltLabels,ParentConceptid,Provider,
+Eligibility Type:1,placeholder,,ELIGIBILITY_REQUIREMENT_TYPE_AUTHORITY_DOCUMENT.csv,CRNHA,
+,,,,,
+,,,,,
+,,,,,
