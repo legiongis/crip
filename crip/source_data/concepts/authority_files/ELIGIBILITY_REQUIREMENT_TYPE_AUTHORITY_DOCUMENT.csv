@@ -1,5 +1,2 @@
-conceptid,PrefLabel, AltLabels,ParentConceptid,Provider,
-Eligibility Type:1,placeholder,,ELIGIBILITY_REQUIREMENT_TYPE_AUTHORITY_DOCUMENT.csv,CRNHA,
-,,,,,
-,,,,,
-,,,,,
+conceptid,PrefLabel, AltLabels,ParentConceptid,Provider
+Eligibility Type:1,placeholder,,ELIGIBILITY_REQUIREMENT_TYPE_AUTHORITY_DOCUMENT.csv,CRNHA
