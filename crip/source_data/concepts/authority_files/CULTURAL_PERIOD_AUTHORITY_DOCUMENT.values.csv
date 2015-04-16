@@ -1,33 +1,21 @@
-conceptid,Value,ValueType,Provider,
-PERIOD_UID:1,5,sortorder,CRNHA,5
-PERIOD_UID:1,-4000,minimum date,CRNHA,
-PERIOD_UID:1,1682,maximum date,CRNHA,
-PERIOD_UID:1,Before the arrival of Europeans to the area,scopeNote,CRNHA,
-PERIOD_UID:2,6,sortorder,CRNHA,-4000
-PERIOD_UID:2,-4000,minimum date,CRNHA,#REF!
-PERIOD_UID:2,700,maximum date,CRNHA,
-PERIOD_UID:2,Earliest general period of Native American settlement,scopeNote,CRNHA,
-PERIOD_UID:3,7,sortorder,CRNHA,700
-PERIOD_UID:3,700,minimum date,CRNHA,#REF!
-PERIOD_UID:3,1200,maximum date,CRNHA,
-PERIOD_UID:3,"Choctaw, Caddo, Adai, Natchitoches",scopeNote,CRNHA,
-PERIOD_UID:4,8,sortorder,CRNHA,8
-PERIOD_UID:4,1200,minimum date,CRNHA,#REF!
-PERIOD_UID:4,1682,maximum date,CRNHA,
-PERIOD_UID:4,"Choctaw, Caddo, Adai, Natchitoches",scopeNote,CRNHA,
-PERIOD_UID:5,1,sortorder,CRNHA,1
-PERIOD_UID:5,1682,minimum date,CRNHA,
-PERIOD_UID:5,2015,maximum date,CRNHA,#REF!
-PERIOD_UID:5,After the arrival of Europeans to the area,scopeNote,CRNHA,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
+conceptid,Value,ValueType,Provider
+PERIOD_UID:1,5,sortorder,CRNHA
+PERIOD_UID:1,-4000,minimum date,CRNHA
+PERIOD_UID:1,1682,maximum date,CRNHA
+PERIOD_UID:1,Before the arrival of Europeans to the area,scopeNote,CRNHA
+PERIOD_UID:2,6,sortorder,CRNHA
+PERIOD_UID:2,-4000,minimum date,CRNHA
+PERIOD_UID:2,700,maximum date,CRNHA
+PERIOD_UID:2,Earliest general period of Native American settlement,scopeNote,CRNHA
+PERIOD_UID:3,7,sortorder,CRNHA
+PERIOD_UID:3,700,minimum date,CRNHA
+PERIOD_UID:3,1200,maximum date,CRNHA
+PERIOD_UID:3,"Choctaw, Caddo, Adai, Natchitoches",scopeNote,CRNHA
+PERIOD_UID:4,8,sortorder,CRNHA
+PERIOD_UID:4,1200,minimum date,CRNHA
+PERIOD_UID:4,1682,maximum date,CRNHA
+PERIOD_UID:4,"Choctaw, Caddo, Adai, Natchitoches",scopeNote,CRNHA
+PERIOD_UID:5,1,sortorder,CRNHA
+PERIOD_UID:5,1682,minimum date,CRNHA
+PERIOD_UID:5,2015,maximum date,CRNHA
+PERIOD_UID:5,After the arrival of Europeans to the area,scopeNote,CRNHA
