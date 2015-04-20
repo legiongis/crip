@@ -3,6 +3,19 @@ import argparse
 import shapefile
 import json
 import subprocess
+import csv
+import sys
+import unicodecsv
+
+## try to get the path to the authority docs with the settings
+## otherwise, hardcode path to likely location
+try:
+    from crip import settings
+    auth_doc_directory = settings.CONCEPT_SCHEME_LOCATIONS
+except:
+    thisdir = os.path.dirname(sys.argv[0])
+    auth_doc_directory = os.path.join(thisdir,
+                     r"crip\source_data\concepts\authority_files")
 
 def getShapeType(reader):
     """ returns the shapetype of the input reader object """
@@ -89,17 +102,86 @@ def notepadOpen(inputfile):
     subprocess.call([notepad,inputfile])
     return
 
-def processSHP(infile):
-    """ process the input shapefile """
+def convertTypeValue(input_value,auth_dict):
+    """ takes the input value, and compares it with the authority document
+    dictionary.  if the value is a Preflabel, the corresponding conceptid
+    is returned.  if it is already a conceptid, that id is returned."""
 
-    outfile = os.path.splitext(infile)[0]+".arches"
-    relations = os.path.splitext(infile)[0]+".relations"
-    config = os.path.splitext(infile)[0]+".conflig"
+    if auth_dict.values().count(input_value) > 1:
+        raise Exception("""
+  There are two or more corresponding concept ids for this Preflabel.
+  You'll have to find the correct conceptid and apply it to the original
+  dataset.""")
 
+    conceptid = False
+    if input_value in auth_dict.keys():
+        conceptid = input_value
+
+    else:
+        for k,v in auth_dict.iteritems():
+            if v == input_value:
+                conceptid = k
+                break
+
+    if not conceptid:
+        raise Exception("""
+  The value listed below can not be reconciled with the Preflabels or
+  conceptids that are available for this entity type.  Double-check your
+  original data before trying again.
+    PROBLEM: {0}""".format(input_value))
+                        
+    return conceptid
+
+def getAuthDict(auth_doc_path):
+    """ makes a dictionary for the accepted values present in an autority
+    document """
+
+    auth_dict = {}
+    with open(auth_doc_path, 'rU') as f:
+        fields = ['conceptid','Preflabel','altlabels','ParentConceptid',
+                      'ConceptType','Provider']
+        rows = unicodecsv.DictReader(f, fieldnames=fields,
+            encoding='utf-8-sig', delimiter=',', restkey='ADDITIONAL',
+                                     restval='MISSING')
+        rows.next()
+        rownum = 2
+        for row in rows:
+            auth_dict[row['conceptid']] = row['Preflabel']
+            rownum += 1
+
+    return auth_dict
+
+def checkForAuthDoc(entity_name,auth_doc_directory):
+    """ checks the entity name against the authority documents, returns path
+    to document if there is one present, returns False if no authority document
+    exists for this entity. """
+    doc_name = entity_name[:-4] + "_AUTHORITY_DOCUMENT.csv"
+    doc_path = os.path.join(auth_doc_directory,doc_name)
+    if not os.path.isfile(doc_path):
+        raise Exception("""
+  This entity seems to need an authority document, yet no document was found.
+  Double check settings.CONCEPT_SCHEME_LOCATIONS and make sure an authority
+  document exists named:\n    {0}""".format(doc_name))
+
+    return doc_path
+
+def makeRelationsFile(arches_file):
+    """ makes an empty relations file to match the given arches file """
+
+    relations = os.path.splitext(arches_file)[0]+".relations"
     if not os.path.isfile(relations):
         with open(relations,"wb") as rel:
             rel.write("RESOURCEID_FROM|RESOURCEID_TO|START_DATE"\
                 "|END_DATE|RELATION_TYPE|NOTES\r\n")
+    return
+
+def processSHP(infile):
+    """ process the input shapefile """
+
+    outfile = os.path.splitext(infile)[0]+".arches"
+    config = os.path.splitext(infile)[0]+".conflig"
+    makeRelationsFile(outfile)
+    
     if not os.path.isfile(config):
         raise Exception("no conflig file")
     if os.path.isfile(outfile):
@@ -119,12 +201,15 @@ def processSHP(infile):
     f_index = makeFieldIndex(config_fields,shp)
 
     ## print intro summary
-    print "FROM:", os.path.basename(infile)
-    print "TO:", os.path.basename(outfile)
-    print "CONFLIGURATION:", os.path.basename(config)
-    print "\nresource type:", res_type
-    print "shape type:", shp_type
-    print "field mapping:\n  (shape field --> arches entity)"
+    print """FROM: {0}
+TO: {1}
+CONFLIGURATION: {2}
+
+resource type: {3}
+shape type: {4}
+field mapping:
+  (shape field --> arches entity)""".format(os.path.basename(infile),
+    os.path.basename(outfile),os.path.basename(config),res_type,shp_type)
     cnt = 1
     for group in groups:
         print "  ~ group", cnt
@@ -132,25 +217,39 @@ def processSHP(infile):
             print "      {0} --> {1}".format(k,v)
         cnt+=1
 
+    ## dictionary of created authority document dictionaries
+    auth_dict_dict = {}                
+
     resourceid = 100000
     groupid = 300000
 
     ## print file
     with open(outfile,"wb") as arches:
         arches.write("RESOURCEID|RESOURCETYPE|ATTRIBUTENAME|ATTRIBUTEVALUE|GROUPID\r\n")
-        for rec in shp.shapeRecords():
+        for rec in shp.shapeRecords()[:5]:
             wkt = getWKT(rec.shape,shp_type)
             arches.write("{0}|{1}|{2}|{3}|{4}\r\n".format(
                 resourceid,res_type,"SPATIAL_COORDINATES_GEOMETRY.E47",wkt,groupid))
                 
             for group in groups:
                 groupid+=1
-                for f_in, f_out in group.iteritems():
+                for f_in, entity in group.iteritems():
+
                     value = rec.record[f_index[f_in]]
                     if value.rstrip() == '':
                         continue
+
+                    ## if it's a type, it may need translation
+                    if ".E55" in entity:
+
+                        auth_path = checkForAuthDoc(entity,auth_doc_directory)
+                        if not entity in auth_dict_dict.keys():
+                            auth_dict_dict[entity] = getAuthDict(auth_path)
+                        auth_dict = auth_dict_dict[entity]
+                        value = convertTypeValue(value,auth_dict)
+
                     arches.write("{0}|{1}|{2}|{3}|{4}\r\n".format(
-                        resourceid,res_type,f_out,value,groupid))
+                        resourceid,res_type,entity,value,groupid))
             groupid+=1
             resourceid+=1
 
@@ -173,8 +272,8 @@ augmented version of the original .config  format) to handle field mapping.""",
 
 parser.add_argument("shapefile",help="path to shapefile")
 
-parser.add_argument("-of",dest="openup",default=True,
-                    help="open output file on completion (default=True)")
+parser.add_argument("-of",dest="openup",action="store_true",
+                    help="open output file on completion (default=TRUE)")
 
 args = parser.parse_args()
 
