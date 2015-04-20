@@ -8,10 +8,10 @@ The CRIP is an adaptation of the Heritage Inventory Package (HIP), developed for
 
 - The ability to add an "alternate" color scheme to any layer instance.  This was added to support the ability to toggle transparent backgrounds on some historic maps, and allow alternate colors for Sanborn map overlays and the relief basemap.
 
-- A utility for converting shapefiles to .arches pipe-delimited .csv files in preparation for loading files.  This utility is called "shp2arches".  It has extend support for authority document validation, so the user's shapefile may list a value's "conceptid" or "Preflabel".  It's a python script in the main app folder, and can be run from the command line like so:
+- A utility for converting shapefiles to .arches pipe-delimited .csv files in preparation for loading files.  This utility is called "shp2arches".  It has extended support for authority document validation, so the user's shapefile may list a value's "conceptid" or "Preflabel".  It's a python script in the main app folder, and can be run from the command line like so:
 
-    $: python shp2arches path/to/shapefile
-    
+        $: python shp2arches.py path/to/shapefile
+
 - Basic modifications to authority documents to reflect the types of heritage resources found in the CRNHA
 
 To install this app with Arches v3:
