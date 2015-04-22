@@ -142,3 +142,7 @@ http://stackoverflow.com/questions/20547819/vertical-align-with-bootstrap-3
     vertical-align: middle;
     float: none;
 }
+
+.arches-logo{
+    height: 28px
+}
