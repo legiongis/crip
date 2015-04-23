@@ -236,12 +236,12 @@
 
                                                                         <div class="">
 
-                                                                            <!-- Status Code form -->
+                                                                            <!-- Elegibility Criteria form -->
                                                                             <div class="row">
                                                                                 <div class="col-xs-12">
                                                                                     <div class="form-group" style="width: 100%;">
 
-                                                                                        <!-- Threats Input-->   
+                                                                                        <!-- Elegibility Criteria Input-->   
                                                                                         <h5 class="section-headline margin-bottom-5">Eligibility Criteria</h5>  
                                                                                         <input style="width:80%; display:inline-block;" class="select2 arches-select2-crud-form name-type designation" data-bind="select2: {value: getEditedNode('ELIGIBILITY_REQUIREMENT_TYPE.E55', 'value'),  placeholder: '{% trans "Eligibility" %}', dataKey: 'ELIGIBILITY_REQUIREMENT_TYPE.E55'}">&nbsp;&nbsp;
 
@@ -254,7 +254,7 @@
                                                                             </div>
                                                                             <!-- End Status form -->
 
-                                                                            <!-- User's Selected Status Codes -->
+                                                                            <!-- User's Elegibility Criteria -->
                                                                             <div class="row">
                                                                                 <div class="col-xs-12">
                                                                                     <div class="margin-left-5">
@@ -274,7 +274,7 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <!-- End User's Selected Status Codes -->
+                                                                            <!-- End User's Selected Elegibility Criteria -->
 
                                                                         </div>
 
@@ -292,7 +292,7 @@
 
                                                                         <div class="">
 
-                                                                            <!-- Status Code form -->
+                                                                            <!-- Integrity Criteria form -->
                                                                             <div class="row">
                                                                                 <div class="col-xs-12">
                                                                                     <div class="form-group" style="width: 100%;">
@@ -308,9 +308,9 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <!-- End Status form -->
+                                                                            <!-- End Integrity Criteria form -->
 
-                                                                            <!-- User's Selected Status Codes -->
+                                                                            <!-- User's Selected Integrity Criteria -->
                                                                             <div class="row">
                                                                                 <div class="col-xs-12">
                                                                                     <div class="margin-left-5">
@@ -330,7 +330,7 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <!-- End User's Selected Status Codes -->
+                                                                            <!-- End User's Selected Integrity Criteria -->
 
                                                                         </div>
 
@@ -429,7 +429,7 @@
 
                                                 <dl class="margin-bottom-10">   
                                                     <dt>
-                                                        <h5 class="section-headline" style="margin-top: 20px;">You entered:</h5>
+                                                        <h5 class="section-headline" style="margin-top: 20px;">You've entered:</h5>
                                                     </dt>
                                                 </dl>
 
@@ -460,14 +460,14 @@
                                                     <dl id="eligibility-summary-section">   
                                                         <dt class="arches-report-header">Eligibility</dt>
                                                         <div data-bind="foreach: getBranchLists()">
-                                                            <span data-bind="text: nodes.get('ELIGIBILITY_REQUIREMENT_TYPE.E55', 'value')" style="padding-right:2px;"></span><br>
+                                                            <span data-bind="text: nodes.get('ELIGIBILITY_REQUIREMENT_TYPE.E55', 'label')" style="padding-right:2px;"></span><br>
                                                         </div>
                                                     </dl>
 
                                                     <dl id="integrity-summary-section">   
                                                         <dt class="arches-report-header">Integrity</dt>
                                                         <div data-bind="foreach: getBranchLists()">
-                                                            <span data-bind="text: nodes.get('INTEGRITY_TYPE.E55', 'value')" style="padding-right:2px;"></span><br>
+                                                            <span data-bind="text: nodes.get('INTEGRITY_TYPE.E55', 'label')" style="padding-right:2px;"></span><br>
                                                         </div>
                                                     </dl>
 <!--
