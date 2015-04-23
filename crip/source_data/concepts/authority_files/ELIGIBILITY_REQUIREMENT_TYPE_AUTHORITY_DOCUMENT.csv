@@ -1,6 +1,5 @@
 conceptid,PrefLabel,AltLabels,ParentConceptid,ConceptType,Provider
-Eligibility Type:845,"Is associated with an event or series of events important in the formation, settlement or development of Eagle Rock",,ELIGIBILITY_REQUIREMENT_TYPE_AUTHORITY_DOCUMENT.csv,index,GCI
-Eligibility Type:1299,More research needed,,ELIGIBILITY_REQUIREMENT_TYPE_AUTHORITY_DOCUMENT.csv,index,GCI
-Eligibility Type:1345,No Eligibility Standards checked,,ELIGIBILITY_REQUIREMENT_TYPE_AUTHORITY_DOCUMENT.csv,index,GCI
-Eligibility Type:1586,Represents a resource dating from the pre-consolidation period of Eagle Rock,,ELIGIBILITY_REQUIREMENT_TYPE_AUTHORITY_DOCUMENT.csv,index,GCI
-Eligibility Type:1613,Resource does not meet Eligibility Standards,,ELIGIBILITY_REQUIREMENT_TYPE_AUTHORITY_DOCUMENT.csv,index,GCI
+Eligibility Type:1,Criterion A - Association with historic events,,ELIGIBILITY_REQUIREMENT_TYPE_AUTHORITY_DOCUMENT.csv,index,CRNHA
+Eligibility Type:2,Criterion B - Association with significant persons,,ELIGIBILITY_REQUIREMENT_TYPE_AUTHORITY_DOCUMENT.csv,index,CRNHA
+Eligibility Type:3,Criterion C - Embodies characteristics of an era or style,,ELIGIBILITY_REQUIREMENT_TYPE_AUTHORITY_DOCUMENT.csv,index,CRNHA
+Eligibility Type:4,Criterion D - May yield historic or prehistoric information,,ELIGIBILITY_REQUIREMENT_TYPE_AUTHORITY_DOCUMENT.csv,index,CRNHA
