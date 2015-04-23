@@ -31,7 +31,7 @@
             </div>
         </div>
 
-        <!-- Evaluations -->
+        <!-- Condition Assessements-->
         <div class="row margin-top-minus-5 margin-bottom-10" id="current-items" style="display: none;" data-bind="foreach: data.data, visible: true">
             <div class="col-xs-12">
 
@@ -91,17 +91,7 @@
                             <span data-bind="html: 'no entries'"></span>
                             </dd>
                     </dl>
-                    
-                    <dl>   
-                        <dt class="arches-evaluation-header">Significance</dt>
-                            <dd data-bind="foreach: $data['SIGNIFICANCE_TYPE.E55'].branch_lists" class="arches-evaluation-content">
-                            <span data-bind="text: nodes[0].label"></span><br>
-                            </dd>
-                            <dd class="arches-evaluation-content" data-bind="ifnot: $data['SIGNIFICANCE_TYPE.E55'].branch_lists.length > 0">
-                            <span data-bind="html: 'no entries'"></span>
-                            </dd>
-                    </dl>
-                    <!--
+<!--
                     <dl>   
                         <dt class="arches-evaluation-header">Status Codes</dt>
                             <dd data-bind="foreach: $data['STATUS.E55'].branch_lists" class="arches-evaluation-content">
@@ -111,7 +101,7 @@
                             <span data-bind="html: 'no entries'"></span>
                             </dd>
                     </dl>
-                    -->
+-->
                 </div>
             </div>
         </div>
@@ -141,13 +131,13 @@
                                                 <li data-target="#step2" style="width: 25%">
                                                     <a href="#tab2" data-toggle="tab"> <span class="step">2</span> <span class="title">{% trans "Part 2: Eligibility/Integrity" %}</span> </a>
                                                 </li>
-                                                <!--
+<!--                                                
                                                 <li data-target="#step3" style="width: 25%">
                                                     <a href="#tab3" data-toggle="tab"> <span class="step">3</span> <span class="title">{% trans "Part 3: Status" %}</span> </a>
                                                 </li>
-                                                -->
-                                                <li data-target="#step3" style="width: 25%">
-                                                    <a href="#tab3" data-toggle="tab"> <span class="step">3</span> <span class="title">{% trans "Part 3: Review and Save" %}</span> </a>
+-->
+                                                <li data-target="#step4" style="width: 25%">
+                                                    <a href="#tab4" data-toggle="tab"> <span class="step">4</span> <span class="title">{% trans "Part 4: Review and Save" %}</span> </a>
                                                 </li>
                                             </ul>
                                             <div class="clearfix"></div>
@@ -195,7 +185,7 @@
                                                             </dd>
                                                             <!-- End Form -->
                                                         </dl>
-                                                    </div>             
+                                                    </div>
                                                     <div id="description-section">
                                                         <dl>   
                                                             <dt>
@@ -225,11 +215,11 @@
                                             <!-- Tab 2: Eligibility and Integrity -->
                                             <div class="tab-pane" id="tab2" style="min-height: 330px;">
                                                 <br>
-                                                <h3 class="margin-bottom-5"><strong>Part 2</strong> Eligibility, Integrity, and Significance</h3>
+                                                <h3 class="margin-bottom-5"><strong>Part 2</strong> Eligibility and Integrity</h3>
 
                                                 <div class="alert alert-info fade in">
                                                     <i class="fa-fw fa fa-info"></i>
-                                                    Select all the eligibility, integrity, and significance criteria for this resource
+                                                    Select all the eligibility and integrity criteria for this resource
                                                 </div>
 
                                                 <dl> 
@@ -246,12 +236,12 @@
 
                                                                         <div class="">
 
-                                                                            <!-- Elegibility form -->
+                                                                            <!-- Status Code form -->
                                                                             <div class="row">
                                                                                 <div class="col-xs-12">
                                                                                     <div class="form-group" style="width: 100%;">
 
-                                                                                        <!-- Elegibility Input-->   
+                                                                                        <!-- Threats Input-->   
                                                                                         <h5 class="section-headline margin-bottom-5">Eligibility Criteria</h5>  
                                                                                         <input style="width:80%; display:inline-block;" class="select2 arches-select2-crud-form name-type designation" data-bind="select2: {value: getEditedNode('ELIGIBILITY_REQUIREMENT_TYPE.E55', 'value'),  placeholder: '{% trans "Eligibility" %}', dataKey: 'ELIGIBILITY_REQUIREMENT_TYPE.E55'}">&nbsp;&nbsp;
 
@@ -262,9 +252,9 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <!-- End Elegibility form -->
+                                                                            <!-- End Status form -->
 
-                                                                            <!-- User's Selected Elegibility -->
+                                                                            <!-- User's Selected Status Codes -->
                                                                             <div class="row">
                                                                                 <div class="col-xs-12">
                                                                                     <div class="margin-left-5">
@@ -284,7 +274,7 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <!-- End User's Elegibility Codes -->
+                                                                            <!-- End User's Selected Status Codes -->
 
                                                                         </div>
 
@@ -348,62 +338,6 @@
                                                                     <!-- End Form -->
                                                                 </dl>
                                                             </div>
-                                                            
-                                                            <!-- Significance form -->
-                                                            <div id="significance-section">
-                                                                <dl>   
-
-                                                                    <!-- Form -->
-                                                                    <dd class="">
-
-                                                                        <div class="">
-
-                                                                            <!-- Significance form -->
-                                                                            <div class="row">
-                                                                                <div class="col-xs-12">
-                                                                                    <div class="form-group" style="width: 100%;">
-
-                                                                                        <!-- Significance Input-->   
-                                                                                        <h5 class="section-headline margin-bottom-5">Significance Labels</h5>  
-                                                                                        <input style="width:80%; display:inline-block;" class="select2 arches-select2-crud-form name-type designation" data-bind="select2: {value: getEditedNode('SIGNIFICANCE_TYPE.E55', 'value'),  placeholder: '{% trans "Significnace" %}', dataKey: 'SIGNIFICANCE_TYPE.E55'}">&nbsp;&nbsp;
-
-                                                                                        <!-- Add Button -->
-                                                                                        {% include 'views/components/add-item-button.htm' %}
-                                                                                        <!-- End Add Button -->
-
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <!-- End Significance form -->
-
-                                                                            <!-- User's Significance Labels -->
-                                                                            <div class="row">
-                                                                                <div class="col-xs-12">
-                                                                                    <div class="margin-left-5">
-                                                                                        <dl class="margin-bottom-10"> 
-
-                                                                                            <dd class="margin-left-10 margin-top-5" style="display: none;" data-bind="visible: true">
-                                                                                                <div data-bind="visible: getBranchLists().length == 0" class="txt-color-blue">{% trans "No significance labels selected" %}</div>   
-
-                                                                                                <div data-bind="foreach: getBranchLists()">
-                                                                                                    <div class="arches-crud-record">
-                                                                                                        <a href="javascript:void(0)" class="arches-CRUD-child" title="Delete this significance label"><i data-bind="click: $parent.deleteItem.bind($parent)" class="arches-CRUD-delete fa fa-times-circle"></i></a>
-                                                                                                        <a href="javascript:void(0)" class="arches-CRUD-child arches-CRUD-edit" data-bind="click: $parent.editItem.bind($parent)" title="{% trans "Edit this significance label" %}"><span data-bind="text: nodes.get('SIGNIFICANCE_TYPE.E55', 'label')" style="padding-right:2px;"></span></a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </dd>
-                                                                                        </dl>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <!-- End User's Selected Significance Labels -->
-
-                                                                        </div>
-
-                                                                    </dd>
-                                                                    <!-- End Form -->
-                                                                </dl>
-                                                            </div>
 
                                                         </div>
                                                     </dd>
@@ -411,7 +345,7 @@
                                             </div>
 
 
-                                            <!-- Tab 3: Resource Status 
+                                            <!-- Tab 3: Resource Status
                                             <div class="tab-pane" id="tab3" style="min-height: 330px;">
                                                 <div id="status-section">
                                                     <br>
@@ -424,24 +358,24 @@
 
                                                     <dl>   
 
-                                                        <!-- Form 
+                                                        <!-- Form
                                                         <dd class="">
 
                                                             <div class="">
 
-                                                                <!-- Status Code form
+                                                                <!-- Status Code form 
                                                                 <div class="row">
                                                                     <div class="col-xs-12">
 
                                                                         <form class="form-inline arches-form" role="form">
                                                                             <div class="form-group" style="width: 100%;">
 
-                                                                                <!-- Threats Input 
+                                                                                <!-- Threats Input
                                                                                 <h5 class="section-headline margin-bottom-5">Status</h5>  
                                                                                 <input style="width:80%; display:inline-block;" class="select2 arches-select2-crud-form name-type designation" data-bind="select2: {value: getEditedNode('STATUS.E55', 'value'),  placeholder: '{% trans "Status" %}', dataKey: 'STATUS.E55'}">&nbsp;&nbsp;
 
-                                                                                <!-- Add Button 
-                                                                                
+                                                                                <!-- Add Button
+                                                                                emptied
                                                                                 <!-- End Add Button 
 
                                                                             </div>
@@ -476,10 +410,10 @@
                                                             </div>
 
                                                         </dd>
-                                                        <!-- End Form
+                                                        <!-- End Form 
                                                     </dl>
                                                 </div>
-                                            </div> -->
+                                            </div>
 
 
                                             <!-- Tab 3: Review and Save -->
@@ -536,22 +470,14 @@
                                                             <span data-bind="text: nodes.get('INTEGRITY_TYPE.E55', 'label')" style="padding-right:2px;"></span><br>
                                                         </div>
                                                     </dl>
-                                                    
-                                                    <dl id="significance-summary-section">   
-                                                        <dt class="arches-report-header">Significance</dt>
-                                                        <div data-bind="foreach: getBranchLists()">
-                                                            <span data-bind="text: nodes.get('SIGNIFICANCE_TYPE.E55', 'label')" style="padding-right:2px;"></span><br>
-                                                        </div>
-                                                    </dl>
-                                                    <!--
+<!--
                                                     <dl id="status-summary-section">   
                                                         <dt class="arches-report-header">Status Codes</dt>
                                                         <div data-bind="foreach: getBranchLists()">
                                                             <span data-bind="text: nodes.get('STATUS.E55', 'label')" style="padding-right:2px;"></span><br>
                                                         </div>
                                                     </dl>
-                                                    -->
-
+-->
                                                 </div>
                                             </div>
                                         </div>

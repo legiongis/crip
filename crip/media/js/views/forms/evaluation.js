@@ -74,14 +74,7 @@ define(['jquery',
             });
             ko.applyBindings(integritySection, this.$el.find('#integrity-summary-section')[0]);
             this.addBranchList(integritySection);
-            
-            var significanceSection = new BranchList({
-                el: this.$el.find('#significance-section')[0],
-                data: currentEditedAssessment,
-                dataKey: 'SIGNIFICANCE_TYPE.E55'
-            });
-            ko.applyBindings(significanceSection, this.$el.find('#significance-summary-section')[0]);
-            this.addBranchList(significanceSection);
+
 
             var descriptionSection = new BranchList({
                 el: this.$el.find('#description-section')[0],
@@ -98,7 +91,7 @@ define(['jquery',
                 dataKey: 'DATE_EVALUATED.E49',
                 singleEdit: true
             });
-            ko.applyBindings(dateEvaluatedSection, this.$el.find('#date-evaluated-summary-section')[0]);
+            ko.applyBindings(descriptionSection, this.$el.find('#date-evaluated-summary-section')[0]);
             this.addBranchList(dateEvaluatedSection);
 
             var evaluationAssignment = new BranchList({
@@ -106,7 +99,8 @@ define(['jquery',
                 dataKey: 'EVALUATION_CRITERIA_ASSIGNMENT.E13'
             });
             this.addBranchList(evaluationAssignment);
-        },
+
+            },
 
 
         validate: function(){
@@ -153,9 +147,6 @@ define(['jquery',
                     'branch_lists': []
                 },
                 'INTEGRITY_TYPE.E55': {
-                    'branch_lists': []
-                },
-                'SIGNIFICANCE_TYPE.E55': {
                     'branch_lists': []
                 },
                 'REASONS.E62': {
