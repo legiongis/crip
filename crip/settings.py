@@ -11,7 +11,7 @@ INSTALLED_APPS = INSTALLED_APPS + (PACKAGE_NAME,)
 STATICFILES_DIRS = (os.path.join(PACKAGE_ROOT, 'media'),) + STATICFILES_DIRS
 TEMPLATE_DIRS = (os.path.join(PACKAGE_ROOT, 'templates'),os.path.join(PACKAGE_ROOT, 'templatetags')) + TEMPLATE_DIRS
 
-RESOURCE_MODEL = {'default': 'crip.models.resource.Resource'}
+#RESOURCE_MODEL = {'default': 'crip.models.resource.Resource'}
 
 DEFAULT_MAP_X = -10362191
 DEFAULT_MAP_Y = 3731083 
