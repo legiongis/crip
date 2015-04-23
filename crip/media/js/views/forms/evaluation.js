@@ -106,8 +106,7 @@ define(['jquery',
                 dataKey: 'EVALUATION_CRITERIA_ASSIGNMENT.E13'
             });
             this.addBranchList(evaluationAssignment);
-
-            },
+        },
 
 
         validate: function(){
