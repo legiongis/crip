@@ -10,8 +10,7 @@ INSTALLED_APPS = INSTALLED_APPS + (PACKAGE_NAME,)
 STATICFILES_DIRS = (os.path.join(PACKAGE_ROOT, 'media'),) + STATICFILES_DIRS
 TEMPLATE_DIRS = (os.path.join(PACKAGE_ROOT, 'templates'),os.path.join(PACKAGE_ROOT, 'templatetags')) + TEMPLATE_DIRS
 
-
-#RESOURCE_MODEL = {'default': 'crip.models.resource.Resource'}
+RESOURCE_MODEL = {'default': 'crip.models.resource.Resource'}
 
 
 DEFAULT_MAP_X = -10362191
@@ -64,8 +63,8 @@ MAP_MAX_ZOOM = 20
 #         }
 #     }
 
-
-#GEOCODING_PROVIDER = ''
+GEOCODING_PROVIDER = 'arches.app.utils.bing_geocoder'
+BING_KEY = "AlBL1IuDdvcboF7cWajeIchjXkr7j2sA_oTYElH_ooYyx6115-GoenKljGJfDopa"
 
 RESOURCE_GRAPH_LOCATIONS = (
      # Put strings here, like "/home/data/resource_graphs" or "C:/data/resource_graphs".
