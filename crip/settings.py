@@ -1,6 +1,7 @@
 import os
 import inspect
 from arches_hip.settings import *
+from django.utils.translation import ugettext as _
 
 PACKAGE_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 PACKAGE_NAME = PACKAGE_ROOT.split(os.sep)[-1]
@@ -146,9 +147,7 @@ RESOURCE_GRAPH_LOCATIONS = (
      # Always use forward slashes, even on Windows.
      # Don't forget to use absolute paths, not relative paths.
      os.path.join(PACKAGE_ROOT, 'source_data', 'resource_graphs'),
- )
-
-
+)
 
 CONCEPT_SCHEME_LOCATIONS = (
     # Put strings here, like "/home/data/authority_files" or "C:/data/authority_files".
