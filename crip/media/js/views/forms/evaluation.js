@@ -98,7 +98,7 @@ define(['jquery',
                 dataKey: 'DATE_EVALUATED.E49',
                 singleEdit: true
             });
-            ko.applyBindings(descriptionSection, this.$el.find('#date-evaluated-summary-section')[0]);
+            ko.applyBindings(dateEvaluatedSection, this.$el.find('#date-evaluated-summary-section')[0]);
             this.addBranchList(dateEvaluatedSection);
 
             var evaluationAssignment = new BranchList({
