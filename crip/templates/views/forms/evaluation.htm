@@ -31,7 +31,7 @@
             </div>
         </div>
 
-        <!-- Condition Assessements-->
+        <!-- Evaluations -->
         <div class="row margin-top-minus-5 margin-bottom-10" id="current-items" style="display: none;" data-bind="foreach: data.data, visible: true">
             <div class="col-xs-12">
 
@@ -81,16 +81,6 @@
                             <span data-bind="html: 'no entries'"></span>
                             </dd>
                     </dl>
-                    
-                    <dl>   
-                        <dt class="arches-evaluation-header">Significance</dt>
-                            <dd data-bind="foreach: $data['SIGNIFICANCE_TYPE.E55'].branch_lists" class="arches-evaluation-content">
-                            <span data-bind="text: nodes[0].label"></span><br>
-                            </dd>
-                            <dd class="arches-evaluation-content" data-bind="ifnot: $data['SIGNIFICANCE_TYPE.E55'].branch_lists.length > 0">
-                            <span data-bind="html: 'no entries'"></span>
-                            </dd>
-                    </dl>
 
                     <dl>   
                         <dt class="arches-evaluation-header">Integrity</dt>
@@ -101,7 +91,17 @@
                             <span data-bind="html: 'no entries'"></span>
                             </dd>
                     </dl>
-
+                    
+                    <dl>   
+                        <dt class="arches-evaluation-header">Significance</dt>
+                            <dd data-bind="foreach: $data['SIGNIFICANCE_TYPE.E55'].branch_lists" class="arches-evaluation-content">
+                            <span data-bind="text: nodes[0].label"></span><br>
+                            </dd>
+                            <dd class="arches-evaluation-content" data-bind="ifnot: $data['SIGNIFICANCE_TYPE.E55'].branch_lists.length > 0">
+                            <span data-bind="html: 'no entries'"></span>
+                            </dd>
+                    </dl>
+                    <!--
                     <dl>   
                         <dt class="arches-evaluation-header">Status Codes</dt>
                             <dd data-bind="foreach: $data['STATUS.E55'].branch_lists" class="arches-evaluation-content">
@@ -111,7 +111,7 @@
                             <span data-bind="html: 'no entries'"></span>
                             </dd>
                     </dl>
-
+                    -->
                 </div>
             </div>
         </div>
@@ -141,11 +141,13 @@
                                                 <li data-target="#step2" style="width: 25%">
                                                     <a href="#tab2" data-toggle="tab"> <span class="step">2</span> <span class="title">{% trans "Part 2: Eligibility/Integrity" %}</span> </a>
                                                 </li>
+                                                <!--
                                                 <li data-target="#step3" style="width: 25%">
                                                     <a href="#tab3" data-toggle="tab"> <span class="step">3</span> <span class="title">{% trans "Part 3: Status" %}</span> </a>
                                                 </li>
-                                                <li data-target="#step4" style="width: 25%">
-                                                    <a href="#tab4" data-toggle="tab"> <span class="step">4</span> <span class="title">{% trans "Part 4: Review and Save" %}</span> </a>
+                                                -->
+                                                <li data-target="#step3" style="width: 25%">
+                                                    <a href="#tab3" data-toggle="tab"> <span class="step">3</span> <span class="title">{% trans "Part 3: Review and Save" %}</span> </a>
                                                 </li>
                                             </ul>
                                             <div class="clearfix"></div>
@@ -409,7 +411,7 @@
                                             </div>
 
 
-                                            <!-- Tab 3: Resource Status -->
+                                            <!-- Tab 3: Resource Status 
                                             <div class="tab-pane" id="tab3" style="min-height: 330px;">
                                                 <div id="status-section">
                                                     <br>
@@ -422,34 +424,34 @@
 
                                                     <dl>   
 
-                                                        <!-- Form -->
+                                                        <!-- Form 
                                                         <dd class="">
 
                                                             <div class="">
 
-                                                                <!-- Status Code form -->
+                                                                <!-- Status Code form
                                                                 <div class="row">
                                                                     <div class="col-xs-12">
 
                                                                         <form class="form-inline arches-form" role="form">
                                                                             <div class="form-group" style="width: 100%;">
 
-                                                                                <!-- Threats Input-->   
+                                                                                <!-- Threats Input 
                                                                                 <h5 class="section-headline margin-bottom-5">Status</h5>  
                                                                                 <input style="width:80%; display:inline-block;" class="select2 arches-select2-crud-form name-type designation" data-bind="select2: {value: getEditedNode('STATUS.E55', 'value'),  placeholder: '{% trans "Status" %}', dataKey: 'STATUS.E55'}">&nbsp;&nbsp;
 
-                                                                                <!-- Add Button -->
+                                                                                <!-- Add Button 
                                                                                 {% include 'views/components/add-item-button.htm' %}
-                                                                                <!-- End Add Button -->
+                                                                                <!-- End Add Button 
 
                                                                             </div>
                                                                         </form>
 
                                                                     </div>
                                                                 </div>
-                                                                <!-- End Status form -->
+                                                                <!-- End Status form 
 
-                                                                <!-- User's Selected Status Codes -->
+                                                                <!-- User's Selected Status Codes 
                                                                 <div class="row">
                                                                     <div class="col-xs-12">
                                                                         <div class="margin-left-5">
@@ -469,19 +471,19 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <!-- End User's Selected Status Codes -->
+                                                                <!-- End User's Selected Status Codes 
 
                                                             </div>
 
                                                         </dd>
-                                                        <!-- End Form -->
+                                                        <!-- End Form
                                                     </dl>
                                                 </div>
-                                            </div>
+                                            </div> -->
 
 
-                                            <!-- Tab 4: Review and Save -->
-                                            <div class="tab-pane" id="tab4">
+                                            <!-- Tab 3: Review and Save -->
+                                            <div class="tab-pane" id="tab3">
                                                 <br>
                                                 <h3 class="margin-bottom-5"><strong>Review and Save</strong></h3>
 
@@ -541,13 +543,14 @@
                                                             <span data-bind="text: nodes.get('SIGNIFICANCE_TYPE.E55', 'label')" style="padding-right:2px;"></span><br>
                                                         </div>
                                                     </dl>
-
+                                                    <!--
                                                     <dl id="status-summary-section">   
                                                         <dt class="arches-report-header">Status Codes</dt>
                                                         <div data-bind="foreach: getBranchLists()">
                                                             <span data-bind="text: nodes.get('STATUS.E55', 'label')" style="padding-right:2px;"></span><br>
                                                         </div>
                                                     </dl>
+                                                    -->
 
                                                 </div>
                                             </div>
