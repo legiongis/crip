@@ -66,7 +66,6 @@ define(['jquery',
             ko.applyBindings(eligibilitySection, this.$el.find('#eligibility-summary-section')[0]);
             this.addBranchList(eligibilitySection);
 
-
             var integritySection = new BranchList({
                 el: this.$el.find('#integrity-section')[0],
                 data: currentEditedAssessment,
