@@ -83,7 +83,6 @@ define(['jquery',
             ko.applyBindings(significanceSection, this.$el.find('#significance-summary-section')[0]);
             this.addBranchList(significanceSection);
 
-
             var descriptionSection = new BranchList({
                 el: this.$el.find('#description-section')[0],
                 data: currentEditedAssessment,
