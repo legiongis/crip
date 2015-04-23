@@ -39,13 +39,13 @@ define(['jquery',
                 dataKey: 'EVALUATION_CRITERIA_ASSIGNMENT.E13'
             }));
 
-            // var statusSection = new BranchList({
-                // el: this.$el.find('#status-section')[0],
-                // data: currentEditedAssessment,
-                // dataKey: 'STATUS.E55'
-            // });
-            // ko.applyBindings(statusSection, this.$el.find('#status-summary-section')[0]);
-            // this.addBranchList(statusSection);
+            var statusSection = new BranchList({
+                el: this.$el.find('#status-section')[0],
+                data: currentEditedAssessment,
+                dataKey: 'STATUS.E55'
+            });
+            ko.applyBindings(statusSection, this.$el.find('#status-summary-section')[0]);
+            this.addBranchList(statusSection);
 
             var evaluationSection = new BranchList({
                 el: this.$el.find('#evaluation-section')[0],
@@ -66,6 +66,7 @@ define(['jquery',
             ko.applyBindings(eligibilitySection, this.$el.find('#eligibility-summary-section')[0]);
             this.addBranchList(eligibilitySection);
 
+
             var integritySection = new BranchList({
                 el: this.$el.find('#integrity-section')[0],
                 data: currentEditedAssessment,
@@ -73,14 +74,7 @@ define(['jquery',
             });
             ko.applyBindings(integritySection, this.$el.find('#integrity-summary-section')[0]);
             this.addBranchList(integritySection);
-            
-            var significanceSection = new BranchList({
-                el: this.$el.find('#significance-section')[0],
-                data: currentEditedAssessment,
-                dataKey: 'SIGNIFICANCE_TYPE.E55'
-            });
-            ko.applyBindings(significanceSection, this.$el.find('#significance-summary-section')[0]);
-            this.addBranchList(significanceSection);
+
 
             var descriptionSection = new BranchList({
                 el: this.$el.find('#description-section')[0],
@@ -146,16 +140,13 @@ define(['jquery',
                 'EVALUATION_CRITERIA_TYPE.E55': {
                     'branch_lists': []
                 },
-                // 'STATUS.E55': {
-                    // 'branch_lists': []
-                // },
+                'STATUS.E55': {
+                    'branch_lists': []
+                },
                 'ELIGIBILITY_REQUIREMENT_TYPE.E55': {
                     'branch_lists': []
                 },
                 'INTEGRITY_TYPE.E55': {
-                    'branch_lists': []
-                },
-                'SIGNIFICANCE_TYPE.E55': {
                     'branch_lists': []
                 },
                 'REASONS.E62': {

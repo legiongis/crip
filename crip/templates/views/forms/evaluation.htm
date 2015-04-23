@@ -91,17 +91,7 @@
                             <span data-bind="html: 'no entries'"></span>
                             </dd>
                     </dl>
-                    
-                    <dl>   
-                        <dt class="arches-evaluation-header">Significance</dt>
-                            <dd data-bind="foreach: $data['SIGNIFICANCE_TYPE.E55'].branch_lists" class="arches-evaluation-content">
-                            <span data-bind="text: nodes[0].label"></span><br>
-                            </dd>
-                            <dd class="arches-evaluation-content" data-bind="ifnot: $data['SIGNIFICANCE_TYPE.E55'].branch_lists.length > 0">
-                            <span data-bind="html: 'no entries'"></span>
-                            </dd>
-                    </dl>
-<!--
+
                     <dl>   
                         <dt class="arches-evaluation-header">Status Codes</dt>
                             <dd data-bind="foreach: $data['STATUS.E55'].branch_lists" class="arches-evaluation-content">
@@ -111,7 +101,7 @@
                             <span data-bind="html: 'no entries'"></span>
                             </dd>
                     </dl>
--->
+
                 </div>
             </div>
         </div>
@@ -135,19 +125,17 @@
                                     <div id="bootstrap-wizard-1" class="col-sm-12">
                                         <div class="form-bootstrapWizard">
                                             <ul class="bootstrapWizard form-wizard">
-                                                <li class="active" data-target="#step1" style="width: 33%">
+                                                <li class="active" data-target="#step1" style="width: 25%">
                                                     <a href="#tab1" data-toggle="tab"> <span class="step">1</span> <span class="title">{% trans "Part 1: Evaluation Criteria" %}</span> </a>
                                                 </li>
-                                                <li data-target="#step2" style="width: 33%">
+                                                <li data-target="#step2" style="width: 25%">
                                                     <a href="#tab2" data-toggle="tab"> <span class="step">2</span> <span class="title">{% trans "Part 2: Eligibility/Integrity" %}</span> </a>
                                                 </li>
-<!--                                                
                                                 <li data-target="#step3" style="width: 25%">
                                                     <a href="#tab3" data-toggle="tab"> <span class="step">3</span> <span class="title">{% trans "Part 3: Status" %}</span> </a>
                                                 </li>
--->
-                                                <li data-target="#step3" style="width: 33%">
-                                                    <a href="#tab3" data-toggle="tab"> <span class="step">3</span> <span class="title">{% trans "Part 3: Review and Save" %}</span> </a>
+                                                <li data-target="#step4" style="width: 25%">
+                                                    <a href="#tab4" data-toggle="tab"> <span class="step">4</span> <span class="title">{% trans "Part 4: Review and Save" %}</span> </a>
                                                 </li>
                                             </ul>
                                             <div class="clearfix"></div>
@@ -225,11 +213,11 @@
                                             <!-- Tab 2: Eligibility and Integrity -->
                                             <div class="tab-pane" id="tab2" style="min-height: 330px;">
                                                 <br>
-                                                <h3 class="margin-bottom-5"><strong>Part 2</strong> Eligibility, Integrity, Significance</h3>
+                                                <h3 class="margin-bottom-5"><strong>Part 2</strong> Eligibility and Integrity</h3>
 
                                                 <div class="alert alert-info fade in">
                                                     <i class="fa-fw fa fa-info"></i>
-                                                    Add all of the criteria that apply for this evaluation
+                                                    Select all the eligibility and integrity criteria for this resource
                                                 </div>
 
                                                 <dl> 
@@ -246,12 +234,12 @@
 
                                                                         <div class="">
 
-                                                                            <!-- Elegibility Criteria form -->
+                                                                            <!-- Status Code form -->
                                                                             <div class="row">
                                                                                 <div class="col-xs-12">
                                                                                     <div class="form-group" style="width: 100%;">
 
-                                                                                        <!-- Elegibility Criteria Input-->   
+                                                                                        <!-- Threats Input-->   
                                                                                         <h5 class="section-headline margin-bottom-5">Eligibility Criteria</h5>  
                                                                                         <input style="width:80%; display:inline-block;" class="select2 arches-select2-crud-form name-type designation" data-bind="select2: {value: getEditedNode('ELIGIBILITY_REQUIREMENT_TYPE.E55', 'value'),  placeholder: '{% trans "Eligibility" %}', dataKey: 'ELIGIBILITY_REQUIREMENT_TYPE.E55'}">&nbsp;&nbsp;
 
@@ -264,7 +252,7 @@
                                                                             </div>
                                                                             <!-- End Status form -->
 
-                                                                            <!-- User's Elegibility Criteria -->
+                                                                            <!-- User's Selected Status Codes -->
                                                                             <div class="row">
                                                                                 <div class="col-xs-12">
                                                                                     <div class="margin-left-5">
@@ -284,7 +272,7 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <!-- End User's Selected Elegibility Criteria -->
+                                                                            <!-- End User's Selected Status Codes -->
 
                                                                         </div>
 
@@ -302,7 +290,7 @@
 
                                                                         <div class="">
 
-                                                                            <!-- Integrity Criteria form -->
+                                                                            <!-- Status Code form -->
                                                                             <div class="row">
                                                                                 <div class="col-xs-12">
                                                                                     <div class="form-group" style="width: 100%;">
@@ -318,9 +306,9 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <!-- End Integrity Criteria form -->
+                                                                            <!-- End Status form -->
 
-                                                                            <!-- User's Selected Integrity Criteria -->
+                                                                            <!-- User's Selected Status Codes -->
                                                                             <div class="row">
                                                                                 <div class="col-xs-12">
                                                                                     <div class="margin-left-5">
@@ -340,64 +328,7 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <!-- End User's Selected Integrity Criteria -->
-
-                                                                        </div>
-
-                                                                    </dd>
-                                                                    <!-- End Form -->
-                                                                </dl>
-                                                            </div>
-                                                            <!-- End Integrity form -->
-                                                            
-                                                            <!-- Significance form -->
-                                                            <div id="significance-section">
-                                                                <dl>   
-
-                                                                    <!-- Form -->
-                                                                    <dd class="">
-
-                                                                        <div class="">
-
-                                                                            <!-- Significance form -->
-                                                                            <div class="row">
-                                                                                <div class="col-xs-12">
-                                                                                    <div class="form-group" style="width: 100%;">
-
-                                                                                        <!-- Threats Input-->   
-                                                                                        <h5 class="section-headline margin-bottom-5">Significance Categories</h5>  
-                                                                                        <input style="width:80%; display:inline-block;" class="select2 arches-select2-crud-form name-type designation" data-bind="select2: {value: getEditedNode('SIGNIFICANCE_TYPE.E55', 'value'),  placeholder: '{% trans "Significance" %}', dataKey: 'SIGNIFICANCE_TYPE.E55'}">&nbsp;&nbsp;
-
-                                                                                        <!-- Add Button -->
-                                                                                        {% include 'views/components/add-item-button.htm' %}
-                                                                                        <!-- End Add Button -->
-
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <!-- End Significance form-->
-
-                                                                            <!-- User's Selected Significance labels-->
-                                                                            <div class="row">
-                                                                                <div class="col-xs-12">
-                                                                                    <div class="margin-left-5">
-                                                                                        <dl class="margin-bottom-10"> 
-
-                                                                                            <dd class="margin-left-10 margin-top-5" style="display: none;" data-bind="visible: true">
-                                                                                                <div data-bind="visible: getBranchLists().length == 0" class="txt-color-blue">{% trans "No significance categories selected" %}</div>   
-
-                                                                                                <div data-bind="foreach: getBranchLists()">
-                                                                                                    <div class="arches-crud-record">
-                                                                                                        <a href="javascript:void(0)" class="arches-CRUD-child" title="Delete this significance category"><i data-bind="click: $parent.deleteItem.bind($parent)" class="arches-CRUD-delete fa fa-times-circle"></i></a>
-                                                                                                        <a href="javascript:void(0)" class="arches-CRUD-child arches-CRUD-edit" data-bind="click: $parent.editItem.bind($parent)" title="{% trans "Edit this significance category" %}"><span data-bind="text: nodes.get('SIGNIFICANCE_TYPE.E55', 'label')" style="padding-right:2px;"></span></a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </dd>
-                                                                                        </dl>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <!-- End User's Selected Significance Categories -->
+                                                                            <!-- End User's Selected Status Codes -->
 
                                                                         </div>
 
@@ -412,7 +343,7 @@
                                             </div>
 
 
-                                            <!-- Tab 3: Resource Status
+                                            <!-- Tab 3: Resource Status -->
                                             <div class="tab-pane" id="tab3" style="min-height: 330px;">
                                                 <div id="status-section">
                                                     <br>
@@ -425,34 +356,34 @@
 
                                                     <dl>   
 
-                                                        <!-- Form
+                                                        <!-- Form -->
                                                         <dd class="">
 
                                                             <div class="">
 
-                                                                <!-- Status Code form 
+                                                                <!-- Status Code form -->
                                                                 <div class="row">
                                                                     <div class="col-xs-12">
 
                                                                         <form class="form-inline arches-form" role="form">
                                                                             <div class="form-group" style="width: 100%;">
 
-                                                                                <!-- Threats Input
+                                                                                <!-- Threats Input-->   
                                                                                 <h5 class="section-headline margin-bottom-5">Status</h5>  
                                                                                 <input style="width:80%; display:inline-block;" class="select2 arches-select2-crud-form name-type designation" data-bind="select2: {value: getEditedNode('STATUS.E55', 'value'),  placeholder: '{% trans "Status" %}', dataKey: 'STATUS.E55'}">&nbsp;&nbsp;
 
-                                                                                <!-- Add Button
-                                                                                emptied
-                                                                                <!-- End Add Button 
+                                                                                <!-- Add Button -->
+                                                                                {% include 'views/components/add-item-button.htm' %}
+                                                                                <!-- End Add Button -->
 
                                                                             </div>
                                                                         </form>
 
                                                                     </div>
                                                                 </div>
-                                                                <!-- End Status form 
+                                                                <!-- End Status form -->
 
-                                                                <!-- User's Selected Status Codes 
+                                                                <!-- User's Selected Status Codes -->
                                                                 <div class="row">
                                                                     <div class="col-xs-12">
                                                                         <div class="margin-left-5">
@@ -472,19 +403,19 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <!-- End User's Selected Status Codes 
+                                                                <!-- End User's Selected Status Codes -->
 
                                                             </div>
 
                                                         </dd>
-                                                        <!-- End Form 
+                                                        <!-- End Form -->
                                                     </dl>
                                                 </div>
                                             </div>
 
 
-                                            <!-- Tab 3: Review and Save -->
-                                            <div class="tab-pane" id="tab3">
+                                            <!-- Tab 4: Review and Save -->
+                                            <div class="tab-pane" id="tab4">
                                                 <br>
                                                 <h3 class="margin-bottom-5"><strong>Review and Save</strong></h3>
 
@@ -496,7 +427,7 @@
 
                                                 <dl class="margin-bottom-10">   
                                                     <dt>
-                                                        <h5 class="section-headline" style="margin-top: 20px;">You've entered:</h5>
+                                                        <h5 class="section-headline" style="margin-top: 20px;">You entered:</h5>
                                                     </dt>
                                                 </dl>
 
@@ -537,21 +468,14 @@
                                                             <span data-bind="text: nodes.get('INTEGRITY_TYPE.E55', 'label')" style="padding-right:2px;"></span><br>
                                                         </div>
                                                     </dl>
-                                                    
-                                                    <dl id="significance-summary-section">   
-                                                        <dt class="arches-report-header">Significance</dt>
-                                                        <div data-bind="foreach: getBranchLists()">
-                                                            <span data-bind="text: nodes.get('SIGNIFICANCE_TYPE.E55', 'label')" style="padding-right:2px;"></span><br>
-                                                        </div>
-                                                    </dl>
-<!--
+
                                                     <dl id="status-summary-section">   
                                                         <dt class="arches-report-header">Status Codes</dt>
                                                         <div data-bind="foreach: getBranchLists()">
                                                             <span data-bind="text: nodes.get('STATUS.E55', 'label')" style="padding-right:2px;"></span><br>
                                                         </div>
                                                     </dl>
--->
+
                                                 </div>
                                             </div>
                                         </div>
