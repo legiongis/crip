@@ -81,6 +81,16 @@
                             <span data-bind="html: 'no entries'"></span>
                             </dd>
                     </dl>
+                    
+                    <dl>   
+                        <dt class="arches-evaluation-header">Significance</dt>
+                            <dd data-bind="foreach: $data['SIGNIFICANCE_TYPE.E55'].branch_lists" class="arches-evaluation-content">
+                            <span data-bind="text: nodes[0].label"></span><br>
+                            </dd>
+                            <dd class="arches-evaluation-content" data-bind="ifnot: $data['SIGNIFICANCE_TYPE.E55'].branch_lists.length > 0">
+                            <span data-bind="html: 'no entries'"></span>
+                            </dd>
+                    </dl>
 
                     <dl>   
                         <dt class="arches-evaluation-header">Integrity</dt>
