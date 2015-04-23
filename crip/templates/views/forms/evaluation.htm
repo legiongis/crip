@@ -194,66 +194,7 @@
                                                             <!-- End Form -->
                                                         </dl>
                                                     </div>
-                                                    <div>
-                                                        <dl>  
-                                                            <!-- NEW FORM significance form -->
-                                                            <!-- <div id="eligibility-section"> -->
-                                                            <div>
-                                                                <dl>   
-
-                                                                    <!-- Form -->
-                                                                    <dd class="">
-
-                                                                        <div class="">
-
-                                                                            <!-- Significance form -->
-                                                                            <div class="row">
-                                                                                <div class="col-xs-12">
-                                                                                    <div class="form-group" style="width: 100%;">
-
-                                                                                        <!-- Significance Input-->   
-                                                                                        <h5 class="section-headline margin-bottom-5">Significance</h5>  
-                                                                                        <input style="width:80%; display:inline-block;" class="select2 arches-select2-crud-form name-type designation" data-bind="select2: {value: getEditedNode('SIGNIFICANCE_TYPE.E55', 'value'),  placeholder: '{% trans "Significance" %}', dataKey: 'SIGNIFICANCE_TYPE.E55'}">&nbsp;&nbsp;
-
-                                                                                        <!-- Add Button -->
-                                                                                        {% include 'views/components/add-item-button.htm' %}
-                                                                                        <!-- End Add Button -->
-
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <!-- End Significance form -->
-
-                                                                            <!-- User's Selected Significance properties -->
-                                                                            <div class="row">
-                                                                                <div class="col-xs-12">
-                                                                                    <div class="margin-left-5">
-                                                                                        <dl class="margin-bottom-10"> 
-
-                                                                                            <dd class="margin-left-10 margin-top-5" style="display: none;" data-bind="visible: true">
-                                                                                                <div data-bind="visible: getBranchLists().length == 0" class="txt-color-blue">{% trans "No significance selected" %}</div>   
-
-                                                                                                <div data-bind="foreach: getBranchLists()">
-                                                                                                    <div class="arches-crud-record">
-                                                                                                        <a href="javascript:void(0)" class="arches-CRUD-child" title="Delete this eligibility criteria"><i data-bind="click: $parent.deleteItem.bind($parent)" class="arches-CRUD-delete fa fa-times-circle"></i></a>
-                                                                                                        <a href="javascript:void(0)" class="arches-CRUD-child arches-CRUD-edit" data-bind="click: $parent.editItem.bind($parent)" title="{% trans "Edit this significance label" %}"><span data-bind="text: nodes.get('SIGNIFICANCE_TYPE.E55', 'label')" style="padding-right:2px;"></span></a>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </dd>
-                                                                                        </dl>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <!-- End User's Selected Significance Terms -->
-
-                                                                        </div>
-
-                                                                    </dd>
-                                                                    <!-- End Form -->
-                                                                </dl>
-                                                            </div>
-                                                        </dl>
-                                                    </div>
+                                                    
                                                     <div id="description-section">
                                                         <dl>   
                                                             <dt>
@@ -406,6 +347,62 @@
                                                                     <!-- End Form -->
                                                                 </dl>
                                                             </div>
+                                                            
+                                                            <!-- Significance form -->
+                                                            <div id="significance-section">
+                                                                <dl>   
+
+                                                                    <!-- Form -->
+                                                                    <dd class="">
+
+                                                                        <div class="">
+
+                                                                            <!-- Significance form -->
+                                                                            <div class="row">
+                                                                                <div class="col-xs-12">
+                                                                                    <div class="form-group" style="width: 100%;">
+
+                                                                                        <!-- Significance Input-->   
+                                                                                        <h5 class="section-headline margin-bottom-5">Significance Labels</h5>  
+                                                                                        <input style="width:80%; display:inline-block;" class="select2 arches-select2-crud-form name-type designation" data-bind="select2: {value: getEditedNode('SIGNIFICANCE_TYPE.E55', 'value'),  placeholder: '{% trans "Significnace" %}', dataKey: 'SIGNIFICANCE_TYPE.E55'}">&nbsp;&nbsp;
+
+                                                                                        <!-- Add Button -->
+                                                                                        {% include 'views/components/add-item-button.htm' %}
+                                                                                        <!-- End Add Button -->
+
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- End Significance form -->
+
+                                                                            <!-- User's Significance Labels -->
+                                                                            <div class="row">
+                                                                                <div class="col-xs-12">
+                                                                                    <div class="margin-left-5">
+                                                                                        <dl class="margin-bottom-10"> 
+
+                                                                                            <dd class="margin-left-10 margin-top-5" style="display: none;" data-bind="visible: true">
+                                                                                                <div data-bind="visible: getBranchLists().length == 0" class="txt-color-blue">{% trans "No significance labels selected" %}</div>   
+
+                                                                                                <div data-bind="foreach: getBranchLists()">
+                                                                                                    <div class="arches-crud-record">
+                                                                                                        <a href="javascript:void(0)" class="arches-CRUD-child" title="Delete this integrity criteria"><i data-bind="click: $parent.deleteItem.bind($parent)" class="arches-CRUD-delete fa fa-times-circle"></i></a>
+                                                                                                        <a href="javascript:void(0)" class="arches-CRUD-child arches-CRUD-edit" data-bind="click: $parent.editItem.bind($parent)" title="{% trans "Edit this significance label" %}"><span data-bind="text: nodes.get('SIGNIFICANCE_TYPE.E55', 'label')" style="padding-right:2px;"></span></a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </dd>
+                                                                                        </dl>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- End User's Selected Significance Labels -->
+
+                                                                        </div>
+
+                                                                    </dd>
+                                                                    <!-- End Form -->
+                                                                </dl>
+                                                            </div>
 
                                                         </div>
                                                     </dd>
@@ -536,6 +533,13 @@
                                                         <dt class="arches-report-header">Integrity</dt>
                                                         <div data-bind="foreach: getBranchLists()">
                                                             <span data-bind="text: nodes.get('INTEGRITY_TYPE.E55', 'label')" style="padding-right:2px;"></span><br>
+                                                        </div>
+                                                    </dl>
+                                                    
+                                                    <dl id="significance-summary-section">   
+                                                        <dt class="arches-report-header">Significance</dt>
+                                                        <div data-bind="foreach: getBranchLists()">
+                                                            <span data-bind="text: nodes.get('SIGNIFICANCE_TYPE.E55', 'label')" style="padding-right:2px;"></span><br>
                                                         </div>
                                                     </dl>
 
