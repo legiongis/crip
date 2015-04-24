@@ -48,7 +48,7 @@
                                         <div class="margin-top-5 hidden-sm hidden-md hidden-lg"></div>
 
                                         <!-- Simple HTML Editor -->
-                                        <div class="arches-html-editor margin-top-5" style="width: 75%;">
+                                        <div class="arches-html-editor margin-top-5" style="width: 78%;">
                                             <div class="summernote" data-ph="enter optional description" data-bind="summernote: {value: getEditedNode('COMPONENT_DESCRIPTION.E62', 'value'), options:{}}"></div>
                                         </div>
 
@@ -97,7 +97,7 @@
                     </dd>
 
                     <dd class="margin-left-5" style="display: none;" data-bind="visible: true">
-                        <div data-bind="visible: getBranchLists().length == 0" class="txt-color-blue">{% trans "No Components Defined" %}</div>   
+                        <div data-bind="visible: getBranchLists().length == 0" class="txt-color-blue">{% trans "no components defined" %}</div>   
 
                         <div data-bind='foreach: getBranchLists()'>
                             <div class="arches-crud-record">
