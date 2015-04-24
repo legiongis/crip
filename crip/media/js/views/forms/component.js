@@ -17,16 +17,6 @@ define(['jquery',
                     return this.validateHasValues(nodes);
                 }
             }));
-
-            // this.addBranchList(new BranchList({
-                // el: this.$el.find('#modification-section')[0],
-                // data: this.data,
-                // dataKey: 'MODIFICATION_EVENT.E11',
-                // validateBranch: function (nodes) {
-                    // return true;
-                    // return this.validateHasValues(nodes);
-                // }
-            // }));
         }
     });
 });
