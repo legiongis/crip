@@ -39,8 +39,8 @@
                                     " data-bind="select2: {value: getEditedNode('MATERIAL.E57', 'value'), placeholder: '{% trans "material" %}', multiple: false, dataKey: 'MATERIAL.E57'}"></input>
                                     
                                         {% include 'views/components/add-item-button.htm' %}
-                                        <br>
-                                        <input style="width:75%; display: inline-block;" class="select2 arches-select2-crud-form name-type hidden-xs" id="resource-measurement-unit" data-bind="select2: {value: getEditedNode('DESCRIPTION_TYPE.E55', 'value'), placeholder: 'Type', dataKey: 'DESCRIPTION_TYPE.E55'}"></input>
+                                        
+                                        <input style="width:75%; display: inline-block; padding-top:10px;" class="select2 arches-select2-crud-form name-type hidden-xs" id="resource-measurement-unit" data-bind="select2: {value: getEditedNode('DESCRIPTION_TYPE.E55', 'value'), placeholder: 'Type', dataKey: 'DESCRIPTION_TYPE.E55'}"></input>
 
                                         <!-- Spacer (for xs screens) -->
                                         <div class="margin-top-5 hidden-sm hidden-md hidden-lg"></div>                                    
@@ -103,8 +103,8 @@
                                 <a href="javascript:void(0)" class="arches-CRUD-child arches-CRUD-edit" data-bind='click: $parent.editItem.bind($parent)' title="Edit this record">
                                     <span data-bind='text: nodes.get("COMPONENT_TYPE.E55", "label")' style="padding-right:2px;"></span><span class="text-muted arches-crud-type-identifier"> ({% trans "Component" %}),</span>
                                     <span data-bind='text: nodes.get("CONSTRUCTION_TECHNIQUE.E55", "label")' style="padding-right:2px;"></span><span class="text-muted arches-crud-type-identifier"> ({% trans "Technique" %}),</span>
-                                    <span data-bind='text: nodes.get("MATERIAL.E57", "label")' style="padding-right:2px;"></span><span class="text-muted arches-crud-type-identifier"> ({% trans "Material" %}),</span>
-                                    <span data-bind='text: nodes.get("COMPONENT_DESCRIPTION.E62", "label")' style="padding-right:2px;"></span><span class="text-muted arches-crud-type-identifier"> ({% trans "Comments" %}),</span>
+                                    <span data-bind='text: nodes.get("MATERIAL.E57", "label")' style="padding-right:2px;"></span><span class="text-muted arches-crud-type-identifier"> ({% trans "Material" %}),</span><br>
+                                    <span data-bind='text: nodes.get("COMPONENT_TYPE.E62", "label")' style="padding-right:2px;"></span><span class="text-muted arches-crud-type-identifier"> ({% trans "Comments" %}),</span>
                                 </a>
                             </div>
                         </div>
