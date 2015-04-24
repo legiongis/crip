@@ -313,8 +313,8 @@ class ClassificationForm(ResourceForm):
         self.update_nodes('TO_DATE.E49', data)
         self.update_nodes('FROM_DATE.E49', data)
         self.update_nodes('HERITAGE_RESOURCE_USE_TYPE.E55', data)
-        self.update_nodes('CULTURAL_PERIOD.E55', data)
-        self.update_nodes('STYLE.E55', data)
+        #self.update_nodes('CULTURAL_PERIOD.E55', data)
+        #self.update_nodes('STYLE.E55', data)
         self.update_nodes('ANCILLARY_FEATURE_TYPE.E55', data)
         production_entities = self.resource.find_entities_by_type_id('PRODUCTION.E12')
 
@@ -343,8 +343,8 @@ class ClassificationForm(ResourceForm):
             'domains': {
                 'HERITAGE_RESOURCE_TYPE.E55': Concept().get_e55_domain('HERITAGE_RESOURCE_TYPE.E55'),
                 'HERITAGE_RESOURCE_USE_TYPE.E55' : Concept().get_e55_domain('HERITAGE_RESOURCE_USE_TYPE.E55'),
-                'CULTURAL_PERIOD.E55' : Concept().get_e55_domain('CULTURAL_PERIOD.E55'),
-                'STYLE.E55' : Concept().get_e55_domain('STYLE.E55'),
+                #'CULTURAL_PERIOD.E55' : Concept().get_e55_domain('CULTURAL_PERIOD.E55'),
+                #'STYLE.E55' : Concept().get_e55_domain('STYLE.E55'),
                 'ANCILLARY_FEATURE_TYPE.E55' : Concept().get_e55_domain('ANCILLARY_FEATURE_TYPE.E55')
             }
         }
@@ -362,18 +362,18 @@ class ClassificationForm(ResourceForm):
                 'HERITAGE_RESOURCE_USE_TYPE.E55': {
                     'branch_lists': self.get_nodes(entity, 'HERITAGE_RESOURCE_USE_TYPE.E55')
                 },
-                'CULTURAL_PERIOD.E55': {
-                    'branch_lists': self.get_nodes(entity, 'CULTURAL_PERIOD.E55')
-                },
+                # 'CULTURAL_PERIOD.E55': {
+                    # 'branch_lists': self.get_nodes(entity, 'CULTURAL_PERIOD.E55')
+                # },
                 'TO_DATE.E49': {
                     'branch_lists': to_date_nodes
                 },
                 'FROM_DATE.E49': {
                     'branch_lists': from_date_nodes
                 },
-                'STYLE.E55': {
-                    'branch_lists': self.get_nodes(entity, 'STYLE.E55')
-                },
+                # 'STYLE.E55': {
+                    # 'branch_lists': self.get_nodes(entity, 'STYLE.E55')
+                # },
                 'ANCILLARY_FEATURE_TYPE.E55': {
                     'branch_lists': self.get_nodes(entity, 'ANCILLARY_FEATURE_TYPE.E55')
                 },

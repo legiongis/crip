@@ -55,20 +55,20 @@ define(['jquery',
                     return this.validateHasValues(nodes);
                 }
             }));
-            this.addBranchList(new BranchList({
-                el: this.$el.find('#period-section')[0],
-                data: currentEditedClassification,
-                dataKey: 'CULTURAL_PERIOD.E55',
-                singleEdit: true
-            }));            
-            this.addBranchList(new BranchList({
-                el: this.$el.find('#style-section')[0],
-                data: currentEditedClassification,
-                dataKey: 'STYLE.E55',
-                validateBranch: function (nodes) {
-                    return this.validateHasValues(nodes);
-                }
-            }));     
+            // this.addBranchList(new BranchList({
+                // el: this.$el.find('#period-section')[0],
+                // data: currentEditedClassification,
+                // dataKey: 'CULTURAL_PERIOD.E55',
+                // singleEdit: true
+            // }));            
+            // this.addBranchList(new BranchList({
+                // el: this.$el.find('#style-section')[0],
+                // data: currentEditedClassification,
+                // dataKey: 'STYLE.E55',
+                // validateBranch: function (nodes) {
+                    // return this.validateHasValues(nodes);
+                // }
+            // }));     
             this.addBranchList(new BranchList({
                 el: this.$el.find('#to-date-section')[0],
                 data: currentEditedClassification,
