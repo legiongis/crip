@@ -2,7 +2,7 @@
 {% load i18n %}
 
 {% block form_content %}
-<!-- Modifications CRUD Form -->
+<!-- Descriptions CRUD Form -->
 <div id="description-section">
     <div class="row">
         <div class="col-xs-12">
@@ -50,7 +50,7 @@
             </div>
         </div>
     </div>
-    <!-- End Modifications CRUD -->
+    <!-- End Descriptions CRUD -->
 
     <!-- Description Records -->
     <div class="row">
@@ -91,4 +91,52 @@
     </div>
 </div>
 <!-- End Description Records -->
+
+<!-- Eligibility form -->
+<div id="style-section">
+    <dl>   
+        <!-- Form -->
+        <dd class="">
+            <div class="">
+                <!-- Status Code form -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-group" style="width: 100%;">
+                            <!-- Threats Input-->   
+                            <h5 class="section-headline margin-bottom-5">Styles</h5>  
+                            <input style="width:80%; display:inline-block;" class="select2 arches-select2-crud-form name-type designation" data-bind="select2: {value: getEditedNode('STYLE.E55', 'value'),  placeholder: '{% trans "Styles" %}', dataKey: 'STYLE.E55'}">&nbsp;&nbsp;
+                            <!-- Add Button -->
+                            {% include 'views/components/add-item-button.htm' %}
+                            <!-- End Add Button -->
+                        </div>
+                    </div>
+                </div>
+                <!-- End Status form -->
+
+                <!-- User's Selected Status Codes -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="margin-left-5">
+                            <dl class="margin-bottom-10"> 
+
+                                <dd class="margin-left-10 margin-top-5" style="display: none;" data-bind="visible: true">
+                                    <div data-bind="visible: getBranchLists().length == 0" class="txt-color-blue">{% trans "No styles selected" %}</div>   
+
+                                    <div data-bind="foreach: getBranchLists()">
+                                        <div class="arches-crud-record">
+                                            <a href="javascript:void(0)" class="arches-CRUD-child" title="remove this style"><i data-bind="click: $parent.deleteItem.bind($parent)" class="arches-CRUD-delete fa fa-times-circle"></i></a>
+                                            <a href="javascript:void(0)" class="arches-CRUD-child arches-CRUD-edit" data-bind="click: $parent.editItem.bind($parent)" title="{% trans "Edit this style" %}"><span data-bind="text: nodes.get('STYLE.E55', 'label')" style="padding-right:2px;"></span></a>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <!-- End User's Selected Status Codes -->
+            </div>
+        </dd>
+        <!-- End Form -->
+    </dl>
+</div>
 {% endblock form_content %}

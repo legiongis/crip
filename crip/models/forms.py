@@ -221,7 +221,6 @@ class ComponentForm(ResourceForm):
    
     def update(self, data, files):
         self.update_nodes('COMPONENT.E18', data)
-        #self.update_nodes('MODIFICATION_EVENT.E11', data)
         return
 
     def update_nodes(self, entitytypeid, data):
@@ -255,21 +254,6 @@ class ComponentForm(ResourceForm):
 
         self.resource.trim()
 
-    # def load(self, lang):
-        # description_types = Concept().get_e55_domain('DESCRIPTION_TYPE.E55')
-        # try:
-            # default_description_type = description_types[2]
-            # if self.resource:
-                # self.data['DESCRIPTION.E62'] = {
-                    # 'branch_lists': self.get_nodes('DESCRIPTION.E62'),
-                    # 'domains': {'DESCRIPTION_TYPE.E55' : description_types},
-                    # 'defaults': {
-                        # 'DESCRIPTION_TYPE.E55': default_description_type['id'],
-                    # }
-                # }
-        # except IndexError:
-            # pass
-
     def load(self, lang):
         if self.resource:
 
@@ -279,17 +263,8 @@ class ComponentForm(ResourceForm):
                     'CONSTRUCTION_TECHNIQUE.E55': Concept().get_e55_domain('CONSTRUCTION_TECHNIQUE.E55'),
                     'MATERIAL.E57' : Concept().get_e55_domain('MATERIAL.E57'),
                     'COMPONENT_TYPE.E55' : Concept().get_e55_domain('COMPONENT_TYPE.E55'),
-                    #'COMPONENT_DESCRIPTION.E62' : Concept().get_e55_domain('COMPONENT_DESCRIPTION.E62'),
-                    #'DESCRIPTION_TYPE.E55' : Concept().get_e55_domain('DESCRIPTION_TYPE.E55'),
                 }
             }
-##            self.data['MODIFICATION_EVENT.E11'] = {
-##                'branch_lists': self.get_nodes('MODIFICATION_EVENT.E11'),
-##                'domains': {
-##                    'MODIFICATION_TYPE.E55': Concept().get_e55_domain('MODIFICATION_TYPE.E55'),
-##                }
-##            }
-
 
 class ClassificationForm(ResourceForm):
     baseentity = None
@@ -474,21 +449,31 @@ class DescriptionForm(ResourceForm):
 
     def update(self, data, files):
         self.update_nodes('DESCRIPTION.E62', data)
+        self.update_nodes('MODIFICATION_EVENT.E11', data)
+        self.update_nodes('STYLE.E55', data)
+        self.update_nodes('CULTURAL_PERIOD.E55', data)
 
     def load(self, lang):
         description_types = Concept().get_e55_domain('DESCRIPTION_TYPE.E55')
-        try:
-            default_description_type = description_types[2]
-            if self.resource:
-                self.data['DESCRIPTION.E62'] = {
-                    'branch_lists': self.get_nodes('DESCRIPTION.E62'),
-                    'domains': {'DESCRIPTION_TYPE.E55' : description_types},
-                    'defaults': {
-                        'DESCRIPTION_TYPE.E55': default_description_type['id'],
-                    }
+        default_description_type = description_types[0]
+        
+        self.data = {
+            'data': [],
+            'domains': {
+                'CULTURAL_PERIOD.E55' : Concept().get_e55_domain('CULTURAL_PERIOD.E55'),
+                'STYLE.E55' : Concept().get_e55_domain('STYLE.E55'),
+            }
+        }        
+        
+        if self.resource:
+            self.data['DESCRIPTION.E62'] = {
+                'branch_lists': self.get_nodes('DESCRIPTION.E62'),
+                'domains': {'DESCRIPTION_TYPE.E55' : description_types},
+                'defaults': {
+                    'DESCRIPTION_TYPE.E55': default_description_type['id'],
                 }
-        except IndexError:
-            pass
+            }       
+            
 
 
 class MeasurementForm(ResourceForm):
