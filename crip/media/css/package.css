@@ -145,6 +145,6 @@
 /*
 http://stackoverflow.com/questions/9093424/placeholder-in-contenteditable-focus-event-issue/18368720#18368720
 */
-arches-html-editor:empty:not(:focus):before{
+summernote:empty:not(:focus):before{
     content:attr(data-ph)
 }
