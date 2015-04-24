@@ -115,7 +115,7 @@
                                 <span data-bind="html: 'no entries'"></span>
                             </dd>
                         </dl>
-
+<!--
                         <dl>   
                             <dt class="arches-evaluation-header">{% trans "Styles" %}</dt>
                                 <dd data-bind="foreach: $data['STYLE.E55'].branch_lists" class="arches-evaluation-content">
@@ -125,7 +125,7 @@
                                 <span data-bind="html: 'no entries'"></span>
                             </dd>
                         </dl>
-
+-->
                     </div>
                 </div>
             </div>
@@ -157,7 +157,7 @@
                                                     <a href="#tab1" data-toggle="tab"> <span class="step">1</span> <span class="title">{% trans "Part 1: Summary" %}</span> </a>
                                                 </li>
                                                 <li data-target="#step2" style="width: 50%">
-                                                    <a href="#tab2" data-toggle="tab"> <span class="step">2</span> <span class="title">{% trans "Part 2: Styles and Related Features" %}</span> </a>
+                                                    <a href="#tab2" data-toggle="tab"> <span class="step">2</span> <span class="title">{% trans "Part 2: Related Features" %}</span> </a>
                                                 </li>
                                             </ul>
                                             <div class="clearfix"></div>
@@ -265,7 +265,7 @@
 
                                                 <div class="alert alert-info fade in">
                                                     <i class="fa-fw fa fa-info"></i>
-                                                    {% trans "Select this classification's related features and styles." %}
+                                                    {% trans "Add any related feature relevant to this classification (see also Components)" %}
                                                 </div>
 
                                                 <!-- Overall Condition, Date Observed -->
