@@ -451,19 +451,11 @@ class DescriptionForm(ResourceForm):
         self.update_nodes('DESCRIPTION.E62', data)
         #self.update_nodes('MODIFICATION_EVENT.E11', data)
         self.update_nodes('STYLE.E55', data)
-        #self.update_nodes('CULTURAL_PERIOD.E55', data)
+        self.update_nodes('CULTURAL_PERIOD.E55', data)
 
     def load(self, lang):
         description_types = Concept().get_e55_domain('DESCRIPTION_TYPE.E55')
         default_description_type = description_types[0]
-        
-        # self.data = {
-            # 'data': [],
-            # 'domains': {
-                #'CULTURAL_PERIOD.E55' : Concept().get_e55_domain('CULTURAL_PERIOD.E55'),
-                
-            # }
-        # }        
         
         if self.resource:
             self.data['DESCRIPTION.E62'] = {
@@ -477,9 +469,15 @@ class DescriptionForm(ResourceForm):
                 }
             }
             self.data['STYLE.E55'] = {
-                'branch_lists': self.get_nodes('STYLE.E62'),
+                'branch_lists': self.get_nodes('STYLE.E55'),
                 'domains': {
                     'STYLE.E55' : Concept().get_e55_domain('STYLE.E55'),
+                }               
+            }
+            self.data['CULTURAL_PERIOD.E55'] = {
+                'branch_lists': self.get_nodes('CULTURAL_PERIOD.E55'),
+                'domains': {
+                    'CULTURAL_PERIOD.E55' : Concept().get_e55_domain('CULTURAL_PERIOD.E55'),
                 }               
             }
            
