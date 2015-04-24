@@ -219,6 +219,9 @@ class ComponentForm(ResourceForm):
             'class': ComponentForm
         }
 
+    
+        
+        
     def update(self, data, files):
         self.update_nodes('COMPONENT.E18', data)
         #self.update_nodes('MODIFICATION_EVENT.E11', data)
@@ -255,6 +258,20 @@ class ComponentForm(ResourceForm):
 
         self.resource.trim()
 
+    # def load(self, lang):
+        # description_types = Concept().get_e55_domain('DESCRIPTION_TYPE.E55')
+        # try:
+            # default_description_type = description_types[2]
+            # if self.resource:
+                # self.data['DESCRIPTION.E62'] = {
+                    # 'branch_lists': self.get_nodes('DESCRIPTION.E62'),
+                    # 'domains': {'DESCRIPTION_TYPE.E55' : description_types},
+                    # 'defaults': {
+                        # 'DESCRIPTION_TYPE.E55': default_description_type['id'],
+                    # }
+                # }
+        # except IndexError:
+            # pass
 
     def load(self, lang):
         if self.resource:
@@ -265,7 +282,7 @@ class ComponentForm(ResourceForm):
                     'CONSTRUCTION_TECHNIQUE.E55': Concept().get_e55_domain('CONSTRUCTION_TECHNIQUE.E55'),
                     'MATERIAL.E57' : Concept().get_e55_domain('MATERIAL.E57'),
                     'COMPONENT_TYPE.E55' : Concept().get_e55_domain('COMPONENT_TYPE.E55'),
-                    'COMPONENT_DESCRIPTION.E62' : Concept().get_e55_domain('COMPONENT_DESCRIPTION.E62'),
+                    #'COMPONENT_DESCRIPTION.E62' : Concept().get_e55_domain('COMPONENT_DESCRIPTION.E62'),
                     'DESCRIPTION_TYPE.E55' : Concept().get_e55_domain('DESCRIPTION_TYPE.E55'),
                 }
             }
