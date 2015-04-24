@@ -449,7 +449,7 @@ class DescriptionForm(ResourceForm):
 
     def update(self, data, files):
         self.update_nodes('DESCRIPTION.E62', data)
-        self.update_nodes('MODIFICATION_EVENT.E11', data)
+        #self.update_nodes('MODIFICATION_EVENT.E11', data)
         self.update_nodes('STYLE.E55', data)
         #self.update_nodes('CULTURAL_PERIOD.E55', data)
 
@@ -470,13 +470,19 @@ class DescriptionForm(ResourceForm):
                 'branch_lists': self.get_nodes('DESCRIPTION.E62'),
                 'domains': {
                     'DESCRIPTION_TYPE.E55' : description_types,
-                    'STYLE.E55' : Concept().get_e55_domain('STYLE.E55'),
+                    
                     },                
                 'defaults': {
                     'DESCRIPTION_TYPE.E55': default_description_type['id'],
                 }
-            }       
-            
+            }
+            self.data['STYLE.E55'] = {
+                'branch_lists': self.get_nodes('STYLE.E62'),
+                'domains': {
+                    'STYLE.E55' : Concept().get_e55_domain('STYLE.E55'),
+                }               
+            }
+           
         
 
 class MeasurementForm(ResourceForm):
