@@ -71,6 +71,7 @@ Source,Target,Type,Id,Label,Weight
 91,25,Directed,390,P2,1.0
 91,49,Directed,386,P45,1.0
 91,92,Directed,384,-P108,1.0
+91,174,Directed,181,P3,1.0
 92,24,Directed,387,P33,1.0
 93,94,Directed,109,P42,1.0
 93,95,Directed,110,P42,1.0
@@ -109,3 +110,5 @@ Source,Target,Type,Id,Label,Weight
 167,166,Directed,174,P3,1.0
 167,169,Directed,173,P3,1.0
 171,172,Directed,178,-P71,1.0
+174,176,Directed,182,P2,1.0
+176,177,Directed,183,P-71,1.0
