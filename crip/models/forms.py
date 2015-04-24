@@ -265,7 +265,7 @@ class ComponentForm(ResourceForm):
                     'CONSTRUCTION_TECHNIQUE.E55': Concept().get_e55_domain('CONSTRUCTION_TECHNIQUE.E55'),
                     'MATERIAL.E57' : Concept().get_e55_domain('MATERIAL.E57'),
                     'COMPONENT_TYPE.E55' : Concept().get_e55_domain('COMPONENT_TYPE.E55'),
-                    'DESCRIPTION_TYPE.E55' : Concept().get_e55_domain('DESCRIPTION_TYPE.E55')
+                    'COMPONENT_DESCRIPTION.E62' : Concept().get_e55_domain('COMPONENT_DESCRIPTION.E55')
                 }
             }
 ##            self.data['MODIFICATION_EVENT.E11'] = {
