@@ -221,7 +221,7 @@ class ComponentForm(ResourceForm):
 
     def update(self, data, files):
         self.update_nodes('COMPONENT.E18', data)
-        self.update_nodes('MODIFICATION_EVENT.E11', data)
+        #self.update_nodes('MODIFICATION_EVENT.E11', data)
         return
 
     def update_nodes(self, entitytypeid, data):
@@ -268,12 +268,12 @@ class ComponentForm(ResourceForm):
                     'DESCRIPTION_TYPE.E55' : Concept().get_e55_domain('DESCRIPTION_TYPE.E55')
                 }
             }
-            self.data['MODIFICATION_EVENT.E11'] = {
-                'branch_lists': self.get_nodes('MODIFICATION_EVENT.E11'),
-                'domains': {
-                    'MODIFICATION_TYPE.E55': Concept().get_e55_domain('MODIFICATION_TYPE.E55'),
-                }
-            }
+##            self.data['MODIFICATION_EVENT.E11'] = {
+##                'branch_lists': self.get_nodes('MODIFICATION_EVENT.E11'),
+##                'domains': {
+##                    'MODIFICATION_TYPE.E55': Concept().get_e55_domain('MODIFICATION_TYPE.E55'),
+##                }
+##            }
 
 
 class ClassificationForm(ResourceForm):

@@ -40,7 +40,7 @@
                                     
                                         {% include 'views/components/add-item-button.htm' %}
                                         
-                                        <input style="width:75%; display: inline-block; padding-top:10px;" class="select2 arches-select2-crud-form name-type hidden-xs" id="resource-measurement-unit" data-bind="select2: {value: getEditedNode('DESCRIPTION_TYPE.E55', 'value'), placeholder: 'Type', dataKey: 'DESCRIPTION_TYPE.E55'}"></input>
+                                        <input style="width:75%; display: inline-block; padding-top:10px;" class="select2 arches-select2-crud-form name-type hidden-xs" id="resource-measurement-unit" data-bind="select2: {value: getEditedNode('COMPONENT_DESCRIPTION.E62', 'value'), placeholder: 'Type', dataKey: 'COMPONENT_DESCRIPTION.E62'}"></input>
 
                                         <!-- Spacer (for xs screens) -->
                                         <div class="margin-top-5 hidden-sm hidden-md hidden-lg"></div>                                    
@@ -108,13 +108,7 @@
                                     
                                     <span data-bind='text: nodes.get("DESCRIPTION_TYPE.E55", "label")' style="padding-right:2px;"></span><span class="text-muted arches-crud-type-identifier"></span>
                                 </a>    
-                                    <!--
-                                    <div class="">
-                                        <a href="#" class="arches-CRUD-delete fa fa-times-circle" title="Remove this description"><i data-bind="click: $parent.deleteItem.bind($parent)" ></i></a>
-                                        <a href="#" class="arches-CRUD-child arches-CRUD-edit" title="{% trans "Edit this description" %}" data-bind='text: nodes.get("DESCRIPTION_TYPE.E55", "label"), click: $parent.editItem.bind($parent)'></a>
-                                    </div>
-                                    -->
-                                    
+                                   
                                 <dl> 
                                     <dd>
                                         <div class="note-editable custom-scroll arches-evaluation-content" contenteditable="true" data-bind='{html: nodes.get("COMPONENT_DESCRIPTION.E62", "value")}'></div>
@@ -132,119 +126,4 @@
     </div>
 </div>
 <!-- End Components CRUD -->
-
-<hr class="divider arches-RDM-divider">
-
- <hr class="divider arches-RDM-divider">
-
-
-<!-- Modifications CRUD Form -->
-<div id="modification-section">
-<div class="row">
-    <div class="col-xs-12">
-        <div class="padding-left-10">
-            
-            <dl>
-                <!-- Title -->
-                <dt>
-                    <h5 id="arches-names-form" class="section-headline">Modifications</h5>
-                </dt>
-
-                <!-- Form -->
-                <dd class="arches-RDM-labels">
-
-                    <div class="row">
-
-                        <div class="col-xs-12">
-
-                            <!-- Form for screens > xs -->
-                            <form class="form-inline hidden-xs" role="form">
-                                <div class="form-group" style="width: 100%">
-                                    
-                                    <!-- Mods -->     
-                                    <input style="width:75%; display: inline-block;" class="modifications select2 arches-select2-crud-form name-type hidden-xs" id="resource-modification-type" data-bind="select2: {value: getEditedNode('MODIFICATION_TYPE.E55', 'value'), placeholder: 'modification type', dataKey: 'MODIFICATION_TYPE.E55'}"></input>
-
-                                    {% include 'views/components/add-item-button.htm' %} 
-                                    <!-- Simple HTML Editor -->
-                                    <div class="arches-html-editor margin-top-5" style="width: 75%;">
-                                        <div class="summernote" data-bind="summernote: {value: getEditedNode('MODIFICATION_DESCRIPTION.E62', 'value'), options:{}, dataKey: 'MODIFICATION_DESCRIPTION.E62'}">
-                                        </div>
-                                    </div>
-                                    <!-- Simple HTML Editor -->
-                                </div>
-                            </form>
-                            <!-- Form for screens > xs -->
-
-                            <!-- Form for screens = xs -->
-                            <form class="form-inline hidden-sm hidden-md hidden-lg" role="form">
-                                <div class="form-group" style="width: 100%">
-                                                                        <!-- Mods -->     
-                                    <!-- Mods -->     
-                                    <input style="width:100%;" class="modifications select2 arches-select2-crud-form name-type" id="resource-modification-type" data-bind="select2: {value: getEditedNode('MODIFICATION_TYPE.E55', 'value'), placeholder: 'modification type', dataKey: 'MODIFICATION_TYPE.E55'}"></input>
-
-                                    <!-- Simple HTML Editor -->
-                                    <div class="arches-html-editor margin-top-5" style="width: 100%; margin-bottom:5px">
-                                        <div class="summernote" data-bind="summernote: {value: getEditedNode('MODIFICATION_DESCRIPTION.E62', 'value'), options:{}, dataKey: 'MODIFICATION_DESCRIPTION.E62'}">
-                                        </div>
-                                    </div>
-
-                                    {% include 'views/components/add-item-button.htm' %} 
-                                </div>
-                            </form>
-                            <!-- Form for screens = xs -->
-                        </div>
-
-                    </div>
-                </dd>
-                <!-- End Form -->
-            </dl>
-
-        </div>
-    </div>
-</div>
-<!-- End Modifications CRUD -->
-
-<!-- Modification Records -->
-    <div class="row">
-        <div class="col-xs-12">
-
-            <!-- Address -->
-            <div class="arches-crud-child-section">
-                <dl>
-                    <dd class="arches-CRUD-child-title">
-                        {% trans "This resource has these modifications:" %}
-                    </dd>
-
-                    <dd class="margin-left-5" style="display: none;" data-bind="visible: true">
-                        <div data-bind="visible: getBranchLists().length == 0" class="txt-color-blue">{% trans "No Modifications Defined" %}</div>   
-                        
-                        <div data-bind='foreach: getBranchLists()'>
-                            <dl class="margin-bottom-0"> 
-                            
-                                <dd>
-                                    <div class="">
-                                        <a href="#" title="Remove this description"><i data-bind="click: $parent.deleteItem.bind($parent)" class="arches-CRUD-delete fa fa-times-circle"></i></a>
-                                        <a href="#" class="arches-CRUD-child arches-CRUD-edit" title="{% trans "Edit this description" %}" data-bind='text: nodes.get("MODIFICATION_TYPE.E55", "label"), click: $parent.editItem.bind($parent)'></a>
-                                    </div>
-                                </dd>
-                            </dl>
-
-                            <dl> 
-
-                                <dd>
-                                    <div class="note-editable custom-scroll arches-evaluation-content" contenteditable="true" data-bind='{html: nodes.get("MODIFICATION_DESCRIPTION.E62", "value")}'></div>
-                                </dd>
-                            </dl>
-
-                        </div>
-                    </dd>
-                </dl>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<!-- End Modifications Records -->
 {% endblock form_content %}
