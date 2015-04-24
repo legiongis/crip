@@ -1009,7 +1009,7 @@ class EvaluationForm(ResourceForm):
         return {
             'id': 'evaluation',
             'icon': 'fa-star-half-o',
-            'name': _('Evaluation Criteria'),
+            'name': _('Evaluations'),
             'class': EvaluationForm
         }
 
