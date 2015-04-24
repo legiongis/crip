@@ -36,12 +36,19 @@
                                         <input style="width:25%;" class="select2 arches-select2-crud-form resource-type" id="resource-type-dropdown
                                     " data-bind="select2: {value: getEditedNode('CONSTRUCTION_TECHNIQUE.E55', 'value'), placeholder: '{% trans "technique" %}', multiple: false, dataKey: 'CONSTRUCTION_TECHNIQUE.E55'}"></input>&nbsp;
                                         <input style="width:25%;" class="select2 arches-select2-crud-form resource-type" id="resource-type-dropdown
-                                    " data-bind="select2: {value: getEditedNode('MATERIAL.E57', 'value'), placeholder: '{% trans "material" %}', multiple: true, dataKey: 'MATERIAL.E57'}"></input>
-                                    
-                                    <!--
-                                        <input style="width:25%;" class="select2 arches-select2-crud-form resource-type" id="resource-type-dropdown
                                     " data-bind="select2: {value: getEditedNode('MATERIAL.E57', 'value'), placeholder: '{% trans "material" %}', multiple: false, dataKey: 'MATERIAL.E57'}"></input>
-                                    -->
+                                    
+                                        <input style="width:80%; display: inline-block;" class="select2 arches-select2-crud-form name-type hidden-xs" id="resource-measurement-unit" data-bind="select2: {value: getEditedNode('DESCRIPTION_TYPE.E55', 'value'), placeholder: 'Type', dataKey: 'DESCRIPTION_TYPE.E55'}"></input>
+
+                                        <!-- Spacer (for xs screens) -->
+                                        <div class="margin-top-5 hidden-sm hidden-md hidden-lg"></div>                                    
+
+                                        {% include 'views/components/add-item-button.htm' %}
+                                        
+                                        <!-- Simple HTML Editor -->
+                                        <div class="arches-html-editor margin-top-5" style="width: 80%;">
+                                            <div class="summernote" data-bind="summernote: {value: getEditedNode('COMPONENT_DESCRIPTION.E62', 'value'), options:{}}"></div>
+                                        </div>
                                     
 
                                             {% include 'views/components/add-item-button.htm' %}
