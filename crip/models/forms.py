@@ -257,6 +257,12 @@ class ComponentForm(ResourceForm):
 
     def load(self, lang):
         if self.resource:
+            self.data['MODIFICATION_EVENT.E11'] = {
+                'branch_lists': self.get_nodes('MODIFICATION_EVENT.E11'),
+                'domains': {
+                    'MODIFICATION_EVENT.E11' : Concept().get_e55_domain('MODIFICATION_EVENT.E11'),
+                }
+            }
 
             self.data['COMPONENT.E18'] = {
                 'branch_lists': self.get_nodes('COMPONENT.E18'),
