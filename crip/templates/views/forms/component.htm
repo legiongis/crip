@@ -16,7 +16,7 @@
                 <dl>
                     <!-- Title -->
                     <dt>
-                        <h5 id="arches-names-form" class="section-headline">Components</h5>
+                        <h5 id="arches-names-form" class="section-headline">Add Component</h5>
                     </dt>
 
                     <!-- Form -->
@@ -32,7 +32,7 @@
                                         
                                         <!-- Component/Technique/Material -->       
                                         <input style="width:25%;" class="select2 arches-select2-crud-form resource" id="resource-type-dropdown
-                                    " data-bind="select2: {value: getEditedNode('COMPONENT_TYPE.E55', 'value'), placeholder: '{% trans "component" %}', multiple: false, dataKey: 'COMPONENT_TYPE.E55'}"></input>&nbsp;
+                                    " data-bind="select2: {value: getEditedNode('COMPONENT_TYPE.E55', 'value'), placeholder: '{% trans "type" %}', multiple: false, dataKey: 'COMPONENT_TYPE.E55'}"></input>&nbsp;
                                         <input style="width:25%;" class="select2 arches-select2-crud-form resource-type" id="resource-type-dropdown
                                     " data-bind="select2: {value: getEditedNode('CONSTRUCTION_TECHNIQUE.E55', 'value'), placeholder: '{% trans "technique" %}', multiple: false, dataKey: 'CONSTRUCTION_TECHNIQUE.E55'}"></input>&nbsp;
                                         <input style="width:25%;" class="select2 arches-select2-crud-form resource-type" id="resource-type-dropdown
@@ -45,11 +45,11 @@
                                         -->
 
                                         <!-- Spacer (for xs screens) -->
-                                        <div class="margin-top-5 hidden-sm hidden-md hidden-lg"></div>                                    
+                                        <div class="margin-top-5 hidden-sm hidden-md hidden-lg"></div>
 
                                         <!-- Simple HTML Editor -->
                                         <div class="arches-html-editor margin-top-5" style="width: 75%;">
-                                            <div class="summernote" data-bind="summernote: {value: getEditedNode('COMPONENT_DESCRIPTION.E62', 'value'), options:{}}"></div>
+                                            <div class="summernote" data-bind="summernote: {value: getEditedNode('COMPONENT_DESCRIPTION.E62', 'value'), placeholder: 'optional description' options:{}}"></div>
                                         </div>
 
                                     </div>
@@ -113,7 +113,7 @@
                                    
                                 <dl> 
                                     <dd>
-                                        <div class="note-editable custom-scroll arches-evaluation-content" contenteditable="true" data-bind='{html: nodes.get("COMPONENT_DESCRIPTION.E62", "value")}'></div>
+                                        <div class="note-editable custom-scroll arches-evaluation-content" contenteditable="false" data-bind='{html: nodes.get("COMPONENT_DESCRIPTION.E62", "value")}'></div>
                                     </dd>
                                 </dl>
                                     
