@@ -1,10 +1,8 @@
 Source,Target,Type,Id,Label,Weight
 4,15,Directed,251,P4,1.0
 4,42,Directed,253,P42,1.0
-4,61,Directed,254,P42,1.0
 4,99,Directed,170,P42,1.0
 4,103,Directed,411,P42,1.0
-4,119,Directed,122,P2,1.0
 5,21,Directed,255,P2,1.0
 13,58,Directed,261,-P71,1.0
 15,64,Directed,262,P78,1.0
@@ -51,11 +49,13 @@ Source,Target,Type,Id,Label,Weight
 69,37,Directed,338,-P34,1.0
 69,46,Directed,341,P2,1.0
 69,51,Directed,343,P104,1.0
+69,61,Directed,184,P42,1.0
 69,71,Directed,346,P53,1.0
 69,77,Directed,347,BM.PX.is_related_to,1.0
 69,93,Directed,108,-P140,1.0
 69,105,Directed,413,P3,1.0
 69,106,Directed,414,P2,1.0
+69,119,Directed,185,P2,1.0
 69,150,Directed,156,-P31,1.0
 69,154,Directed,160,-P92,1.0
 69,155,Directed,161,-P93,1.0
