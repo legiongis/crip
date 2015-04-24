@@ -221,6 +221,7 @@ class ComponentForm(ResourceForm):
    
     def update(self, data, files):
         self.update_nodes('COMPONENT.E18', data)
+        self.update_nodes('MODIFICATION_EVENT.E11', data)
         return
 
     def update_nodes(self, entitytypeid, data):
@@ -263,6 +264,7 @@ class ComponentForm(ResourceForm):
                     'CONSTRUCTION_TECHNIQUE.E55': Concept().get_e55_domain('CONSTRUCTION_TECHNIQUE.E55'),
                     'MATERIAL.E57' : Concept().get_e55_domain('MATERIAL.E57'),
                     'COMPONENT_TYPE.E55' : Concept().get_e55_domain('COMPONENT_TYPE.E55'),
+                    'MODIFICATION_EVENT.E11' : Concept().get_e55_domain('MODIFICATION_EVENT.E11'),
                 }
             }
 
@@ -449,24 +451,24 @@ class DescriptionForm(ResourceForm):
 
     def update(self, data, files):
         self.update_nodes('DESCRIPTION.E62', data)
-        #self.update_nodes('MODIFICATION_EVENT.E11', data)
+        
         self.update_nodes('STYLE.E55', data)
         self.update_nodes('CULTURAL_PERIOD.E55', data)
 
     def load(self, lang):
-        description_types = Concept().get_e55_domain('DESCRIPTION_TYPE.E55')
-        default_description_type = description_types[0]
+        ## this is a good example of how to set the default in a dropdown
+        #description_types = Concept().get_e55_domain('DESCRIPTION_TYPE.E55')
+        #default_description_type = description_types[0]
         
         if self.resource:
             self.data['DESCRIPTION.E62'] = {
                 'branch_lists': self.get_nodes('DESCRIPTION.E62'),
                 'domains': {
-                    'DESCRIPTION_TYPE.E55' : description_types,
-                    
+                    'DESCRIPTION_TYPE.E55' : Concept().get_e55_domain('DESCRIPTION_TYPE.E55'), 
                     },                
-                'defaults': {
-                    'DESCRIPTION_TYPE.E55': default_description_type['id'],
-                }
+                #'defaults': {
+                #    'DESCRIPTION_TYPE.E55': default_description_type['id'],
+                #}
             }
             self.data['STYLE.E55'] = {
                 'branch_lists': self.get_nodes('STYLE.E55'),
