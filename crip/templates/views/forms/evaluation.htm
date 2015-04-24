@@ -63,7 +63,7 @@
                             </dd>
                     </dl>
                     <dl>   
-                        <dt class="arches-evaluation-header">Reason Statement</dt>
+                        <dt class="arches-evaluation-header">Justification</dt>
                             <dd class="arches-evaluation-content" data-bind="if: $data['REASONS.E62'].branch_lists.length > 0">
                             <span data-bind="html: $data['REASONS.E62'].branch_lists[0].nodes[0].value"></span><br>
                             </dd>
@@ -189,7 +189,7 @@
                                                     <div id="description-section">
                                                         <dl>   
                                                             <dt>
-                                                                <h5 id="" class="section-headline" style="margin-top: 30px;">{% trans "Reason Statement" %}</h5>
+                                                                <h5 id="" class="section-headline" style="margin-top: 30px;">{% trans "Justification Statement" %}</h5>
                                                             </dt>
 
                                                             <!-- HTML Editor -->
@@ -507,7 +507,7 @@
                                                     </dl>
 
                                                     <dl id="description-summary-section">   
-                                                        <dt class="arches-report-header">Reason Statement</dt>
+                                                        <dt class="arches-report-header">Justification Statement</dt>
                                                         <div data-bind="foreach: getBranchLists()">
                                                             <span data-bind="text: nodes.get('REASONS.E62', 'value')" style="padding-right:2px;"></span><br>
                                                         </div>
