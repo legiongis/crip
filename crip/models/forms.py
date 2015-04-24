@@ -257,10 +257,11 @@ class ComponentForm(ResourceForm):
 
     def load(self, lang):
         if self.resource:
+        
             self.data['MODIFICATION_EVENT.E11'] = {
                 'branch_lists': self.get_nodes('MODIFICATION_EVENT.E11'),
                 'domains': {
-                    'MODIFICATION_EVENT.E11' : Concept().get_e55_domain('MODIFICATION_EVENT.E11'),
+                    'MODIFICATION_TYPE.E55' : Concept().get_e55_domain('MODIFICATION_TYPE.E55'),
                 }
             }
 
@@ -270,7 +271,6 @@ class ComponentForm(ResourceForm):
                     'CONSTRUCTION_TECHNIQUE.E55': Concept().get_e55_domain('CONSTRUCTION_TECHNIQUE.E55'),
                     'MATERIAL.E57' : Concept().get_e55_domain('MATERIAL.E57'),
                     'COMPONENT_TYPE.E55' : Concept().get_e55_domain('COMPONENT_TYPE.E55'),
-                    'MODIFICATION_EVENT.E11' : Concept().get_e55_domain('MODIFICATION_EVENT.E11'),
                 }
             }
 
