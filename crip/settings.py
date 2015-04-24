@@ -1,3 +1,5 @@
+he = "hello"
+
 import os
 import inspect
 from arches_hip.settings import *
@@ -171,7 +173,7 @@ BUSISNESS_DATA_FILES = (
     # os.path.normpath(os.path.join(PACKAGE_ROOT, 'source_data', 'business_data', 'sample.arches')),
 )
 
-APP_NAME = 'Cane River Heritage Inventory and Map'
+APP_NAME = 'Cane River Heritage Inventory & Map'
 
 LOGGING = {
     'version': 1,

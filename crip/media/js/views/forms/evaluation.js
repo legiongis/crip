@@ -39,13 +39,13 @@ define(['jquery',
                 dataKey: 'EVALUATION_CRITERIA_ASSIGNMENT.E13'
             }));
 
-            var statusSection = new BranchList({
-                el: this.$el.find('#status-section')[0],
+            var significanceSection = new BranchList({
+                el: this.$el.find('#significance-section')[0],
                 data: currentEditedAssessment,
-                dataKey: 'STATUS.E55'
+                dataKey: 'SIGNIFICANCE_TYPE.E55'
             });
-            ko.applyBindings(statusSection, this.$el.find('#status-summary-section')[0]);
-            this.addBranchList(statusSection);
+            ko.applyBindings(significanceSection, this.$el.find('#significance-summary-section')[0]);
+            this.addBranchList(significanceSection);
 
             var evaluationSection = new BranchList({
                 el: this.$el.find('#evaluation-section')[0],
@@ -140,7 +140,7 @@ define(['jquery',
                 'EVALUATION_CRITERIA_TYPE.E55': {
                     'branch_lists': []
                 },
-                'STATUS.E55': {
+                'SIGNIFICANCE_TYPE.E55': {
                     'branch_lists': []
                 },
                 'ELIGIBILITY_REQUIREMENT_TYPE.E55': {

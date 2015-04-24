@@ -1047,7 +1047,7 @@ class EvaluationForm(ResourceForm):
                     #remove the node
                     self.resource.filter(lambda entity: entity.entityid != node['entityid'])
 
-        self.update_nodes('STATUS.E55', data)
+        self.update_nodes('SIGNIFICANCE_TYPE.E55', data)
         self.update_nodes('EVALUATION_CRITERIA_TYPE.E55', data)
         self.update_nodes('ELIGIBILITY_REQUIREMENT_TYPE.E55', data)
         self.update_nodes('INTEGRITY_TYPE.E55', data)
@@ -1064,7 +1064,7 @@ class EvaluationForm(ResourceForm):
         self.data = {
             'data': [],
             'domains': {
-                'STATUS.E55': Concept().get_e55_domain('STATUS.E55'),
+                'SIGNIFICANCE_TYPE.E55': Concept().get_e55_domain('SIGNIFICANCE_TYPE.E55'),
                 'EVALUATION_CRITERIA_TYPE.E55' : Concept().get_e55_domain('EVALUATION_CRITERIA_TYPE.E55'),
                 'INTEGRITY_TYPE.E55' : Concept().get_e55_domain('INTEGRITY_TYPE.E55'),
                 'ELIGIBILITY_REQUIREMENT_TYPE.E55' : Concept().get_e55_domain('ELIGIBILITY_REQUIREMENT_TYPE.E55')
@@ -1075,8 +1075,8 @@ class EvaluationForm(ResourceForm):
 
         for entity in evaluation_assessment_entities:
             self.data['data'].append({
-                'STATUS.E55': {
-                    'branch_lists': self.get_nodes(entity, 'STATUS.E55')
+                'SIGNIFICANCE_TYPE.E55': {
+                    'branch_lists': self.get_nodes(entity, 'SIGNIFICANCE_TYPE.E55')
                 },
                 'EVALUATION_CRITERIA_TYPE.E55': {
                     'branch_lists': self.get_nodes(entity, 'EVALUATION_CRITERIA_TYPE.E55')
