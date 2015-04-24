@@ -98,7 +98,7 @@
         <!-- Form -->
         <dd class="">
             <div class="">
-                <!-- Status Code form -->
+                <!-- Style form -->
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="form-group" style="width: 100%;">
@@ -111,9 +111,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- End Status form -->
+                <!-- Style form -->
 
-                <!-- User's Selected Status Codes -->
+                <!-- User's Selected Styles -->
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="margin-left-5">
@@ -125,7 +125,7 @@
                                     <div data-bind="foreach: getBranchLists()">
                                         <div class="arches-crud-record">
                                             <a href="javascript:void(0)" class="arches-CRUD-child" title="remove this style"><i data-bind="click: $parent.deleteItem.bind($parent)" class="arches-CRUD-delete fa fa-times-circle"></i></a>
-                                            <a href="javascript:void(0)" class="arches-CRUD-child arches-CRUD-edit" data-bind="click: $parent.editItem.bind($parent)" title="{% trans "Edit this style" %}"><span data-bind="text: nodes.get('STYLE.E55', 'label')" style="padding-right:2px;"></span></a>
+                                            <a href="javascript:void(0)" class="arches-CRUD-child arches-CRUD-edit" data-bind="click: $parent.editItem.bind($parent)" title="{% trans 'Edit this style' %}"><span data-bind="text: nodes.get('STYLE.E55', 'label')" style="padding-right:2px;"></span></a>
                                         </div>
                                     </div>
                                 </dd>
@@ -133,7 +133,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- End User's Selected Status Codes -->
+                <!-- End User's Selected Styles -->
             </div>
         </dd>
         <!-- End Form -->
