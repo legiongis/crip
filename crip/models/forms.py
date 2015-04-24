@@ -453,7 +453,7 @@ class DescriptionForm(ResourceForm):
         return {
             'id': 'description',
             'icon': 'fa-picture-o',
-            'name': _('Descriptions'),
+            'name': _('Description'),
             'class': DescriptionForm
         }
 
