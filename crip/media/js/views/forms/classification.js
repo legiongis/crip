@@ -123,18 +123,18 @@ define(['jquery',
                 'ANCILLARY_FEATURE_TYPE.E55': {
                     'branch_lists':[]
                 },
-                'CULTURAL_PERIOD.E55': {
-                    'branch_lists':[]
-                },   
+                // 'CULTURAL_PERIOD.E55': {
+                    // 'branch_lists':[]
+                // },   
                 'FROM_DATE.E49': {
                     'branch_lists': []
                 },
                 'TO_DATE.E49': {
                     'branch_lists': []
                 },        
-                'STYLE.E55': {
-                    'branch_lists':[]
-                },
+                // 'STYLE.E55': {
+                    // 'branch_lists':[]
+                // },
                 'PHASE_TYPE_ASSIGNMENT.E17': {
                     'branch_lists':[]
                 }
