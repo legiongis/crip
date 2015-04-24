@@ -55,20 +55,6 @@ define(['jquery',
                     return this.validateHasValues(nodes);
                 }
             }));
-            // this.addBranchList(new BranchList({
-                // el: this.$el.find('#period-section')[0],
-                // data: currentEditedClassification,
-                // dataKey: 'CULTURAL_PERIOD.E55',
-                // singleEdit: true
-            // }));            
-            // this.addBranchList(new BranchList({
-                // el: this.$el.find('#style-section')[0],
-                // data: currentEditedClassification,
-                // dataKey: 'STYLE.E55',
-                // validateBranch: function (nodes) {
-                    // return this.validateHasValues(nodes);
-                // }
-            // }));     
             this.addBranchList(new BranchList({
                 el: this.$el.find('#to-date-section')[0],
                 data: currentEditedClassification,
@@ -123,18 +109,12 @@ define(['jquery',
                 'ANCILLARY_FEATURE_TYPE.E55': {
                     'branch_lists':[]
                 },
-                // 'CULTURAL_PERIOD.E55': {
-                    // 'branch_lists':[]
-                // },   
                 'FROM_DATE.E49': {
                     'branch_lists': []
                 },
                 'TO_DATE.E49': {
                     'branch_lists': []
                 },        
-                // 'STYLE.E55': {
-                    // 'branch_lists':[]
-                // },
                 'PHASE_TYPE_ASSIGNMENT.E17': {
                     'branch_lists':[]
                 }
