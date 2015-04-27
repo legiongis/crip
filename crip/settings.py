@@ -29,6 +29,10 @@ extent_coords = [
     ]
 #MAP_EXTENT = ",".join(extent_coords)
 
+# URL that handles the media served from MEDIA_ROOT, used for managing 
+# stored files. It must end in a slash if set to a non-empty value.
+MEDIA_URL = os.path.join(PACKAGE_ROOT, 'uploads/')
+
 def RESOURCE_TYPE_CONFIGS():
     return {
         'HERITAGE_RESOURCE.E18': {
