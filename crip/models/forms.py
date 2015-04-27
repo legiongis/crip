@@ -462,7 +462,7 @@ class ResourceDescriptionForm(ResourceForm):
     @staticmethod
     def get_info():
         return {
-            'id': 'resource-description',
+            'id': 'heritage-resource-description',
             'icon': 'fa-picture-o',
             'name': _('Description'),
             'class': DescriptionForm
