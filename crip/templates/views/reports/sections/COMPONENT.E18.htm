@@ -64,11 +64,13 @@
                                 {% endif %}
                                 
                                 <span class="arches-report-subsection-item-type">
-                                    {% trans "comments:" %}:
+                                    {% trans "component comments" %}:
                                 </span>
                                 <br>
                                 {% if 'COMPONENT_DESCRIPTION_E62' in COMPONENT_E18 %}
-                                    {{COMPONENT_DESCRIPTION_E62.COMPONENT_DESCRIPTION_E62__value}}
+                                    {% for COMPONENT_DESCRIPTION_E62 in COMPONENT_E18.COMPONENT_DESCRIPTION_E62 %}
+                                        {{COMPONENT_DESCRIPTION_E62.COMPONENT_DESCRIPTION_E62__value}}
+                                    {% endfor %}
                                 {% else %}
                                     {% trans "none" %}
                                 {% endif %}
