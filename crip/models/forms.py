@@ -465,7 +465,7 @@ class ResourceDescriptionForm(ResourceForm):
             'id': 'heritage-resource-description',
             'icon': 'fa-picture-o',
             'name': _('Description'),
-            'class': DescriptionForm
+            'class': ResourceDescriptionForm
         }
 
     def update(self, data, files):
