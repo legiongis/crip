@@ -20,6 +20,7 @@ define(['jquery',
             this.defaults = [];
             
             console.log(this.data);
+            console.log(this.dataKey);
             
             this.viewModel = JSON.parse(JSON.stringify(this.data[this.dataKey]));
             
