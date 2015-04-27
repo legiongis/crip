@@ -313,8 +313,6 @@ class ClassificationForm(ResourceForm):
         self.update_nodes('TO_DATE.E49', data)
         self.update_nodes('FROM_DATE.E49', data)
         self.update_nodes('HERITAGE_RESOURCE_USE_TYPE.E55', data)
-        #self.update_nodes('CULTURAL_PERIOD.E55', data)
-        #self.update_nodes('STYLE.E55', data)
         self.update_nodes('ANCILLARY_FEATURE_TYPE.E55', data)
         production_entities = self.resource.find_entities_by_type_id('PRODUCTION.E12')
 
@@ -343,8 +341,6 @@ class ClassificationForm(ResourceForm):
             'domains': {
                 'HERITAGE_RESOURCE_TYPE.E55': Concept().get_e55_domain('HERITAGE_RESOURCE_TYPE.E55'),
                 'HERITAGE_RESOURCE_USE_TYPE.E55' : Concept().get_e55_domain('HERITAGE_RESOURCE_USE_TYPE.E55'),
-                #'CULTURAL_PERIOD.E55' : Concept().get_e55_domain('CULTURAL_PERIOD.E55'),
-                #'STYLE.E55' : Concept().get_e55_domain('STYLE.E55'),
                 'ANCILLARY_FEATURE_TYPE.E55' : Concept().get_e55_domain('ANCILLARY_FEATURE_TYPE.E55')
             }
         }
@@ -362,18 +358,12 @@ class ClassificationForm(ResourceForm):
                 'HERITAGE_RESOURCE_USE_TYPE.E55': {
                     'branch_lists': self.get_nodes(entity, 'HERITAGE_RESOURCE_USE_TYPE.E55')
                 },
-                # 'CULTURAL_PERIOD.E55': {
-                    # 'branch_lists': self.get_nodes(entity, 'CULTURAL_PERIOD.E55')
-                # },
                 'TO_DATE.E49': {
                     'branch_lists': to_date_nodes
                 },
                 'FROM_DATE.E49': {
                     'branch_lists': from_date_nodes
                 },
-                # 'STYLE.E55': {
-                    # 'branch_lists': self.get_nodes(entity, 'STYLE.E55')
-                # },
                 'ANCILLARY_FEATURE_TYPE.E55': {
                     'branch_lists': self.get_nodes(entity, 'ANCILLARY_FEATURE_TYPE.E55')
                 },
@@ -457,7 +447,29 @@ class DescriptionForm(ResourceForm):
 
     def update(self, data, files):
         self.update_nodes('DESCRIPTION.E62', data)
-        
+
+    def load(self, lang):
+    
+        if self.resource:
+            self.data['DESCRIPTION.E62'] = {
+                'branch_lists': self.get_nodes('DESCRIPTION.E62'),
+                'domains': {
+                    'DESCRIPTION_TYPE.E55' : Concept().get_e55_domain('DESCRIPTION_TYPE.E55'), 
+                },
+            }       
+ 
+class ResourceDescriptionForm(ResourceForm):
+    @staticmethod
+    def get_info():
+        return {
+            'id': 'resource-description',
+            'icon': 'fa-picture-o',
+            'name': _('Description'),
+            'class': DescriptionForm
+        }
+
+    def update(self, data, files):
+        self.update_nodes('DESCRIPTION.E62', data)       
         self.update_nodes('STYLE.E55', data)
         self.update_nodes('CULTURAL_PERIOD.E55', data)
 
@@ -487,8 +499,7 @@ class DescriptionForm(ResourceForm):
                 'domains': {
                     'CULTURAL_PERIOD.E55' : Concept().get_e55_domain('CULTURAL_PERIOD.E55'),
                 }               
-            }
-           
+            } 
         
 
 class MeasurementForm(ResourceForm):
