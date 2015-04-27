@@ -148,3 +148,12 @@ http://stackoverflow.com/questions/9093424/placeholder-in-contenteditable-focus-
 summernote:empty:not(:focus):before{
     content:attr(data-ph)
 }
+
+/*
+disable drop image in summernote WISYWIG
+cf https://github.com/summernote/summernote/issues/187
+*/
+
+.note-editor .note-dropzone {
+    opacity: 0 !important;
+}
