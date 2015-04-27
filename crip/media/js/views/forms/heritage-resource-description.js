@@ -14,6 +14,8 @@ define(['jquery', 'summernote', 'views/forms/base', 'views/forms/sections/branch
                 }
             }));  
             
+            console.log("1");
+            
             this.addBranchList(new BranchList({
                 el: this.$el.find('#style-section')[0],
                 data: this.data,
@@ -22,6 +24,8 @@ define(['jquery', 'summernote', 'views/forms/base', 'views/forms/sections/branch
                     return this.validateHasValues(nodes);
                 }
             }));
+            
+            console.log("2");
             
             this.addBranchList(new BranchList({
                 el: this.$el.find('#period-section')[0],
