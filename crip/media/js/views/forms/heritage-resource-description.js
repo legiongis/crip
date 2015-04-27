@@ -32,6 +32,8 @@ define(['jquery', 'summernote', 'views/forms/base', 'views/forms/sections/branch
                 }
             }));
             
+            console.log("this is a message from the end of the heritage-resource-description.js file");
+            
         }
     });
 });
