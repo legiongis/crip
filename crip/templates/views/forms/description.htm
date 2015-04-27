@@ -91,99 +91,102 @@
     </div>
 </div>
 <!-- End Description Records -->
-
-<!-- Style form -->
-<div id="style-section">
-    <dl>   
-        <!-- Form -->
-        <dd class="">
-            <div class="padding-left-10">
-                <!-- Style form -->
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="form-group" style="width: 100%;">
-                            <!-- Threats Input-->   
-                            <h5 class="section-headline margin-bottom-5">Styles</h5>  
-                            <input style="width:80%; display:inline-block;" class="select2 arches-select2-crud-form name-type designation" data-bind="select2: {value: getEditedNode('STYLE.E55', 'value'),  placeholder: '{% trans "Styles" %}', dataKey: 'STYLE.E55'}">&nbsp;&nbsp;
-                            <!-- Add Button -->
-                            {% include 'views/components/add-item-button.htm' %}
-                            <!-- End Add Button -->
+{% if 'HERITAGE_RESOURCE_E18' %}
+    <!-- Style form -->
+    <div id="style-section">
+        <dl>   
+            <!-- Form -->
+            <dd class="">
+                <div class="padding-left-10">
+                    <!-- Style form -->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group" style="width: 100%;">
+                                <!-- Threats Input-->   
+                                <h5 class="section-headline margin-bottom-5">Styles</h5>  
+                                <input style="width:80%; display:inline-block;" class="select2 arches-select2-crud-form name-type designation" data-bind="select2: {value: getEditedNode('STYLE.E55', 'value'),  placeholder: '{% trans "Styles" %}', dataKey: 'STYLE.E55'}">&nbsp;&nbsp;
+                                <!-- Add Button -->
+                                {% include 'views/components/add-item-button.htm' %}
+                                <!-- End Add Button -->
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Style form -->
+                    <!-- Style form -->
 
-                <!-- User's Selected Styles -->
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="margin-left-5">
-                            <dl class="margin-bottom-10"> 
+                    <!-- User's Selected Styles -->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="margin-left-5">
+                                <dl class="margin-bottom-10"> 
 
-                                <dd class="margin-left-10 margin-top-5" style="display: none;" data-bind="visible: true">
-                                    <div data-bind="visible: getBranchLists().length == 0" class="txt-color-blue">{% trans "No styles selected" %}</div>   
+                                    <dd class="margin-left-10 margin-top-5" style="display: none;" data-bind="visible: true">
+                                        <div data-bind="visible: getBranchLists().length == 0" class="txt-color-blue">{% trans "No styles selected" %}</div>   
 
-                                    <div data-bind="foreach: getBranchLists()">
-                                        <div class="arches-crud-record">
-                                            <a href="javascript:void(0)" class="arches-CRUD-child" title="remove this style"><i data-bind="click: $parent.deleteItem.bind($parent)" class="arches-CRUD-delete fa fa-times-circle"></i></a>
-                                            <a href="javascript:void(0)" class="arches-CRUD-child arches-CRUD-edit" data-bind="click: $parent.editItem.bind($parent)" title="{% trans 'Edit this style' %}"><span data-bind="text: nodes.get('STYLE.E55', 'label')" style="padding-right:2px;"></span></a>
+                                        <div data-bind="foreach: getBranchLists()">
+                                            <div class="arches-crud-record">
+                                                <a href="javascript:void(0)" class="arches-CRUD-child" title="remove this style"><i data-bind="click: $parent.deleteItem.bind($parent)" class="arches-CRUD-delete fa fa-times-circle"></i></a>
+                                                <a href="javascript:void(0)" class="arches-CRUD-child arches-CRUD-edit" data-bind="click: $parent.editItem.bind($parent)" title="{% trans 'Edit this style' %}"><span data-bind="text: nodes.get('STYLE.E55', 'label')" style="padding-right:2px;"></span></a>
+                                            </div>
                                         </div>
-                                    </div>
-                                </dd>
-                            </dl>
+                                    </dd>
+                                </dl>
+                            </div>
                         </div>
                     </div>
+                    <!-- End User's Selected Styles -->
                 </div>
-                <!-- End User's Selected Styles -->
-            </div>
-        </dd>
-        <!-- End Form -->
-    </dl>
-</div>
-<!-- cultural period form -->
-<div id="period-section">
-    <dl>   
-        <!-- Form -->
-        <dd class="">
-            <div class="padding-left-10">
-                <!-- Style form -->
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="form-group" style="width: 100%;">
-                            <!-- Threats Input-->   
-                            <h5 class="section-headline margin-bottom-5">Cultural Period</h5>  
-                            <input style="width:80%; display:inline-block;" class="select2 arches-select2-crud-form name-type designation" data-bind="select2: {value: getEditedNode('CULTURAL_PERIOD.E55', 'value'),  placeholder: '{% trans "Cultural Period" %}', dataKey: 'CULTURAL_PERIOD.E55'}">&nbsp;&nbsp;
-                            <!-- Add Button -->
-                            {% include 'views/components/add-item-button.htm' %}
-                            <!-- End Add Button -->
+            </dd>
+            <!-- End Form -->
+        </dl>
+    </div>
+    <!-- cultural period form -->
+    <div id="period-section">
+        <dl>   
+            <!-- Form -->
+            <dd class="">
+                <div class="padding-left-10">
+                    <!-- Style form -->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group" style="width: 100%;">
+                                <!-- Threats Input-->   
+                                <h5 class="section-headline margin-bottom-5">Cultural Period</h5>  
+                                <input style="width:80%; display:inline-block;" class="select2 arches-select2-crud-form name-type designation" data-bind="select2: {value: getEditedNode('CULTURAL_PERIOD.E55', 'value'),  placeholder: '{% trans "Cultural Period" %}', dataKey: 'CULTURAL_PERIOD.E55'}">&nbsp;&nbsp;
+                                <!-- Add Button -->
+                                {% include 'views/components/add-item-button.htm' %}
+                                <!-- End Add Button -->
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Style form -->
+                    <!-- Style form -->
 
-                <!-- User's Selected Styles -->
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="margin-left-5">
-                            <dl class="margin-bottom-10"> 
+                    <!-- User's Selected Styles -->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="margin-left-5">
+                                <dl class="margin-bottom-10"> 
 
-                                <dd class="margin-left-10 margin-top-5" style="display: none;" data-bind="visible: true">
-                                    <div data-bind="visible: getBranchLists().length == 0" class="txt-color-blue">{% trans "no cultural period assigned" %}</div>   
+                                    <dd class="margin-left-10 margin-top-5" style="display: none;" data-bind="visible: true">
+                                        <div data-bind="visible: getBranchLists().length == 0" class="txt-color-blue">{% trans "no cultural period assigned" %}</div>   
 
-                                    <div data-bind="foreach: getBranchLists()">
-                                        <div class="arches-crud-record">
-                                            <a href="javascript:void(0)" class="arches-CRUD-child" title="remove this style"><i data-bind="click: $parent.deleteItem.bind($parent)" class="arches-CRUD-delete fa fa-times-circle"></i></a>
-                                            <a href="javascript:void(0)" class="arches-CRUD-child arches-CRUD-edit" data-bind="click: $parent.editItem.bind($parent)" title="{% trans 'change this cultural period' %}"><span data-bind="text: nodes.get('CULTURAL_PERIOD.E55', 'label')" style="padding-right:2px;"></span></a>
+                                        <div data-bind="foreach: getBranchLists()">
+                                            <div class="arches-crud-record">
+                                                <a href="javascript:void(0)" class="arches-CRUD-child" title="remove this style"><i data-bind="click: $parent.deleteItem.bind($parent)" class="arches-CRUD-delete fa fa-times-circle"></i></a>
+                                                <a href="javascript:void(0)" class="arches-CRUD-child arches-CRUD-edit" data-bind="click: $parent.editItem.bind($parent)" title="{% trans 'change this cultural period' %}"><span data-bind="text: nodes.get('CULTURAL_PERIOD.E55', 'label')" style="padding-right:2px;"></span></a>
+                                            </div>
                                         </div>
-                                    </div>
-                                </dd>
-                            </dl>
+                                    </dd>
+                                </dl>
+                            </div>
                         </div>
                     </div>
+                    <!-- End User's Selected Styles -->
                 </div>
-                <!-- End User's Selected Styles -->
-            </div>
-        </dd>
-        <!-- End Form -->
-    </dl>
-</div>
+            </dd>
+            <!-- End Form -->
+        </dl>
+    </div>
+{% else %}
+    {% pass %}
+{% end if %}
 {% endblock form_content %}
