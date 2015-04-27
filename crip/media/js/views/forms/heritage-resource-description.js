@@ -2,6 +2,8 @@ define(['jquery', 'summernote', 'views/forms/base', 'views/forms/sections/branch
     return BaseForm.extend({
         initialize: function() {
             BaseForm.prototype.initialize.apply(this);
+            
+            console.log("this is a message from the heritage-resource-description.js file");
 
             this.addBranchList(new BranchList({
                 el: this.$el.find('#description-section')[0],
