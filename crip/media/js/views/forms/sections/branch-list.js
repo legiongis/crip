@@ -18,7 +18,11 @@ define(['jquery',
             _.extend(this, options);
 
             this.defaults = [];
+            
+            console.log(this.data);
+            
             this.viewModel = JSON.parse(JSON.stringify(this.data[this.dataKey]));
+            
             
             console.log("this is a message after viewModel has been called");
             
