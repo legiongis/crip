@@ -115,9 +115,6 @@ define(['jquery',
                 'TO_DATE.E49': {
                     'branch_lists': []
                 },        
-                'PHASE_TYPE_ASSIGNMENT.E17': {
-                    'branch_lists':[]
-                }
             })
         },
 
