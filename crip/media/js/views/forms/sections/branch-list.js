@@ -11,6 +11,7 @@ define(['jquery',
         },
 
         initialize: function(options) {
+            console.log("this is a message from the very beginning of branch-list.js");
             var self = this;
             this.singleEdit = false;
 
@@ -19,7 +20,7 @@ define(['jquery',
             this.defaults = [];
             this.viewModel = JSON.parse(JSON.stringify(this.data[this.dataKey]));
             
-            console.log("this is a message from branch-list.js");
+            console.log("this is a message after viewModel has been called");
             
             //this.viewModel.domains = this.data[this.dataKey].domains;
             this.viewModel.branch_lists = koMapping.fromJS(this.data[this.dataKey].branch_lists);
