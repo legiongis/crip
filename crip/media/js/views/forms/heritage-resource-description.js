@@ -19,6 +19,7 @@ define(['jquery', 'summernote', 'views/forms/base', 'views/forms/sections/branch
             this.addBranchList(new BranchList({
                 el: this.$el.find('#style-section')[0],
                 data: this.data,
+                console.log(this.data),
                 dataKey: 'STYLE.E55',
                 validateBranch: function(nodes){
                     return this.validateHasValues(nodes);
