@@ -63,10 +63,11 @@
                                     {% trans "none defined" %}
                                 {% endif %}
                                 
-                                <span class="arches-report-subsection-item-type">
-                                    {% trans "component comments" %}:
-                                </span>
                                 <br>
+                                <span class="arches-report-subsection-item-type">
+                                    {% trans "comments" %}:
+                                </span>
+                                
                                 {% if 'COMPONENT_DESCRIPTION_E62' in COMPONENT_E18 %}
                                     {% for COMPONENT_DESCRIPTION_E62 in COMPONENT_E18.COMPONENT_DESCRIPTION_E62 %}
                                         {{COMPONENT_DESCRIPTION_E62.COMPONENT_DESCRIPTION_E62__value}}
