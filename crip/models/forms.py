@@ -549,14 +549,13 @@ class FormDimensionForm(ResourceForm):
                     'UNIT_OF_MEASUREMENT.E55': Concept().get_e55_domain('UNIT_OF_MEASUREMENT.E55')
                 }
             }
-            print self.data
             self.data['FORM_DIMENSION_TYPE.E55'] = {
                 'branch_lists': self.get_nodes('FORM_DIMENSION_TYPE.E55'),
                 'domains': {
                     'FORM_DIMENSION_TYPE.E55' : Concept().get_e55_domain('FORM_DIMENSION_TYPE.E55'),
                 }
             }
-            print self.data
+            print self.data['FORM_DIMENSION_TYPE.E55']
 
 class ConditionForm(ResourceForm):
     baseentity = None
