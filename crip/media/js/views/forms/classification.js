@@ -61,7 +61,9 @@ define(['jquery',
                 dataKey: 'TO_DATE.E49',
                 singleEdit: true,
                 validateBranch: function (nodes) {
-                    return this.validateHasValues(nodes);
+                    console.log("this is the validate function");
+                    console.log(this.validateHasValues(nodes));
+                    //return this.validateHasValues(nodes);
                 }
             }));   
             this.addBranchList(new BranchList({
@@ -70,7 +72,9 @@ define(['jquery',
                 dataKey: 'FROM_DATE.E49',
                 singleEdit: true,
                 validateBranch: function (nodes) {
-                    return this.validateHasValues(nodes);
+                    console.log("this is the validate function");
+                    console.log(this.validateHasValues(nodes));
+                    //return this.validateHasValues(nodes);
                 }
             }));   
 
