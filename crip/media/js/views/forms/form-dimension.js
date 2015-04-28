@@ -8,7 +8,7 @@ define(['jquery', 'underscore', 'knockout-mapping', 'views/forms/base', 'views/f
                 data: this.data,
                 dataKey: 'FORM_DIMENSION_TYPE.E55',
                 validateBranch: function (nodes) {
-                    return this.validateHasValues(nodes);
+                    return true;
                 }
             }));
 
