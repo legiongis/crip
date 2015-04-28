@@ -20,7 +20,7 @@ define(['jquery',
             this.defaults = [];
             console.log("message from branchlist.js 1");
             console.log(this.data);
-            console.lost(this.dataKey);
+            console.log(this.dataKey);
             this.viewModel = JSON.parse(JSON.stringify(this.data[this.dataKey]));
             //this.viewModel.domains = this.data[this.dataKey].domains;
             this.viewModel.branch_lists = koMapping.fromJS(this.data[this.dataKey].branch_lists);
