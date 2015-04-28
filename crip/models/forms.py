@@ -314,7 +314,6 @@ class ClassificationForm(ResourceForm):
         self.update_nodes('FROM_DATE.E49', data)
         self.update_nodes('HERITAGE_RESOURCE_USE_TYPE.E55', data)
         self.update_nodes('ANCILLARY_FEATURE_TYPE.E55', data)
-        #self.update_nodes('PHASE_TYPE_ASSIGNMENT.E17', data)
         production_entities = self.resource.find_entities_by_type_id('PRODUCTION.E12')
 
         phase_type_node_id = ''
@@ -367,14 +366,12 @@ class ClassificationForm(ResourceForm):
                 },
                 'ANCILLARY_FEATURE_TYPE.E55': {
                     'branch_lists': self.get_nodes(entity, 'ANCILLARY_FEATURE_TYPE.E55')
-                },
-                
+                },              
                 'PHASE_TYPE_ASSIGNMENT.E17': {
                     'branch_lists': self.get_nodes(entity, 'PHASE_TYPE_ASSIGNMENT.E17')
                 }
             })
            
-
 class HistoricalEventSummaryForm(ActivitySummaryForm):
     @staticmethod
     def get_info():
@@ -525,6 +522,38 @@ class MeasurementForm(ResourceForm):
                 'domains': {
                     'MEASUREMENT_TYPE.E55' : Concept().get_e55_domain('MEASUREMENT_TYPE.E55'),
                     'UNIT_OF_MEASUREMENT.E55': Concept().get_e55_domain('UNIT_OF_MEASUREMENT.E55')
+                }
+            }
+            
+class FormDimensionForm(ResourceForm):
+    @staticmethod
+    def get_info():
+        return {
+            'id': 'form-dimension',
+            'icon': 'fa-th-large',
+            'name': _('Measurements'),
+            'class': FormDimensionForm
+        }
+
+    def update(self, data, files):
+        self.update_nodes('MEASUREMENT_TYPE.E55', data)
+        self.update_nodes('FORM_DIMENSION_TYPE.E55', data)
+
+
+    def load(self, lang):
+        if self.resource:
+            self.data['MEASUREMENT_TYPE.E55'] = {
+                'branch_lists': self.get_nodes('MEASUREMENT_TYPE.E55'),
+                'domains': {
+                    'MEASUREMENT_TYPE.E55' : Concept().get_e55_domain('MEASUREMENT_TYPE.E55'),
+                    'UNIT_OF_MEASUREMENT.E55': Concept().get_e55_domain('UNIT_OF_MEASUREMENT.E55')
+                }
+            }
+            
+            self.data['FORM_DIMENSION_TYPE.E55'] = {
+                'branch_lists': self.get_nodes('FORM_DIMENSION_TYPE.E55'),
+                'domains': {
+                    'FORM_DIMENSION_TYPE.E55' : Concept().get_e55_domain('FORM_DIMENSION_TYPE.E55'),
                 }
             }
 
