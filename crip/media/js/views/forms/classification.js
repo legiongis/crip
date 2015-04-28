@@ -32,7 +32,7 @@ define(['jquery',
             console.log("1");
             
             ko.applyBindings(this, this.$el.find('#existing-classifications')[0]);
-
+            console.log("1.5");
             this.addBranchList(new BranchList({
                 data: currentEditedClassification,
                 dataKey: 'PHASE_TYPE_ASSIGNMENT.E17'
