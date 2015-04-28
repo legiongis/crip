@@ -19,7 +19,7 @@
                     <dl style="margin-bottom: 0px;">
                         <!-- Title -->
                         <dt style="display: none;" data-bind="visible: true">
-                            <h5 id="arches-names-form" class="section-headline">{% trans "Resource Classification" %}</h5>
+                            <h5 id="arches-names-form" class="section-headline">{% trans "Resource Function" %}</h5>
                         </dt>
 
                         <dt data-bind="visible: false">
@@ -44,7 +44,7 @@
                                 <div class="">
                                     <h5>
                                         <a href="#" title="Remove this classification" data-bind="click: $root.deleteClassification"><i class="arches-CRUD-delete fa fa-times-circle"></i></a>
-                                        <a href="#" class="" title="Edit this classification" data-bind="click: $root.editClassification">{% trans "Classification" %} 
+                                        <a href="#" class="" title="Edit this classification" data-bind="click: $root.editClassification">{% trans "Funciton" %} 
                                         <span data-bind="if: $data['HERITAGE_RESOURCE_TYPE.E55'].branch_lists.length > 0">
                                             <span data-bind="text: ': ' + $data['HERITAGE_RESOURCE_TYPE.E55'].branch_lists[0].nodes[0].label"></span>
                                         </span>
@@ -55,7 +55,7 @@
                         </dl>
 
                         <dl>   
-                            <dt class="arches-evaluation-header">{% trans "Resource Type" %}</dt>
+                            <dt class="arches-evaluation-header">{% trans "Functions" %}</dt>
                             <dd class="arches-evaluation-content" data-bind="if: $data['HERITAGE_RESOURCE_TYPE.E55'].branch_lists.length > 0">
                                 <span data-bind="html: $data['HERITAGE_RESOURCE_TYPE.E55'].branch_lists[0].nodes[0].label"></span>
                             </dd>
@@ -66,7 +66,7 @@
 
 
                         <dl>   
-                            <dt class="arches-evaluation-header">{% trans "Resource Use" %}</dt>
+                            <dt class="arches-evaluation-header">{% trans "Time Period" %}</dt>
                             <dd class="arches-evaluation-content" data-bind="if: $data['HERITAGE_RESOURCE_USE_TYPE.E55'].branch_lists.length > 0">
                                 <span data-bind="html: $data['HERITAGE_RESOURCE_USE_TYPE.E55'].branch_lists[0].nodes[0].label"></span>
                             </dd>
@@ -154,10 +154,10 @@
                                         <div class="form-bootstrapWizard">
                                             <ul class="bootstrapWizard form-wizard">
                                                 <li class="active" data-target="#step1" style="width: 50%">
-                                                    <a href="#tab1" data-toggle="tab"> <span class="step">1</span> <span class="title">{% trans "Part 1: Summary" %}</span> </a>
+                                                    <a href="#tab1" data-toggle="tab"> <span class="step">1</span> <span class="title">{% trans "Part 1: Function" %}</span> </a>
                                                 </li>
                                                 <li data-target="#step2" style="width: 50%">
-                                                    <a href="#tab2" data-toggle="tab"> <span class="step">2</span> <span class="title">{% trans "Part 2: Related Features" %}</span> </a>
+                                                    <a href="#tab2" data-toggle="tab"> <span class="step">2</span> <span class="title">{% trans "Part 2: Auxiliary Features" %}</span> </a>
                                                 </li>
                                             </ul>
                                             <div class="clearfix"></div>
@@ -169,11 +169,11 @@
                                             <!-- Tab 1: Summary -->
                                             <div class="tab-pane active" id="tab1" style="min-height: 330px;">
                                                 <br>
-                                                <h3 class="margin-bottom-5"><strong>{% trans "Part 1" %}</strong> {% trans "Classification Summary" %}</h3>
+                                                <h3 class="margin-bottom-5"><strong>{% trans "Part 1" %}</strong> {% trans "Function Summary" %}</h3>
 
                                                 <div class="alert alert-info fade in">
                                                     <i class="fa-fw fa fa-info"></i>
-                                                    {% trans "Start your classification by describing it's type, use and cultural period." %}
+                                                    {% trans "Select functions to associate with this resource." %}
                                                 </div>
 
                                                 <!-- Overall Condition, Date Observed -->
@@ -261,11 +261,11 @@
                                             <!-- Tab 2: Upload Files -->
                                             <div class="tab-pane" id="tab2" style="min-height: 330px;">
                                                 <br>
-                                                <h3 class="margin-bottom-5"><strong>{% trans "Part 2" %}</strong> {% trans "Assessment Summary" %}</h3>
+                                                <h3 class="margin-bottom-5"><strong>{% trans "Part 2" %}</strong> {% trans "Auxiliary Features" %}</h3>
 
                                                 <div class="alert alert-info fade in">
                                                     <i class="fa-fw fa fa-info"></i>
-                                                    {% trans "Add any related feature relevant to this classification (see also Components)" %}
+                                                    {% trans "Add any related feature relevant to this classification (see also Components in the sidebar)" %}
                                                 </div>
 
                                                 <!-- Overall Condition, Date Observed -->
@@ -274,7 +274,7 @@
                                                 <dl id="related-features-section">
                                                     <!-- Title -->
                                                     <dt>
-                                                        <h5 id="arches-names-form" class="section-headline">{% trans "Related Features" %}</h5>
+                                                        <h5 id="arches-names-form" class="section-headline">{% trans "Add Features" %}</h5>
                                                     </dt>
 
                                                     <!-- Form -->
@@ -393,10 +393,10 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">{% trans "Are you ready to delete this assessment?" %}</h4>
+                    <h4 class="modal-title">{% trans "Are you ready to delete this function?" %}</h4>
                 </div>
                 <div class="modal-body">
-                    <h5 name="warning-text">{% trans "Classification" %}
+                    <h5 name="warning-text">{% trans "Function" %}
                     </h5>
                     <div name="additional-info" style="max-height: 300px; overflow-y: scroll;">
                     </div>
