@@ -314,6 +314,7 @@ class ClassificationForm(ResourceForm):
         self.update_nodes('FROM_DATE.E49', data)
         self.update_nodes('HERITAGE_RESOURCE_USE_TYPE.E55', data)
         self.update_nodes('ANCILLARY_FEATURE_TYPE.E55', data)
+        self.update_nodes('PHASE_TYPE_ASSIGNMENT.E17', data)
         production_entities = self.resource.find_entities_by_type_id('PRODUCTION.E12')
 
         phase_type_node_id = ''
