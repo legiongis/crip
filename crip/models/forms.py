@@ -282,7 +282,7 @@ class ClassificationForm(ResourceForm):
         return {
             'id': 'classification',
             'icon': 'fa-adjust',
-            'name': _('Classifications'),
+            'name': _('Function and Use'),
             'class': ClassificationForm
         }
 

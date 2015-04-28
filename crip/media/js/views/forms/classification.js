@@ -63,7 +63,7 @@ define(['jquery',
                 validateBranch: function (nodes) {
                     console.log("this is the validate function");
                     //console.log(this.validateHasValues(nodes));
-                    return true;
+                    return this.validateHasValues(nodes);
                 }
             }));   
             this.addBranchList(new BranchList({
@@ -74,7 +74,7 @@ define(['jquery',
                 validateBranch: function (nodes) {
                     console.log("this is the validate function");
                     //console.log(this.validateHasValues(nodes));
-                    return true;
+                    return this.validateHasValues(nodes);
                 }
             }));   
 
