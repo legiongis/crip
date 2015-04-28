@@ -31,10 +31,10 @@ define(['jquery',
 
             ko.applyBindings(this, this.$el.find('#existing-classifications')[0]);
 
-            // this.addBranchList(new BranchList({
-                // data: currentEditedClassification,
-                // dataKey: 'PHASE_TYPE_ASSIGNMENT.E17'
-            // }));
+            this.addBranchList(new BranchList({
+                data: currentEditedClassification,
+                dataKey: 'PHASE_TYPE_ASSIGNMENT.E17'
+            }));
             this.addBranchList(new BranchList({
                 el: this.$el.find('#resource-type-section')[0],
                 data: currentEditedClassification,
