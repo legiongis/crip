@@ -531,7 +531,7 @@ class FormDimensionForm(ResourceForm):
         return {
             'id': 'form-dimension',
             'icon': 'fa-th-large',
-            'name': _('Measurements'),
+            'name': _('Form and Dimensions'),
             'class': FormDimensionForm
         }
 
