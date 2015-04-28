@@ -1,12 +1,11 @@
 Source,Target,Type,Id,Label,Weight
-4,15,Directed,251,P4,1.0
 4,42,Directed,253,P42,1.0
+4,64,Directed,191,P78,1.0
+4,66,Directed,192,P78,1.0
 4,99,Directed,170,P42,1.0
 4,103,Directed,411,P42,1.0
 5,21,Directed,255,P2,1.0
 13,58,Directed,261,-P71,1.0
-15,64,Directed,262,P78,1.0
-15,66,Directed,263,P78,1.0
 16,74,Directed,264,-P71,1.0
 17,16,Directed,265,P2,1.0
 18,3,Directed,266,-P71,1.0
