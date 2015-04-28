@@ -83,11 +83,13 @@ define(['jquery',
                     //console.log(this.validateHasValues(nodes));
                     return this.validateHasValues(nodes);
                 }
-            }));   
+            })); 
+
+            console.log("7");
 
         },
         
-        console.log("7");
+        
 
         startWorkflow: function() { 
             this.switchBranchForEdit(this.getBlankFormData());
