@@ -103,8 +103,10 @@ require([
         var navigateForm = function () {
             $('#nav-confirm-modal').modal('hide');
             $('.form-load-mask').show();
-            document.location.href = formurl;
+            
             console.log(formurl);
+            document.location.href = formurl;
+            
         }
 
         $('.form-link').click(function (e) {
