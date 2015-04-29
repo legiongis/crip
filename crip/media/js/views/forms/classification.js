@@ -110,7 +110,7 @@ define(['jquery',
                 singleEdit: true,
                 validateBranch: function (nodes) {
                     console.log('full currentEditedClassification:');
-                    console.log(currentEditedClassification['FROM_DATE.E49']['domains']);
+                    console.log(currentEditedClassification);
                     console.log('printing FROM_DATE.E49:domains');
                     console.log(currentEditedClassification['FROM_DATE.E49']['domains']);
                     console.log('printing FROM_DATE.E49:branch_lists');
