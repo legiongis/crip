@@ -112,9 +112,9 @@ define(['jquery',
                     console.log('full currentEditedClassification:');
                     console.log(currentEditedClassification);
                     console.log('printing FROM_DATE.E49:domains');
-                    console.log(currentEditedClassification['FROM_DATE.E49']['domains']);
+                    console.log(currentEditedClassification['FROM_DATE.E49']);
                     console.log('printing FROM_DATE.E49:branch_lists');
-                    console.log(currentEditedClassification['FROM_DATE.E49']['branch_lists']);
+                    console.log(currentEditedClassification['FROM_DATE.E49']['value']);
                     console.log(isValidDate("1994/1/2"));
                     //return this.validateHasValues(nodes);
                     return true;
