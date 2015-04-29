@@ -10,7 +10,7 @@ define(['jquery',
     function isValidDate(dateString){
         
         // Change to acceptable db format
-        var replaceDate = dateString.replace("/","-");
+        var replaceDate = dateString.replace(///g,"-");
         
         var output = new Array(
             false,
@@ -39,7 +39,7 @@ define(['jquery',
 
         // Check the range of the day
         output[0] = day > 0 && day <= monthLength[month - 1];
-        output[1] = replaceDate
+        output[1] = replaceDate;
     };
 
     return WizardBase.extend({
