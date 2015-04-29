@@ -9,13 +9,20 @@ define(['jquery',
     //modified version of code from http://stackoverflow.com/questions/6177975/how-to-validate-date-with-format-mm-dd-yyyy-in-javascript
     function isValidDate(dateString){
         
-        // Change to acceptable db format
-        var replaceDate = dateString.replace(/\//g,"-");
-        
+        // Create output array
         var output = new Array(
             false,
             replaceDate
         );
+
+        // Change to acceptable db format
+        var replaceDate = dateString.replace(/\//g,"-");
+        
+        // Deal with empty dates (they're ok!)
+        if(replaceDate == ""){
+            output[0] = true;
+            return output;
+        };
         
         // First check for the pattern
         if(!/^\d{4}\-\d{1,2}\-\d{1,2}$/.test(dateString))
