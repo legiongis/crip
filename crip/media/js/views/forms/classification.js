@@ -22,15 +22,13 @@ define(['jquery',
         if(output[1] == ""){
             output[0] = true;
             return output;
-        };
+        }
         
         // First check for the pattern
-        if(!/^\d{4}\-\d{1,2}\-\d{1,2}$/.test(dateString)){
-            console.log('1');
+        if(!/^\d{4,3}\-\d{1,2}\-\d{1,2}$/.test(dateString)){
             return output;
-        };
-        
-        console.log('2');    
+        }
+
         // Parse the date parts to integers       
         var parts = replaceDate.split("-");
         var day = parseInt(parts[2], 10);
@@ -39,21 +37,18 @@ define(['jquery',
 
         // Check the ranges of month and year
         if(year > 3000 || month == 0 || month > 12){
-            console.log('3');
             return output;
-        };
-        console.log('4');
+        }
         var monthLength = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
 
         // Adjust for leap years
         if(year % 400 == 0 || (year % 100 != 0 && year % 4 == 0)){
             monthLength[1] = 29;
-        };
+        }
             
         // Check the range of the day
         output[0] = day > 0 && day <= monthLength[month - 1];
         output[1] = replaceDate;
-        console.log('5');
         return output;
     };
 
@@ -113,8 +108,6 @@ define(['jquery',
                 dataKey: 'TO_DATE.E49',
                 singleEdit: true,
                 validateBranch: function (nodes) {
-                    console.log(nodes[0]['value']);
-                    console.log(isValidDate(nodes[0]['value']));
                     var check_to = isValidDate(nodes[0]['value']);
                     nodes[0]['value'] = check_to[1];
                     return check_to[0];
@@ -126,16 +119,12 @@ define(['jquery',
                 dataKey: 'FROM_DATE.E49',
                 singleEdit: true,
                 validateBranch: function (nodes) {
-                    console.log(nodes[0]['value']);
-                    console.log(isValidDate(nodes[0]['value']));
                     var check_from = isValidDate(nodes[0]['value']);
                     nodes[0]['value'] = check_from[1];
                     return check_from[0];
                 }
             })); 
-        },
-        
-        
+        },     
 
         startWorkflow: function() { 
             this.switchBranchForEdit(this.getBlankFormData());
