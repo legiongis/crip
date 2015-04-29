@@ -162,7 +162,9 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
         <!--Title Box -->     
         <div class="title-box no-border margin-top-minus-10" style="border-bottom-color: #dcdcdc;">
-            <div class="title-box-text"><span class="color-green">{% user_name() %}</span></div>
+            <div class="title-box-text"><span class="color-green">{% user %}</span></div>
+            <div class="title-box-text"><span class="color-green">{% user.is_authenticated() %}</span></div>
+            <div class="title-box-text"><span class="color-green">{% user.groups %}</span></div>
             <p>These are some of the interesting cultural heritage stories in Los Angeles</p>
         </div>
         <!-- End Title Box --> 
