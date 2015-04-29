@@ -83,7 +83,7 @@ def user_permissions(request):
     return {
         'user_permissions': {
             'can_create': can_create,
-            'entities_allows': entities_allowed
+            'entities_allowed': entities_allowed
         }
     }
 
