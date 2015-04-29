@@ -17,7 +17,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 '''
 
 from django.conf import settings
-from arches.app.models.resource import Resource
+from crip.models.resource import Resource
 
 def livereload(request):
     return {
