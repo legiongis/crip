@@ -71,7 +71,7 @@ def user_permissions(request):
     group_names = [i.name for i in request.user.groups.all()]
     
     # if user is part of the data creators group, they can create new resources
-    if "DataCreators" in group_names:
+    if "DATA CREATORS" in group_names:
         can_create = True
     
     entities_allowed = [i for i in group_names if i in resource_types]
