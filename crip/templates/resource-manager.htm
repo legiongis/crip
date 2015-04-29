@@ -178,7 +178,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     </div>
 </div>
 
-{% if not resource.entityid and not user.can_create%}
+{% if not resource.entityid and not user_permissions.can_create%}
 <div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="bad-permissions-modal">
     <div class="modal-dialog modal-lg">
         <div class="modal-content no-corners" style="border-radius: 2px;">
