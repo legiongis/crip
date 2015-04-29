@@ -116,7 +116,7 @@ define(['jquery',
                     console.log(isValidDate(nodes[0]['value']));
                     var check_to = isValidDate(nodes[0]['value']);
                     nodes[0]['value'] = check_to[1];
-                    return check[0];
+                    return check_to[0];
                 }
             }));   
             //console.log("6");
@@ -130,7 +130,7 @@ define(['jquery',
                     console.log(isValidDate(nodes[0]['value']));
                     var check_from = isValidDate(nodes[0]['value']);
                     nodes[0]['value'] = check_from[1];
-                    return check[0];
+                    return check_from[0];
                 }
             })); 
 
