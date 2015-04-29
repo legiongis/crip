@@ -13,7 +13,8 @@ define(['jquery',
             return false;
 
         // Parse the date parts to integers
-        var parts = dateString.split("/");
+        var replacedate = dateString.replace("-","/");
+        var parts = replacedate.split("/");
         var day = parseInt(parts[1], 10);
         var month = parseInt(parts[2], 10);
         var year = parseInt(parts[0], 10);
