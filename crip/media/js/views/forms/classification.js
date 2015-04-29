@@ -83,7 +83,7 @@ define(['jquery',
                     console.log("this is the validate function");
                     //console.log(this.validateHasValues(nodes));
                     //return this.validateHasValues(nodes);
-                    return true
+                    return true;
                 }
             })); 
 
