@@ -62,7 +62,7 @@ def user_can_edit(request):
 def user_permissions(request):
     # need to implement proper permissions check here...
     # for now allowing all logged in users to be 'editors'
-    summary = "<br>".join([(i.name, i.code_val) for i in request.user.user_permissions.all()])
+    summary = "<br>".join([(i.name, i.codename) for i in request.user.user_permissions.all()])
     return {
         'user_permissions': summary
     }
