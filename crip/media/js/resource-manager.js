@@ -6,6 +6,8 @@ require([
     "bootstrap-datetimepicker"
 ], function($, arches) {
     $(document).ready(function() {
+        $('#bad-permissions-modal').modal('show');
+    
         //Scrolling, Get initial offsets for the app header
         var header_offset = $("#appheader").offset();
         
