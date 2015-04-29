@@ -114,8 +114,8 @@ define(['jquery',
                 validateBranch: function (nodes) {
                     console.log(nodes[0]['value']);
                     console.log(isValidDate(nodes[0]['value']));
-                    var check = isValidDate(nodes[0]['value']);
-                    nodes[0]['value'] = check[1];
+                    var check_to = isValidDate(nodes[0]['value']);
+                    nodes[0]['value'] = check_to[1];
                     return check[0];
                 }
             }));   
@@ -128,8 +128,8 @@ define(['jquery',
                 validateBranch: function (nodes) {
                     console.log(nodes[0]['value']);
                     console.log(isValidDate(nodes[0]['value']));
-                    var check = isValidDate(nodes[0]['value']);
-                    nodes[0]['value'] = check[1];
+                    var check_from = isValidDate(nodes[0]['value']);
+                    nodes[0]['value'] = check_from[1];
                     return check[0];
                 }
             })); 
