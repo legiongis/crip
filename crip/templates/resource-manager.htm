@@ -201,10 +201,10 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
             <!-- End Form (modal body) -->
 
             <div class="modal-footer" style="text-align:center">
-                <button class="btn-u nav-confirm-btn" type="button" href="javascript:history.back()">{% trans "go back" %}</button>
-                <button class="btn-u nav-confirm-btn" type="button" href="{% url 'home' %}">{% trans "jump to HOME" %}</button>
-                <button class="btn-u nav-confirm-btn" type="button" href="{% url 'search_home' %}">{% trans "jump to SEARCH" %}</button>
-                <button class="btn-u nav-confirm-btn" type="button" href="{% url 'map' %}">{% trans "jump to MAP" %}</button>               
+                <button class="btn-u" type="button" href="#" onClick="history.go(-1)">{% trans "go back" %}</button>
+                <button class="btn-u" type="button" href="{% url 'home' %}">{% trans "HOME" %}</button>
+                <button class="btn-u" type="button" href="{% url 'search_home' %}">{% trans "SEARCH" %}</button>
+                <button class="btn-u" type="button" href="{% url 'map' %}">{% trans "MAP" %}</button>               
             </div>
           </div>
     </div>
@@ -225,15 +225,18 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
             <!-- Form -->
             <div class="modal-body">
                 <div class="alert alert-warning" role="alert">
-                    {% trans 'This account does not have permission to edit or create this type of resource.' %}
-                    {{resource_type_name}}{{user_permissions.entities_allowed}}
+                    {% trans 'This account has permission to edit or create the following resource types:' %}
+                    {% for name in user_permissions.entities_allowed %}
+                        {{name}}
+                    {% endfor %}
+                    {% trans 'You are trying to edit or create a ' %}{{resource_type_name}}{% trans ' resource.' %}
                 </div>
                 
             </div>
             <!-- End Form (modal body) -->
 
             <div class="modal-footer" style="text-align:center">
-                <button class="btn-u nav-confirm-btn" type="button" href="javascript:history.back()">{% trans "go back" %}</button>          
+                <button class="btn-u" type="button" href="#" onClick="history.go(-1)">{% trans "go back" %}</button>          
             </div>
           </div>
     </div>
