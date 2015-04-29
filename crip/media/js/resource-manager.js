@@ -10,7 +10,7 @@ require([
                             'show':'true',
                             'backdrop':'static'
                         });
-        $('#bad-permissions-for-entity-modal"').modal({
+        $('#bad-permissions-for-entity-modal').modal({
                             'show':'true',
                             'backdrop':'static'
                         });
