@@ -75,7 +75,7 @@ def user_permissions(request):
     
     entities_allowed = [i for i in group_names if i in resource_types]
 
-    if request.user.is_super_user():
+    if request.user.is_superuser:
         can_create = True
         entities_allowed = resource_types
 
