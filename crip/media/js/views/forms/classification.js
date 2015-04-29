@@ -96,10 +96,9 @@ define(['jquery',
                 dataKey: 'TO_DATE.E49',
                 singleEdit: true,
                 validateBranch: function (nodes) {
-                    console.log("this is the validate function");
-                    //console.log(this.validateHasValues(nodes));
-                    //return this.validateHasValues(nodes);
-                    return true;
+                    console.log(nodes[0]['value']);
+                    console.log(isValidDate(nodes['value']));
+                    return isValidDate(nodes['value']);
                 }
             }));   
             //console.log("6");
@@ -109,19 +108,9 @@ define(['jquery',
                 dataKey: 'FROM_DATE.E49',
                 singleEdit: true,
                 validateBranch: function (nodes) {
-                    console.log('full currentEditedClassification:');
-                    console.log(currentEditedClassification);
-                    console.log('printing FROM_DATE.E49');
-                    console.log(currentEditedClassification['FROM_DATE.E49']);
-                    console.log('printing nodes');
-                    console.log(JSON.stringify(nodes));
-                    console.log('this should be the date value:');
-                    console.log(JSON.stringify(nodes)[0]['value']);
-                    console.log('or maybe just this:');
                     console.log(nodes[0]['value']);
-                    //console.log(isValidDate(nodes['value']));
-                    //return this.validateHasValues(nodes);
-                    return true;
+                    console.log(isValidDate(nodes['value']));
+                    return isValidDate(nodes['value']);
                 }
             })); 
 
