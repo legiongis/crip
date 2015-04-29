@@ -40,6 +40,7 @@ define(['jquery',
         // Check the range of the day
         output[0] = day > 0 && day <= monthLength[month - 1];
         output[1] = replaceDate;
+        return output;
     };
 
     return WizardBase.extend({
