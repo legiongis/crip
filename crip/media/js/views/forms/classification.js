@@ -109,8 +109,8 @@ define(['jquery',
                 dataKey: 'FROM_DATE.E49',
                 singleEdit: true,
                 validateBranch: function (nodes) {
-                    console.log(currentEditedClassification['TO_DATE.E49']['domains']);
-                    console.log(currentEditedClassification['TO_DATE.E49']['branch_lists']);
+                    console.log(currentEditedClassification['FROM_DATE.E49']['domains']);
+                    console.log(currentEditedClassification['FROM_DATE.E49']['branch_lists']);
                     console.log(isValidDate("1994/1/2"));
                     //return this.validateHasValues(nodes);
                     return true;
