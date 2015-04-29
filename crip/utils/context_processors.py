@@ -64,7 +64,7 @@ def user_permissions(request):
     # for now allowing all logged in users to be 'editors'
     
     can_create = False
-    resource_types = settings.RESOURCE_TYPE_CONFIGS().keys()
+    resource_types = [v['name'] for v in settings.RESOURCE_TYPE_CONFIGS().values()]
     print resource_types
 
     # get all group names for user
