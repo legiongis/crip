@@ -11,21 +11,21 @@ define(['jquery',
         },
 
         initialize: function(options) {
-            console.log("message from branchlist.js 0");
+            //console.log("message from branchlist.js 0");
             var self = this;
             this.singleEdit = false;
 
             _.extend(this, options);
 
             this.defaults = [];
-            console.log("message from branchlist.js 1");
-            console.log(this.data);
-            console.log(this.dataKey);
+            //console.log("message from branchlist.js 1");
+            //console.log(this.data);
+            //console.log(this.dataKey);
             this.viewModel = JSON.parse(JSON.stringify(this.data[this.dataKey]));
             //this.viewModel.domains = this.data[this.dataKey].domains;
             this.viewModel.branch_lists = koMapping.fromJS(this.data[this.dataKey].branch_lists);
             
-            console.log("message from branchlist.js 2");
+            //console.log("message from branchlist.js 2");
 
             // if this is a function then it's assumed to be an observableArray already
             if(typeof this.viewModel !== 'function'){
