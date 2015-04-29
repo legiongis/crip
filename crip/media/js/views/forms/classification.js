@@ -35,7 +35,7 @@ define(['jquery',
         var year = parseInt(parts[0], 10);
 
         // Check the ranges of month and year
-        if(year < 1000 || year > 3000 || month == 0 || month > 12)
+        if(year > 3000 || month == 0 || month > 12)
             return output;
 
         var monthLength = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
@@ -74,29 +74,24 @@ define(['jquery',
                 self.deleteClicked(branchlist);
             }
             
-            //console.log("1");
-            
             ko.applyBindings(this, this.$el.find('#existing-classifications')[0]);
-            //console.log("1.5");
+
             this.addBranchList(new BranchList({
                 data: currentEditedClassification,
                 dataKey: 'PHASE_TYPE_ASSIGNMENT.E17'
             }));
-            //console.log("2");
             this.addBranchList(new BranchList({
                 el: this.$el.find('#resource-type-section')[0],
                 data: currentEditedClassification,
                 dataKey: 'HERITAGE_RESOURCE_TYPE.E55',
                 singleEdit: true
             }));
-            //console.log("3");
             this.addBranchList(new BranchList({
                 el: this.$el.find('#resource-use-section')[0],
                 data: currentEditedClassification,
                 dataKey: 'HERITAGE_RESOURCE_USE_TYPE.E55',
                 singleEdit: true
             }));
-            //console.log("4");
             this.addBranchList(new BranchList({
                 el: this.$el.find('#related-features-section')[0],
                 data: currentEditedClassification,
@@ -105,7 +100,6 @@ define(['jquery',
                     return this.validateHasValues(nodes);
                 }
             }));
-            //console.log("5");
             this.addBranchList(new BranchList({
                 el: this.$el.find('#to-date-section')[0],
                 data: currentEditedClassification,
@@ -119,7 +113,6 @@ define(['jquery',
                     return check_to[0];
                 }
             }));   
-            //console.log("6");
             this.addBranchList(new BranchList({
                 el: this.$el.find('#from-date-section')[0],
                 data: currentEditedClassification,
@@ -133,9 +126,6 @@ define(['jquery',
                     return check_from[0];
                 }
             })); 
-
-            //console.log("7");
-
         },
         
         

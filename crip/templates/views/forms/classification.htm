@@ -5,7 +5,7 @@
 
 
 <div>
-    <div class="alert alert-danger branch-invalid-alert" role="alert" style="display:none;">{% trans "Make sure the date format is correct, and that a type has been specified." %}</div>
+    <div class="alert alert-danger branch-invalid-alert" role="alert" style="display:none;">{% trans "Make sure the date format is correct (YYYY-MM-DD), and that a type has been specified." %}</div>
     <!-- Related Information Objects Container -->
     <div id="existing-classifications">
 
@@ -55,7 +55,7 @@
                         </dl>
 
                         <dl>   
-                            <dt class="arches-evaluation-header">{% trans "Functions" %}</dt>
+                            <dt class="arches-evaluation-header">{% trans "Function" %}</dt>
                             <dd class="arches-evaluation-content" data-bind="if: $data['HERITAGE_RESOURCE_TYPE.E55'].branch_lists.length > 0">
                                 <span data-bind="html: $data['HERITAGE_RESOURCE_TYPE.E55'].branch_lists[0].nodes[0].label"></span>
                             </dd>
@@ -66,26 +66,11 @@
 
 
                         <dl>   
-                            <dt class="arches-evaluation-header">{% trans "Time Period" %}</dt>
                             <dd class="arches-evaluation-content" data-bind="if: $data['HERITAGE_RESOURCE_USE_TYPE.E55'].branch_lists.length > 0">
-                                <span data-bind="html: $data['HERITAGE_RESOURCE_USE_TYPE.E55'].branch_lists[0].nodes[0].label"></span>
-                            </dd>
-                            <dd class="arches-evaluation-content" data-bind="ifnot: $data['HERITAGE_RESOURCE_USE_TYPE.E55'].branch_lists.length > 0">
-                                <span data-bind="html: 'no entries'"></span>
+                                <span data-bind="html: $data['HERITAGE_RESOURCE_USE_TYPE.E55'].branch_lists[0].nodes[0].label"> Use</span>
                             </dd>
                         </dl>
 
-<!--
-                        <dl>   
-                            <dt class="arches-evaluation-header">{% trans "Cultural Period" %}</dt>
-                            <dd class="arches-evaluation-content" data-bind="if: $data['CULTURAL_PERIOD.E55'].branch_lists.length > 0">
-                                <span data-bind="html: $data['CULTURAL_PERIOD.E55'].branch_lists[0].nodes[0].label"></span>
-                            </dd>
-                            <dd class="arches-evaluation-content" data-bind="ifnot: $data['CULTURAL_PERIOD.E55'].branch_lists.length > 0">
-                                <span data-bind="html: 'no entries'"></span>
-                            </dd>
-                        </dl>
--->
                         <dl>   
                             <dt class="arches-evaluation-header">{% trans "From" %}</dt>
                             <dd class="arches-evaluation-content" data-bind="if: $data['FROM_DATE.E49'].branch_lists.length > 0">
@@ -115,17 +100,6 @@
                                 <span data-bind="html: 'no entries'"></span>
                             </dd>
                         </dl>
-<!--
-                        <dl>   
-                            <dt class="arches-evaluation-header">{% trans "Styles" %}</dt>
-                                <dd data-bind="foreach: $data['STYLE.E55'].branch_lists" class="arches-evaluation-content">
-                                    <span data-bind="text: nodes[0].label"></span><br>
-                                </dd>
-                            <dd class="arches-evaluation-content" data-bind="ifnot: $data['STYLE.E55'].branch_lists.length > 0">
-                                <span data-bind="html: 'no entries'"></span>
-                            </dd>
-                        </dl>
--->
                     </div>
                 </div>
             </div>
@@ -187,7 +161,7 @@
                                                                 <div id="resource-type-section" class="col-xs-12 col-sm-6">
                                                                                
                                                                     <div style="padding-right: 0px; padding-left: 0px;">
-                                                                        <input style="width:100%" class="select2 arches-select2-crud-form" data-bind="select2: {value: getEditedNode('HERITAGE_RESOURCE_TYPE.E55', 'value'), placeholder: '{% trans "type" %}', dataKey: 'HERITAGE_RESOURCE_TYPE.E55'}">
+                                                                        <input style="width:100%" class="select2 arches-select2-crud-form" data-bind="select2: {value: getEditedNode('HERITAGE_RESOURCE_TYPE.E55', 'value'), placeholder: '{% trans "select function" %}', dataKey: 'HERITAGE_RESOURCE_TYPE.E55'}">
                                                                         </input>
 
                                                                     </div>
@@ -198,7 +172,7 @@
                                                                 <div id="resource-use-section" class="col-xs-12 col-sm-6">
                                                                                
                                                                     <div style="padding-right: 0px; padding-left: 0px;">
-                                                                            <input style="width:100%" class="select2 arches-select2-crud-form" data-bind="select2: {value: getEditedNode('HERITAGE_RESOURCE_USE_TYPE.E55', 'value'), placeholder: '{% trans "use" %}',  dataKey: 'HERITAGE_RESOURCE_USE_TYPE.E55'}">
+                                                                            <input style="width:100%" class="select2 arches-select2-crud-form" data-bind="select2: {value: getEditedNode('HERITAGE_RESOURCE_USE_TYPE.E55', 'value'), placeholder: '{% trans "current or historic" %}',  dataKey: 'HERITAGE_RESOURCE_USE_TYPE.E55'}">
                                                                             </input>
                                                                         </div>
                                                                         <!-- Spacer for xs screens -->
