@@ -114,7 +114,7 @@ define(['jquery',
                     console.log('printing FROM_DATE.E49');
                     console.log(currentEditedClassification['FROM_DATE.E49']);
                     console.log('printing nodes');
-                    console.log(nodes);
+                    console.log(JSON.stringify(nodes));
                     console.log(isValidDate("1994/1/2"));
                     //return this.validateHasValues(nodes);
                     return true;
