@@ -116,9 +116,9 @@ define(['jquery',
                     console.log('printing nodes');
                     console.log(JSON.stringify(nodes));
                     console.log('this should be the date value:');
-                    console.log(JSON.stringify(nodes)['value']);
+                    console.log(JSON.stringify(nodes)[0]['value']);
                     console.log('or maybe just this:');
-                    console.log(nodes['value']);
+                    console.log(nodes[0]['value']);
                     //console.log(isValidDate(nodes['value']));
                     //return this.validateHasValues(nodes);
                     return true;
