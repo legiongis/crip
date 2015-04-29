@@ -58,29 +58,29 @@ define(['jquery',
                 self.deleteClicked(branchlist);
             }
             
-            console.log("1");
+            //console.log("1");
             
             ko.applyBindings(this, this.$el.find('#existing-classifications')[0]);
-            console.log("1.5");
+            //console.log("1.5");
             this.addBranchList(new BranchList({
                 data: currentEditedClassification,
                 dataKey: 'PHASE_TYPE_ASSIGNMENT.E17'
             }));
-            console.log("2");
+            //console.log("2");
             this.addBranchList(new BranchList({
                 el: this.$el.find('#resource-type-section')[0],
                 data: currentEditedClassification,
                 dataKey: 'HERITAGE_RESOURCE_TYPE.E55',
                 singleEdit: true
             }));
-            console.log("3");
+            //console.log("3");
             this.addBranchList(new BranchList({
                 el: this.$el.find('#resource-use-section')[0],
                 data: currentEditedClassification,
                 dataKey: 'HERITAGE_RESOURCE_USE_TYPE.E55',
                 singleEdit: true
             }));
-            console.log("4");
+            //console.log("4");
             this.addBranchList(new BranchList({
                 el: this.$el.find('#related-features-section')[0],
                 data: currentEditedClassification,
@@ -89,7 +89,7 @@ define(['jquery',
                     return this.validateHasValues(nodes);
                 }
             }));
-            console.log("5");
+            //console.log("5");
             this.addBranchList(new BranchList({
                 el: this.$el.find('#to-date-section')[0],
                 data: currentEditedClassification,
@@ -102,21 +102,22 @@ define(['jquery',
                     return true;
                 }
             }));   
-            console.log("6");
+            //console.log("6");
             this.addBranchList(new BranchList({
                 el: this.$el.find('#from-date-section')[0],
                 data: currentEditedClassification,
                 dataKey: 'FROM_DATE.E49',
                 singleEdit: true,
                 validateBranch: function (nodes) {
-                    console.log(currentEditedClassification['TO_DATE.E49']);
+                    console.log(currentEditedClassification['TO_DATE.E49']['domains']);
+                    console.log(currentEditedClassification['TO_DATE.E49']['branch_lists']);
                     console.log(isValidDate("1994/1/2"));
                     //return this.validateHasValues(nodes);
                     return true;
                 }
             })); 
 
-            console.log("7");
+            //console.log("7");
 
         },
         
