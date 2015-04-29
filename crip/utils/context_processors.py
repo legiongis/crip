@@ -62,9 +62,28 @@ def user_can_edit(request):
 def user_permissions(request):
     # need to implement proper permissions check here...
     # for now allowing all logged in users to be 'editors'
-    summary = "\n\r<br>".join(["{0}|{1}|{2}".format(i.name, i.codename, i.content_type) for i in request.user.user_permissions.all()])
+    
+    can_create = False
+    resource_types = settings.RESOURCE_TYPE_CONFIGS().keys()
+
+    # get all group names for user
+    group_names = [i.name for i in request.user.groups.all()]
+    
+    # if user is part of the data creators group, they can create new resources
+    if "DataCreators" in group_names:
+        can_create = True
+    
+    entities_allowed = [i for i in group_names if i in resource_types]
+
+    if request.user.is_super_user():
+        can_create = True
+        entities_allowed = resource_types
+
     return {
-        'user_permissions': summary
+        'user_permissions': {
+            'can_create': can_create,
+            'entities_allows': entities_allowed
+        }
     }
 
 def user_groups(request):

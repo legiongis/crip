@@ -162,9 +162,8 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
         <!--Title Box -->     
         <div class="title-box no-border margin-top-minus-10" style="border-bottom-color: #dcdcdc;">
-            {{ user_can_edit }}
-            {{ user_permissions }}
-            {{ user_groups }}
+            {{ user_permissions.can_create }}
+            {{ user_permissions.entities_allowed }}
             <p>These are some of the interesting cultural heritage stories in Los Angeles</p>
         </div>
         <!-- End Title Box --> 
