@@ -25,10 +25,11 @@ define(['jquery',
         };
         
         // First check for the pattern
-        if(!/^\d{4}\-\d{1,2}\-\d{1,2}$/.test(dateString))
+        if(!/^\d{4}\-\d{1,2}\-\d{1,2}$/.test(dateString)){
             console.log('1');
             return output;
-
+        };
+        
         console.log('2');    
         // Parse the date parts to integers       
         var parts = replaceDate.split("-");
@@ -37,16 +38,18 @@ define(['jquery',
         var year = parseInt(parts[0], 10);
 
         // Check the ranges of month and year
-        if(year > 3000 || month == 0 || month > 12)
+        if(year > 3000 || month == 0 || month > 12){
             console.log('3');
             return output;
+        };
         console.log('4');
         var monthLength = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
 
         // Adjust for leap years
-        if(year % 400 == 0 || (year % 100 != 0 && year % 4 == 0))
+        if(year % 400 == 0 || (year % 100 != 0 && year % 4 == 0)){
             monthLength[1] = 29;
-
+        };
+            
         // Check the range of the day
         output[0] = day > 0 && day <= monthLength[month - 1];
         output[1] = replaceDate;
