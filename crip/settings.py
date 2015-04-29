@@ -33,6 +33,24 @@ extent_coords = [
 # stored files. It must end in a slash if set to a non-empty value.
 MEDIA_URL = os.path.join(PACKAGE_ROOT, 'uploads/')
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.core.context_processors.tz',
+    'django.core.context_processors.request',
+    'django.contrib.messages.context_processors.messages',
+    'crip.utils.context_processors.livereload',
+    'crip.utils.context_processors.resource_types',
+    'crip.utils.context_processors.map_info',
+    'crip.utils.context_processors.app_settings',
+    'crip.utils.context_processors.user_can_edit',
+    'crip.utils.context_processors.user_permissions',
+    'crip.utils.context_processors.user_groups',
+)
+
 def RESOURCE_TYPE_CONFIGS():
     return {
         'HERITAGE_RESOURCE.E18': {
