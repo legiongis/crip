@@ -17,7 +17,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 '''
 
 from django.conf import settings
-from crip.models.resource import Resource
+from arches.app.models.resource import Resource
 
 def livereload(request):
     return {
@@ -62,7 +62,7 @@ def user_can_edit(request):
 def user_permissions(request):
     # need to implement proper permissions check here...
     # for now allowing all logged in users to be 'editors'
-    summary = "<br>".join(["{0} : {1}".format(i.name, i.codename) for i in request.user.user_permissions.all()])
+    summary = "\n".join(["{0}|{1}|{2}".format(i.name, i.codename, i.content_type) for i in request.user.user_permissions.all()])
     return {
         'user_permissions': summary
     }
