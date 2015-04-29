@@ -6,22 +6,30 @@ define(['jquery',
     'bootstrap-datetimepicker',
     'summernote'], function ($, _, ko, WizardBase, BranchList, datetimepicker, summernote) {
     
-    //from http://stackoverflow.com/questions/6177975/how-to-validate-date-with-format-mm-dd-yyyy-in-javascript
+    //modified version of code from http://stackoverflow.com/questions/6177975/how-to-validate-date-with-format-mm-dd-yyyy-in-javascript
     function isValidDate(dateString){
+        
+        // Change to acceptable db format
+        var replaceDate = dateString.replace("/","-");
+        
+        var output = new Array(
+            false,
+            replaceDate
+        );
+        
         // First check for the pattern
-        if(!/^\d{4}\/\d{1,2}\/\d{1,2}$/.test(dateString) && !/^\d{4}\-\d{1,2}\-\d{1,2}$/.test(dateString))
-            return false;
+        if(!/^\d{4}\-\d{1,2}\-\d{1,2}$/.test(dateString))
+            return output;
 
-        // Parse the date parts to integers
-        var replacedate = dateString.replace("-","/");
-        var parts = replacedate.split("/");
+        // Parse the date parts to integers       
+        var parts = replaceDate.split("-");
         var day = parseInt(parts[1], 10);
         var month = parseInt(parts[2], 10);
         var year = parseInt(parts[0], 10);
 
         // Check the ranges of month and year
         if(year < 1000 || year > 3000 || month == 0 || month > 12)
-            return false;
+            return output;
 
         var monthLength = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
 
@@ -30,13 +38,12 @@ define(['jquery',
             monthLength[1] = 29;
 
         // Check the range of the day
-        return day > 0 && day <= monthLength[month - 1];
+        output[0] = day > 0 && day <= monthLength[month - 1];
+        output[1] = replaceDate
     };
 
     return WizardBase.extend({
-        
-        
-    
+
         initialize: function() {
             WizardBase.prototype.initialize.apply(this);
 
@@ -99,7 +106,9 @@ define(['jquery',
                 validateBranch: function (nodes) {
                     console.log(nodes[0]['value']);
                     console.log(isValidDate(nodes[0]['value']));
-                    return isValidDate(nodes[0]['value']);
+                    check = isValidDate(nodes[0]['value'])
+                    nodes[0]['value'] = check[1]
+                    return check[0];
                 }
             }));   
             //console.log("6");
@@ -111,7 +120,9 @@ define(['jquery',
                 validateBranch: function (nodes) {
                     console.log(nodes[0]['value']);
                     console.log(isValidDate(nodes[0]['value']));
-                    return isValidDate(nodes[0]['value']);
+                    check = isValidDate(nodes[0]['value'])
+                    nodes[0]['value'] = check[1]
+                    return check[0];
                 }
             })); 
 
