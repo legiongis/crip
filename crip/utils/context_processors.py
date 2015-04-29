@@ -63,7 +63,7 @@ def user_permissions(request):
     # need to implement proper permissions check here...
     # for now allowing all logged in users to be 'editors'
     return {
-        'user_permissions': request.user.permissions
+        'user_permissions': request.user.user_permissions
     }
 
 def user_groups(request):
