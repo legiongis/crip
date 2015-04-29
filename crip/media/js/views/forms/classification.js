@@ -69,7 +69,8 @@ define(['jquery',
                 validateBranch: function (nodes) {
                     console.log("this is the validate function");
                     //console.log(this.validateHasValues(nodes));
-                    return this.validateHasValues(nodes);
+                    //return this.validateHasValues(nodes);
+                    return true;
                 }
             }));   
             console.log("6");
@@ -81,7 +82,8 @@ define(['jquery',
                 validateBranch: function (nodes) {
                     console.log("this is the validate function");
                     //console.log(this.validateHasValues(nodes));
-                    return this.validateHasValues(nodes);
+                    //return this.validateHasValues(nodes);
+                    return true
                 }
             })); 
 
