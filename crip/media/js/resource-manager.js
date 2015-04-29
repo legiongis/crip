@@ -111,7 +111,7 @@ require([
         // function to close modal when a button is clicked to allow leaving the page
         $('.nav-away').click(function () {
             $('.modal').modal('hide');
-        }
+        });
             
 
         var formurl = '';
