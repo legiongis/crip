@@ -106,7 +106,7 @@ define(['jquery',
                 validateBranch: function (nodes) {
                     console.log(nodes[0]['value']);
                     console.log(isValidDate(nodes[0]['value']));
-                    check = isValidDate(nodes[0]['value'])
+                    var check = isValidDate(nodes[0]['value'])
                     nodes[0]['value'] = check[1]
                     return check[0];
                 }
@@ -120,7 +120,7 @@ define(['jquery',
                 validateBranch: function (nodes) {
                     console.log(nodes[0]['value']);
                     console.log(isValidDate(nodes[0]['value']));
-                    check = isValidDate(nodes[0]['value'])
+                    var check = isValidDate(nodes[0]['value'])
                     nodes[0]['value'] = check[1]
                     return check[0];
                 }
