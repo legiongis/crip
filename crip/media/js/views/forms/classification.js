@@ -10,7 +10,7 @@ define(['jquery',
     function isValidDate(dateString){
         
         // Change to acceptable db format
-        var replaceDate = dateString.replace(///g,"-");
+        var replaceDate = dateString.replace(/\//g,"-");
         
         var output = new Array(
             false,
