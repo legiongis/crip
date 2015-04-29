@@ -97,8 +97,8 @@ define(['jquery',
                 singleEdit: true,
                 validateBranch: function (nodes) {
                     console.log(nodes[0]['value']);
-                    console.log(isValidDate(nodes['value']));
-                    return isValidDate(nodes['value']);
+                    console.log(isValidDate(nodes[0]['value']));
+                    return isValidDate(nodes[0]['value']);
                 }
             }));   
             //console.log("6");
@@ -109,8 +109,8 @@ define(['jquery',
                 singleEdit: true,
                 validateBranch: function (nodes) {
                     console.log(nodes[0]['value']);
-                    console.log(isValidDate(nodes['value']));
-                    return isValidDate(nodes['value']);
+                    console.log(isValidDate(nodes[0]['value']));
+                    return isValidDate(nodes[0]['value']);
                 }
             })); 
 
