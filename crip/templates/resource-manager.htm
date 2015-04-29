@@ -178,8 +178,10 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     </div>
 </div>
 
-{% if not resource.entityid and not user_permissions.can_create%}
-<div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="bad-permissions-modal">
+
+
+{% if not resource.entityid and not user_permissions.can_create %}
+<div class="modal" tabindex="-1" role="dialog" aria-hidden="true" id="bad-permissions-modal">
     <div class="modal-dialog modal-lg">
         <div class="modal-content no-corners" style="border-radius: 2px;">
             
@@ -192,20 +194,51 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
             <!-- Form -->
             <div class="modal-body">
                 <div class="alert alert-warning" role="alert">
-                    {% trans 'This account {{user_name}} does not have permission to create new resources.  Use the SEARCH or MAP tabs to find existing resources to edit.' %}
+                    {% trans 'This account does not have permission to create new resources.  You must use the SEARCH or MAP tabs to find existing resources to edit.' %}
                 </div>
                 
             </div>
             <!-- End Form (modal body) -->
 
             <div class="modal-footer">
-                <button class="btn-u nav-confirm-btn" type="button" href="{% url 'map' %}">{% trans "go to MAP" %}</button>
-                <button class="btn-u nav-confirm-btn" type="button" href="{% url 'search_home' %}">{% trans "go to SEARCH" %}</button>
+                <button class="btn-u nav-confirm-btn" type="button" href="javascript:history.back()">{% trans "go back" %}</button>
+                <button class="btn-u nav-confirm-btn" type="button" href="{% url 'home' %}">{% trans "jump to HOME" %}</button>
+                <button class="btn-u nav-confirm-btn" type="button" href="{% url 'search_home' %}">{% trans "jump to SEARCH" %}</button>
+                <button class="btn-u nav-confirm-btn" type="button" href="{% url 'map' %}">{% trans "jump to MAP" %}</button>               
             </div>
           </div>
     </div>
 </div>
 {% endif %}
+
+{% if resource_type_name not in user_permissions.entities_allowed %}
+<div class="modal" tabindex="-1" role="dialog" aria-hidden="true" id="bad-permissions-for-entity-modal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content no-corners" style="border-radius: 2px;">
+            
+            <!-- Form Header -->
+            <div class="modal-header arches-modal-header">
+                <h4 id="" class="modal-title">{% trans 'Insufficient Permissions...' %}</h4>
+            </div>
+            <!-- End Form Header -->
+            
+            <!-- Form -->
+            <div class="modal-body">
+                <div class="alert alert-warning" role="alert">
+                    {% trans 'This account does not have permission to edit or create this type of resource.' %}
+                </div>
+                
+            </div>
+            <!-- End Form (modal body) -->
+
+            <div class="modal-footer">
+                <button class="btn-u nav-confirm-btn" type="button" href="javascript:history.back()">{% trans "go back" %}</button>          
+            </div>
+          </div>
+    </div>
+</div>
+{% endif %}
+
 
 <div style="display:none;" id="form-data">
     <input type="hidden" id="form-id" value="{{form_id}}">
