@@ -25,7 +25,7 @@ define(['jquery',
         }
         
         // First check for the pattern
-        if(!/^\d{3,4}\-\d{1,2}\-\d{1,2}$/.test(dateString)){
+        if(!/^\d{4}\-\d{1,2}\-\d{1,2}$/.test(dateString)){
             return output;
         }
 
