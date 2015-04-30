@@ -1,6 +1,7 @@
 define(['jquery', 'underscore', 'knockout-mapping', 'views/forms/base', 'views/forms/sections/branch-list'], function ($, _, koMapping, BaseForm, BranchList) {
     return BaseForm.extend({
         initialize: function() {
+            console.log("this is this designation.js");
             BaseForm.prototype.initialize.apply(this);
 
             var date_picker = $('.datetimepicker').datetimepicker({pickTime: false});
