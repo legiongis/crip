@@ -115,6 +115,8 @@
                                 <a href="javascript:void(0)" class="arches-CRUD-child" title="{% trans "Delete this designation" %}"><i data-bind='click: $parent.deleteItem.bind($parent)' class="arches-CRUD-delete fa fa-times-circle"></i></a>
                                 <a href="javascript:void(0)" class="arches-CRUD-child arches-CRUD-edit" data-bind='click: $parent.editItem.bind($parent)' title="Edit this designation"><span data-bind="{text: nodes.get('TYPE_OF_DESIGNATION_OR_PROTECTION.E55', 'label')}" style="padding-right:2px;"></span><span class="text-muted"> from </span><span data-bind="{text: nodes.get('DESIGNATION_OR_PROTECTION_FROM_DATE.E49', 'value')}" style="padding-right:2px"></span><span class="text-muted"> to </span><span data-bind="{text: nodes.get('DESIGNATION_OR_PROTECTION_TO_DATE.E49', 'value')}"></span>
                                 </a>
+                                <br>
+                                <span class="text-muted">Status:</span><span data-bind="{text: nodes.get('STATUS.E55', 'value')}"></span>
                             </div>
                         </div>
                     </dd>
