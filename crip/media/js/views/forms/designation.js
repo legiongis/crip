@@ -71,6 +71,8 @@ define(['jquery',
         if (from_date_check == false || to_date_check == false) {
             return false;
         }
+        
+        return true
     }
         
     return BaseForm.extend({
@@ -88,6 +90,7 @@ define(['jquery',
                 data: this.data,
                 dataKey: 'PROTECTION_EVENT.E65',
                 validateBranch: function (nodes) {
+                    console.log(nodes);
                     return checkNodes(nodes);
                 }
             }));
