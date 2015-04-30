@@ -16,6 +16,10 @@
   border-bottom: 0px;
 }
 
+.form-headline h3 {
+    color:rgb(66, 139, 202) !important;
+}
+
 .modal-subtitle {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -155,8 +159,4 @@ cf https://github.com/summernote/summernote/issues/187
 */
 .note-editor .note-dropzone {
     opacity: 0 !important;
-}
-
-.form-headline {
-    color:rgb(66, 139, 202) !important;
 }
