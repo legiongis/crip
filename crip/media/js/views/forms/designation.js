@@ -54,13 +54,19 @@ define(['jquery',
     // custom validate function
     function checkNodes(nodes){
         
+        console.log(nodes[0]['value']);
+        console.log(nodes[1]['value']);
+        console.log(nodes[2]['value']);
+        
         // check to make sure there's actually a listing
         if (nodes[0]['value'] == ""){
             return false;
         }
         
         var from_date_check = isValidDate(nodes[1]['value'])[0];
+        console.log(from_date_check);
         var to_date_check = isValidDate(nodes[2]['value'])[0];
+        console.log(to_date_check);
         
         if (from_date_check == false || to_date_check == false) {
             return false;
