@@ -65,6 +65,7 @@ define(['jquery',
         if (from_date_check == false || to_date_check == false) {
             return false;
         }
+    }
         
     return BaseForm.extend({
         initialize: function() {
