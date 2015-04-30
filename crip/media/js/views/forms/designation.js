@@ -13,6 +13,7 @@ define(['jquery', 'underscore', 'knockout-mapping', 'views/forms/base', 'views/f
                 data: this.data,
                 dataKey: 'PROTECTION_EVENT.E65',
                 validateBranch: function (nodes) {
+                    console.log(nodes);
                     return this.validateHasValues(nodes);
                 }
             }));
