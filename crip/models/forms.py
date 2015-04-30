@@ -942,7 +942,8 @@ class DesignationForm(ResourceForm):
             self.data['PROTECTION_EVENT.E65'] = {
                 'branch_lists': self.get_nodes('PROTECTION_EVENT.E65'),
                 'domains': {
-                    'TYPE_OF_DESIGNATION_OR_PROTECTION.E55' : Concept().get_e55_domain('TYPE_OF_DESIGNATION_OR_PROTECTION.E55')
+                    'TYPE_OF_DESIGNATION_OR_PROTECTION.E55' : Concept().get_e55_domain('TYPE_OF_DESIGNATION_OR_PROTECTION.E55'),
+                    'STATUS.E55' : Concept().get_e55_domain('STATUS.E55')
                 }
             }
 
