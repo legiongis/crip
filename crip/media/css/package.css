@@ -153,7 +153,10 @@ summernote:empty:not(:focus):before{
 disable drop image in summernote WISYWIG
 cf https://github.com/summernote/summernote/issues/187
 */
-
 .note-editor .note-dropzone {
     opacity: 0 !important;
+}
+
+.form-headline {
+    color:rgb(66, 139, 202);
 }
