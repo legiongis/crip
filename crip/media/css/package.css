@@ -158,5 +158,5 @@ cf https://github.com/summernote/summernote/issues/187
 }
 
 .form-headline {
-    color:rgb(66, 139, 202);
+    color:rgb(66, 139, 202) !important;
 }
