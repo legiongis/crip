@@ -29,16 +29,16 @@
                                             {% include 'views/components/add-item-button.htm' %}
                                             <!-- End Add Button -->                                           
                                         </div>
-                                        <div>
+                                        <div style="margin-top:5px">
                                             <!-- From Date -->
-                                            <div class="form-group datetimepicker" style="width:37%;">
+                                            <div class="form-group datetimepicker" style="width:30%;">
                                                 <div class="input-group">
                                                     <input type="text" name="mydate" id="date" placeholder='{% trans "from (yyyy-mm-dd)" %}' class="form-control datepicker" data-date-format="YYYY-MM-DD" data-bind="{value: getEditedNode('DESIGNATION_OR_PROTECTION_FROM_DATE.E49', 'value')} ">
                                                     <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                                                 </div>
                                             </div>&nbsp;
                                             <!-- To date -->
-                                            <div class="form-group datetimepicker" style="width:37%;">
+                                            <div class="form-group datetimepicker" style="width:30%;">
                                                 <div class="input-group">
                                                     <input type="text" name="mydate" id="date" placeholder='{% trans "to (yyyy-mm-dd)" %}' class="form-control datepicker" data-date-format="YYYY-MM-DD"collapse-resource-description data-bind="{value: getEditedNode('DESIGNATION_OR_PROTECTION_TO_DATE.E49', 'value')} ">
                                                     <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
@@ -46,9 +46,9 @@
                                             </div>
                                             
                                         </div>
-                                        <div>
+                                        <div style="margin-top:5px">
                                             <!-- Listing Status -->
-                                            <input style="width:80%; display:inline-block;" class="select2 arches-select2-crud-form name-type designation" id="resource-designation-type" data-bind="select2: {value: getEditedNode('STATUS.E55', 'value'),  placeholder: '{% trans "Type" %}', dataKey: 'STATUS.E55'}">
+                                            <input style="width:80%; display:inline-block;" class="select2 arches-select2-crud-form name-type designation" id="resource-designation-type" data-bind="select2: {value: getEditedNode('STATUS.E55', 'value'),  placeholder: '{% trans "Status" %}', dataKey: 'STATUS.E55'}">
                                         </div>
                                     </div>
                                 </div>
