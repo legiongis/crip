@@ -69,46 +69,6 @@ define(['jquery',
     return BaseForm.extend({
         initialize: function() {
             
-            
-        // Create output array
-        var output = new Array(
-            false,
-            replaceDate
-        );       
-        
-        // Deal with empty dates (they're ok!)
-        if(output[1] == ""){
-            output[0] = true;
-            return output;
-        }
-        
-        // First check for the pattern
-        if(!/^\d{4}\-\d{1,2}\-\d{1,2}$/.test(dateString)){
-            return output;
-        }
-
-        // Parse the date parts to integers       
-        var parts = replaceDate.split("-");
-        var day = parseInt(parts[2], 10);
-        var month = parseInt(parts[1], 10);
-        var year = parseInt(parts[0], 10);
-
-        // Check the ranges of month and year
-        if(year > 3000 || month == 0 || month > 12){
-            return output;
-        }
-        var monthLength = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
-
-        // Adjust for leap years
-        if(year % 400 == 0 || (year % 100 != 0 && year % 4 == 0)){
-            monthLength[1] = 29;
-        }
-            
-        // Check the range of the day
-        output[0] = day > 0 && day <= monthLength[month - 1];
-        output[1] = replaceDate;
-        return output;
-    };
             BaseForm.prototype.initialize.apply(this);
 
             var date_picker = $('.datetimepicker').datetimepicker({pickTime: false});
