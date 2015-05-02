@@ -25,7 +25,8 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 <div id="report-body" class="report-body">
     
      {% if geometry != 'null' %}
-        <!--=== Map Block ===-->
+		{% include 'views/reports/map_section.htm' %}
+        <!--=== Map Block ===
         <div id="map-container">
 
             <div id="map" class="map map-report-panel" style="display: block;">
@@ -35,10 +36,10 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                 </div>
             </div>
 
-            <!-- Map: Project Info Panel -->
+            <!-- Map: Project Info Panel
             <div class="container">
 
-                <!-- Map Tools Panel -->
+                <!-- Map Tools Panel
                 <div class="row">
                     <div class="col-xs-12 col-sm-6" style="">
 
@@ -52,7 +53,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                                 </h4>
                             </div>
 
-                            <!-- Body Content -->
+                            <!-- Body Content 
                             <div class="modal-body padding-top-0 padding-bottom-0" data-bind='foreach: baseLayers'>
 
                                 <div class="row">
@@ -76,14 +77,14 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                                 </div>
 
                             </div>
-                            <!-- End Body Content -->
+                            <!-- End Body Content 
 
                         </div>
                     </div>
                 </div>
-                <!-- End Map Tools Panel -->
+                <!-- End Map Tools Panel
 
-                <!-- Map Tools -->
+                <!-- Map Tools 
                 <div class="row">
                     <div class="col-xs-12 col-sm-7 col-md-5 col-lg-4" style="margin-top: -77px;">
                         <div class="btn-group">
@@ -92,10 +93,11 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                         </div>
                     </div>
                 </div>
-                <!-- End Map Tools -->
+                <!-- End Map Tools 
             </div>
         </div>
         <!--=== End Map Block ===-->
+		
     {% endif %}
 
 

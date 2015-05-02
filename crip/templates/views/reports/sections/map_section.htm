@@ -1,0 +1,142 @@
+<!--
+ARCHES - a program developed to inventory and manage immovable cultural heritage.
+Copyright (C) 2013 J. Paul Getty Trust and World Monuments Fund
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+{% load staticfiles %}
+{% load i18n %}
+
+<!--=== Map Block ===-->
+<div id="map-container">
+
+	<div id="map" class="map map-report-panel" style="display: block;">
+		<div id="olmap" class="fill"></div>
+		<div style="display:none;" id="map-data">
+			<input type="hidden" id="resource_geometry" value='{{ geometry }}' />
+		</div>
+	</div>
+
+	<!-- Map: Project Info Panel -->
+	<div class="container">
+
+		<!-- Basemap Panel -->
+		<div class="row">
+			<div class="col-xs-12 col-sm-6" style="min-height:0px !important;">
+
+				<div id="basemaps-panel" class="tools-panel-filter hidden" style="border-top-left-radius: 5px; border-top-right-radius: 5px;">
+					<div class="modal-header arches-modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+							×
+						</button>
+						<span title="Go to the MAP tab to learn more about these basemaps">
+							<h4 class="modal-title">
+								{% trans "Basemaps" %}
+							</h4>
+						</span>
+					</div>
+
+					<!-- Body Content -->
+					<div class="modal-body padding-top-0 padding-bottom-10" data-bind='foreach: baseLayers' style="overflow-y: scroll; height:276px">
+
+						<div class="row">
+							<hr class="arches-layer-divider" style="border-top: 0px; margin-top: 5px;">
+
+							<div class="arches-basemap-entry" style="" data-bind="attr: { id: id}">
+						
+								<div class="" style="">
+									<a data-bind="attr: { id: id, title: alttext }" class="basemap info-click" data-rel="" href="javascript:void(0);">
+										<span class="">  
+											<img data-bind="attr: { src: icon }" class="arches-basemap-thumbnail" alt="" />
+											<span class="zoom-icon"></span>                   
+										</span>                                              
+									</a>
+								 
+									<span class="arches-basemap-caption">
+										<a data-bind="attr: { id: id }, text: name" class="caption-text hover-effect basemap info-click" href="javascript:void(0);" style="font-size:medium"> </a>
+									</span>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+					<!-- End Body Content -->
+				</div>
+			</div>
+		</div>
+		<!-- End Basemap Panel -->
+		
+		<!-- Historic Map Panel -->
+		<div class="row">
+			<div class="col-xs-12 col-xs-6" style="min-height:0px !important;">
+
+				<div id="historicmaps-panel" class="tools-panel-filter hidden" style="border-top-left-radius: 3px; border-top-right-radius: 3px;">
+				
+					<div class="modal-header arches-modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+							×
+						</button>
+						<span title="Go to the MAP tab to learn more about these historic maps">
+							<h4 class="modal-title">
+								{% trans "Historic Maps" %}
+							</h4>
+						</span>
+					</div>
+
+					<!-- Body Content -->
+					<div class= "modal-body padding-top-0 padding-bottom-10" data-bind='foreach: historicLayers' style="overflow-y: scroll; height:276px">
+
+						<div class="row">
+							<hr class="arches-layer-divider" style="border-top: 0px; margin-top: 5px;">
+
+							<div class="arches-basemap-entry" style="" data-bind="attr: { id: id}">
+						
+								<div class="">
+									<a data-bind="attr: { id: id, title: name }" class="historicmap info-click" data-rel="" href="javascript:void(0);">
+										<span class="">  
+											<img data-bind="attr: {src: icon }" class="arches-basemap-thumbnail" alt="" />
+											<span class="zoom-icon"></span>                   
+										</span>                                              
+									</a>                    
+									<span class="arches-basemap-caption">
+										<a data-bind="attr: { id: id }, text: name" class="caption-text hover-effect historicmap info-click" href="javascript:void(0);" style="font-size:medium"> </a>
+									</span>
+
+								</div>
+							</div>
+						</div>                            
+					</div>
+					<!-- End Body Content -->
+
+				</div>
+			</div>
+		</div>
+		<!-- End Historic Map Panel -->
+
+		<!-- Map Tools -->
+		<div class="row">
+			<div class="col-xs-12 col-sm-7 col-md-5 col-lg-4" style="margin-top: -77px; margin-left: 15px;">
+				<div class="btn-group">
+					<button id="inventory-basemaps" type="button" class="btn btn-primary arches-map-tools"><i class="fa fa-globe"></i> {% trans "Basemaps" %}
+					</button>
+					<button id="inventory-historicmaps" type="button" class="btn btn-primary arches-map-tools"><i class="fa fa-newspaper-o"></i> {% trans "Historic Maps" %}
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- End Map Tools -->
+	</div>
+</div>
+<!--=== End Map Block ===-->
