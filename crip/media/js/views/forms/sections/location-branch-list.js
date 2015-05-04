@@ -230,8 +230,9 @@ define([
 
                 self.$el.find("#inventory-historicmaps").removeClass("arches-map-tools-pressed");
                 self.$el.find("#inventory-historicmaps").addClass("arches-map-tools");
+            });
 
-            self.$el.find("#inventory-overlays").click(function (){ 
+            self.$el.find("#inventory-historicmaps").click(function (){ 
                 self.$el.find("#historicmaps-panel").removeClass("hidden");
                 self.$el.find("#basemaps-panel").addClass("hidden");
                 self.$el.find("#overlay-panel").addClass("hidden");
