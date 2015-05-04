@@ -158,11 +158,8 @@ require([
         },
         
         selectHistoricMap: function(historicmap){
-            console.log("firing...");
-            console.log(historicmap);
             var self = this;
             _.each(self.map.historicLayers, function(historicLayer){
-                console.log(historicLayer);
                 if (historicLayer.id == historicmap){
                     historicLayer.layer.setVisible(!historicLayer.layer.getVisible());
                     
@@ -180,6 +177,7 @@ require([
                     }
                 }                
             });
+            console.log("show features");
             this.highlightFeatures();
         },
 
