@@ -73,51 +73,54 @@ require([
                 $(".close").click(function (){ 
                     hideAllPanels();
                 });
+                
+                //Inventory-historicmaps button opens historic maps panel
+                $("#inventory-historicmaps").click(function (){
+                    if ($(this).hasClass('arches-map-tools-pressed')) {
+                        hideAllPanels();
+                    } else {
+                        $("#basemaps-panel").addClass("hidden");
+                        $("#historicmaps-panel").removeClass("hidden");
+                        
+                        $("#inventory-basemaps").removeClass("arches-map-tools-pressed");
+                        $("#inventory-basemaps").addClass("arches-map-tools");
+
+                        //Update state of current button and adjust position
+                        $("#inventory-historicmaps").addClass("arches-map-tools-pressed");
+                        $("#inventory-historicmaps").removeClass("arches-map-tools");
+                    }
+                });
+                
+                // activate historic map when button is clicked, stays on until clicked again
+                // historic map panel doesn't close automatically
+                $(".historicmap").click(function (){
+                    var historicmap = $(this).attr('id');
+                    _.each(map.historicLayers, function(historicLayer){
+                        if (historicLayer.id == historicmap){
+                            historicLayer.layer.setVisible(!historicLayer.layer.getVisible());
+                            
+                            // if activated, set layer on top of all historic maps/basemaps
+                            // also highlight layer button by changing background
+                            if (historicLayer.layer.getVisible() == true) {
+                                setlyrs = map.historicLayers.length + map.baseLayers.length;
+                                
+                                map.map.removeLayer(historicLayer.layer);
+                                map.map.getLayers().insertAt(setlyrs, historicLayer.layer);
+                                
+                                $('#'+historicLayer.id).css("background","#eaeaea");
+                            } else {
+                                $('#'+historicLayer.id).css("background","");
+                            }
+                        }                
+                    });
+                });
+            
                
             }else{
                 $('.block-description').css('marginTop', '-40px');
                 $('#map-container').hide();
             }
-            //Inventory-historicmaps button opens historic maps panel
-            $("#inventory-historicmaps").click(function (){
-                if ($(this).hasClass('arches-map-tools-pressed')) {
-                    hideAllPanels();
-                } else {
-                    $("#basemaps-panel").addClass("hidden");
-                    $("#historicmaps-panel").removeClass("hidden");
-                    
-                    $("#inventory-basemaps").removeClass("arches-map-tools-pressed");
-                    $("#inventory-basemaps").addClass("arches-map-tools");
-
-                    //Update state of current button and adjust position
-                    $("#inventory-historicmaps").addClass("arches-map-tools-pressed");
-                    $("#inventory-historicmaps").removeClass("arches-map-tools");
-                }
-            });
             
-            // activate historic map when button is clicked, stays on until clicked again
-            // historic map panel doesn't close automatically
-            $(".historicmap").click(function (){
-                var historicmap = $(this).attr('id');
-                _.each(map.historicLayers, function(historicLayer){
-                    if (historicLayer.id == historicmap){
-                        historicLayer.layer.setVisible(!historicLayer.layer.getVisible());
-                        
-                        // if activated, set layer on top of all historic maps/basemaps
-                        // also highlight layer button by changing background
-                        if (historicLayer.layer.getVisible() == true) {
-                            setlyrs = map.historicLayers.length + map.baseLayers.length;
-                            
-                            map.map.removeLayer(historicLayer.layer);
-                            map.map.getLayers().insertAt(setlyrs, historicLayer.layer);
-                            
-                            $('#'+historicLayer.id).css("background","#eaeaea");
-                        } else {
-                            $('#'+historicLayer.id).css("background","");
-                        }
-                    }                
-                });
-            });
 
             var resize = function() {
                 var header = $('.breadcrumbs').outerHeight() + $('.header').outerHeight();
