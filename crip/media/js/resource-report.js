@@ -220,6 +220,7 @@ require([
                 source: new ol.source.GeoJSON(),
                 style: style
             });
+            this.map.map.removeLayer(this.selectedFeatureLayer);
             this.map.map.addLayer(this.selectedFeatureLayer);
             position = self.map.historicLayers.length + self.map.baseLayers.length + 1;
             console.log(position);
