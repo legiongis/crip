@@ -160,7 +160,8 @@ require([
         selectHistoricMap: function(historicmap){
             console.log("firing...");
             console.log(historicmap);
-            _.each(this.map.historicLayers, function(historicLayer){
+            var self = this;
+            _.each(self.map.historicLayers, function(historicLayer){
                 console.log(historicLayer);
                 if (historicLayer.id == historicmap){
                     historicLayer.layer.setVisible(!historicLayer.layer.getVisible());
@@ -168,10 +169,10 @@ require([
                     // if activated, set layer on top of all historic maps/basemaps
                     // also highlight layer button by changing background
                     if (historicLayer.layer.getVisible() == true) {
-                        setlyrs = this.map.historicLayers.length; // + this.map.baseLayers.length;
+                        setlyrs = self.map.historicLayers.length + self.map.baseLayers.length;
                         
-                        this.map.map.removeLayer(historicLayer.layer);
-                        this.map.map.getLayers().insertAt(setlyrs, historicLayer.layer);
+                        self.map.map.removeLayer(historicLayer.layer);
+                        self.map.map.getLayers().insertAt(setlyrs, historicLayer.layer);
                         
                         $('#'+historicLayer.id).css("background","#eaeaea");
                     } else {
@@ -179,7 +180,7 @@ require([
                     }
                 }                
             });
-            this.highlightFeatures();
+            self.highlightFeatures();
         },
 
         highlightFeatures: function(){
