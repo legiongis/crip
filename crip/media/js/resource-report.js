@@ -158,7 +158,6 @@ require([
                         }
                     }                
                 });
-                highlightFeatures(JSON.parse(resource_geometry.val()));
             });
 
             //Close Button
