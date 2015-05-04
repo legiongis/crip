@@ -174,6 +174,29 @@ define([
 
                 self.$el.find("#inventory-home").click();
             });
+            
+            $(".alt-map-icon").click(function(){
+                var fullid = $(this).attr('id');
+                var mapid = fullid.slice(0,fullid.search("-"));
+                var layers = map.map.getLayers();                
+                if ($(this).hasClass("fa-circle")) {
+                    $(this).removeClass("fa-circle");
+                    $(this).addClass("fa-adjust");                     
+                } else {
+                    $(this).removeClass("fa-adjust");
+                    $(this).addClass("fa-circle");                                      
+                }
+                _.each(map.historicLayers, function(historicLayer){
+                    if (historicLayer.id == mapid){
+                        swapAltLayers(historicLayer);
+                    }
+                });
+                _.each(map.baseLayers, function(baseLayer){
+                    if (baseLayer.id == mapid){
+                        swapAltLayers(baseLayer);
+                    }
+                });
+            });
 
             self.$el.find("#inventory-home").click(function (){ 
                 self.$el.find("#overlay-panel").addClass("hidden");
