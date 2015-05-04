@@ -4,7 +4,7 @@ require([
     'arches',
     'bootstrap',
     'views/map',
-    'openlayers', 
+    'openlayers',
     'knockout',
     'utils'
 ], function($, _, arches, bootstrap, MapView, ol, ko, utils) {
@@ -15,116 +15,116 @@ require([
             var self = this;
             var resource_geometry = $('#resource_geometry');
             
-            if(resource_geometry.length > 0){
-                var geom = JSON.parse(resource_geometry.val());
-                this.map = new MapView({
-                    el: $('#map')
-                });
+            //if(resource_geometry.length > 0){
+            var geom = JSON.parse(resource_geometry.val());
+            this.map = new MapView({
+                el: $('#map')
+            });
 
-                ko.applyBindings(this.map, $('#basemaps-panel')[0]);
+            ko.applyBindings(this.map, $('#basemaps-panel')[0]);
 
-                this.highlightFeatures(JSON.parse(resource_geometry.val()));
-                this.zoomToResource('1');
+            this.highlightFeatures(JSON.parse(resource_geometry.val()));
+            this.zoomToResource('1');
 
-                var hideAllPanels = function(){
-                    $("#basemaps-panel").addClass("hidden");
+            var hideAllPanels = function(){
+                $("#basemaps-panel").addClass("hidden");
+                $("#historicmaps-panel").addClass("hidden");
+
+                //Update state of buttons
+                $("#inventory-basemaps").removeClass("arches-map-tools-pressed");
+                $("#inventory-basemaps").addClass("arches-map-tools");
+                $("#inventory-basemaps").css("border-bottom-left-radius", "1px");
+
+                $("#inventory-historicmaps").removeClass("arches-map-tools-pressed");
+                $("#inventory-historicmaps").addClass("arches-map-tools");
+                $("#inventory-historicmaps").css("border-bottom-right-radius", "1px");
+            };
+
+            //Inventory-basemaps button opens basemap panel
+            $("#inventory-basemaps").click(function (){
+                if ($(this).hasClass('arches-map-tools-pressed')) {
+                    hideAllPanels();
+                } else {
                     $("#historicmaps-panel").addClass("hidden");
-
-                    //Update state of buttons
-                    $("#inventory-basemaps").removeClass("arches-map-tools-pressed");
-                    $("#inventory-basemaps").addClass("arches-map-tools");
-                    $("#inventory-basemaps").css("border-bottom-left-radius", "1px");
-
+                    $("#basemaps-panel").removeClass("hidden");
+                    
+                    //Update state of remaining buttons
                     $("#inventory-historicmaps").removeClass("arches-map-tools-pressed");
                     $("#inventory-historicmaps").addClass("arches-map-tools");
-                    $("#inventory-historicmaps").css("border-bottom-right-radius", "1px");
-                };
-
-                //Inventory-basemaps button opens basemap panel
-                $("#inventory-basemaps").click(function (){
-                    if ($(this).hasClass('arches-map-tools-pressed')) {
-                        hideAllPanels();
-                    } else {
-                        $("#historicmaps-panel").addClass("hidden");
-                        $("#basemaps-panel").removeClass("hidden");
-                        
-                        //Update state of remaining buttons
-                        $("#inventory-historicmaps").removeClass("arches-map-tools-pressed");
-                        $("#inventory-historicmaps").addClass("arches-map-tools");
-                        
-                        //Update state of current button and adjust position
-                        $(this).addClass("arches-map-tools-pressed")
-                        $(this).removeClass("arches-map-tools");
-                    }
-                });
-                
-                $("#inventory-historicmaps").click(function (){
-                    if ($(this).hasClass('arches-map-tools-pressed')) {
-                        hideAllPanels();
-                    } else {
-                        $("#basemaps-panel").addClass("hidden");
-                        $("#historicmaps-panel").removeClass("hidden");
-
-                        //Update state of remaining buttons
-                        $("#inventory-basemaps").removeClass("arches-map-tools-pressed");
-                        $("#inventory-basemaps").addClass("arches-map-tools");
-
-                        //Update state of current button
-                        $(this).addClass("arches-map-tools-pressed");
-                        $(this).removeClass("arches-map-tools");
-                    }
-                });
-
-                // activate single basemap when basemap is clicked, and remove basemap panel
-                $(".basemap").click(function (){
-                    var basemap = $(this).attr('id');
-                    _.each(self.map.baseLayers, function(baseLayer){
-                        baseLayer.layer.setVisible(basemap == baseLayer.id);
-                        if (basemap == baseLayer.id){
-                            $('#'+baseLayer.id).css("background","#eaeaea"); 
-                            console.log(baseLayer.id+" set grey");                       
-                        } else {
-                            $('#'+baseLayer.id).css("background","");
-                            console.log(baseLayer.id+" no bg");  
-                        }   
-                    });
+                    
+                    //Update state of current button and adjust position
+                    $(this).addClass("arches-map-tools-pressed")
+                    $(this).removeClass("arches-map-tools");
+                }
+            });
+            
+            $("#inventory-historicmaps").click(function (){
+                if ($(this).hasClass('arches-map-tools-pressed')) {
                     hideAllPanels();
+                } else {
+                    $("#basemaps-panel").addClass("hidden");
+                    $("#historicmaps-panel").removeClass("hidden");
+
+                    //Update state of remaining buttons
+                    $("#inventory-basemaps").removeClass("arches-map-tools-pressed");
+                    $("#inventory-basemaps").addClass("arches-map-tools");
+
+                    //Update state of current button
+                    $(this).addClass("arches-map-tools-pressed");
+                    $(this).removeClass("arches-map-tools");
+                }
+            });
+
+            // activate single basemap when basemap is clicked, and remove basemap panel
+            $(".basemap").click(function (){
+                var basemap = $(this).attr('id');
+                _.each(self.map.baseLayers, function(baseLayer){
+                    baseLayer.layer.setVisible(basemap == baseLayer.id);
+                    if (basemap == baseLayer.id){
+                        $('#'+baseLayer.id).css("background","#eaeaea"); 
+                        console.log(baseLayer.id+" set grey");                       
+                    } else {
+                        $('#'+baseLayer.id).css("background","");
+                        console.log(baseLayer.id+" no bg");  
+                    }   
                 });
-                
-                // activate historic map when button is clicked, stays on until clicked again
-                // historic map panel doesn't close automatically
-                $(".historicmap").click(function (){
-                    var historicmap = $(this).attr('id');
-                    _.each(self.map.historicLayers, function(historicLayer){
-                        if (historicLayer.id == historicmap){
-                            historicLayer.layer.setVisible(!historicLayer.layer.getVisible());
+                hideAllPanels();
+            });
+            
+            // activate historic map when button is clicked, stays on until clicked again
+            // historic map panel doesn't close automatically
+            $(".historicmap").click(function (){
+                var historicmap = $(this).attr('id');
+                _.each(self.map.historicLayers, function(historicLayer){
+                    if (historicLayer.id == historicmap){
+                        historicLayer.layer.setVisible(!historicLayer.layer.getVisible());
+                        
+                        // if activated, set layer on top of all historic maps/basemaps
+                        // also highlight layer button by changing background
+                        if (historicLayer.layer.getVisible() == true) {
+                            setlyrs = self.map.historicLayers.length + self.map.baseLayers.length;
                             
-                            // if activated, set layer on top of all historic maps/basemaps
-                            // also highlight layer button by changing background
-                            if (historicLayer.layer.getVisible() == true) {
-                                setlyrs = self.map.historicLayers.length + self.map.baseLayers.length;
-                                
-                                self.map.map.removeLayer(historicLayer.layer);
-                                self.map.map.getLayers().insertAt(setlyrs, historicLayer.layer);
-                                
-                                $('#'+historicLayer.id).css("background","#eaeaea");
-                            } else {
-                                $('#'+historicLayer.id).css("background","");
-                            }
-                        }                
-                    });
+                            self.map.map.removeLayer(historicLayer.layer);
+                            self.map.map.getLayers().insertAt(setlyrs, historicLayer.layer);
+                            
+                            $('#'+historicLayer.id).css("background","#eaeaea");
+                        } else {
+                            $('#'+historicLayer.id).css("background","");
+                        }
+                    }                
                 });
+            });
 
-                //Close Button
-                $(".close").click(function (){ 
-                    hideAllPanels();
-                });
+            //Close Button
+            $(".close").click(function (){ 
+                hideAllPanels();
+            });
             
                
-            }else{
-                $('.block-description').css('marginTop', '-40px');
-                $('#map-container').hide();
-            }
+            // }else{
+                // $('.block-description').css('marginTop', '-40px');
+                // $('#map-container').hide();
+            // }
             
 
             var resize = function() {
