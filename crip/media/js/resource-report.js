@@ -48,6 +48,16 @@ require([
                             .addClass("arches-map-tools-pressed")
                             .removeClass("arches-map-tools")
                             .css("border-bottom-left-radius", "5px");
+                            
+                        $("#basemaps-panel").addClass("hidden");
+                        $("#historicmaps-panel").removeClass("hidden");
+                        
+                        $("#inventory-basemaps").removeClass("arches-map-tools-pressed");
+                        $("#inventory-basemaps").addClass("arches-map-tools");
+
+                        //Update state of current button and adjust position
+                        $("#inventory-historicmaps").addClass("arches-map-tools-pressed");
+                        $("#inventory-historicmaps").removeClass("arches-map-tools");
                     }
                 });
 
@@ -68,6 +78,22 @@ require([
                 $('.block-description').css('marginTop', '-40px');
                 $('#map-container').hide();
             }
+            //Inventory-historicmaps button opens historic maps panel
+            $("#inventory-historicmaps").click(function (){
+                if ($(this).hasClass('arches-map-tools-pressed')) {
+                    hideAllPanels();
+                } else {
+                    $("#basemaps-panel").addClass("hidden");
+                    $("#historicmaps-panel").removeClass("hidden");
+                    
+                    $("#inventory-basemaps").removeClass("arches-map-tools-pressed");
+                    $("#inventory-basemaps").addClass("arches-map-tools");
+
+                    //Update state of current button and adjust position
+                    $("#inventory-historicmaps").addClass("arches-map-tools-pressed");
+                    $("#inventory-historicmaps").removeClass("arches-map-tools");
+                }
+            });
             
             // activate historic map when button is clicked, stays on until clicked again
             // historic map panel doesn't close automatically
