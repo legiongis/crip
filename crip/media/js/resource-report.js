@@ -222,11 +222,11 @@ require([
                 name: "feature"
             });
             
-            var layers = this.map.map.getLayers().getArray(); 
-            var feature = layers.filter(function(layer) { 
-                return layer.get('name') == 'feature';                
+            var layers = this.map.map.getLayers().getArray().forEach(function(l){
+                if (l.get('name') == 'feature'){
+                    this.map.map.removeLayer(layer);
+                }
             });
-            this.map.map.removeLayer(layer);
 
             this.map.map.addLayer(this.selectedFeatureLayer);
             position = self.map.historicLayers.length + self.map.baseLayers.length + 1;
