@@ -58,20 +58,22 @@
                                 <div class="row">
                                     <hr class="arches-layer-divider" style="border-top: 0px; margin-top: 5px;" />
 
-                                    <div class="arches-basemap-entry" style="margin-right: 7px;">
-                                
-                                        <div>
-                                            <a data-bind="attr: { id: id, title: name }" class="basemap info-click" data-rel="" href="javascript:void(0);">
-                                                <span class="">  
-                                                    <img data-bind="attr: { src: icon }" class="arches-basemap-thumbnail" alt="" />
-                                                    <span class="zoom-icon"></span>                   
-                                                </span>                                              
-                                            </a>                    
-                                            <span class="arches-basemap-caption">
-                                                <a data-bind="attr: { id: id }, text: name" class="caption-text-search hover-effect basemap info-click" href="javascript:void(0);"> </a>
-                                            </span>
-                                        </div>
+                                    <div class="">
+                                        <a data-bind="attr: { id: id, title: alttext }" class="basemap info-click" data-rel="" href="javascript:void(0);">
+                                            <span class="">  
+                                                <img data-bind="attr: { src: icon }" class="arches-basemap-thumbnail" alt="" />
+                                                <span class="zoom-icon"></span>                   
+                                            </span>                                              
+                                        </a>                    
+                                        <span class="arches-basemap-caption">
+                                            <a data-bind="attr: { id: id }, text: name" class="caption-text hover-effect basemap info-click" href="javascript:void(0);"> </a>
+                                        </span>
+                                        
+                                        <div style="float:right; padding-top:10px; padding-right:5px;">
+                                        <a href="javascript:void(0);" title="change color scheme" data-bind="if: altlayer, attr: {'data-layerid': id}"><i data-bind="attr: { id: id+'-extra'}" class="fa fa-2x fa-circle alt-map-icon" style="color: #65a5da;"></i></a> &nbsp;
 
+                                        <a href="javascript:void(0);" data-toggle="popover" data-container="body" data-placement="right" data-bind="if: showInfo, attr: {'data-content': showInfo, title: name}" data-html="true"><i class="fa fa-2x fa-info-circle" style="color: #65a5da;"></i></a>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -85,9 +87,9 @@
                 
                 <!-- Historic Map Panel -->
                 <div class="row">
-                    <div class="col-xs-6" style="min-height:0px !important;">
+                    <div class="col-xs-4 col-xs-offset-1" style="min-height:0px !important;">
 
-                        <div id="historicmaps-panel" class="tools-panel location-form-panel hidden" style="border-top-left-radius: 3px; border-top-right-radius: 3px;">
+                        <div id="historicmaps-panel" class="tools-panel location-form-panel hidden">
                             <div class="modal-header arches-modal-header" style="padding: 15px 15px 0px 15px !important;">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
                                     ×
@@ -149,7 +151,7 @@
                             </div>
 
                             <!-- Body Content -->
-                            <div class="modal-body location-form-panel-body padding-top-10 padding-bottom-0" style="padding-left: 5px; padding-right: 5px;">
+                            <div class="modal-body location-form-panel-body padding-top-10 padding-bottom-0" style="overflow-x: hidden; padding-left: 5px; padding-right: 5px;">
                                 
                                 <!-- List overlays -->
                                 <div class="row">
