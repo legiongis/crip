@@ -218,9 +218,15 @@ require([
             };                     
             this.selectedFeatureLayer = new ol.layer.Vector({
                 source: new ol.source.GeoJSON(),
-                style: style
+                style: style,
+                name: "feature"
             });
-            this.map.map.removeLayer(this.selectedFeatureLayer);
+            _.each(map.map.getLayers, function(layer){
+                console.log(layer);
+                if (layer.name == "feature") {
+                    this.map.map.removeLayer(layer);
+                }
+            }
             this.map.map.addLayer(this.selectedFeatureLayer);
             position = self.map.historicLayers.length + self.map.baseLayers.length + 1;
             console.log(position);
