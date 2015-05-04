@@ -42,22 +42,14 @@ require([
                         hideAllPanels();
                     } else {
                         $("#basemaps-panel").removeClass("hidden");
-
-                        //Update state of current button and adjust position
-                        $("#inventory-basemaps")
-                            .addClass("arches-map-tools-pressed")
-                            .removeClass("arches-map-tools")
-                            .css("border-bottom-left-radius", "5px");
-                            
-                        $("#basemaps-panel").addClass("hidden");
-                        $("#historicmaps-panel").removeClass("hidden");
+                        $("#historicmaps-panel").addClass("hidden");
                         
-                        $("#inventory-basemaps").removeClass("arches-map-tools-pressed");
-                        $("#inventory-basemaps").addClass("arches-map-tools");
+                        $("#inventory-basemaps").addClass("arches-map-tools-pressed");
+                        $("#inventory-basemaps").removeClass("arches-map-tools");
 
                         //Update state of current button and adjust position
-                        $("#inventory-historicmaps").addClass("arches-map-tools-pressed");
-                        $("#inventory-historicmaps").removeClass("arches-map-tools");
+                        $("#inventory-historicmaps").removeClass("arches-map-tools-pressed");
+                        $("#inventory-historicmaps").addClass("arches-map-tools");
                     }
                 });
 
