@@ -24,11 +24,7 @@ require([
             ko.applyBindings(this.map, $('#basemaps-panel')[0]);
             ko.applyBindings(this.map, $('#historicmaps-panel')[0]);
 
-            var callHighlightFeatures = function(){
-                this.highlightFeatures(JSON.parse(resource_geometry.val()));
-            }
-            callHighlightFeatures();
-            this.zoomToResource('1');
+            
 
             var hideAllPanels = function(){
                 $("#basemaps-panel").addClass("hidden");
@@ -116,7 +112,6 @@ require([
                         }
                     }                
                 });
-                callHighlightFeatures();
             });
 
             //Close Button
@@ -138,6 +133,9 @@ require([
                     $(list).find('.empty-message').show();
                 }
             })
+            
+            this.highlightFeatures(JSON.parse(resource_geometry.val()));
+            this.zoomToResource('1');
 
         },
 
