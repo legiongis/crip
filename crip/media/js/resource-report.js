@@ -156,7 +156,7 @@ require([
             }
         },
         
-        selectHistoricMap = function(historicmap){
+        selectHistoricMap: function(historicmap){
             _.each(self.map.historicLayers, function(historicLayer){
                         if (historicLayer.id == historicmap){
                             historicLayer.layer.setVisible(!historicLayer.layer.getVisible());
