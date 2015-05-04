@@ -191,39 +191,39 @@ require([
             var self = this;
             var f = new ol.format.GeoJSON({defaultDataProjection: 'EPSG:4326'});
 
-            if(!this.selectedFeatureLayer){
-                var zIndex = 0;
-                var styleCache = {};
+            //if(!this.selectedFeatureLayer){
+            var zIndex = 0;
+            var styleCache = {};
 
-                var style = function(feature, resolution) {
-                    return [new ol.style.Style({
+            var style = function(feature, resolution) {
+                return [new ol.style.Style({
+                    fill: new ol.style.Fill({
+                        color: 'rgba(66, 139, 202, 0.4)'
+                    }),
+                    stroke: new ol.style.Stroke({
+                        color: 'rgba(66, 139, 202, 0.9)',
+                        width: 2
+                    }),
+                    image: new ol.style.Circle({
+                        radius: 10,
                         fill: new ol.style.Fill({
                             color: 'rgba(66, 139, 202, 0.4)'
                         }),
                         stroke: new ol.style.Stroke({
                             color: 'rgba(66, 139, 202, 0.9)',
                             width: 2
-                        }),
-                        image: new ol.style.Circle({
-                            radius: 10,
-                            fill: new ol.style.Fill({
-                                color: 'rgba(66, 139, 202, 0.4)'
-                            }),
-                            stroke: new ol.style.Stroke({
-                                color: 'rgba(66, 139, 202, 0.9)',
-                                width: 2
-                            })
                         })
-                    })];
-                };                     
-                this.selectedFeatureLayer = new ol.layer.Vector({
-                    source: new ol.source.GeoJSON(),
-                    style: style
-                });
-                this.map.map.addLayer(this.selectedFeatureLayer);
-                position = self.map.historicLayers.length + self.map.baseLayers.length + 1;
-                console.log(position);
-                console.log(self.map.map.getLayers());
+                    })
+                })];
+            };                     
+            this.selectedFeatureLayer = new ol.layer.Vector({
+                source: new ol.source.GeoJSON(),
+                style: style
+            });
+            this.map.map.addLayer(this.selectedFeatureLayer);
+            position = self.map.historicLayers.length + self.map.baseLayers.length + 1;
+            console.log(position);
+            console.log(self.map.map.getLayers());
                 //self.map.map.getLayers().insertAt(position, self.selectedFeatureLayer);                
             }
             this.selectedFeatureLayer.getSource().clear();
