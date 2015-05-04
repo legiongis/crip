@@ -178,6 +178,7 @@ define([
             self.$el.find("#inventory-home").click(function (){ 
                 self.$el.find("#overlay-panel").addClass("hidden");
                 self.$el.find("#basemaps-panel").addClass("hidden");
+                self.$el.find("#historicmaps-panel").addClass("hidden");
 
                 self.$el.find("#inventory-basemaps").removeClass("arches-map-tools-pressed");
                 self.$el.find("#inventory-basemaps").addClass("arches-map-tools");
@@ -185,6 +186,8 @@ define([
                 self.$el.find("#inventory-overlays").removeClass("arches-map-tools-pressed");
                 self.$el.find("#inventory-overlays").addClass("arches-map-tools");
 
+                self.$el.find("#inventory-historicmaps").removeClass("arches-map-tools-pressed");
+                self.$el.find("#inventory-historicmaps").addClass("arches-map-tools");
 
                 self.$el.find("#inventory-home").addClass("arches-map-tools-pressed");
                 self.$el.find("#inventory-home").removeClass("arches-map-tools");
@@ -194,6 +197,7 @@ define([
             self.$el.find("#inventory-basemaps").click(function (){ 
                 self.$el.find("#overlay-panel").addClass("hidden");
                 self.$el.find("#basemaps-panel").removeClass("hidden");
+                self.$el.find("#historicmaps-panel").addClass("hidden");
 
                 self.$el.find("#inventory-home").removeClass("arches-map-tools-pressed");
                 self.$el.find("#inventory-home").addClass("arches-map-tools");
@@ -203,13 +207,17 @@ define([
 
                 self.$el.find("#inventory-basemaps").addClass("arches-map-tools-pressed");
                 self.$el.find("#inventory-basemaps").removeClass("arches-map-tools");
-                
+
+                self.$el.find("#inventory-historicmaps").removeClass("arches-map-tools-pressed");
+                self.$el.find("#inventory-historicmaps").addClass("arches-map-tools");
+
                 return false;
             });
 
             self.$el.find("#inventory-overlays").click(function (){ 
                 self.$el.find("#overlay-panel").removeClass("hidden");
                 self.$el.find("#basemaps-panel").addClass("hidden");
+                self.$el.find("#historicmaps-panel").addClass("hidden");
 
                 self.$el.find("#inventory-home").removeClass("arches-map-tools-pressed");
                 self.$el.find("#inventory-home").addClass("arches-map-tools");
@@ -219,6 +227,26 @@ define([
 
                 self.$el.find("#inventory-overlays").addClass("arches-map-tools-pressed");
                 self.$el.find("#inventory-overlays").removeClass("arches-map-tools");
+
+                self.$el.find("#inventory-historicmaps").removeClass("arches-map-tools-pressed");
+                self.$el.find("#inventory-historicmaps").addClass("arches-map-tools");
+
+            self.$el.find("#inventory-overlays").click(function (){ 
+                self.$el.find("#historicmaps-panel").removeClass("hidden");
+                self.$el.find("#basemaps-panel").addClass("hidden");
+                self.$el.find("#overlay-panel").addClass("hidden");
+
+                self.$el.find("#inventory-home").removeClass("arches-map-tools-pressed");
+                self.$el.find("#inventory-home").addClass("arches-map-tools");
+
+                self.$el.find("#inventory-basemaps").removeClass("arches-map-tools-pressed");
+                self.$el.find("#inventory-basemaps").addClass("arches-map-tools");
+
+                self.$el.find("#inventory-overlays").addClass("arches-map-tools-pressed");
+                self.$el.find("#inventory-overlays").removeClass("arches-map-tools");
+
+                self.$el.find("#inventory-historicmaps").addClass("arches-map-tools-pressed");
+                self.$el.find("#inventory-historicmaps").removeClass("arches-map-tools");
 
                 return false;
             });
