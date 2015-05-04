@@ -24,54 +24,9 @@ require([
             ko.applyBindings(this.map, $('#basemaps-panel')[0]);
             ko.applyBindings(this.map, $('#historicmaps-panel')[0]);
 
+            highlightFeatures(JSON.parse(resource_geometry.val()));
+            this.zoomToResource('1');
             
-            var highlightFeatures = function(geometry){
-                var source, geometries;
-                var self = this;
-                var f = new ol.format.GeoJSON({defaultDataProjection: 'EPSG:4326'});
-
-                if(!this.selectedFeatureLayer){
-                    var zIndex = 0;
-                    var styleCache = {};
-
-                    var style = function(feature, resolution) {
-                        return [new ol.style.Style({
-                            fill: new ol.style.Fill({
-                                color: 'rgba(66, 139, 202, 0.4)'
-                            }),
-                            stroke: new ol.style.Stroke({
-                                color: 'rgba(66, 139, 202, 0.9)',
-                                width: 2
-                            }),
-                            image: new ol.style.Circle({
-                                radius: 10,
-                                fill: new ol.style.Fill({
-                                    color: 'rgba(66, 139, 202, 0.4)'
-                                }),
-                                stroke: new ol.style.Stroke({
-                                    color: 'rgba(66, 139, 202, 0.9)',
-                                    width: 2
-                                })
-                            })
-                        })];
-                    };                     
-                    this.selectedFeatureLayer = new ol.layer.Vector({
-                        source: new ol.source.GeoJSON(),
-                        style: style
-                    });
-                    self.map.map.addLayer(this.selectedFeatureLayer);  
-                }
-                this.selectedFeatureLayer.getSource().clear();
-
-                feature = {
-                    'type': 'Feature',
-                    'id': '1',
-                    'geometry':  geometry
-                };
-
-                this.selectedFeatureLayer.getSource().addFeature(f.readFeature(feature, {featureProjection: 'EPSG:3857'}));
-            }
-
             var hideAllPanels = function(){
                 $("#basemaps-panel").addClass("hidden");
                 $("#historicmaps-panel").addClass("hidden");
@@ -180,8 +135,7 @@ require([
                 }
             })
             
-            highlightFeatures(JSON.parse(resource_geometry.val()));
-            this.zoomToResource('1');
+            
 
         },
 
@@ -201,52 +155,54 @@ require([
             }
         }
 
-        // highlightFeatures: function(geometry){
-            // var source, geometries;
-            // var self = this;
-            // var f = new ol.format.GeoJSON({defaultDataProjection: 'EPSG:4326'});
+        highlightFeatures: function(geometry){
+            var source, geometries;
+            var self = this;
+            var f = new ol.format.GeoJSON({defaultDataProjection: 'EPSG:4326'});
 
-            // if(!this.selectedFeatureLayer){
-                // var zIndex = 0;
-                // var styleCache = {};
+            if(!this.selectedFeatureLayer){
+                var zIndex = 0;
+                var styleCache = {};
 
-                // var style = function(feature, resolution) {
-                    // return [new ol.style.Style({
-                        // fill: new ol.style.Fill({
-                            // color: 'rgba(66, 139, 202, 0.4)'
-                        // }),
-                        // stroke: new ol.style.Stroke({
-                            // color: 'rgba(66, 139, 202, 0.9)',
-                            // width: 2
-                        // }),
-                        // image: new ol.style.Circle({
-                            // radius: 10,
-                            // fill: new ol.style.Fill({
-                                // color: 'rgba(66, 139, 202, 0.4)'
-                            // }),
-                            // stroke: new ol.style.Stroke({
-                                // color: 'rgba(66, 139, 202, 0.9)',
-                                // width: 2
-                            // })
-                        // })
-                    // })];
-                // };                     
-                // this.selectedFeatureLayer = new ol.layer.Vector({
-                    // source: new ol.source.GeoJSON(),
-                    // style: style
-                // });
-                // this.map.map.addLayer(this.selectedFeatureLayer);  
-            // }
-            // this.selectedFeatureLayer.getSource().clear();
+                var style = function(feature, resolution) {
+                    return [new ol.style.Style({
+                        fill: new ol.style.Fill({
+                            color: 'rgba(66, 139, 202, 0.4)'
+                        }),
+                        stroke: new ol.style.Stroke({
+                            color: 'rgba(66, 139, 202, 0.9)',
+                            width: 2
+                        }),
+                        image: new ol.style.Circle({
+                            radius: 10,
+                            fill: new ol.style.Fill({
+                                color: 'rgba(66, 139, 202, 0.4)'
+                            }),
+                            stroke: new ol.style.Stroke({
+                                color: 'rgba(66, 139, 202, 0.9)',
+                                width: 2
+                            })
+                        })
+                    })];
+                };                     
+                this.selectedFeatureLayer = new ol.layer.Vector({
+                    source: new ol.source.GeoJSON(),
+                    style: style
+                });
+                //this.map.map.addLayer(this.selectedFeatureLayer);
+                position = self.map.historicLayers.length + self.map.baseLayers.length + 1;
+                this.map.map.getLayers().insertAt(position, this.selectedFeatureLayer);                
+            }
+            this.selectedFeatureLayer.getSource().clear();
 
-            // feature = {
-                // 'type': 'Feature',
-                // 'id': '1',
-                // 'geometry':  geometry
-            // };
+            feature = {
+                'type': 'Feature',
+                'id': '1',
+                'geometry':  geometry
+            };
 
-            // this.selectedFeatureLayer.getSource().addFeature(f.readFeature(feature, {featureProjection: 'EPSG:3857'}));
-        // }
+            this.selectedFeatureLayer.getSource().addFeature(f.readFeature(feature, {featureProjection: 'EPSG:3857'}));
+        }
     });
 
     new ReportView();
