@@ -222,7 +222,7 @@ require([
                 });
                 //this.map.map.addLayer(this.selectedFeatureLayer);
                 position = self.map.historicLayers.length + self.map.baseLayers.length + 1;
-                this.map.map.getLayers().insertAt(position, this.selectedFeatureLayer);                
+                self.map.map.getLayers().insertAt(position, self.selectedFeatureLayer);                
             }
             this.selectedFeatureLayer.getSource().clear();
 
