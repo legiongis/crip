@@ -175,6 +175,28 @@ define([
                 self.$el.find("#inventory-home").click();
             });
             
+            function swapAltLayers(layer) {
+                maplayers = map.map.getLayers();
+                setat = maplayers.getArray().length;
+                maplayers.forEach(function(lyr,index){
+                    console.log("lyr.matchid = " + lyr.matchid);
+                    if (layer.id == lyr.matchid) {
+                        console.log(index);
+                        setat = index;
+                    }
+                });
+                map.map.removeLayer(layer.layer);                
+                var oldlayer = layer.layer;
+                var vis = oldlayer.getVisible();
+                oldlayer.setVisible(false);                                           
+                var newlayer = layer.altlayer;
+                newlayer.setVisible(vis);       
+                layer.altlayer = oldlayer;
+                layer.layer = newlayer;               
+                // reset new layer at the index of the old layer
+                map.map.getLayers().insertAt(setat, layer.layer);
+            }
+            
             $(".alt-map-icon").click(function(){
                 var fullid = $(this).attr('id');
                 var mapid = fullid.slice(0,fullid.search("-"));
