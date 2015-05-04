@@ -176,7 +176,7 @@ require([
                         }                
                     });
             this.highlightFeatures();
-        }
+        },
 
         highlightFeatures: function(){
             
