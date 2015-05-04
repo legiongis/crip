@@ -186,10 +186,6 @@ require([
 
         },
 
-        reshowFeatures: function(){
-            highlightFeatures()
-        }
-
         zoomToResource: function(resourceid){
             this.cancelFitBaseLayer = true;
             var feature = this.selectedFeatureLayer.getSource().getFeatureById(resourceid);
