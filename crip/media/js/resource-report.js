@@ -158,24 +158,26 @@ require([
         },
         
         selectHistoricMap: function(historicmap){
+            console.log("firing...");
+            console.log(historicmap);
             _.each(self.map.historicLayers, function(historicLayer){
-                        if (historicLayer.id == historicmap){
-                            historicLayer.layer.setVisible(!historicLayer.layer.getVisible());
-                            
-                            // if activated, set layer on top of all historic maps/basemaps
-                            // also highlight layer button by changing background
-                            if (historicLayer.layer.getVisible() == true) {
-                                setlyrs = self.map.historicLayers.length + self.map.baseLayers.length;
-                                
-                                self.map.map.removeLayer(historicLayer.layer);
-                                self.map.map.getLayers().insertAt(setlyrs, historicLayer.layer);
-                                
-                                $('#'+historicLayer.id).css("background","#eaeaea");
-                            } else {
-                                $('#'+historicLayer.id).css("background","");
-                            }
-                        }                
-                    });
+                if (historicLayer.id == historicmap){
+                    historicLayer.layer.setVisible(!historicLayer.layer.getVisible());
+                    
+                    // if activated, set layer on top of all historic maps/basemaps
+                    // also highlight layer button by changing background
+                    if (historicLayer.layer.getVisible() == true) {
+                        setlyrs = self.map.historicLayers.length + self.map.baseLayers.length;
+                        
+                        self.map.map.removeLayer(historicLayer.layer);
+                        self.map.map.getLayers().insertAt(setlyrs, historicLayer.layer);
+                        
+                        $('#'+historicLayer.id).css("background","#eaeaea");
+                    } else {
+                        $('#'+historicLayer.id).css("background","");
+                    }
+                }                
+            });
             this.highlightFeatures();
         },
 
