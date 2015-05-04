@@ -68,6 +68,30 @@ require([
                 $('.block-description').css('marginTop', '-40px');
                 $('#map-container').hide();
             }
+            
+            // activate historic map when button is clicked, stays on until clicked again
+            // historic map panel doesn't close automatically
+            $(".historicmap").click(function (){
+                var historicmap = $(this).attr('id');
+                _.each(map.historicLayers, function(historicLayer){
+                    if (historicLayer.id == historicmap){
+                        historicLayer.layer.setVisible(!historicLayer.layer.getVisible());
+                        
+                        // if activated, set layer on top of all historic maps/basemaps
+                        // also highlight layer button by changing background
+                        if (historicLayer.layer.getVisible() == true) {
+                            setlyrs = map.historicLayers.length + map.baseLayers.length;
+                            
+                            map.map.removeLayer(historicLayer.layer);
+                            map.map.getLayers().insertAt(setlyrs, historicLayer.layer);
+                            
+                            $('#'+historicLayer.id).css("background","#eaeaea");
+                        } else {
+                            $('#'+historicLayer.id).css("background","");
+                        }
+                    }                
+                });
+            });
 
             var resize = function() {
                 var header = $('.breadcrumbs').outerHeight() + $('.header').outerHeight();
