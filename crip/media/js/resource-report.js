@@ -224,7 +224,7 @@ require([
             
             var layers = this.map.map.getLayers().getArray().forEach(function(l){
                 if (l.get('name') == 'feature'){
-                    self.map.map.removeLayer(layer);
+                    self.map.map.removeLayer(l);
                 }
             });
 
