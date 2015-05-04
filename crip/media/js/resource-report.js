@@ -153,7 +153,7 @@ require([
             }else{
                 this.map.map.getView().fitGeometry(feature.getGeometry().getGeometries()[0], this.map.map.getSize(), {maxZoom:18});                    
             }
-        }
+        },
 
         highlightFeatures: function(geometry){
             var source, geometries;
