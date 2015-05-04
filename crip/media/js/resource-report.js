@@ -24,7 +24,10 @@ require([
             ko.applyBindings(this.map, $('#basemaps-panel')[0]);
             ko.applyBindings(this.map, $('#historicmaps-panel')[0]);
 
-            this.highlightFeatures(JSON.parse(resource_geometry.val()));
+            var callHighlightFeatures = function(){
+                this.highlightFeatures(JSON.parse(resource_geometry.val()));
+            }
+            callHighlightFeatures();
             this.zoomToResource('1');
 
             var hideAllPanels = function(){
@@ -113,7 +116,7 @@ require([
                         }
                     }                
                 });
-                highlightFeatures(JSON.parse(resource_geometry.val()));
+                callHighlightFeatures();
             });
 
             //Close Button
