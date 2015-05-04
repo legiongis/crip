@@ -95,24 +95,25 @@ require([
             // historic map panel doesn't close automatically
             $(".historicmap").click(function (){
                 var historicmap = $(this).attr('id');
-                _.each(self.map.historicLayers, function(historicLayer){
-                    if (historicLayer.id == historicmap){
-                        historicLayer.layer.setVisible(!historicLayer.layer.getVisible());
+                selectHistoricMap(historicmap);
+                // _.each(self.map.historicLayers, function(historicLayer){
+                    // if (historicLayer.id == historicmap){
+                        // historicLayer.layer.setVisible(!historicLayer.layer.getVisible());
                         
                         // if activated, set layer on top of all historic maps/basemaps
                         // also highlight layer button by changing background
-                        if (historicLayer.layer.getVisible() == true) {
-                            setlyrs = self.map.historicLayers.length + self.map.baseLayers.length;
+                        // if (historicLayer.layer.getVisible() == true) {
+                            // setlyrs = self.map.historicLayers.length + self.map.baseLayers.length;
                             
-                            self.map.map.removeLayer(historicLayer.layer);
-                            self.map.map.getLayers().insertAt(setlyrs, historicLayer.layer);
+                            // self.map.map.removeLayer(historicLayer.layer);
+                            // self.map.map.getLayers().insertAt(setlyrs, historicLayer.layer);
                             
-                            $('#'+historicLayer.id).css("background","#eaeaea");
-                        } else {
-                            $('#'+historicLayer.id).css("background","");
-                        }
-                    }                
-                });
+                            // $('#'+historicLayer.id).css("background","#eaeaea");
+                        // } else {
+                            // $('#'+historicLayer.id).css("background","");
+                        // }
+                    // }                
+                // });
             });
 
             //Close Button
@@ -154,8 +155,35 @@ require([
                 this.map.map.getView().fitGeometry(feature.getGeometry().getGeometries()[0], this.map.map.getSize(), {maxZoom:18});                    
             }
         },
+        
+        selectHistoricMap = function(historicmap){
+            _.each(self.map.historicLayers, function(historicLayer){
+                        if (historicLayer.id == historicmap){
+                            historicLayer.layer.setVisible(!historicLayer.layer.getVisible());
+                            
+                            // if activated, set layer on top of all historic maps/basemaps
+                            // also highlight layer button by changing background
+                            if (historicLayer.layer.getVisible() == true) {
+                                setlyrs = self.map.historicLayers.length + self.map.baseLayers.length;
+                                
+                                self.map.map.removeLayer(historicLayer.layer);
+                                self.map.map.getLayers().insertAt(setlyrs, historicLayer.layer);
+                                
+                                $('#'+historicLayer.id).css("background","#eaeaea");
+                            } else {
+                                $('#'+historicLayer.id).css("background","");
+                            }
+                        }                
+                    });
+            this.highlightFeatures();
+        }
 
-        highlightFeatures: function(geometry){
+        highlightFeatures: function(){
+            
+            //pulled from beginning of initialize
+            var resource_geometry = $('#resource_geometry');
+            var geometry = JSON.parse(resource_geometry.val());
+
             var source, geometries;
             var self = this;
             var f = new ol.format.GeoJSON({defaultDataProjection: 'EPSG:4326'});
