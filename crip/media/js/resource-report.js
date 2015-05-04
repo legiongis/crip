@@ -95,7 +95,7 @@ require([
             // historic map panel doesn't close automatically
             $(".historicmap").click(function (){
                 var historicmap = $(this).attr('id');
-                selectHistoricMap(historicmap);
+                this.selectHistoricMap(historicmap);
                 // _.each(self.map.historicLayers, function(historicLayer){
                     // if (historicLayer.id == historicmap){
                         // historicLayer.layer.setVisible(!historicLayer.layer.getVisible());
