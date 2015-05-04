@@ -25,7 +25,7 @@ require([
             ko.applyBindings(this.map, $('#historicmaps-panel')[0]);
 
             
-            var highlightFeatures = function(geometry){
+            var highlightFeatures = function(geometry,this.map){
                 var source, geometries;
                 var self = this;
                 var f = new ol.format.GeoJSON({defaultDataProjection: 'EPSG:4326'});
@@ -59,7 +59,7 @@ require([
                         source: new ol.source.GeoJSON(),
                         style: style
                     });
-                    this.map.addLayer(this.selectedFeatureLayer);  
+                    this.map.map.addLayer(this.selectedFeatureLayer);  
                 }
                 this.selectedFeatureLayer.getSource().clear();
 
