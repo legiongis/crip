@@ -223,7 +223,7 @@ require([
                 //this.map.map.addLayer(this.selectedFeatureLayer);
                 position = self.map.historicLayers.length + self.map.baseLayers.length + 1;
                 console.log(position);
-                console.log(self.map.map.getLayers().length);
+                console.log(self.map.map.getLayers());
                 self.map.map.getLayers().insertAt(position, self.selectedFeatureLayer);                
             }
             this.selectedFeatureLayer.getSource().clear();
