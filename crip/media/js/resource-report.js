@@ -113,7 +113,7 @@ require([
                         }
                     }                
                 });
-                this.highlightFeatures(JSON.parse(resource_geometry.val()));
+                highlightFeatures(JSON.parse(resource_geometry.val()));
             });
 
             //Close Button
