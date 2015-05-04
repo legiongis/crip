@@ -221,7 +221,7 @@ require([
                 style: style,
                 name: "feature"
             });
-            _.each(map.map.getLayers, function(layer){
+            _.each(self.map.map.getLayers(), function(layer){
                 console.log(layer);
                 if (layer.name == "feature") {
                     this.map.map.removeLayer(layer);
