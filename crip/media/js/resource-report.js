@@ -59,7 +59,7 @@ require([
                         source: new ol.source.GeoJSON(),
                         style: style
                     });
-                    this.map.addLayer(this.selectedFeatureLayer);  
+                    map.addLayer(this.selectedFeatureLayer);  
                 }
                 this.selectedFeatureLayer.getSource().clear();
 
