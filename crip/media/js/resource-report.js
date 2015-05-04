@@ -180,7 +180,7 @@ require([
                     }
                 }                
             });
-            self.highlightFeatures();
+            this.highlightFeatures();
         },
 
         highlightFeatures: function(){
