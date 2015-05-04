@@ -71,6 +71,7 @@ define([
             };
 
             this.baseLayers = map.baseLayers;
+            this.historicLayers = map.historicLayers;
 
             BranchList.prototype.initialize.apply(this, arguments);
 
