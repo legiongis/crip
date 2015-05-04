@@ -225,7 +225,7 @@ require([
             console.log(position);
             console.log(self.map.map.getLayers());
                 //self.map.map.getLayers().insertAt(position, self.selectedFeatureLayer);                
-            }
+            //}
             this.selectedFeatureLayer.getSource().clear();
 
             feature = {
