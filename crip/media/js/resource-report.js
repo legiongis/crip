@@ -15,7 +15,7 @@ require([
             var self = this;
             var resource_geometry = $('#resource_geometry');
             
-            //if(resource_geometry.length > 0){
+
             var geom = JSON.parse(resource_geometry.val());
             this.map = new MapView({
                 el: $('#map')
@@ -24,7 +24,7 @@ require([
             ko.applyBindings(this.map, $('#basemaps-panel')[0]);
             ko.applyBindings(this.map, $('#historicmaps-panel')[0]);
 
-            this.highlightFeatures(JSON.parse(resource_geometry.val()));
+            //this.highlightFeatures(JSON.parse(resource_geometry.val()));
             this.zoomToResource('1');
 
             var hideAllPanels = function(){
@@ -120,13 +120,6 @@ require([
             $(".close").click(function (){ 
                 hideAllPanels();
             });
-            
-               
-            // }else{
-                // $('.block-description').css('marginTop', '-40px');
-                // $('#map-container').hide();
-            // }
-            
 
             var resize = function() {
                 var header = $('.breadcrumbs').outerHeight() + $('.header').outerHeight();
