@@ -168,7 +168,7 @@ require([
                     // if activated, set layer on top of all historic maps/basemaps
                     // also highlight layer button by changing background
                     if (historicLayer.layer.getVisible() == true) {
-                        setlyrs = this.map.historicLayers.length + this.map.baseLayers.length;
+                        setlyrs = this.map.historicLayers.length; // + this.map.baseLayers.length;
                         
                         this.map.map.removeLayer(historicLayer.layer);
                         this.map.map.getLayers().insertAt(setlyrs, historicLayer.layer);
