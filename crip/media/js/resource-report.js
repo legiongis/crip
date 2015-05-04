@@ -24,7 +24,6 @@ require([
             ko.applyBindings(this.map, $('#basemaps-panel')[0]);
             ko.applyBindings(this.map, $('#historicmaps-panel')[0]);
 
-            //this.highlightFeatures(JSON.parse(resource_geometry.val()));
             this.highlightFeatures();
             this.zoomToResource('1');
             
@@ -97,24 +96,6 @@ require([
             $(".historicmap").click(function (){
                 var historicmap = $(this).attr('id');
                 self.selectHistoricMap(historicmap);
-                // _.each(self.map.historicLayers, function(historicLayer){
-                    // if (historicLayer.id == historicmap){
-                        // historicLayer.layer.setVisible(!historicLayer.layer.getVisible());
-                        
-                        // if activated, set layer on top of all historic maps/basemaps
-                        // also highlight layer button by changing background
-                        // if (historicLayer.layer.getVisible() == true) {
-                            // setlyrs = self.map.historicLayers.length + self.map.baseLayers.length;
-                            
-                            // self.map.map.removeLayer(historicLayer.layer);
-                            // self.map.map.getLayers().insertAt(setlyrs, historicLayer.layer);
-                            
-                            // $('#'+historicLayer.id).css("background","#eaeaea");
-                        // } else {
-                            // $('#'+historicLayer.id).css("background","");
-                        // }
-                    // }                
-                // });
             });
 
             //Close Button
@@ -136,9 +117,6 @@ require([
                     $(list).find('.empty-message').show();
                 }
             })
-            
-            
-
         },
 
         zoomToResource: function(resourceid){
@@ -177,7 +155,6 @@ require([
                     }
                 }                
             });
-            console.log("show features");
             this.highlightFeatures();
         },
 
@@ -229,11 +206,6 @@ require([
             });
 
             this.map.map.addLayer(this.selectedFeatureLayer);
-            position = self.map.historicLayers.length + self.map.baseLayers.length + 1;
-            console.log(position);
-            console.log(self.map.map.getLayers());
-                //self.map.map.getLayers().insertAt(position, self.selectedFeatureLayer);                
-            //}
             this.selectedFeatureLayer.getSource().clear();
 
             feature = {
