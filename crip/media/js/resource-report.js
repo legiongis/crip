@@ -28,12 +28,16 @@ require([
 
                 var hideAllPanels = function(){
                     $("#basemaps-panel").addClass("hidden");
+                    $("#historicmaps-panel").addClass("hidden");
 
-                    //Update state of remaining buttons
-                    $("#inventory-basemaps")
-                        .removeClass("arches-map-tools-pressed")
-                        .addClass("arches-map-tools")
-                        .css("border-bottom-left-radius", "1px");
+                    //Update state of buttons
+                    $("#inventory-basemaps").removeClass("arches-map-tools-pressed");
+                    $("#inventory-basemaps").addClass("arches-map-tools");
+                    $("#inventory-basemaps").css("border-bottom-left-radius", "1px");
+
+                    $("#inventory-historicmaps").removeClass("arches-map-tools-pressed");
+                    $("#inventory-historicmaps").addClass("arches-map-tools");
+                    $("#inventory-historicmaps").css("border-bottom-right-radius", "1px");
                 };
 
                 //Inventory-basemaps button opens basemap panel
@@ -41,63 +45,67 @@ require([
                     if ($(this).hasClass('arches-map-tools-pressed')) {
                         hideAllPanels();
                     } else {
-                        $("#basemaps-panel").removeClass("hidden");
                         $("#historicmaps-panel").addClass("hidden");
+                        $("#basemaps-panel").removeClass("hidden");
                         
-                        $("#inventory-basemaps").addClass("arches-map-tools-pressed");
-                        $("#inventory-basemaps").removeClass("arches-map-tools");
-
-                        //Update state of current button and adjust position
+                        //Update state of remaining buttons
                         $("#inventory-historicmaps").removeClass("arches-map-tools-pressed");
                         $("#inventory-historicmaps").addClass("arches-map-tools");
+                        
+                        //Update state of current button and adjust position
+                        $(this).addClass("arches-map-tools-pressed")
+                        $(this).removeClass("arches-map-tools");
                     }
                 });
-
-                $(".basemap").click(function (){ 
-                    var basemap = $(this).attr('id');
-                    _.each(self.map.baseLayers, function(baseLayer){ 
-                        baseLayer.layer.setVisible(baseLayer.id == basemap);
-                    });
-                    hideAllPanels();
-                });
-
-                //Close Button
-                $(".close").click(function (){ 
-                    hideAllPanels();
-                });
                 
-                //Inventory-historicmaps button opens historic maps panel
                 $("#inventory-historicmaps").click(function (){
                     if ($(this).hasClass('arches-map-tools-pressed')) {
                         hideAllPanels();
                     } else {
                         $("#basemaps-panel").addClass("hidden");
                         $("#historicmaps-panel").removeClass("hidden");
-                        
+
+                        //Update state of remaining buttons
                         $("#inventory-basemaps").removeClass("arches-map-tools-pressed");
                         $("#inventory-basemaps").addClass("arches-map-tools");
 
-                        //Update state of current button and adjust position
-                        $("#inventory-historicmaps").addClass("arches-map-tools-pressed");
-                        $("#inventory-historicmaps").removeClass("arches-map-tools");
+                        //Update state of current button
+                        $(this).addClass("arches-map-tools-pressed");
+                        $(this).removeClass("arches-map-tools");
                     }
+                });
+
+                // activate single basemap when basemap is clicked, and remove basemap panel
+                $(".basemap").click(function (){
+                    var basemap = $(this).attr('id');
+                    _.each(self.map.baseLayers, function(baseLayer){
+                        baseLayer.layer.setVisible(basemap == baseLayer.id);
+                        if (basemap == baseLayer.id){
+                            $('#'+baseLayer.id).css("background","#eaeaea"); 
+                            console.log(baseLayer.id+" set grey");                       
+                        } else {
+                            $('#'+baseLayer.id).css("background","");
+                            console.log(baseLayer.id+" no bg");  
+                        }   
+                    });
+                    hideAllPanels();
                 });
                 
                 // activate historic map when button is clicked, stays on until clicked again
                 // historic map panel doesn't close automatically
                 $(".historicmap").click(function (){
                     var historicmap = $(this).attr('id');
-                    _.each(map.historicLayers, function(historicLayer){
+                    _.each(self.map.historicLayers, function(historicLayer){
                         if (historicLayer.id == historicmap){
                             historicLayer.layer.setVisible(!historicLayer.layer.getVisible());
                             
                             // if activated, set layer on top of all historic maps/basemaps
                             // also highlight layer button by changing background
                             if (historicLayer.layer.getVisible() == true) {
-                                setlyrs = map.historicLayers.length + map.baseLayers.length;
+                                setlyrs = self.map.historicLayers.length + self.map.baseLayers.length;
                                 
-                                map.map.removeLayer(historicLayer.layer);
-                                map.map.getLayers().insertAt(setlyrs, historicLayer.layer);
+                                self.map.map.removeLayer(historicLayer.layer);
+                                self.map.map.getLayers().insertAt(setlyrs, historicLayer.layer);
                                 
                                 $('#'+historicLayer.id).css("background","#eaeaea");
                             } else {
@@ -105,6 +113,11 @@ require([
                             }
                         }                
                     });
+                });
+
+                //Close Button
+                $(".close").click(function (){ 
+                    hideAllPanels();
                 });
             
                
