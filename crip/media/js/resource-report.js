@@ -160,7 +160,7 @@ require([
         selectHistoricMap: function(historicmap){
             console.log("firing...");
             console.log(historicmap);
-            _.each(self.map.historicLayers, function(historicLayer){
+            _.each(this.map.historicLayers, function(historicLayer){
                 console.log(historicLayer);
                 if (historicLayer.id == historicmap){
                     historicLayer.layer.setVisible(!historicLayer.layer.getVisible());
@@ -168,10 +168,10 @@ require([
                     // if activated, set layer on top of all historic maps/basemaps
                     // also highlight layer button by changing background
                     if (historicLayer.layer.getVisible() == true) {
-                        setlyrs = self.map.historicLayers.length + self.map.baseLayers.length;
+                        setlyrs = this.map.historicLayers.length + this.map.baseLayers.length;
                         
-                        self.map.map.removeLayer(historicLayer.layer);
-                        self.map.map.getLayers().insertAt(setlyrs, historicLayer.layer);
+                        this.map.map.removeLayer(historicLayer.layer);
+                        this.map.map.getLayers().insertAt(setlyrs, historicLayer.layer);
                         
                         $('#'+historicLayer.id).css("background","#eaeaea");
                     } else {
