@@ -163,7 +163,7 @@ cf https://github.com/summernote/summernote/issues/187
     margin-left: -42px;
 }
 
-.location-form-body {
+.location-form-panel-body {
     height: 313px;
     overflow-y: scroll;
 }
