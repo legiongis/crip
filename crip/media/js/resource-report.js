@@ -221,12 +221,13 @@ require([
                 style: style,
                 name: "feature"
             });
-            _.each(self.map.map.getLayers(), function(layer){
-                console.log(layer);
-                if (layer.name == "feature") {
-                    this.map.map.removeLayer(layer);
-                }
+            
+            var layers = this.map.map.getLayers().getArray(); 
+            var feature = layers.filter(function(layer) { 
+                return layer.get('name') == 'feature';                
             });
+            this.map.map.removeLayer(layer);
+
             this.map.map.addLayer(this.selectedFeatureLayer);
             position = self.map.historicLayers.length + self.map.baseLayers.length + 1;
             console.log(position);
