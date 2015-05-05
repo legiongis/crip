@@ -17,7 +17,7 @@ define([
             })
         });
     });
-    
+
     //pull desirable bing layers and set new thumbnails
     var bingstr = bingLayers[0];
     bingstr.icon = arches.urls.media + 'img/map/thb_bingstr.png';
@@ -25,22 +25,24 @@ define([
     bingstr.layer.matchid = bingstr.id;
     bingstr.altlayer = false;
     bingstr.showInfo = false;
-    
-        
+    bingstr.maxzoom = 19;
+
     var bingsat = bingLayers[1];
     bingsat.icon = arches.urls.media + 'img/map/thb_bingsat.png';
     bingsat.alttext = 'Bing Satellite Imagery';
     bingsat.layer.matchid = bingsat.id;
     bingsat.altlayer = false;
     bingsat.showInfo = false;
-    
+    bingsat.maxzoom = 19;
+
     var binghyb = bingLayers[2];
     binghyb.icon = arches.urls.media + 'img/map/thb_binghyb.png';
     binghyb.alttext = 'Bing Satellite and Streets';
     binghyb.layer.matchid = binghyb.id;
     binghyb.altlayer = false;
     binghyb.showInfo = false;
-    
+    binghyb.maxzoom = 19;
+
     //Open Street Map from MapQuest
     //AT THIS POINT, UNSURE IF OSM WILL BE USED.
     var osmLyr = new ol.layer.Tile({
@@ -59,6 +61,7 @@ define([
         showInfo: false,
     };
     osm.layer.matchid = osm.id;
+    osm.maxzoom = 19;
     
     //Open Street Map Hybrid from MapQuest
     // var osmlabelLyr = new ol.layer.Tile({
@@ -102,6 +105,7 @@ define([
         showInfo: 'This is a seamless mosaic of 24k USGS Quads from <a href="http://datagateway.nrcs.usda.gov/" target="_blank">NRCS</a>.',
     };
     usgs.layer.matchid = usgs.id;
+    usgs.maxzoom = 17;
      
     //Shaded Relief basemap from CRNHA server  
     var reliefLyr = new ol.layer.Tile({
@@ -133,6 +137,7 @@ define([
     };
     relief.layer.matchid = relief.id;
     relief.altlayer.matchid = relief.id;
+    relief.maxzoom = 18;
     
     //Make blank base layer in order to show no basemap
     var blankLyr = new ol.layer.Tile({
@@ -152,6 +157,7 @@ define([
         showInfo: 'When viewing historic maps, it may be useful to remove the basemap altogether.',
     };
     blank.layer.matchid = blank.id;
+    blank.maxzoom = 20;
     
     // aggregate layers in the baseLayers array
     var baseLayers = [

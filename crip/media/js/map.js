@@ -430,6 +430,24 @@ require([
                     }
                 }    
             });
+            
+            
+            // if the zoom goes past the basemap's max zoom, add blank basemap on top.
+            var switched = 'undefined';
+            map.map.getView().on('change:resolution', function() {
+                _.each(map.baseLayers, function(baseLayer){
+                    if (baseLayer.id == 'blank'){
+                        var blankLayer = baseLayer
+                    }
+                });
+                var zoomlevel = map.map.getView().getZoom()
+                _.each(map.baseLayers, function(baseLayer){
+                    if (baseLayer.layer.getVisible() == true){
+                        blankLayer.layer.setVisible()(zoomlevel > baseLayer.maxzoom)
+                    }                
+                });
+            });
+            
 
             ko.applyBindings(self.viewModel, $('body')[0]);
 
