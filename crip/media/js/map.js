@@ -437,13 +437,15 @@ require([
             map.map.getView().on('change:resolution', function() {
                 
                 var zoomlevel = map.map.getView().getZoom()
+                console.log(zoomlevel);
                 _.each(map.baseLayers, function(baseLayer2){
                     if (baseLayer2.layer.getVisible() == true){
+                        console.log(baseLayer2.id + " is visible");
                         _.each(map.baseLayers, function(baseLayer1){
-                            console.log("looking at " + baseLayer1.id);
                             if (baseLayer1.id == 'blank'){
+                                console.log("blank layer found, setting visible to:");
+                                console.log(zoomlevel > baseLayer2.maxzoom);
                                 baseLayer1.layer.setVisible(zoomlevel > baseLayer2.maxzoom);
-                                console.log("blank layer found");
                             }
                         });
                     };
