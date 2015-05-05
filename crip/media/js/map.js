@@ -439,13 +439,13 @@ require([
                     console.log("looking at " + baseLayer.id);
                     if (baseLayer.id == 'blank'){
                         var blankLayer = baseLayer;
-                        condole.log("blank layer found");
+                        console.log("blank layer found");
                     }
                 });
                 var zoomlevel = map.map.getView().getZoom()
                 _.each(map.baseLayers, function(baseLayer){
                     if (baseLayer.layer.getVisible() == true){
-                        blankLayer.layer.setVisible()(zoomlevel > baseLayer.maxzoom);
+                        blankLayer.layer.setVisible(zoomlevel > baseLayer.maxzoom);
                     }                
                 });
             });
