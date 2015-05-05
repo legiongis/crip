@@ -439,7 +439,7 @@ require([
                 var zoomlevel = map.map.getView().getZoom()
                 console.log(zoomlevel);
                 _.each(map.baseLayers, function(baseLayer2){
-                    if (baseLayer2.layer.getVisible() == true){
+                    if (baseLayer2.layer.getVisible() == true && baseLayer2.id != 'blank'){
                         console.log(baseLayer2.id + " is visible");
                         _.each(map.baseLayers, function(baseLayer1){
                             if (baseLayer1.id == 'blank'){
