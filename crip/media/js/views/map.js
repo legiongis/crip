@@ -113,7 +113,6 @@ define([
                         })];
                     }
                 });
-
                 this.map.addInteraction(this.select);
             }
 
@@ -123,11 +122,11 @@ define([
                 self.trigger('viewChanged', view.getZoom(), extent);
             });
             
-            var switched = 'undefined';
+            // turn off basemap if max zoom level is exceeded, important to allow
+            // the viewing of certain historic maps without the bad basemap underneath
+            var switched = '';
             this.map.getView().on('change:resolution', function() {
                 var zoomlevel = self.map.getView().getZoom()
-                console.log(zoomlevel);
-                console.log("switched = " +switched);
                 _.each(self.baseLayers, function(baseLayer){
                     if (baseLayer.layer.getVisible() == true && zoomlevel > baseLayer.maxzoom){
                         switched = baseLayer.id
@@ -138,21 +137,6 @@ define([
                     }
                 });
             });
-            // this.map.getView().on('change:resolution', function() {
-                
-                // var zoomlevel = self.map.getView().getZoom()
-                // console.log(zoomlevel);
-                // _.each(self.baseLayers, function(baseLayer2){
-                    // if (baseLayer2.layer.getVisible() == true && baseLayer2.id != 'blank'){
-                        // _.each(self.baseLayers, function(baseLayer1){
-                            // if (baseLayer1.id == 'blank'){
-                                // baseLayer1.layer.setVisible(zoomlevel > baseLayer2.maxzoom);
-                            // }
-                        // });
-                    // }
-                // });
-            // });
-
 
             this.map.on('click', function(e) {
                 var clickFeature = self.map.forEachFeatureAtPixel(e.pixel, function (feature, layer) {

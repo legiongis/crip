@@ -404,54 +404,6 @@ require([
                 $("#inventory-historicmaps").addClass("arches-map-tools");
                 //$("#inventory-historicmaps").css("border-bottom-right-radius", "1px");
             };
-            
-            // if the zoom goes too far in, switch from relief or usgs basemap to
-            // the basic roads basemap. switch back when zoomed back out.
-            // var switched = 'undefined';
-            // map.map.getView().on('change:resolution', function() {
-                // if (map.map.getView().getZoom() > 18) {
-                    // _.each(map.baseLayers, function(baseLayer){
-                        // if (baseLayer.id == 'relief' || baseLayer.id == 'usgs'){
-                            // if (baseLayer.layer.getVisible() == true){
-                                // baseLayer.layer.setVisible(false);
-                                // map.baseLayers[0].layer.setVisible(true);
-                                // switched = baseLayer.id;
-                            // }
-                        // }                
-                    // });
-                // } else {
-                    // if (switched != 'undefined'){
-                        // _.each(map.baseLayers, function(baseLayer){
-                            // if (baseLayer.id == switched){
-                                // baseLayer.layer.setVisible(true);
-                                // switched = 'undefined';
-                            // }                
-                        // });
-                    // }
-                // }    
-            // });
-            
-            
-            // if the zoom goes past the basemap's max zoom, add blank basemap on top.
-            // var switched = 'undefined';
-            // map.map.getView().on('change:resolution', function() {
-                
-                // var zoomlevel = map.map.getView().getZoom()
-                // console.log(zoomlevel);
-                // _.each(map.baseLayers, function(baseLayer2){
-                    // if (baseLayer2.layer.getVisible() == true && baseLayer2.id != 'blank'){
-                        // console.log(baseLayer2.id + " is visible");
-                        // _.each(map.baseLayers, function(baseLayer1){
-                            // if (baseLayer1.id == 'blank'){
-                                // console.log("blank layer found, setting visible to:");
-                                // console.log(zoomlevel > baseLayer2.maxzoom);
-                                // baseLayer1.layer.setVisible(zoomlevel > baseLayer2.maxzoom);
-                            // }
-                        // });
-                    // };
-                // });
-            // });
-            
 
             ko.applyBindings(self.viewModel, $('body')[0]);
 
