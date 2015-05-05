@@ -134,7 +134,7 @@ define([
                         baseLayer.layer.setVisible(false);
                     }
                     if (switched == baseLayer.id){
-                        baseLayer.layer.setVisible(zoomlevel < baseLayer.maxzoom);
+                        baseLayer.layer.setVisible(zoomlevel <= baseLayer.maxzoom);
                     }
                 });
             });
