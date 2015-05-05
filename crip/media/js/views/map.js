@@ -128,9 +128,9 @@ define([
                 
                 var zoomlevel = self.map.getView().getZoom()
                 console.log(zoomlevel);
-                _.each(this.baseLayers, function(baseLayer2){
+                _.each(self.baseLayers, function(baseLayer2){
                     if (baseLayer2.layer.getVisible() == true && baseLayer2.id != 'blank'){
-                        _.each(this.baseLayers, function(baseLayer1){
+                        _.each(self.baseLayers, function(baseLayer1){
                             if (baseLayer1.id == 'blank'){
                                 baseLayer1.layer.setVisible(zoomlevel > baseLayer2.maxzoom);
                             }
