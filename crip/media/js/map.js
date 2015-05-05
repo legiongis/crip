@@ -442,7 +442,7 @@ require([
                         _.each(map.baseLayers, function(baseLayer1){
                             console.log("looking at " + baseLayer1.id);
                             if (baseLayer1.id == 'blank'){
-                                blankLayer1.layer.setVisible(zoomlevel > baseLayer2.maxzoom);
+                                baseLayer1.layer.setVisible(zoomlevel > baseLayer2.maxzoom);
                                 console.log("blank layer found");
                             }
                         });
