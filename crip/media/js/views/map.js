@@ -126,7 +126,7 @@ define([
             var switched = 'undefined';
             this.map.getView().on('change:resolution', function() {
                 
-                var zoomlevel = this.map.getView().getZoom()
+                var zoomlevel = self.map.getView().getZoom()
                 console.log(zoomlevel);
                 _.each(this.baseLayers, function(baseLayer2){
                     if (baseLayer2.layer.getVisible() == true && baseLayer2.id != 'blank'){
