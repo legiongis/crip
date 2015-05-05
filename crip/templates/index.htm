@@ -160,12 +160,17 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 <div class="block-description">
     <div class="container content padding-top-20">
 
-        <!--Title Box -->     
+        <!--Permissions Info Box -->  
+        {% if not user.is_anonymous %}
         <div class="title-box no-border margin-top-minus-10" style="border-bottom-color: #dcdcdc;">
-            {{ user_permissions.can_create }}
-            {{ user_permissions.entities_allowed }}
-            <p>These are some of the interesting cultural heritage stories in Los Angeles</p>
+            <p>Permissions summary for {{user.username}}
+            <br>Create new records: {{user_permissions.can_create}}
+            <br>Access to these resource types:
+            {% for restype in user_permissions.entities_allowed %}
+                <br>{{restype}}
+            {% endfor %}
         </div>
+        {% endif %}
         <!-- End Title Box --> 
 
         <!-- Promo Box   

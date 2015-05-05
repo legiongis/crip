@@ -22,26 +22,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 <div class="map-space">
     
     <!-- Disclaimer Modal -->
-    <div id="historic-disclaimer-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="historic-disclaimer-modal" aria-hidden="true" style="margin-top: 200px">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h4 class="modal-title" id="disclaimer-title"><b>Historic Map Disclaimer</b></h4>
-                </div>
-                <div class="modal-body" id="disclaimer-body">
-                    <p>There are two main issues with the interpretation of historic maps:</p>
-                        <ul>
-                            <li>The maps themselves may have been drawn inaccurately or approximately</li>
-                            <li>The process of placing them on current maps (as shown here) <em><b>should not be considered authoritative</b></em>.</li>
-                        </ul>
-                    <p>Before continuing, the user must understand that the Cane River National Heritage Area takes no responsibility for the relationship between features on the historic maps (property lines, structures, roads, etc.) and their apparent corresponding location on current maps or on the ground.</p>                   
-                </div>
-                <div class="modal-footer" style="text-align:center">
-                    <button type="button" class="btn btn-default" id="close-modal" data-dismiss="modal">OK</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% include 'historic-map-disclaimer-modal.htm' %}
     <!-- End Disclaimer Modal -->
 
     <!-- Map Side -->
