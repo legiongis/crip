@@ -18,9 +18,9 @@ define([
                     'LAYERS': 'vect:fedland020',
                     'TILED': true,
                 },
-                serverType: 'geoserver'   
-            });
-        });
+                serverType: 'geoserver'
+            })
+        })
     }));
 
     return layers;
