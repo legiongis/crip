@@ -124,13 +124,13 @@ define([
             });
             
             var switched = 'undefined';
-            self.map.getView().on('change:resolution', function() {
+            this.map.getView().on('change:resolution', function() {
                 
-                var zoomlevel = map.map.getView().getZoom()
+                var zoomlevel = this.map.getView().getZoom()
                 console.log(zoomlevel);
-                _.each(map.baseLayers, function(baseLayer2){
+                _.each(this.baseLayers, function(baseLayer2){
                     if (baseLayer2.layer.getVisible() == true && baseLayer2.id != 'blank'){
-                        _.each(map.baseLayers, function(baseLayer1){
+                        _.each(this.baseLayers, function(baseLayer1){
                             if (baseLayer1.id == 'blank'){
                                 baseLayer1.layer.setVisible(zoomlevel > baseLayer2.maxzoom);
                             }
