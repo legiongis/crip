@@ -34,7 +34,7 @@ require([
                         map.map.removeLayer(layer);
                         map.map.addLayer(layer);
                     }
-                }
+                });
                 map.map.getLayers().forEach(function(layer, index) {
                     if (layer.get('is_arches_layer') == true) {
                         map.map.removeLayer(layer);
