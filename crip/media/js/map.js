@@ -435,18 +435,18 @@ require([
             // if the zoom goes past the basemap's max zoom, add blank basemap on top.
             var switched = 'undefined';
             map.map.getView().on('change:resolution', function() {
-                _.each(map.baseLayers, function(baseLayer1){
-                    console.log("looking at " + baseLayer1.id);
-                    if (baseLayer1.id == 'blank'){
-                        var blankLayer = baseLayer1;
-                        console.log("blank layer found");
-                    }
-                });
+                
                 var zoomlevel = map.map.getView().getZoom()
                 _.each(map.baseLayers, function(baseLayer2){
                     if (baseLayer2.layer.getVisible() == true){
-                        blankLayer.layer.setVisible(zoomlevel > baseLayer2.maxzoom);
-                    }                
+                        _.each(map.baseLayers, function(baseLayer1){
+                            console.log("looking at " + baseLayer1.id);
+                            if (baseLayer1.id == 'blank'){
+                                blankLayer1.layer.setVisible(zoomlevel > baseLayer2.maxzoom);
+                                console.log("blank layer found");
+                            }
+                        });
+                    };
                 });
             });
             
