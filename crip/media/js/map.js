@@ -443,6 +443,7 @@ require([
                         }
                     }                
                 });
+                elevateArchesResourceLayers();
             });
 
             //swaps the .altlayer with the .layer in a map.layer object
