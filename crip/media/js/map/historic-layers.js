@@ -22,7 +22,7 @@ define([
         }),
         visible: false,
     });
-    
+
     // sanborn 1892 in red (for overlays?)
     var sanborn1892red_Lyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
@@ -40,7 +40,7 @@ define([
         }),
         visible: false,
     });
-    
+
     var sanborn1892 = {
         id: 'sanborn1892',
         name: 'Sanborn\u00A9 Maps (1892)',
@@ -98,7 +98,7 @@ define([
     }
     sanborn1914.layer.matchid = sanborn1914.id;
     sanborn1914.altlayer.matchid = sanborn1914.id;
- 
+
     // full confederate map
     var confed_fullLyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
@@ -113,7 +113,7 @@ define([
         }),
         visible: false,
     });
-    
+
     // transparent confederate map (for altlayer)
     var confed_transLyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
@@ -128,7 +128,7 @@ define([
         }),
         visible: false,
     });
-    
+
     var confed = {
         id: 'confed',
         name: 'Captured Confederate Map',
@@ -139,7 +139,7 @@ define([
     }
     confed.layer.matchid = confed.id;
     confed.altlayer.matchid = confed.id;
-    
+
     // tiled plat map layer
     var platmaps_transLyr = new ol.layer.Tile({
         name: "platmaps_transLyr",
@@ -149,7 +149,7 @@ define([
         }),
         visible: false,
     });   
-    
+
     // DO NOT ACTIVATE FULL LAYER (altlayer) AT THIS TIME
     var platmaps_fullLyr = new ol.layer.Tile({
         name: "platmaps_fullLyr",
@@ -159,7 +159,7 @@ define([
         }),
         visible: false,
     });
-        
+
     var platmaps = {
         id: 'platmaps',
         name: 'Plat Maps',
@@ -169,7 +169,7 @@ define([
         showInfo: 'This layer comprises many historic township plat maps, all acquired through the Louisiana State Land Office <a href="https://wwwslodms.doa.la.gov/" target="_blank">Historical Documents</a> database.  These plat maps are not all from the same year, so the date has been added in the top right/northeast corner of each township.',
     }
     platmaps.layer.matchid = platmaps.id;
-    
+
     // tiled road map layer
     var roadmapLyr = new ol.layer.Tile({
         name: "roadmapLyr",
@@ -188,7 +188,7 @@ define([
         showInfo: 'This is a captured confederate map showing the road between Natchitoches and Alexandria (only the portions within Natchitoches Parish are shown here).  It was originally drawn in many segments on both sides of a single piece of paper.',
     }
     roadmap.layer.matchid = roadmap.id;
-    
+
     // map 174
     var map174Lyr = new ol.layer.Tile({
         name: "map174Lyr",
@@ -203,7 +203,7 @@ define([
             serverType: 'geoserver'   
         }),
         visible: false,
-    });    
+    });
     var map174 = {
         id: 'map174',
         name: 'Map 174',
@@ -213,7 +213,7 @@ define([
         showInfo: 'This is a plat map of the city of Natchitoches from 1866.  It is map number 174 at the <a href="https://library.nsula.edu/cammie-henry-research-center/" target="_blank">Cammie G. Henry Research Library</a>.',
     }
     map174.layer.matchid = map174.id;
-    
+
     // aggregate layers in historicLayers array
     var historicLayers = [
         platmaps,

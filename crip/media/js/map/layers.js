@@ -7,12 +7,17 @@ define([
     var layers = resourceLayers.layers;
 
     layers.push(new LayerModel({
-        name: layerI18n.exampleLayerName,
-        categories: [layerI18n.exampleCategory],
+        name: 'fedland',
+        categories: ["Boundaries"],
         icon: 'fa fa-bookmark-o',
-        infoContent: layerI18n.exampleContent,
-        layer: new ol.layer.Tile({
-            source: new ol.source.XYZ({url: 'http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png'})
+        infoContent: "this is the infoContent",
+        layer: new ol.source.TileWMS({
+            url: 'http://54.148.201.140:8080/geoserver/vect/wms/',
+            params: {
+                'LAYERS': 'vect:fedland020',
+                'TILED': true,
+            },
+            serverType: 'geoserver'   
         })
     }));
 
