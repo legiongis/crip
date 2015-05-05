@@ -44,6 +44,8 @@ define([
                 layers.push(historicLayer.layer);
             });
 
+            console.log("pushed layers");
+
             dragAndDropInteraction.on('addfeatures', function(event) {
                 var vectorSource = new ol.source.Vector({
                     features: event.features,

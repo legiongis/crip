@@ -11,7 +11,6 @@ define([
         categories: ["Boundaries"],
         icon: 'fa fa-bookmark-o',
         infoContent: "this is the infoContent",
-        onMap: true,
         layer: new ol.source.TileWMS({
             url: 'http://54.148.201.140:8080/geoserver/vect/wms/',
             params: {

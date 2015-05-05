@@ -109,6 +109,8 @@ require([
             self.map = map;
             var clusterFeaturesCache = {};
             var archesFeaturesCache = {};
+            
+            console.log("1");
 
             var selectDeafultFeature = function (features) {
                 var feature = _.find(features, function (feature) {
@@ -130,7 +132,7 @@ require([
                     selectDeafultFeature(features);
                 });
             }
-
+            console.log("2");
             self.viewModel.filterTerms.subscribe(function () {
                 var terms = self.viewModel.filterTerms()
                 _.each(self.viewModel.layers(), function(layer) {
@@ -149,7 +151,7 @@ require([
                     layer.filtered(filtered)
                 });
             });
-
+            console.log("3");
             map.on('layerDropped', function (layer, name) {
                 var layerModel = new LayerModel({
                       name: name,
@@ -186,7 +188,7 @@ require([
                 $(".knob").css("font-weight", 200);
                 $('[data-toggle="popover"]').popover();
             });
-
+            console.log("4");
             map.on('viewChanged', function (zoom, extent) {
                 self.viewModel.zoom(zoom);
             });
