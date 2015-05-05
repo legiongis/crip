@@ -11,14 +11,16 @@ define([
         categories: ["Boundaries"],
         icon: 'fa fa-bookmark-o',
         infoContent: "this is the infoContent",
-        layer: new ol.source.TileWMS({
-            url: 'http://54.148.201.140:8080/geoserver/vect/wms/',
-            params: {
-                'LAYERS': 'vect:fedland020',
-                'TILED': true,
-            },
-            serverType: 'geoserver'   
-        })
+        layer: new ol.layer.Tile({
+            source: new ol.source.TileWMS({
+                url: 'http://54.148.201.140:8080/geoserver/vect/wms/',
+                params: {
+                    'LAYERS': 'vect:fedland020',
+                    'TILED': true,
+                },
+                serverType: 'geoserver'   
+            });
+        });
     }));
 
     return layers;
