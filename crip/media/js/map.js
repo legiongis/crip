@@ -30,10 +30,10 @@ require([
             var mapLayers = [];
             var elevateArchesResourceLayers = function () {
                 //map.map.getLayers().forEach(function(layer, index) {
-                layers.forEach(function(layer, index) {
+                map.map.getLayers().forEach(function(layer, index) {
                     if (layer.get('is_arches_layer')) {
-                        map.map.removeLayer(layer.layer);
-                        map.map.addLayer(layer.layer);
+                        map.map.removeLayer(layer);
+                        map.map.addLayer(layer);
                     }
                 });
             };
