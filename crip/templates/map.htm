@@ -19,12 +19,13 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 {% load staticfiles %}
 {% load i18n %}
 {% block content %}
+
+<!-- Disclaimer Modal -->
+{% include 'historic-map-disclaimer-modal.htm' %}
+<!-- End Disclaimer Modal -->
+    
 <div class="map-space">
     
-    <!-- Disclaimer Modal -->
-    {% include 'historic-map-disclaimer-modal.htm' %}
-    <!-- End Disclaimer Modal -->
-
     <!-- Map Side -->
     <div class="map-space-panel" id="map-panel">
         
