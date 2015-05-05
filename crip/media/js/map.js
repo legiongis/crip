@@ -436,14 +436,16 @@ require([
             var switched = 'undefined';
             map.map.getView().on('change:resolution', function() {
                 _.each(map.baseLayers, function(baseLayer){
+                    console.log("looking at " + baseLayer.id);
                     if (baseLayer.id == 'blank'){
-                        var blankLayer = baseLayer
+                        var blankLayer = baseLayer;
+                        condole.log("blank layer found");
                     }
                 });
                 var zoomlevel = map.map.getView().getZoom()
                 _.each(map.baseLayers, function(baseLayer){
                     if (baseLayer.layer.getVisible() == true){
-                        blankLayer.layer.setVisible()(zoomlevel > baseLayer.maxzoom)
+                        blankLayer.layer.setVisible()(zoomlevel > baseLayer.maxzoom);
                     }                
                 });
             });
@@ -458,10 +460,8 @@ require([
                     baseLayer.layer.setVisible(basemap == baseLayer.id);
                     if (basemap == baseLayer.id){
                         $('#'+baseLayer.id).css("background","#eaeaea"); 
-                        console.log(baseLayer.id+" set grey");                       
                     } else {
                         $('#'+baseLayer.id).css("background","");
-                        console.log(baseLayer.id+" no bg");  
                     }   
                 });
                 hideAllPanels();
