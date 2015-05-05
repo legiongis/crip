@@ -11,6 +11,7 @@ define([
         categories: ["Boundaries"],
         icon: 'fa fa-bookmark-o',
         infoContent: "this is the infoContent",
+        is_arches_layer: "nobutclose",
         layer: new ol.layer.Tile({
             source: new ol.source.TileWMS({
                 url: 'http://54.148.201.140:8080/geoserver/vect/wms/',
