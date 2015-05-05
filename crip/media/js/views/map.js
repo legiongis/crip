@@ -133,6 +133,9 @@ define([
                         switched = baseLayer.id
                         baseLayer.layer.setVisible(false);
                     }
+                    if (switched == baseLayer.id){
+                        baseLayer.layer.setVisible(zoomlevel < baseLayer.maxzoom);
+                    }
                 });
             });
             // this.map.getView().on('change:resolution', function() {
