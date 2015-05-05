@@ -124,7 +124,7 @@ define([
             });
             
             var switched = 'undefined';
-            this.map.getView().on('change:resolution', function() {
+            self.map.getView().on('change:resolution', function() {
                 
                 var zoomlevel = map.map.getView().getZoom()
                 console.log(zoomlevel);
