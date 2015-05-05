@@ -125,19 +125,29 @@ define([
             
             var switched = 'undefined';
             this.map.getView().on('change:resolution', function() {
-                
                 var zoomlevel = self.map.getView().getZoom()
                 console.log(zoomlevel);
                 _.each(self.baseLayers, function(baseLayer2){
-                    if (baseLayer2.layer.getVisible() == true && baseLayer2.id != 'blank'){
-                        _.each(self.baseLayers, function(baseLayer1){
-                            if (baseLayer1.id == 'blank'){
-                                baseLayer1.layer.setVisible(zoomlevel > baseLayer2.maxzoom);
-                            }
-                        });
+                    if (baseLayer2.layer.getVisible() == true && zoomlevel > baseLayer2.maxzoom){
+                        switched = baseLayer.id
+                        baseLayer2.layer.setVisible(false);
                     }
                 });
             });
+            // this.map.getView().on('change:resolution', function() {
+                
+                // var zoomlevel = self.map.getView().getZoom()
+                // console.log(zoomlevel);
+                // _.each(self.baseLayers, function(baseLayer2){
+                    // if (baseLayer2.layer.getVisible() == true && baseLayer2.id != 'blank'){
+                        // _.each(self.baseLayers, function(baseLayer1){
+                            // if (baseLayer1.id == 'blank'){
+                                // baseLayer1.layer.setVisible(zoomlevel > baseLayer2.maxzoom);
+                            // }
+                        // });
+                    // }
+                // });
+            // });
 
 
             this.map.on('click', function(e) {
