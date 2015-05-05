@@ -127,10 +127,11 @@ define([
             this.map.getView().on('change:resolution', function() {
                 var zoomlevel = self.map.getView().getZoom()
                 console.log(zoomlevel);
-                _.each(self.baseLayers, function(baseLayer2){
-                    if (baseLayer2.layer.getVisible() == true && zoomlevel > baseLayer2.maxzoom){
+                console.log("switched = " +switched);
+                _.each(self.baseLayers, function(baseLayer){
+                    if (baseLayer.layer.getVisible() == true && zoomlevel > baseLayer.maxzoom){
                         switched = baseLayer.id
-                        baseLayer2.layer.setVisible(false);
+                        baseLayer.layer.setVisible(false);
                     }
                 });
             });
