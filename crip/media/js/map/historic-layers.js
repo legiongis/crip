@@ -8,14 +8,17 @@ define([
     // sanborn map 1892
     var sanborn1892black_Lyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
-            //url: 'http://199.184.68.66:8080/geoserver/confed_parish/wms/',
             url: 'http://54.148.201.140:8080/geoserver/raster/wms/',
             params: {
-                //'LAYERS': 'confed_parish:sheet42_full',
                 'LAYERS': 'raster:sanborn1892_blk',
                 'TILED': true,
                 },
-            serverType: 'geoserver'   
+            serverType: 'geoserver',
+            attributions: [
+                new ol.Attribution({
+                    html: 'Sanborn\u00A9 Maps used here with special permission from <a href="http://edrnet.com/">EDR</a>.'
+                })
+            ],
         }),
         visible: false,
     });
@@ -23,13 +26,17 @@ define([
     // sanborn 1892 in red (for overlays?)
     var sanborn1892red_Lyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
-            //url: 'http://199.184.68.66:8080/geoserver/confed_parish/wms/',
             url: 'http://54.148.201.140:8080/geoserver/raster/wms/',
             params: {
                 'LAYERS': 'raster:sanborn1892_red',
                 'TILED': true,
                 },
-            serverType: 'geoserver'   
+            serverType: 'geoserver',
+            attributions: [
+                new ol.Attribution({
+                    html: 'Sanborn\u00A9 Maps used here with special permission from <a href="http://edrnet.com/">EDR</a>.'
+                })
+            ],            
         }),
         visible: false,
     });
@@ -40,7 +47,7 @@ define([
         icon: arches.urls.media + 'img/map/thb_san1892.png',
         layer: sanborn1892black_Lyr,
         altlayer: sanborn1892red_Lyr,
-        showInfo: 'Sanborn\u00A9 Fire Insurance Maps (1892 series) show structures in Natchitoches and information useful for insurance agencies.  The original map sheets have been stitched together here to show a single seamless layer for the whole year.',
+        showInfo: 'Sanborn\u00A9 maps were created to assist fire insurance companies with risk assessment for certain properties.  In this application, the original map sheets for the city of Natchitoches have been stitched together to show a single seamless layer for the year of 1892.  Special permission was granted by <a href="http://edrnet.com/">EDR</a> for use of their scans of these maps.',
     }
     sanborn1892.layer.matchid = sanborn1892.id;
     sanborn1892.altlayer.matchid = sanborn1892.id;
@@ -48,14 +55,17 @@ define([
     // sanborn map 1914
     var sanborn1914black_Lyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
-            //url: 'http://199.184.68.66:8080/geoserver/confed_parish/wms/',
             url: 'http://54.148.201.140:8080/geoserver/raster/wms/',
             params: {
-                //'LAYERS': 'confed_parish:sheet42_full',
                 'LAYERS': 'raster:sanborn1914_blk',
                 'TILED': true,
                 },
-            serverType: 'geoserver'   
+            serverType: 'geoserver',
+            attributions: [
+                new ol.Attribution({
+                    html: 'Sanborn\u00A9 Maps used here with special permission from <a href="http://edrnet.com/">EDR</a>.'
+                })
+            ],
         }),
         visible: false,
     });
@@ -63,14 +73,17 @@ define([
     // sanborn 1914 in red (for overlays?)
     var sanborn1914red_Lyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
-            //url: 'http://199.184.68.66:8080/geoserver/confed_parish/wms/',
             url: 'http://54.148.201.140:8080/geoserver/raster/wms/',
             params: {
-                //'LAYERS': 'confed_parish:sheet42_full',
                 'LAYERS': 'raster:sanborn1914_red',
                 'TILED': true,
                 },
-            serverType: 'geoserver'   
+            serverType: 'geoserver',
+            attributions: [
+                new ol.Attribution({
+                    html: 'Sanborn\u00A9 Maps used here with special permission from <a href="http://edrnet.com/">EDR</a>.'
+                })
+            ],
         }),
         visible: false,
     });
@@ -81,7 +94,7 @@ define([
         icon: arches.urls.media + 'img/map/thb_san1914.png',
         layer: sanborn1914black_Lyr,
         altlayer: sanborn1914red_Lyr,
-        showInfo: 'Sanborn\u00A9 Fire Insurance Maps (1914 series) show structures in Natchitoches and information useful for insurance agencies.  The original map sheets have been stitched together here to show a single seamless layer for the whole year.',
+        showInfo: 'Sanborn\u00A9 maps were created to assist fire insurance companies with risk assessment for certain properties.  In this application, the original map sheets for the city of Natchitoches have been stitched together to show a single seamless layer for the year of 1914.  Special permission was granted by <a href="http://edrnet.com/">EDR</a> for use of their scans of these maps.',
     }
     sanborn1914.layer.matchid = sanborn1914.id;
     sanborn1914.altlayer.matchid = sanborn1914.id;

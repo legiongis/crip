@@ -111,8 +111,13 @@ define([
     var reliefLyr = new ol.layer.Tile({
         name: "relief",
         source: new ol.source.XYZ({
-            url: 'http://199.184.68.66/tiles/relief_basemap/{z}/{x}/{y}.png'
-            //url: 'https://s3-us-west-2.amazonaws.com/natchdata/tiles/relief_basemap/{z}/{x}/{y}.png'
+            url: 'http://199.184.68.66/tiles/relief_basemap/{z}/{x}/{y}.png',
+            //url: 'https://s3-us-west-2.amazonaws.com/natchdata/tiles/relief_basemap/{z}/{x}/{y}.png',
+            attributions: [
+                new ol.Attribution({
+                    html: '<a href="http://atlas.lsu.edu">Atlas: The Louisiana Statewide GIS</a>. LSU Department of Geography and Anthropology, Baton Rouge, LA.'
+                })
+            ],
         }),
         opacity: .95,
         visible: false,
@@ -121,8 +126,13 @@ define([
     var hillshadeLyr = new ol.layer.Tile({
         name: "relief",
         source: new ol.source.XYZ({
-            url: 'http://199.184.68.66/tiles/hillshade/{z}/{x}/{y}.png'
-            //url: 'https://s3-us-west-2.amazonaws.com/natchdata/tiles/relief_basemap/{z}/{x}/{y}.png'
+            url: 'http://199.184.68.66/tiles/hillshade/{z}/{x}/{y}.png',
+            //url: 'https://s3-us-west-2.amazonaws.com/natchdata/tiles/relief_basemap/{z}/{x}/{y}.png',
+            attributions: [
+                new ol.Attribution({
+                    html: '<a href="http://atlas.lsu.edu">Atlas: The Louisiana Statewide GIS</a>. LSU Department of Geography and Anthropology, Baton Rouge, LA.'
+                })
+            ],
         }),
         visible: false,
     });
@@ -133,12 +143,13 @@ define([
         layer: reliefLyr,
         altlayer: hillshadeLyr,
         alttext: 'Shaded Relief from Louisiana Statewide LiDAR Project',
-        showInfo: 'This layer is a hillshade derivative of LiDAR data acquired through <a href="http://atlas.lsu.edu">Atlas</a>, the Louisiana statewide GIS.  The data was produced for the <a href="http://atlas.lsu.edu/central/la_lidar_project.pdf" target="_blank">Louisiana State LiDAR Project</a>.',
+        showInfo: 'This layer is a hillshade derivative of LiDAR data distributed by <a href="http://atlas.lsu.edu">Atlas: The Louisiana Statewide GIS</a>, which was produced for the <a href="http://atlas.lsu.edu/central/la_lidar_project.pdf" target="_blank">Louisiana State LiDAR Project</a>, LSU Department of Geography and Anthropology, Baton Rouge, LA.',
     };
+
     relief.layer.matchid = relief.id;
     relief.altlayer.matchid = relief.id;
     relief.maxzoom = 18;
-    
+
     //Make blank base layer in order to show no basemap
     var blankLyr = new ol.layer.Tile({
         name: "blank",
@@ -158,7 +169,7 @@ define([
     };
     blank.layer.matchid = blank.id;
     blank.maxzoom = 20;
-    
+
     // aggregate layers in the baseLayers array
     var baseLayers = [
         bingstr,
