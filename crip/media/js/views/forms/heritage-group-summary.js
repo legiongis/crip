@@ -27,7 +27,7 @@ define(['jquery',
                 this.addBranchList(new BranchList({
                     el: this.$el.find('#heritage-type-section')[0],
                     data: this.data,
-                    dataKey: 'PHASE_TYPE_ASSIGNMENT.E17',
+                    dataKey: 'PRODUCTION.E12',
                     validateBranch: function (nodes) {
                         return true;
                     }
