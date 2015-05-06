@@ -15,12 +15,12 @@ define(['jquery',
                     $(this).find('input').trigger('change'); 
                 });
                 
-                var currentEditedClassification = this.getBlankFormData();
+                // var currentEditedClassification = this.getBlankFormData();
                 
-                this.addBranchList(new BranchList({
-                    data: currentEditedClassification,
-                    dataKey: 'PHASE_TYPE_ASSIGNMENT.E17'
-                }));
+                // this.addBranchList(new BranchList({
+                    // data: currentEditedClassification,
+                    // dataKey: 'PHASE_TYPE_ASSIGNMENT.E17'
+                // }));
 
                 this.addBranchList(new BranchList({
                     el: this.$el.find('#heritage-type-section')[0],
