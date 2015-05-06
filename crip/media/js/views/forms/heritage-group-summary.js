@@ -15,30 +15,41 @@ define(['jquery',
                     $(this).find('input').trigger('change'); 
                 });
                 
-                // var currentEditedClassification = this.getBlankFormData();
+                var currentEditedClassification = this.getBlankFormData();
+                
+                this.addBranchList(new BranchList({
+                    
+                    data: currentEditedClassification,
+                    dataKey: 'PHASE_TYPE_ASSIGNMENT.E17',
+                    
+                }));
+                
+                this.addBranchList(new BranchList({
+                    el: this.$el.find('#heritage-type-section')[0],
+                    data: this.data,
+                    dataKey: 'PHASE_TYPE_ASSIGNMENT.E17',
+                    validateBranch: function (nodes) {
+                        return true;
+                    }
+                }));
+
+                // this.addBranchList(new BranchList({
+                    // el: this.$el.find('#heritage-type-section')[0],
+                    // data: this.data,
+                    // dataKey: 'HERITAGE_RESOURCE_GROUP_TYPE.E55',
+                    // validateBranch: function (nodes) {
+                        // return true;
+                    // }
+                // }));
                 
                 // this.addBranchList(new BranchList({
-                    // data: currentEditedClassification,
-                    // dataKey: 'PHASE_TYPE_ASSIGNMENT.E17'
+                    // el: this.$el.find('#heritage-type-section')[0],
+                    // data: this.data,
+                    // dataKey: 'HERITAGE_RESOURCE_GROUP_USE_TYPE.E55',
+                    // validateBranch: function (nodes) {
+                        // return true;
+                    // }
                 // }));
-
-                this.addBranchList(new BranchList({
-                    el: this.$el.find('#heritage-type-section')[0],
-                    data: this.data,
-                    dataKey: 'HERITAGE_RESOURCE_GROUP_TYPE.E55',
-                    validateBranch: function (nodes) {
-                        return true;
-                    }
-                }));
-                
-                this.addBranchList(new BranchList({
-                    el: this.$el.find('#heritage-type-section')[0],
-                    data: this.data,
-                    dataKey: 'HERITAGE_RESOURCE_GROUP_USE_TYPE.E55',
-                    validateBranch: function (nodes) {
-                        return true;
-                    }
-                }));
 
                 this.addBranchList(new BranchList({
                     el: this.$el.find('#names-section')[0],
