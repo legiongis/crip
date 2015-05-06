@@ -31,6 +31,7 @@ require([
             var elevateArchesResourceLayers = function () {
                 map.map.getLayers().forEach(function(layer, index) {
                     if (layer.get('is_arches_layer') == "nobutclose") {
+                        console.log("elevate " + layer.get('name');
                         map.map.removeLayer(layer);
                         map.map.addLayer(layer);
                     }
