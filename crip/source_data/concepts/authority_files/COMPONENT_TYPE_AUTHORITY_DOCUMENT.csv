@@ -1,130 +1,98 @@
-conceptid,PrefLabel,AltLabels,ParentConceptid,ConceptType,Provider,,,
-COMPONENT_TYPE:1,Porch ,,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Collector,LASHPO-LHRI,,,
-COMPONENT_TYPE:2,Porch - Stoop,stoop,COMPONENT_TYPE:1,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:3,Porch - Verandah ,verandah ,COMPONENT_TYPE:1,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:4,Porch - Gallery ,gallery ,COMPONENT_TYPE:1,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:5,Porch - Portico ,portico ,COMPONENT_TYPE:1,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:6,Porch - Balcony ,balcony ,COMPONENT_TYPE:1,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:7,Porch - Loggia ,loggia ,COMPONENT_TYPE:1,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:8,Porch - Porte-Cochere,porte-cochere,COMPONENT_TYPE:1,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:9,Porch - Full Width ,full width ,COMPONENT_TYPE:1,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:10,Porch - Partial Width ,partial width ,COMPONENT_TYPE:1,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:11,Porch - Attached ,attached ,COMPONENT_TYPE:1,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:12,Porch - Intergrated ,intergrated ,COMPONENT_TYPE:1,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:13,Porch - Wrap ,wrap ,COMPONENT_TYPE:1,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:14,Porch - Peripteral ,peripteral ,COMPONENT_TYPE:1,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:15,Porch - Screened ,screened ,COMPONENT_TYPE:1,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:16,Porch - Enclosed ,enclosed ,COMPONENT_TYPE:1,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:17,Porch - Unknown ,unknown ,COMPONENT_TYPE:1,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:18,Porch - Other (see narrative),other,COMPONENT_TYPE:1,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:19,Door,,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Collector,LASHPO-LHRI,,,
-COMPONENT_TYPE:20,Door - Batten ,batten ,COMPONENT_TYPE:19,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:21,Door - French ,french ,COMPONENT_TYPE:19,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:22,Door - Panel ,panel ,COMPONENT_TYPE:19,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:23,Door - Flush ,flush ,COMPONENT_TYPE:19,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:24,Door - Glazed ,glazed ,COMPONENT_TYPE:19,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:25,Door - Partially Glazed ,partially glazed ,COMPONENT_TYPE:19,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:26,Door - Fanlight,fanlight,COMPONENT_TYPE:19,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:27,Door - Sidelights,sidelights,COMPONENT_TYPE:19,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:28,Door - Transom,transom,COMPONENT_TYPE:19,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:29,Door - Screened,screened,COMPONENT_TYPE:19,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:30,Door - Replacment,replacment,COMPONENT_TYPE:19,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:31,Door - Unknown ,unknown ,COMPONENT_TYPE:19,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:32,Door - Federal ,Federal ,COMPONENT_TYPE:19,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:33,Door - Greek Revival ,Greek Revival ,COMPONENT_TYPE:19,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:34,Door - Queen Anne,Queen Anne,COMPONENT_TYPE:19,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:35,Door - Other (see narrative),other,COMPONENT_TYPE:19,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:36,Windows ,,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Collector,LASHPO-LHRI,,,
-COMPONENT_TYPE:37,Windows - Batten ,batten ,COMPONENT_TYPE:36,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:38,Windows - Fixed Single ,fixed single ,COMPONENT_TYPE:36,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:39,Windows - Fixed Divided ,fixed divided ,COMPONENT_TYPE:36,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:40,Windows - Single-Hung,single-hung,COMPONENT_TYPE:36,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:41,Windows - Double-Hung ,double-hung ,COMPONENT_TYPE:36,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:42,Windows - Triple-Hung,triple-hung,COMPONENT_TYPE:36,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:43,Windows - Bay ,bay ,COMPONENT_TYPE:36,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:44,Windows - Oriel,oriel,COMPONENT_TYPE:36,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:45,Windows - Palladian,Palladian,COMPONENT_TYPE:36,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:46,Windows - Casement,casement,COMPONENT_TYPE:36,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:47,Windows - Sliding ,sliding ,COMPONENT_TYPE:36,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:48,Windows - Replacement ,replacement ,COMPONENT_TYPE:36,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:49,Windows - Unknown ,unknown ,COMPONENT_TYPE:36,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:50,Windows - Other (see narrative),other,COMPONENT_TYPE:36,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:51,Chimney,,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Collector,LASHPO-LHRI,,,
-COMPONENT_TYPE:52,Chimney - Gable End Exterior ,gable end exterior ,COMPONENT_TYPE:51,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:53,Chimney - Gable End Interior/Flush,gable end interior/flush,COMPONENT_TYPE:51,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:54,Chimney - Ridge Center,ridge center,COMPONENT_TYPE:51,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:55,Chimney - Ridge Off-Center,ridge off-center,COMPONENT_TYPE:51,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:56,Chimney - Slope Center ,slope center ,COMPONENT_TYPE:51,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:57,Chimney - Slope Off Center,slope off center,COMPONENT_TYPE:51,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:58,Chimney - Lateral Exterior ,lateral exterior ,COMPONENT_TYPE:51,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:59,Chimney - Removed ,removed ,COMPONENT_TYPE:51,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:60,Chimney - Other (see narrative),other ,COMPONENT_TYPE:51,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:61,Chimney - Unkown ,unkown ,COMPONENT_TYPE:51,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:62,Roof ,,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Collector,LASHPO-LHRI,,,
-COMPONENT_TYPE:63,Roof - Front Gable ,front gable ,COMPONENT_TYPE:62,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:64,Roof - Side Gable ,side gable ,COMPONENT_TYPE:62,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:65,Roof - Parapet Gable ,parapet gable ,COMPONENT_TYPE:62,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:66,Roof - Stepped Gable ,stepped gable ,COMPONENT_TYPE:62,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:67,Roof - Clipped Gable,clipped gable,COMPONENT_TYPE:62,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:68,Roof - Cross Gable ,cross gable ,COMPONENT_TYPE:62,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:69,Roof - Double Pitch Gable,double pitch gable,COMPONENT_TYPE:62,Index,CRNHA,,,
-COMPONENT_TYPE:70,Roof - Gambrel ,gambrel ,COMPONENT_TYPE:62,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:71,Roof - Hip,hip,COMPONENT_TYPE:62,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:72,Roof - Double Pitch Hip ,double pitch hip ,COMPONENT_TYPE:62,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:73,Roof - Gable On Hip,gable on hip,COMPONENT_TYPE:62,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:74,Roof - Pyramidal,pyramidal,COMPONENT_TYPE:62,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:75,Roof - Mansard ,mansard ,COMPONENT_TYPE:62,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:76,Roof - Complex ,complex ,COMPONENT_TYPE:62,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:77,Roof - Round ,round ,COMPONENT_TYPE:62,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:78,Roof - Conical ,conical ,COMPONENT_TYPE:62,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:79,Roof - Flat ,flat ,COMPONENT_TYPE:62,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:80,Roof - Shed ,shed ,COMPONENT_TYPE:62,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:81,Roof - Other (see narrative),other (see narrative),COMPONENT_TYPE:62,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:82,Roof - Unknown ,unknown ,COMPONENT_TYPE:62,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:83,Foundation,,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Collector,LASHPO-LHRI,,,
-COMPONENT_TYPE:84,Foundation - Post In Ground,post in ground,COMPONENT_TYPE:83,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:85,Foundation - Sill On Ground ,sill on ground ,COMPONENT_TYPE:83,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:86,Foundation - Wooden Pier,wooden pier,COMPONENT_TYPE:83,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:87,Foundation - Brick Pier,brick pier,COMPONENT_TYPE:83,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:88,Foundation - Concrete Block Pier,concrete block pier,COMPONENT_TYPE:83,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:89,Foundation - Concrete Pylon Pier,concrete pylon pier,COMPONENT_TYPE:83,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:90,Foundation - Continuous Brick,continuous brick,COMPONENT_TYPE:83,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:91,Foundation - Continuous Stone,continuous stone,COMPONENT_TYPE:83,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:92,Foundation - Continuous Concrete Block ,continuous concrete block ,COMPONENT_TYPE:83,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:93,Foundation - Concrete Slab,concrete slab,COMPONENT_TYPE:83,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:94,Foundation - Other (see narrative),,COMPONENT_TYPE:83,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:95,Foundation - Unknown,,COMPONENT_TYPE:83,Index,LASHPO-LHRI,,,
-COMPONENT_TYPE:96,Grave,,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Collector,CRNHA,,,
-COMPONENT_TYPE:97,Basal Marker,,COMPONENT_TYPE:96,Index,CRNHA,,,
-COMPONENT_TYPE:98,Bedstead Marker,,COMPONENT_TYPE:96,Index,CRNHA,,,
-COMPONENT_TYPE:99,Pedestal Column,,COMPONENT_TYPE:96,Index,CRNHA,,,
-COMPONENT_TYPE:100,Footstone,,COMPONENT_TYPE:96,Index,CRNHA,,,
-COMPONENT_TYPE:101,Funeral Home Plaque,,COMPONENT_TYPE:96,Index,CRNHA,,,
-COMPONENT_TYPE:102,Family Marker,,COMPONENT_TYPE:96,Index,CRNHA,,,
-COMPONENT_TYPE:103,Headstone,,COMPONENT_TYPE:96,Index,CRNHA,,,
-COMPONENT_TYPE:104,Mausoleum,,COMPONENT_TYPE:96,Index,CRNHA,,,
-COMPONENT_TYPE:105,Pedestal Obelisk,,COMPONENT_TYPE:96,Index,CRNHA,,,
-COMPONENT_TYPE:106,Ground Tablet,,COMPONENT_TYPE:96,Index,CRNHA,,,
-COMPONENT_TYPE:107,Woodmen of the World Monument,,COMPONENT_TYPE:96,Index,CRNHA,,,
-COMPONENT_TYPE:108,Veteran Plaque,,COMPONENT_TYPE:96,Index,CRNHA,,,
-COMPONENT_TYPE:109,Other Grave Component (see narrative),,COMPONENT_TYPE:96,Index,CRNHA,,,
-COMPONENT_TYPE:110,Details,,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Collector,SurveyLA,,,
-COMPONENT_TYPE:111,Details - Applied decoration,Applied decoration,COMPONENT_TYPE:110,Index,SurveyLA,,,
-COMPONENT_TYPE:112,Details - Balconette,Balconette,COMPONENT_TYPE:110,Index,SurveyLA,,,
-COMPONENT_TYPE:113,Details - Belt course,Belt course,COMPONENT_TYPE:110,Index,SurveyLA,,,
-COMPONENT_TYPE:114,Details - Bris soleil,Bris soleil,COMPONENT_TYPE:110,Index,SurveyLA,,,
-COMPONENT_TYPE:115,Details - Buttresses,Buttresses,COMPONENT_TYPE:110,Index,SurveyLA,,,
-COMPONENT_TYPE:116,Details - Dingbats,Dingbats,COMPONENT_TYPE:110,Index,SurveyLA,,,
-COMPONENT_TYPE:117,Details - Grilles,Grilles,COMPONENT_TYPE:110,Index,SurveyLA,,,
-COMPONENT_TYPE:118,Details - Light Fixtures,Light Fixtures,COMPONENT_TYPE:110,Index,SurveyLA,,,
-COMPONENT_TYPE:119,Details - Loading Dock,Loading Dock,COMPONENT_TYPE:110,Index,SurveyLA,,,
-COMPONENT_TYPE:120,Details - Pierced screens,Pierced screens,COMPONENT_TYPE:110,Index,SurveyLA,,,
-COMPONENT_TYPE:121,Details - Pilasters,Pilasters,COMPONENT_TYPE:110,Index,SurveyLA,,,
-COMPONENT_TYPE:122,Details - Planters,Planters,COMPONENT_TYPE:110,Index,SurveyLA,,,
-COMPONENT_TYPE:123,Details - Quoins,Quoins,COMPONENT_TYPE:110,Index,SurveyLA,,,
-COMPONENT_TYPE:124,Details - Sign,Sign,COMPONENT_TYPE:110,Index,SurveyLA,,,
-COMPONENT_TYPE:125,Details - String course,String course,COMPONENT_TYPE:110,Index,SurveyLA,,,
-COMPONENT_TYPE:126,Details - Tile,Tile,COMPONENT_TYPE:110,Index,SurveyLA,,,
-COMPONENT_TYPE:127,Walls,,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Index,CRNHA,,,
-COMPONENT_TYPE:128,Cladding,Cladding,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Index,SurveyLA,,,
-COMPONENT_TYPE:129,Other Component (see narrative),,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Index,CRNHA,,,
+conceptid,PrefLabel,AltLabels,ParentConceptid,ConceptType,Provider
+COMPONENT_TYPE:1,Porch ,,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Collector,LASHPO-LHRI
+COMPONENT_TYPE:2,Porch - Stoop,stoop,COMPONENT_TYPE:1,Index,LASHPO-LHRI
+COMPONENT_TYPE:3,Porch - Verandah ,verandah ,COMPONENT_TYPE:1,Index,LASHPO-LHRI
+COMPONENT_TYPE:4,Porch - Gallery ,gallery ,COMPONENT_TYPE:1,Index,LASHPO-LHRI
+COMPONENT_TYPE:5,Porch - Portico ,portico ,COMPONENT_TYPE:1,Index,LASHPO-LHRI
+COMPONENT_TYPE:6,Porch - Balcony ,balcony ,COMPONENT_TYPE:1,Index,LASHPO-LHRI
+COMPONENT_TYPE:7,Porch - Loggia ,loggia ,COMPONENT_TYPE:1,Index,LASHPO-LHRI
+COMPONENT_TYPE:8,Porch - Porte-Cochere,porte-cochere,COMPONENT_TYPE:1,Index,LASHPO-LHRI
+COMPONENT_TYPE:9,Porch - Full Width ,full width ,COMPONENT_TYPE:1,Index,LASHPO-LHRI
+COMPONENT_TYPE:10,Porch - Partial Width ,partial width ,COMPONENT_TYPE:1,Index,LASHPO-LHRI
+COMPONENT_TYPE:11,Porch - Attached ,attached ,COMPONENT_TYPE:1,Index,LASHPO-LHRI
+COMPONENT_TYPE:12,Porch - Intergrated ,intergrated ,COMPONENT_TYPE:1,Index,LASHPO-LHRI
+COMPONENT_TYPE:13,Porch - Wrap ,wrap ,COMPONENT_TYPE:1,Index,LASHPO-LHRI
+COMPONENT_TYPE:14,Porch - Peripteral ,peripteral ,COMPONENT_TYPE:1,Index,LASHPO-LHRI
+COMPONENT_TYPE:15,Porch - Screened ,screened ,COMPONENT_TYPE:1,Index,LASHPO-LHRI
+COMPONENT_TYPE:16,Porch - Enclosed ,enclosed ,COMPONENT_TYPE:1,Index,LASHPO-LHRI
+COMPONENT_TYPE:17,Porch - Unknown ,unknown ,COMPONENT_TYPE:1,Index,LASHPO-LHRI
+COMPONENT_TYPE:18,Porch - Other (see narrative),other,COMPONENT_TYPE:1,Index,LASHPO-LHRI
+COMPONENT_TYPE:19,Door,,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Collector,LASHPO-LHRI
+COMPONENT_TYPE:20,Door - Batten ,batten ,COMPONENT_TYPE:19,Index,LASHPO-LHRI
+COMPONENT_TYPE:21,Door - French ,french ,COMPONENT_TYPE:19,Index,LASHPO-LHRI
+COMPONENT_TYPE:22,Door - Panel ,panel ,COMPONENT_TYPE:19,Index,LASHPO-LHRI
+COMPONENT_TYPE:23,Door - Flush ,flush ,COMPONENT_TYPE:19,Index,LASHPO-LHRI
+COMPONENT_TYPE:24,Door - Glazed ,glazed ,COMPONENT_TYPE:19,Index,LASHPO-LHRI
+COMPONENT_TYPE:25,Door - Partially Glazed ,partially glazed ,COMPONENT_TYPE:19,Index,LASHPO-LHRI
+COMPONENT_TYPE:26,Door - Fanlight,fanlight,COMPONENT_TYPE:19,Index,LASHPO-LHRI
+COMPONENT_TYPE:27,Door - Sidelights,sidelights,COMPONENT_TYPE:19,Index,LASHPO-LHRI
+COMPONENT_TYPE:28,Door - Transom,transom,COMPONENT_TYPE:19,Index,LASHPO-LHRI
+COMPONENT_TYPE:29,Door - Screened,screened,COMPONENT_TYPE:19,Index,LASHPO-LHRI
+COMPONENT_TYPE:30,Door - Replacment,replacment,COMPONENT_TYPE:19,Index,LASHPO-LHRI
+COMPONENT_TYPE:31,Door - Unknown ,unknown ,COMPONENT_TYPE:19,Index,LASHPO-LHRI
+COMPONENT_TYPE:32,Door - Federal ,Federal ,COMPONENT_TYPE:19,Index,LASHPO-LHRI
+COMPONENT_TYPE:33,Door - Greek Revival ,Greek Revival ,COMPONENT_TYPE:19,Index,LASHPO-LHRI
+COMPONENT_TYPE:34,Door - Queen Anne,Queen Anne,COMPONENT_TYPE:19,Index,LASHPO-LHRI
+COMPONENT_TYPE:35,Door - Other (see narrative),other,COMPONENT_TYPE:19,Index,LASHPO-LHRI
+COMPONENT_TYPE:36,Windows ,,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Collector,LASHPO-LHRI
+COMPONENT_TYPE:37,Windows - Batten ,batten ,COMPONENT_TYPE:36,Index,LASHPO-LHRI
+COMPONENT_TYPE:38,Windows - Fixed Single ,fixed single ,COMPONENT_TYPE:36,Index,LASHPO-LHRI
+COMPONENT_TYPE:39,Windows - Fixed Divided ,fixed divided ,COMPONENT_TYPE:36,Index,LASHPO-LHRI
+COMPONENT_TYPE:40,Windows - Single-Hung,single-hung,COMPONENT_TYPE:36,Index,LASHPO-LHRI
+COMPONENT_TYPE:41,Windows - Double-Hung ,double-hung ,COMPONENT_TYPE:36,Index,LASHPO-LHRI
+COMPONENT_TYPE:42,Windows - Triple-Hung,triple-hung,COMPONENT_TYPE:36,Index,LASHPO-LHRI
+COMPONENT_TYPE:43,Windows - Bay ,bay ,COMPONENT_TYPE:36,Index,LASHPO-LHRI
+COMPONENT_TYPE:44,Windows - Oriel,oriel,COMPONENT_TYPE:36,Index,LASHPO-LHRI
+COMPONENT_TYPE:45,Windows - Palladian,Palladian,COMPONENT_TYPE:36,Index,LASHPO-LHRI
+COMPONENT_TYPE:46,Windows - Casement,casement,COMPONENT_TYPE:36,Index,LASHPO-LHRI
+COMPONENT_TYPE:47,Windows - Sliding ,sliding ,COMPONENT_TYPE:36,Index,LASHPO-LHRI
+COMPONENT_TYPE:48,Windows - Replacement ,replacement ,COMPONENT_TYPE:36,Index,LASHPO-LHRI
+COMPONENT_TYPE:49,Windows - Unknown ,unknown ,COMPONENT_TYPE:36,Index,LASHPO-LHRI
+COMPONENT_TYPE:50,Windows - Other (see narrative),other,COMPONENT_TYPE:36,Index,LASHPO-LHRI
+COMPONENT_TYPE:51,Chimney,,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Collector,LASHPO-LHRI
+COMPONENT_TYPE:52,Chimney - Gable End Exterior ,gable end exterior ,COMPONENT_TYPE:51,Index,LASHPO-LHRI
+COMPONENT_TYPE:53,Chimney - Gable End Interior/Flush,gable end interior/flush,COMPONENT_TYPE:51,Index,LASHPO-LHRI
+COMPONENT_TYPE:54,Chimney - Ridge Center,ridge center,COMPONENT_TYPE:51,Index,LASHPO-LHRI
+COMPONENT_TYPE:55,Chimney - Ridge Off-Center,ridge off-center,COMPONENT_TYPE:51,Index,LASHPO-LHRI
+COMPONENT_TYPE:56,Chimney - Slope Center ,slope center ,COMPONENT_TYPE:51,Index,LASHPO-LHRI
+COMPONENT_TYPE:57,Chimney - Slope Off Center,slope off center,COMPONENT_TYPE:51,Index,LASHPO-LHRI
+COMPONENT_TYPE:58,Chimney - Lateral Exterior ,lateral exterior ,COMPONENT_TYPE:51,Index,LASHPO-LHRI
+COMPONENT_TYPE:59,Chimney - Removed ,removed ,COMPONENT_TYPE:51,Index,LASHPO-LHRI
+COMPONENT_TYPE:60,Chimney - Other (see narrative),other ,COMPONENT_TYPE:51,Index,LASHPO-LHRI
+COMPONENT_TYPE:61,Chimney - Unkown ,unkown ,COMPONENT_TYPE:51,Index,LASHPO-LHRI
+COMPONENT_TYPE:62,Roof ,,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Index,LASHPO-LHRI
+COMPONENT_TYPE:63,Foundation,,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Index,LASHPO-LHRI
+COMPONENT_TYPE:64,Grave Component,,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Collector,CRNHA
+COMPONENT_TYPE:65,Basal Marker,,COMPONENT_TYPE:64,Index,CRNHA
+COMPONENT_TYPE:66,Bedstead Marker,,COMPONENT_TYPE:64,Index,CRNHA
+COMPONENT_TYPE:67,Pedestal Column,,COMPONENT_TYPE:64,Index,CRNHA
+COMPONENT_TYPE:68,Footstone,,COMPONENT_TYPE:64,Index,CRNHA
+COMPONENT_TYPE:69,Funeral Home Plaque,,COMPONENT_TYPE:64,Index,CRNHA
+COMPONENT_TYPE:70,Family Marker,,COMPONENT_TYPE:64,Index,CRNHA
+COMPONENT_TYPE:71,Headstone,,COMPONENT_TYPE:64,Index,CRNHA
+COMPONENT_TYPE:72,Mausoleum,,COMPONENT_TYPE:64,Index,CRNHA
+COMPONENT_TYPE:73,Pedestal Obelisk,,COMPONENT_TYPE:64,Index,CRNHA
+COMPONENT_TYPE:74,Ground Tablet,,COMPONENT_TYPE:64,Index,CRNHA
+COMPONENT_TYPE:75,Woodmen of the World Monument,,COMPONENT_TYPE:64,Index,CRNHA
+COMPONENT_TYPE:76,Veteran Plaque,,COMPONENT_TYPE:64,Index,CRNHA
+COMPONENT_TYPE:77,Other Grave Component (see narrative),,COMPONENT_TYPE:64,Index,CRNHA
+COMPONENT_TYPE:78,Details,,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Collector,SurveyLA
+COMPONENT_TYPE:79,Details - Applied decoration,Applied decoration,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:80,Details - Balconette,Balconette,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:81,Details - Belt course,Belt course,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:82,Details - Bris soleil,Bris soleil,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:83,Details - Buttresses,Buttresses,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:84,Details - Dingbats,Dingbats,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:85,Details - Grilles,Grilles,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:86,Details - Light Fixtures,Light Fixtures,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:87,Details - Loading Dock,Loading Dock,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:88,Details - Pierced screens,Pierced screens,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:89,Details - Pilasters,Pilasters,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:90,Details - Planters,Planters,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:91,Details - Quoins,Quoins,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:92,Details - Sign,Sign,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:93,Details - String course,String course,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:94,Details - Tile,Tile,COMPONENT_TYPE:78,Index,SurveyLA
+COMPONENT_TYPE:95,Walls,,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Index,CRNHA
+COMPONENT_TYPE:96,Cladding,Cladding,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Index,SurveyLA
+COMPONENT_TYPE:97,Other Component (see narrative),,COMPONENT_TYPE_AUTHORITY_DOCUMENT.csv,Index,CRNHA
