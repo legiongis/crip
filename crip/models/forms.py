@@ -117,7 +117,7 @@ class HeritageGroupSummaryForm(ResourceForm):
             'id': 'heritage-group-summary',
             'icon': 'fa-tag',
             'name': _('Summary'),
-            'class': SummaryForm
+            'class': HeritageGroupSummaryForm
         }
 
     def update(self, data, files):
