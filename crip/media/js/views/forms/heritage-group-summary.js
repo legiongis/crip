@@ -4,7 +4,7 @@ define(['jquery',
     'views/forms/base', 
     'views/forms/sections/branch-list',
     'bootstrap-datetimepicker',], 
-    function ($, _, koMapping, BaseForm, BranchList) {
+    function ($, _, ko, koMapping, BaseForm, BranchList) {
         return BaseForm.extend({
             initialize: function() {
                 BaseForm.prototype.initialize.apply(this);                
