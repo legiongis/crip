@@ -1,13 +1,8 @@
 Source,Target,Type,Id,Label,Weight
-3,14,Directed,251,P4,1.0
 3,37,Directed,253,P42,1.0
-3,55,Directed,254,P42,1.0
 3,90,Directed,518,P42,1.0
-3,92,Directed,411,P42,1.0
 4,20,Directed,255,P2,1.0
 12,52,Directed,261,-P71,1.0
-14,58,Directed,262,P78,1.0
-14,59,Directed,263,P78,1.0
 15,67,Directed,264,-P71,1.0
 16,15,Directed,265,P2,1.0
 17,2,Directed,266,-P71,1.0
@@ -36,7 +31,6 @@ Source,Target,Type,Id,Label,Weight
 47,8,Directed,315,P78,1.0
 47,38,Directed,316,P78,1.0
 48,22,Directed,318,P2,1.0
-55,13,Directed,327,-P71,1.0
 60,65,Directed,329,P87,1.0
 62,16,Directed,332,P1,1.0
 62,30,Directed,336,-P108,1.0
@@ -48,7 +42,6 @@ Source,Target,Type,Id,Label,Weight
 62,70,Directed,347,BM.PX.is_related_to,1.0
 62,84,Directed,456,-P140,1.0
 62,94,Directed,413,P3,1.0
-62,95,Directed,414,P2,1.0
 62,501,Directed,502,-P92,1.0
 62,502,Directed,508,-P93,1.0
 64,4,Directed,349,P87,1.0
@@ -67,9 +60,7 @@ Source,Target,Type,Id,Label,Weight
 84,475,Directed,517,P42,1.0
 85,466,Directed,475,-P71,1.0
 90,91,Directed,408,-P71,1.0
-92,93,Directed,412,-P71,1.0
 94,464,Directed,467,P2,1.0
-95,96,Directed,415,-P71,1.0
 97,98,Directed,417,-P71,1.0
 457,460,Directed,466,-P71,1.0
 458,461,Directed,465,-P71,1.0
