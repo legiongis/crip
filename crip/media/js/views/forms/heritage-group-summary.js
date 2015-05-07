@@ -14,10 +14,17 @@ define(['jquery',
                 date_picker.on('dp.change', function(evt){
                     $(this).find('input').trigger('change'); 
                 });
+
+                var currentEditedClassification = this.getBlankFormData();
                 
+                this.editClassification = function(branchlist){
+                    self.switchBranchForEdit(branchlist);
+                }
+                this.deleteClassification = function(branchlist){
+                    self.deleteClicked(branchlist);
+                    
                 ko.applyBindings(this, this.$el.find('#heritage_type_section')[0]);
                 
-                var currentEditedClassification = this.getBlankFormData();
                 console.log("1");
                 this.addBranchList(new BranchList({                   
                     data: currentEditedClassification,
