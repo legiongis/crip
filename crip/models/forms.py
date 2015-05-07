@@ -131,7 +131,7 @@ class HeritageGroupSummaryForm(ResourceForm):
         # for value in data['PHASE_TYPE_ASSIGNMENT.E17']:
             # for node in value['nodes']:
                 # if node['entitytypeid'] == 'PHASE_TYPE_ASSIGNMENT.E17' and node['entityid'] != '':
-                    remove the node
+                    # remove the node
                     # phase_type_node_id = node['entityid']
                     # self.resource.filter(lambda entity: entity.entityid != node['entityid'])
                     
