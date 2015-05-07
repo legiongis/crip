@@ -7,6 +7,7 @@ define(['jquery',
     function ($, _, ko, koMapping, BaseForm, BranchList) {
         return BaseForm.extend({
             initialize: function() {
+                console.log("initial");
                 BaseForm.prototype.initialize.apply(this);                
                 
                 var self = this;
