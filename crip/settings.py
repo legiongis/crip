@@ -31,7 +31,10 @@ extent_coords = [
 
 # URL that handles the media served from MEDIA_ROOT, used for managing 
 # stored files. It must end in a slash if set to a non-empty value.
-MEDIA_URL = os.path.join(PACKAGE_ROOT, 'uploads/')
+MEDIA_ROOT =  os.path.join(ROOT_DIR, 'uploadedfiles')
+MEDIA_URL = os.path.join(PACKAGE_ROOT, 'files/')
+print MEDIA_ROOT
+print MEDIA_URL
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
