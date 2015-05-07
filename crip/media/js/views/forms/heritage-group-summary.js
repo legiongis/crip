@@ -99,6 +99,14 @@ define(['jquery',
                     }
                 }));
             },
+            
+            prepareData: function(assessmentNode){
+                _.each(assessmentNode, function(value, key, list){
+                    assessmentNode[key].domains = this.data.domains;
+                }, this);
+                return assessmentNode;
+            },
+            
             getBlankFormData: function(){
                 return this.prepareData({
                     'HERITAGE_RESOURCE_GROUP_TYPE.E55': {
