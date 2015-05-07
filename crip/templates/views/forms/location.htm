@@ -556,7 +556,7 @@
                                     <form class="form-inline arches-form hidden-sm hidden-md hidden-lg" role="form">
                                         <div class="form-group margin-top-5" style="width: 100%">
                                            
-                                            <input data-bind="select2: {value: getEditedNode('ADMINISTRATIVE_SUBDIVISION_TYPE.E55', 'value'), placeholder: 'Type', dataKey: 'ADMINISTRATIVE_SUBDIVISION_TYPE.E55'}" style="width:100%; height: 36px; padding-top: 2px;" class="select2 arches-select2-crud-form admin-area-type" placeholder="Admin Area Type">
+                                            <input data-bind="select2: {value: getEditedNode('ADMINISTRATIVE_SUBDIVISION_NAME.E55', 'value'), placeholder: 'Type', dataKey: 'ADMINISTRATIVE_SUBDIVISION_NAME.E55'}" style="width:100%; height: 36px; padding-top: 2px;" class="select2 arches-select2-crud-form admin-area-type" placeholder="Admin Area Type">
 
                                             <!-- Spacer (for xs screens) -->
                                             <div class="margin-top-10 hidden-sm hidden-md hidden-lg"></div>
@@ -598,7 +598,7 @@
                             <dd class="margin-left-5">
                                 <div class="arches-crud-record">
                                     <a href="#" class="arches-CRUD-child" title="Remove this relationship" data-bind="click: $parent.deleteItem.bind($parent)"><i class="arches-CRUD-delete fa fa-times-circle"></i></a>
-                                    <a href="#" class="arches-CRUD-child" title="Edit this area" data-bind="click: $parent.editItem.bind($parent), text: nodes.get('ADMINISTRATIVE_SUBDIVISION.E48', 'value')"></a>&nbsp; <span class="text-muted arches-crud-type-identifier">(<span data-bind="text: nodes.get('ADMINISTRATIVE_SUBDIVISION_TYPE.E55', 'label')"></span>)</span>
+                                    <a href="#" class="arches-CRUD-child" title="Edit this area" data-bind="click: $parent.editItem.bind($parent), text: nodes.get('ADMINISTRATIVE_SUBDIVISION.E48', 'value')"></a>&nbsp; <span class="text-muted arches-crud-type-identifier">(<span data-bind="text: nodes.get('ADMINISTRATIVE_SUBDIVISION_NAME.E55', 'label')"></span>)</span>
                                 </div>
                             </dd>
                         </div>
