@@ -9,7 +9,7 @@ define(['jquery',
             initialize: function() {
                 console.log("initial");
                 BaseForm.prototype.initialize.apply(this);                
-                
+                console.log("initial +1");
                 var self = this;
                 var date_picker = $('.datetimepicker').datetimepicker({pickTime: false});
                 date_picker.on('dp.change', function(evt){
