@@ -119,13 +119,7 @@ class HeritageGroupSummaryForm(ResourceForm):
             'name': _('Summary'),
             'class': HeritageGroupSummaryForm
         }
-def update(self, data, files):
-        
 
-
-    def load(self, lang):
-        if self.resource:
-            
     def update(self, data, files):
         self.update_nodes('NAME.E41', data)
         self.update_nodes('KEYWORD.E55', data)
