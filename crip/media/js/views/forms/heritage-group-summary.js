@@ -32,7 +32,7 @@ define(['jquery',
                 // }));
 
                 this.addBranchList(new BranchList({
-                    el: this.$el.find('#heritage-type-section')[0],
+                    el: this.$el.find('#heritage-type-dropdown')[0],
                     data: currentEditedClassification,
                     dataKey: 'HERITAGE_RESOURCE_GROUP_TYPE.E55',
                     validateBranch: function (nodes) {
@@ -41,7 +41,7 @@ define(['jquery',
                 }));
                 
                 this.addBranchList(new BranchList({
-                    el: this.$el.find('#heritage-type-section')[0],
+                    el: this.$el.find('#heritage-type-use-dropdown')[0],
                     data: currentEditedClassification,
                     dataKey: 'HERITAGE_RESOURCE_GROUP_USE_TYPE.E55',
                     validateBranch: function (nodes) {
