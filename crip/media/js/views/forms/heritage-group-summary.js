@@ -31,23 +31,23 @@ define(['jquery',
                     // }
                 // }));
 
-                // this.addBranchList(new BranchList({
-                    // el: this.$el.find('#heritage-type-section')[0],
-                    // data: this.data,
-                    // dataKey: 'HERITAGE_RESOURCE_GROUP_TYPE.E55',
-                    // validateBranch: function (nodes) {
-                        // return true;
-                    // }
-                // }));
+                this.addBranchList(new BranchList({
+                    el: this.$el.find('#heritage-type-section')[0],
+                    data: this.data,
+                    dataKey: 'HERITAGE_RESOURCE_GROUP_TYPE.E55',
+                    validateBranch: function (nodes) {
+                        return true;
+                    }
+                }));
                 
-                // this.addBranchList(new BranchList({
-                    // el: this.$el.find('#heritage-type-section')[0],
-                    // data: this.data,
-                    // dataKey: 'HERITAGE_RESOURCE_GROUP_USE_TYPE.E55',
-                    // validateBranch: function (nodes) {
-                        // return true;
-                    // }
-                // }));
+                this.addBranchList(new BranchList({
+                    el: this.$el.find('#heritage-type-section')[0],
+                    data: this.data,
+                    dataKey: 'HERITAGE_RESOURCE_GROUP_USE_TYPE.E55',
+                    validateBranch: function (nodes) {
+                        return true;
+                    }
+                }));
 
                 this.addBranchList(new BranchList({
                     el: this.$el.find('#names-section')[0],
