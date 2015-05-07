@@ -30,7 +30,7 @@ extent_coords = [
 # URL that handles the media served from MEDIA_ROOT, used for managing 
 # stored files. It must end in a slash if set to a non-empty value.
 MEDIA_ROOT =  os.path.join('/home/ubuntu/Projects/crip/crip/uploads')
-MEDIA_URL = os.path.join(PACKAGE_ROOT, 'uploads/')
+MEDIA_URL = os.path.join('uploads/')
 print MEDIA_ROOT
 print MEDIA_URL
 
