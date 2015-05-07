@@ -39,7 +39,7 @@ define(['jquery',
                         // return true;
                     // }
                 // }));
-
+                console.log("before");
                 this.addBranchList(new BranchList({
                     el: this.$el.find('#heritage-type-section')[0],
                     data: this.data,
@@ -48,7 +48,7 @@ define(['jquery',
                         return this.validateHasValues(nodes);
                     }
                 }));
-                
+                console.log("after");
                 // this.addBranchList(new BranchList({
                     // el: this.$el.find('#heritage-type-use-dropdown')[0],
                     // data: currentEditedClassification,
