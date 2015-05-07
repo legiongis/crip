@@ -109,6 +109,76 @@ class SummaryForm(ResourceForm):
                 self.data['primaryname_conceptid'] = self.data['NAME.E41']['domains']['NAME_TYPE.E55'][3]['id']
             except IndexError:
                 pass
+                
+class AreaSummaryForm(ResourceForm):
+    @staticmethod
+    def get_info():
+        return {
+            'id': 'area-summary',
+            'icon': 'fa-tag',
+            'name': _('Summary'),
+            'class': AreaSummaryForm
+        }
+
+    def update(self, data, files):
+        self.update_nodes('NAME.E41', data)
+        self.update_nodes('KEYWORD.E55', data)
+        if self.resource.entitytypeid in ('HERITAGE_RESOURCE.E18', 'HERITAGE_RESOURCE_GROUP.E27'):   
+            self.update_nodes('RESOURCE_TYPE_CLASSIFICATION.E55', data)
+
+        beginning_of_existence_nodes = []
+        end_of_existence_nodes = []
+        for branch_list in data['important_dates']:
+            for node in branch_list['nodes']:
+                if node['entitytypeid'] == 'BEGINNING_OF_EXISTENCE_TYPE.E55':
+                    beginning_of_existence_nodes.append(branch_list)
+                if node['entitytypeid'] == 'END_OF_EXISTENCE_TYPE.E55':
+                    end_of_existence_nodes.append(branch_list)
+
+        for branch_list in beginning_of_existence_nodes:
+            for node in branch_list['nodes']:        
+                if node['entitytypeid'] == 'START_DATE_OF_EXISTENCE.E49,END_DATE_OF_EXISTENCE.E49':
+                    node['entitytypeid'] = 'START_DATE_OF_EXISTENCE.E49'
+
+        for branch_list in end_of_existence_nodes:
+            for node in branch_list['nodes']:        
+                if node['entitytypeid'] == 'START_DATE_OF_EXISTENCE.E49,END_DATE_OF_EXISTENCE.E49':
+                    node['entitytypeid'] = 'END_DATE_OF_EXISTENCE.E49'
+
+        self.update_nodes('BEGINNING_OF_EXISTENCE.E63', {'BEGINNING_OF_EXISTENCE.E63':beginning_of_existence_nodes})
+        self.update_nodes('END_OF_EXISTENCE.E64', {'END_OF_EXISTENCE.E64':end_of_existence_nodes})
+
+    def load(self, lang):
+        self.data['important_dates'] = {
+            'branch_lists': datetime_nodes_to_dates(self.get_nodes('BEGINNING_OF_EXISTENCE.E63') + self.get_nodes('END_OF_EXISTENCE.E64')),
+            'domains': {'important_dates' : Concept().get_e55_domain('BEGINNING_OF_EXISTENCE_TYPE.E55') + Concept().get_e55_domain('END_OF_EXISTENCE_TYPE.E55')}
+        }
+
+        if self.resource:
+            if self.resource.entitytypeid in ('HERITAGE_RESOURCE.E18', 'HERITAGE_RESOURCE_GROUP.E27'):            
+                self.data['RESOURCE_TYPE_CLASSIFICATION.E55'] = {
+                    'branch_lists': self.get_nodes('RESOURCE_TYPE_CLASSIFICATION.E55'),
+                    'domains': {'RESOURCE_TYPE_CLASSIFICATION.E55' : Concept().get_e55_domain('RESOURCE_TYPE_CLASSIFICATION.E55')}
+                }
+
+            self.data['NAME.E41'] = {
+                'branch_lists': self.get_nodes('NAME.E41'),
+                'domains': {'NAME_TYPE.E55' : Concept().get_e55_domain('NAME_TYPE.E55')}
+                # 'defaults': {
+                #     'NAME_TYPE.E55': default_name_type['id'],
+                #     'NAME.E41': ''
+                # }
+            }
+
+            self.data['KEYWORD.E55'] = {
+                'branch_lists': self.get_nodes('KEYWORD.E55'),
+                'domains': {'KEYWORD.E55' : Concept().get_e55_domain('KEYWORD.E55')}
+            }
+
+            try:
+                self.data['primaryname_conceptid'] = self.data['NAME.E41']['domains']['NAME_TYPE.E55'][3]['id']
+            except IndexError:
+                pass
 
 class HeritageGroupSummaryForm(ResourceForm):
     @staticmethod
