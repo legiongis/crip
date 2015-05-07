@@ -167,11 +167,11 @@ class HeritageGroupSummaryForm(ResourceForm):
 
     def load(self, lang):
 
-        self.data = {
-            'data': [],
+        self.data['PHASE_TYPE_ASSIGNMENT.E17'] = {
+            'branch_lists': self.get_nodes('PHASE_TYPE_ASSIGNMENT.E17'),
             'domains': {
-                'HERITAGE_RESOURCE_TYPE.E55': Concept().get_e55_domain('HERITAGE_RESOURCE_TYPE.E55'),
-                'HERITAGE_RESOURCE_USE_TYPE.E55' : Concept().get_e55_domain('HERITAGE_RESOURCE_USE_TYPE.E55')
+                'HERITAGE_RESOURCE_GROUP_TYPE.E55': Concept().get_e55_domain('HERITAGE_RESOURCE_GROUP_TYPE.E55'),
+                'HERITAGE_RESOURCE_GROUP_USE_TYPE.E55' : Concept().get_e55_domain('HERITAGE_RESOURCE_GROUP_USE_TYPE.E55')
             }
         }
     
