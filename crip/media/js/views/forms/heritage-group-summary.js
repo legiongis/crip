@@ -20,7 +20,7 @@ define(['jquery',
                 this.addBranchList(new BranchList({
                     
                     data: currentEditedClassification,
-                    dataKey: 'PHASE_TYPE_ASSIGNMENT.E17',
+                    dataKey: 'PRODUCTION.E12',
                     
                 }));
                 
