@@ -33,7 +33,7 @@ define(['jquery',
 
                 this.addBranchList(new BranchList({
                     el: this.$el.find('#heritage-type-section')[0],
-                    data: this.data,
+                    data: currentEditedClassification,
                     dataKey: 'HERITAGE_RESOURCE_GROUP_TYPE.E55',
                     validateBranch: function (nodes) {
                         return true;
@@ -42,7 +42,7 @@ define(['jquery',
                 
                 this.addBranchList(new BranchList({
                     el: this.$el.find('#heritage-type-section')[0],
-                    data: this.data,
+                    data: currentEditedClassification,
                     dataKey: 'HERITAGE_RESOURCE_GROUP_USE_TYPE.E55',
                     validateBranch: function (nodes) {
                         return true;
