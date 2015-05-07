@@ -15,6 +15,8 @@ define(['jquery',
                     $(this).find('input').trigger('change'); 
                 });
                 
+                ko.applyBindings(this, this.$el.find('#heritage_type_section')[0]);
+                
                 var currentEditedClassification = this.getBlankFormData();
                 console.log("1");
                 this.addBranchList(new BranchList({                   
