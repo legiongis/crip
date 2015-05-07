@@ -31,8 +31,6 @@ extent_coords = [
 # stored files. It must end in a slash if set to a non-empty value.
 MEDIA_ROOT =  os.path.join('/home/ubuntu/Projects/crip/crip/uploads')
 MEDIA_URL = os.path.join('/uploads/')
-print MEDIA_ROOT
-print MEDIA_URL
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
