@@ -908,7 +908,7 @@ class LocationForm(ResourceForm):
         self.data['ADMINISTRATIVE_SUBDIVISION.E48'] = {
             'branch_lists': self.get_nodes('ADMINISTRATIVE_SUBDIVISION.E48'),
             'domains': {
-                'ADMINISTRATIVE_SUBDIVISION_TYPE.E55': Concept().get_e55_domain('ADMINISTRATIVE_SUBDIVISION_TYPE.E55')
+                'ADMINISTRATIVE_SUBDIVISION_NAME.E55': Concept().get_e55_domain('ADMINISTRATIVE_SUBDIVISION_NAME.E55')
             }
         }
 
