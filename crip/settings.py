@@ -1,5 +1,3 @@
-he = "hello"
-
 import os
 import inspect
 from arches_hip.settings import *
