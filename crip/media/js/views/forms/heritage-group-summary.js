@@ -16,14 +16,14 @@ define(['jquery',
                 });
                 
                 var currentEditedClassification = this.getBlankFormData();
-                
+                console.log("1");
                 this.addBranchList(new BranchList({
                     
                     data: currentEditedClassification,
                     dataKey: 'PRODUCTION.E12',
                     
                 }));
-                
+                console.log("2");
                 // this.addBranchList(new BranchList({
                     // el: this.$el.find('#heritage-type-section')[0],
                     // data: this.data,
