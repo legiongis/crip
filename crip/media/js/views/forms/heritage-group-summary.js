@@ -22,7 +22,7 @@ define(['jquery',
                 }
                 this.deleteClassification = function(branchlist){
                     self.deleteClicked(branchlist);
-                    
+                }   
                 ko.applyBindings(this, this.$el.find('#heritage_type_section')[0]);
                 
                 console.log("1");
