@@ -17,11 +17,9 @@ define(['jquery',
                 
                 var currentEditedClassification = this.getBlankFormData();
                 console.log("1");
-                this.addBranchList(new BranchList({
-                    
+                this.addBranchList(new BranchList({                   
                     data: currentEditedClassification,
-                    dataKey: 'PRODUCTION.E12',
-                    
+                    dataKey: 'PHASE_TYPE_ASSIGNMENT.E17',
                 }));
                 console.log("2");
                 // this.addBranchList(new BranchList({
