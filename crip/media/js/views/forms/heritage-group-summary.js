@@ -15,22 +15,22 @@ define(['jquery',
                     $(this).find('input').trigger('change'); 
                 });
 
-                var currentEditedClassification = this.getBlankFormData();
-                
-                this.editClassification = function(branchlist){
-                    self.switchBranchForEdit(branchlist);
-                }
-                this.deleteClassification = function(branchlist){
-                    self.deleteClicked(branchlist);
-                }   
-                ko.applyBindings(this, this.$el.find('#heritage_type_section')[0]);
-                
-                console.log("1");
-                this.addBranchList(new BranchList({                   
-                    data: currentEditedClassification,
-                    dataKey: 'PHASE_TYPE_ASSIGNMENT.E17',
-                }));
-                console.log("2");
+                // var currentEditedClassification = this.getBlankFormData();
+
+                // this.editClassification = function(branchlist){
+                    // self.switchBranchForEdit(branchlist);
+                // }
+                // this.deleteClassification = function(branchlist){
+                    // self.deleteClicked(branchlist);
+                // }
+                // ko.applyBindings(this, this.$el.find('#heritage_type_section')[0]);
+
+                // console.log("1");
+                // this.addBranchList(new BranchList({                   
+                    // data: currentEditedClassification,
+                    // dataKey: 'PHASE_TYPE_ASSIGNMENT.E17',
+                // }));
+                // console.log("2");
                 // this.addBranchList(new BranchList({
                     // el: this.$el.find('#heritage-type-section')[0],
                     // data: this.data,
@@ -41,7 +41,7 @@ define(['jquery',
                 // }));
 
                 this.addBranchList(new BranchList({
-                    el: this.$el.find('#heritage-type-dropdown')[0],
+                    el: this.$el.find('#heritage-type-section')[0],
                     data: currentEditedClassification,
                     dataKey: 'HERITAGE_RESOURCE_GROUP_TYPE.E55',
                     validateBranch: function (nodes) {
@@ -49,14 +49,14 @@ define(['jquery',
                     }
                 }));
                 
-                this.addBranchList(new BranchList({
-                    el: this.$el.find('#heritage-type-use-dropdown')[0],
-                    data: currentEditedClassification,
-                    dataKey: 'HERITAGE_RESOURCE_GROUP_USE_TYPE.E55',
-                    validateBranch: function (nodes) {
-                        return true;
-                    }
-                }));
+                // this.addBranchList(new BranchList({
+                    // el: this.$el.find('#heritage-type-use-dropdown')[0],
+                    // data: currentEditedClassification,
+                    // dataKey: 'HERITAGE_RESOURCE_GROUP_USE_TYPE.E55',
+                    // validateBranch: function (nodes) {
+                        // return true;
+                    // }
+                // }));
 
                 this.addBranchList(new BranchList({
                     el: this.$el.find('#names-section')[0],
@@ -107,26 +107,26 @@ define(['jquery',
                 }));
             },
             
-            prepareData: function(assessmentNode){
-                _.each(assessmentNode, function(value, key, list){
-                    assessmentNode[key].domains = this.data.domains;
-                }, this);
-                return assessmentNode;
-            },
+            // prepareData: function(assessmentNode){
+                // _.each(assessmentNode, function(value, key, list){
+                    // assessmentNode[key].domains = this.data.domains;
+                // }, this);
+                // return assessmentNode;
+            // },
             
-            getBlankFormData: function(){
-                return this.prepareData({
-                    'HERITAGE_RESOURCE_GROUP_TYPE.E55': {
-                        'branch_lists':[]
-                    },
-                    'HERITAGE_RESOURCE_GROUP_USE_TYPE.E55': {
-                        'branch_lists':[]
-                    },
-                    'PHASE_TYPE_ASSIGNMENT.E17': {
-                        'branch_lists':[]
-                    }
-                });
-        },
+            // getBlankFormData: function(){
+                // return this.prepareData({
+                    // 'HERITAGE_RESOURCE_GROUP_TYPE.E55': {
+                        // 'branch_lists':[]
+                    // },
+                    // 'HERITAGE_RESOURCE_GROUP_USE_TYPE.E55': {
+                        // 'branch_lists':[]
+                    // },
+                    // 'PHASE_TYPE_ASSIGNMENT.E17': {
+                        // 'branch_lists':[]
+                    // }
+                // });
+            // },
         });
     }
 );
