@@ -15,23 +15,23 @@ define(['jquery',
                     $(this).find('input').trigger('change'); 
                 });
                 
-                // var currentEditedClassification = this.getBlankFormData();
-                
-                // this.addBranchList(new BranchList({
-                    
-                    // data: currentEditedClassification,
-                    // dataKey: 'PHASE_TYPE_ASSIGNMENT.E17',
-                    
-                // }));
+                var currentEditedClassification = this.getBlankFormData();
                 
                 this.addBranchList(new BranchList({
-                    el: this.$el.find('#heritage-type-section')[0],
-                    data: this.data,
-                    dataKey: 'PRODUCTION.E12',
-                    validateBranch: function (nodes) {
-                        return true;
-                    }
+                    
+                    data: currentEditedClassification,
+                    dataKey: 'PHASE_TYPE_ASSIGNMENT.E17',
+                    
                 }));
+                
+                // this.addBranchList(new BranchList({
+                    // el: this.$el.find('#heritage-type-section')[0],
+                    // data: this.data,
+                    // dataKey: 'PRODUCTION.E12',
+                    // validateBranch: function (nodes) {
+                        // return true;
+                    // }
+                // }));
 
                 // this.addBranchList(new BranchList({
                     // el: this.$el.find('#heritage-type-section')[0],
@@ -98,7 +98,17 @@ define(['jquery',
                         return this.validateHasValues(nodes);
                     }
                 }));
-            }
+            },
+            getBlankFormData: function(){
+                return this.prepareData({
+                    'HERITAGE_RESOURCE_GROUP_TYPE.E55': {
+                        'branch_lists':[]
+                    },
+                    'HERITAGE_RESOURCE_GROUP_USE_TYPE.E55': {
+                        'branch_lists':[]
+                    }
+                });
+        },
         });
     }
 );
