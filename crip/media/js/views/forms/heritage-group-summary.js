@@ -45,7 +45,7 @@ define(['jquery',
                     data: this.data,
                     dataKey: 'HERITAGE_RESOURCE_GROUP_TYPE.E55',
                     validateBranch: function (nodes) {
-                        return true;
+                        return this.validateHasValues(nodes);
                     }
                 }));
                 
