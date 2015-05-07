@@ -123,8 +123,7 @@ class AreaSummaryForm(ResourceForm):
     def update(self, data, files):
         self.update_nodes('NAME.E41', data)
         self.update_nodes('KEYWORD.E55', data)
-        if self.resource.entitytypeid in ('HERITAGE_RESOURCE.E18', 'HERITAGE_RESOURCE_GROUP.E27'):   
-            self.update_nodes('RESOURCE_TYPE_CLASSIFICATION.E55', data)
+        self.update_nodes('HERITAGE_RESOURCE_GROUP_TYPE.E55', data)
 
         beginning_of_existence_nodes = []
         end_of_existence_nodes = []
@@ -155,11 +154,11 @@ class AreaSummaryForm(ResourceForm):
         }
 
         if self.resource:
-            if self.resource.entitytypeid in ('HERITAGE_RESOURCE.E18', 'HERITAGE_RESOURCE_GROUP.E27'):            
-                self.data['RESOURCE_TYPE_CLASSIFICATION.E55'] = {
-                    'branch_lists': self.get_nodes('RESOURCE_TYPE_CLASSIFICATION.E55'),
-                    'domains': {'RESOURCE_TYPE_CLASSIFICATION.E55' : Concept().get_e55_domain('RESOURCE_TYPE_CLASSIFICATION.E55')}
-                }
+         
+            self.data['HERITAGE_RESOURCE_GROUP_TYPE.E55'] = {
+                'branch_lists': self.get_nodes('HERITAGE_RESOURCE_GROUP_TYPE.E55'),
+                'domains': {'HERITAGE_RESOURCE_GROUP_TYPE.E55' : Concept().get_e55_domain('HERITAGE_RESOURCE_GROUP_TYPE.E55')}
+            }
 
             self.data['NAME.E41'] = {
                 'branch_lists': self.get_nodes('NAME.E41'),
