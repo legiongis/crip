@@ -21,7 +21,7 @@ define([
 
             BaseForm.prototype.initialize.apply(this);
 
-            _.each(this.data["ADMINISTRATIVE_SUBDIVISION.E48"].domains["ADMINISTRATIVE_SUBDIVISION_TYPE.E55"], function (typeRecord) {
+            _.each(this.data["ADMINISTRATIVE_SUBDIVISION.E48"].domains["ADMINISTRATIVE_SUBDIVISION_NAME.E55"], function (typeRecord) {
                 adminAreaTypeLookup[typeRecord.text] = typeRecord.id;
             });
 
@@ -50,7 +50,7 @@ define([
                                     var sameName = false;
                                     var sameType = false;
                                     _.each(branch.nodes(), function (node) {
-                                        if (node.entitytypeid() === "ADMINISTRATIVE_SUBDIVISION_TYPE.E55" &&
+                                        if (node.entitytypeid() === "ADMINISTRATIVE_SUBDIVISION_NAME.E55" &&
                                             node.label() === item.overlayty) {
                                             sameType = true;
                                         }
@@ -70,7 +70,7 @@ define([
                                         'nodes': ko.observableArray([
                                             koMapping.fromJS({
                                               "property": "",
-                                              "entitytypeid": "ADMINISTRATIVE_SUBDIVISION_TYPE.E55",
+                                              "entitytypeid": "ADMINISTRATIVE_SUBDIVISION_NAME.E55",
                                               "entityid": "",
                                               "value": adminAreaTypeLookup[item.overlayty],
                                               "label": item.overlayty,
