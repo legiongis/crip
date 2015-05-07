@@ -112,6 +112,9 @@ define(['jquery',
                     },
                     'HERITAGE_RESOURCE_GROUP_USE_TYPE.E55': {
                         'branch_lists':[]
+                    },
+                    'PHASE_TYPE_ASSIGNMENT.E17': {
+                        'branch_lists':[]
                     }
                 });
         },
