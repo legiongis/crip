@@ -180,7 +180,7 @@ define([
                 'TILED': true,
             },
             serverType: 'geoserver'   
-        });
+        }),
         visible: false
     });  
     var amcem = {
