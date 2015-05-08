@@ -186,7 +186,7 @@ define([
     var amcem = {
         id: 'amcem',
         name: 'American Cemetery',
-        icon: arches.urls.media + 'img/map/thb_blank.png',
+        icon: false,
         layer: amcemLyr,
         altlayer: false,
         alttext: 'Click to remove basemap',
