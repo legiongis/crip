@@ -169,6 +169,31 @@ define([
     };
     blank.layer.matchid = blank.id;
     blank.maxzoom = 20;
+    
+    //Make blank base layer in order to show no basemap
+    var amcemLyr = new ol.layer.Tile({
+        name: "amcem",
+        source: new ol.source.TileWMS({
+                url: 'http://54.148.201.140:8080/geoserver/raster/wms/',
+                params: {
+                    'LAYERS': 'raster:basemap_image',
+                    'TILED': true,
+                },
+                serverType: 'geoserver'   
+            })
+        visible: false
+    });  
+    var amcem = {
+        id: 'amcem',
+        name: 'American Cemetery',
+        icon: arches.urls.media + 'img/map/thb_blank.png',
+        layer: amcemLyr,
+        altlayer: false,
+        alttext: 'Click to remove basemap',
+        showInfo: 'When viewing historic maps, it may be useful to remove the basemap altogether.',
+    };
+    blank.layer.matchid = blank.id;
+    blank.maxzoom = 20;
 
     // aggregate layers in the baseLayers array
     var baseLayers = [
@@ -178,6 +203,7 @@ define([
         usgs,
         relief,
         blank,
+        amcem,
     ];  
 
     //set default map style to Open Street Map
