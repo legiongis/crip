@@ -63,7 +63,7 @@ define([
 
             BaseForm.prototype.initialize.apply(this);
             var resourceId = this.data['resource-id'];
-            console.log(this.data)
+            console.log(this.data);
             var defaultRelationshipType = this.data['related-resources']['default_relationship_type'];
 
             var relationBranchList = new BranchList({
