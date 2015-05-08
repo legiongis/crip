@@ -225,7 +225,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
             <!-- Form -->
             <div class="modal-body">
                 <div class="alert alert-warning" role="alert">
-                    {% trans 'This account has permission to edit or create the following resource types:' %}
+                    {% trans 'This account has permission to edit or create only the following resource types:' %}
                     {% for name in user_permissions.entities_allowed %}
                         <ul>
                         <li>{{name}}</li>
