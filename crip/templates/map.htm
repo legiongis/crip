@@ -185,8 +185,8 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
                         <!-- Body Content -->
                         <div class= "modal-body padding-top-0 padding-bottom-0" data-bind='foreach: historicLayers'>
-                            {% if not id == "amcem" %}
-                            <div class="row">
+
+                            <div class="row" data-band="ifnot: id='amcem'">
                                 <hr class="arches-layer-divider" style="border-top: 0px; margin-top: 5px;">
 
                                 <div class="arches-basemap-entry" style="" data-bind="attr: { id: id}">
