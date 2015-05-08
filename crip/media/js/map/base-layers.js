@@ -186,7 +186,7 @@ define([
     var amcem = {
         id: 'amcem',
         name: 'American Cemetery',
-        icon: false,
+        //icon: false,
         layer: amcemLyr,
         altlayer: false,
         alttext: 'Click to remove basemap',
