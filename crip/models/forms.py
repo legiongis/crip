@@ -30,8 +30,6 @@ from django.utils.translation import ugettext as _
 from django.forms.models import model_to_dict
 from datetime import datetime
 from django.conf import settings
-print settings.MEDIA_ROOT
-print settings.MEDIA_URL
 
 def datetime_nodes_to_dates(branch_list):
     for branch in branch_list:
