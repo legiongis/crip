@@ -132,6 +132,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                         <!-- Body Content -->
                         <div class="modal-body padding-top-0 padding-bottom-0" data-bind='foreach: baseLayers'>
 
+                            <!-- ko ifnot: icon=false -->
                             <div class="row">
                                 <hr class="arches-layer-divider" style="border-top: 0px; margin-top: 5px;">
 
@@ -157,6 +158,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
                                 </div>
                             </div>
+                            <!-- /ko -->
                             
                         </div>
                         <!-- End Body Content -->
@@ -186,7 +188,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                         <!-- Body Content -->
                         <div class= "modal-body padding-top-0 padding-bottom-0" data-bind='foreach: historicLayers'>
 
-                            <!-- ko ifnot: icon=false -->
+
                             <div class="row">
                                 <hr class="arches-layer-divider" style="border-top: 0px; margin-top: 5px;">
 
@@ -211,7 +213,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                                     </div>
                                 </div>
                             </div>
-                            <!-- /ko -->
+                            
 
                         </div>
                         <!-- End Body Content -->
