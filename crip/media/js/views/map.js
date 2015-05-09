@@ -139,6 +139,8 @@ define([
                     }
                     if (switched == baseLayer.id && baseLayer.layer.getVisible() == false){
                         self.baseLayers[6].layer.setVisible(true);
+                    } else {
+                        self.baseLayers[6].layer.setVisible(false);
                     }
                 });
             });
