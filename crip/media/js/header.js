@@ -8,13 +8,17 @@ require([
             
             if ($("#help-contents").is(':visible') {
                 $("#help-contents").hide();
+                console.log("hide");
             } else {
                 $("#help-contents").show();
+                console.log("show");
             });
         });
     };
 
     $(document).ready(function() {
+    
+        console.log("document ready");
         showHelp()
     });
 });
