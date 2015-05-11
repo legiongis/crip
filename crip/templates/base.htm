@@ -18,7 +18,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="{% static 'img/icons/favicon/favicon.ico' %}">
 
-	{% block css %}
+    {% block css %}
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="{% static 'plugins/line-icons/line-icons.css' %}">
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
@@ -39,11 +39,11 @@
 <body class="scroll-y"> 
 
     <div class="wrapper">
-    	{% block header %}
+        {% block header %}
             {% include 'header.htm' %}
         {% endblock header %} 
 
-		{% block breadcrumbs %}
+        {% block breadcrumbs %}
         <!--=== Breadcrumbs ===-->
 <!--         <div class="breadcrumbs">
             <div class="container">
@@ -67,7 +67,7 @@
         <!--=== End Content Part ===-->
 
         <!--=== Footer ===-->
-    	{% block footer %}
+        {% block footer %}
             {% include 'footer.htm' %}
         {% endblock footer %}
         <!--=== End Footer ===-->
@@ -80,7 +80,7 @@
 
     </div><!--/wrapper-->
 
-	{% block javascript %}
+    {% block javascript %}
     <script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js"></script>
     {% block pre_require_js %}
     {% endblock pre_require_js %}
@@ -228,10 +228,32 @@
 
                 $('[data-toggle="popover"]').popover();
             });
+            console.log("first print");
+            function showHelp() {
+                $("#help-button").click(function(){
+                    if (this.hasClass("help-shown")){
+                        $(this).removeClass("help-shown");
+                        $(this).text("SHOW HELP");
+                        $("#help-contents").hide();
+                        console.log("hide");
+                    } else {
+                        $(this).addClass("help-shown");
+                        $(this).text("HIDE HELP");
+                        $("#help-contents").show();
+                        console.log("show");
+                    }
+                });
+            };
+            
+            $(document).ready(function() {
+            
+                console.log("document ready");
+                showHelp()
+            });
         });
     </script>
 
-	{% endblock javascript %}
+    {% endblock javascript %}
 
     {% if GOOGLE_ANALYTICS_TRACKING_ID != None %}
     <script>
