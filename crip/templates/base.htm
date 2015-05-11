@@ -233,13 +233,14 @@
             function showHelp() {
                 $("#help-button").click(function(){
                     if (help_on == false){
-                        $(this).text("SHOW HELP");
+                        //$(this).text("SHOW HELP");
                         $("#help-contents").slideUp();
                     } else {
                         //$(this).addClass("help-shown");
-                        $(this).text("HIDE HELP");
+                        //$(this).text("HIDE HELP");
                         $("#help-contents").slideDown();
                     }
+                    help_on = !help_on
                 });
             };
             
