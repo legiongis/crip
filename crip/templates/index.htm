@@ -122,8 +122,8 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
             </div>
             <!--Permissions Info Box -->  
             {% if not user.is_anonymous %}
-            <div class="title-box no-border margin-top-minus-10" style="border-bottom-color: #dcdcdc; text-align: left">
-                <span>Permissions summary for this account ({{user.username}}:)</span>
+            <div class="col-md-12 animated fadeInLeft" style="border-bottom-color: #dcdcdc; text-align: left">
+                <span>Permissions summary for this account ({{user.username}}):</span>
                 {% if user.is_superuser %}
                     <p>You <b>can</b> access the Reference Data Manager (RDM).<p>
                 {% else %}
