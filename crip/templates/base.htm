@@ -233,12 +233,10 @@
                 $("#help-button").click(function(){
                     if ($(this).hasClass("help-shown")){
                         $(this).removeClass("help-shown");
-                        $(this).text("SHOW HELP");
                         $("#help-contents").slideUp();
                         console.log("hide");
                     } else {
                         $(this).addClass("help-shown");
-                        $(this).text("HIDE HELP");
                         $("#help-contents").slideDown();
                         console.log("show");
                     }
