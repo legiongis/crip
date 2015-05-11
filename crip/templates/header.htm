@@ -18,8 +18,7 @@
 
             <!-- Topbar Navigation -->
             <ul class="loginbar pull-right">
-                <!-- <li><a href="javascript:void(0);" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="{% trans 'Documentation coming soon.' %}">{% trans "Help" %}</a></li> -->
-                <li id="help-button"><a href="javascript:void(0);">{% trans "SHOW HELP" %}</a></li>
+                <li id="help-button"><a href="javascript:void(0);" text="SHOW HELP"></a></li>
                 <li class="topbar-devider"></li>   
                 <li>
                     <a id="auth-link" href="{% url 'auth' %}?next={{ request.get_full_path }}{% if user.is_anonymous %}">{% trans "Login" %}{% else %}&logout=true">Welcome {{ user.username }} - {% trans "Logout" %}{% endif %}</a>
