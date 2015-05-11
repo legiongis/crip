@@ -232,7 +232,7 @@
             var help_on = false;
             function showHelp() {
                 $("#help-button").click(function(){
-                    if (help_on == false){
+                    if (help_on == true){
                         //$(this).text("SHOW HELP");
                         $("#help-contents").slideUp();
                     } else {
@@ -243,6 +243,15 @@
                     help_on = !help_on
                 });
             };
+            
+            function hideHelp() {
+                $("#hide-help-button").click(function(){
+                    $("#help-contents").slideUp();
+                    help_on = false
+                });
+            };
+            
+            hide
             
             $(document).ready(function() {
             
