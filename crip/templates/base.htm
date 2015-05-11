@@ -228,26 +228,22 @@
 
                 $('[data-toggle="popover"]').popover();
             });
-            console.log("first print");
             function showHelp() {
                 $("#help-button").click(function(){
                     if ($(this).hasClass("help-shown")){
                         $(this).removeClass("help-shown");
-                        $(this).text("HIDE HELP");
+                        $(this).text("SHOW HELP");
                         $("#help-contents").slideUp();
-                        console.log("hide");
                     } else {
                         $(this).addClass("help-shown");
-                        $(this).text("SHOW HELP");
+                        $(this).text("HIDE HELP");
                         $("#help-contents").slideDown();
-                        console.log("show");
                     }
                 });
             };
             
             $(document).ready(function() {
             
-                console.log("document ready");
                 showHelp()
             });
         });
