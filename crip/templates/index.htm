@@ -117,14 +117,36 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
             </div>
             -->
             <div class="col-md-12 animated fadeInLeft" style="float:left;">
-                <span>Cane River Heritage Inventory and Map</span>
-                <p>The <a href="http://www.canerivernha.org" target="_blank">Cane River National Heritage Area</a> has created this database to serve everyone interested in the unique history of the Cane River and its environs.  The inventory includes audio interviews, historic maps, photos, and information on local historic resources.  Support for the ongoing maintenance of the inventory comes from the <a href="http://ncptt.nps.gov/" target="_blank">National Center for Preservation Technology and Training</a>.</p>
-            </div>  
-            <!-- DONT THINK I NEED THIS
-            <div class="col-md-3 btn-buy animated fadeInRight">
-                <a href="javascript:void(0);" class="btn-u btn-u-lg"><i class="fa fa-plus-square"></i> Learn More</a>
+                <span>How to Explore the Cane River Heritage Inventory & Map</span>
+                <p>The CRHIM has many uses, and the best use is exploration!  To search for specific resources, start with the SEARCH tab.  All search functions are included in the search box: just begin to type a resource's name, or  has created this database to serve everyone interested in the unique history of the Cane River and its environs.  The inventory includes audio interviews, historic maps, photos, and information on local historic resources.  Support for the ongoing maintenance of the inventory comes from the <a href="http://ncptt.nps.gov/" target="_blank">National Center for Preservation Technology and Training</a>.</p>
             </div>
-            -->
+            <!--Permissions Info Box -->  
+            {% if not user.is_anonymous %}
+            <div class="title-box no-border margin-top-minus-10" style="border-bottom-color: #dcdcdc; text-align: left">
+                <span>Permissions summary for this account ({{user.username}}:)</span>
+                {% if user.is_superuser %}
+                    <p>You <b>can</b> access the Reference Data Manager (RDM).<p>
+                {% else %}
+                    <p>You <b>cannot</b> access the Reference Data Manager (RDM).<p>
+                {% end if %}
+                {% if user_permissions.can_create %}
+                    <p>You can <b>create</b> new resources of the following types:<p>
+                    
+                {% else %}
+                    <p>You can <b>edit</b> existing resources of the following types:<p>
+                {% end if %}
+                <ul>
+                {% for restype in user_permissions.entities_allowed %}
+                    <li>{{restype}}</li>
+                {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+            <!-- End Title Box -->
+            <div class="col-md-12 animated fadeInRight" style="float:left;">
+                <span>About the Cane River Heritage Inventory & Map</span>
+                <p>The CRHIM is one of the first deploymenst o <a href="http://www.canerivernha.org" target="_blank">Cane River National Heritage Area</a> has created this database to serve everyone interested in the unique history of the Cane River and its environs.  The inventory includes audio interviews, historic maps, photos, and information on local historic resources.  Support for the ongoing maintenance of the inventory comes from the <a href="http://ncptt.nps.gov/" target="_blank">National Center for Preservation Technology and Training</a>.</p>
+            </div>            
             
         </div>
     </div>
@@ -133,21 +155,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 <!-- don't really need this content at this point -->
 <!--=== Content Part === -->
-<div class="block-description">
-    <div class="container content padding-top-20">
-
-        <!--Permissions Info Box -->  
-        {% if not user.is_anonymous %}
-        <div class="title-box no-border margin-top-minus-10" style="border-bottom-color: #dcdcdc;">
-            <p>Permissions summary for {{user.username}}
-            <br>Create new records: {{user_permissions.can_create}}
-            <br>Access to these resource types:
-            {% for restype in user_permissions.entities_allowed %}
-                <br>{{restype}}
-            {% endfor %}
-        </div>
-        {% endif %}
-        <!-- End Title Box --> 
 
         <!-- Promo Box   
         <div class="row">

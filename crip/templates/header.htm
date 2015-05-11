@@ -1,5 +1,6 @@
 {% load staticfiles %}
 {% load i18n %}
+{% load media/js/header.js %}
 <div class="header">
 
     <!-- Topbar -->
@@ -149,7 +150,7 @@
                         <p>The CRHIM has many uses, and the best use is exploration!  To search for specific resources, start with the SEARCH tab.  All search functions are included in the search box: just begin to type a resource's name, or  has created this database to serve everyone interested in the unique history of the Cane River and its environs.  The inventory includes audio interviews, historic maps, photos, and information on local historic resources.  Support for the ongoing maintenance of the inventory comes from the <a href="http://ncptt.nps.gov/" target="_blank">National Center for Preservation Technology and Training</a>.</p>
                     </div>
                     <!--Permissions Info Box -->  
-                    {% if request.get_full_path == "/map" %}
+                    {% if request.get_full_path.startswith("/map") %}
                     <div class="title-box no-border margin-top-minus-10" style="border-bottom-color: #dcdcdc;">
                         <p>Permissions summary for {{user.username}}
                         <br>Create new records: {{user_permissions.can_create}}
