@@ -153,7 +153,7 @@
                 <br>Create new records: {{user_permissions.can_create}}
                 <br>Access to these resource types:
                 {% for restype in user_permissions.entities_allowed %}
-                    <br>{{restype}}
+                    <br>{{ request.get_full_path }}
                 {% endfor %}
             </div>
             {% endif %}
