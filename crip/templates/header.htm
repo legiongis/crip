@@ -18,7 +18,9 @@
 
             <!-- Topbar Navigation -->
             <ul class="loginbar pull-right">
-                <li id="help-button"><a href="javascript:void(0);">SHOW HELP</a></li>
+                <li id="help-button">
+                    <a href="javascript:void(0);">SHOW HELP</a>
+                </li>
                 <li class="topbar-devider"></li>   
                 <li>
                     <a id="auth-link" href="{% url 'auth' %}?next={{ request.get_full_path }}{% if user.is_anonymous %}">{% trans "Login" %}{% else %}&logout=true">Welcome {{ user.username }} - {% trans "Logout" %}{% endif %}</a>
