@@ -128,7 +128,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
             {% if not user.is_anonymous %}
             <hr class="arches-layer-divider" style="border-top: 0px; margin-top: 5px;">
             <div class="col-md-12 animated fadeInLeft" style="border-bottom-color: #dcdcdc; text-align: left">
-                <span>Permissions summary for this account ({{user.username}}):</span>
+                <span>Permissions summary for this account ('{{user.username}}'):</span>
                 {% if user.is_superuser %}
                     <p>You <b>can</b> access the Reference Data Manager (RDM).<p>
                 {% else %}
