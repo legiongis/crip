@@ -15,7 +15,7 @@ require([
                 $(this).text("HIDE HELP");
                 $("#help-contents").show();
                 console.log("show");
-            });
+            }
         });
     };
     
