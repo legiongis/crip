@@ -128,13 +128,13 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                     <p>You <b>can</b> access the Reference Data Manager (RDM).<p>
                 {% else %}
                     <p>You <b>cannot</b> access the Reference Data Manager (RDM).<p>
-                {% end if %}
+                {% endif %}
                 {% if user_permissions.can_create %}
                     <p>You can <b>create</b> new resources of the following types:<p>
                     
                 {% else %}
                     <p>You can <b>edit</b> existing resources of the following types:<p>
-                {% end if %}
+                {% endif %}
                 <ul>
                 {% for restype in user_permissions.entities_allowed %}
                     <li>{{restype}}</li>
