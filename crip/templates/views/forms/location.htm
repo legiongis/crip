@@ -60,7 +60,7 @@
 
                             <!-- Body Content -->
                             <div class="modal-body location-form-panel-body padding-top-0 padding-bottom-0" style="" data-bind='foreach: baseLayers'>
-
+                                <!-- ko ifnot: icon==false -->
                                 <div class="row">
                                     <hr class="arches-layer-divider" style="border-top: 0px; margin-top: 5px;" />
 
@@ -80,6 +80,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- /ko -->
 
                             </div>
                             <!-- End Body Content -->
