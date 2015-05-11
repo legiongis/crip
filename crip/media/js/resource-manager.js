@@ -7,16 +7,16 @@ require([
     "bootstrap-datetimepicker"
 ], function($, arches, showHelp) {
     $(document).ready(function() {
-        showHelp();
+        //showHelp();
     
         $('#bad-permissions-modal').modal({
-                            'show':'true',
-                            'backdrop':'static'
-                        });
+            'show':'true',
+            'backdrop':'static'
+        });
         $('#bad-permissions-for-entity-modal').modal({
-                            'show':'true',
-                            'backdrop':'static'
-                        });
+            'show':'true',
+            'backdrop':'static'
+        });
     
         //Scrolling, Get initial offsets for the app header
         var header_offset = $("#appheader").offset();
