@@ -5,7 +5,7 @@ require([
     "moment",
     "header",
     "bootstrap-datetimepicker"
-], function($, arches) {
+], function($, arches, showHelp) {
     $(document).ready(function() {
         showHelp();
     
