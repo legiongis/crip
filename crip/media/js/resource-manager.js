@@ -2,10 +2,13 @@ require([
     'jquery',
     'arches',
     "bootstrap", 
-    "moment", 
+    "moment",
+    "header",
     "bootstrap-datetimepicker"
 ], function($, arches) {
     $(document).ready(function() {
+        showHelp();
+    
         $('#bad-permissions-modal').modal({
                             'show':'true',
                             'backdrop':'static'
