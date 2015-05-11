@@ -18,7 +18,7 @@
             <!-- Topbar Navigation -->
             <ul class="loginbar pull-right">
                 <!-- <li><a href="javascript:void(0);" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="{% trans 'Documentation coming soon.' %}">{% trans "Help" %}</a></li> -->
-                <li><a href="javascript:void(0);" id="help-button">{% trans "Help" %}</a></li>
+                <li><a href="javascript:void(0);" id="help-button">{% trans "SHOW HELP" %}</a></li>
                 <li class="topbar-devider"></li>   
                 <li>
                     <a id="auth-link" href="{% url 'auth' %}?next={{ request.get_full_path }}{% if user.is_anonymous %}">{% trans "Login" %}{% else %}&logout=true">Welcome {{ user.username }} - {% trans "Logout" %}{% endif %}</a>
@@ -135,35 +135,38 @@
         </div>    
     </div>            
     <!-- End Navbar -->
-    <div class="purchase">
-    <div class="container">
-        <div class="row">
-            <!-- REMOVE LOGO FROM HERE FOR NOW
-            <div class="col-md-3 animated fadeInRight" style="float:right;margin-left:auto;margin-right:auto;">
-                <img src="{% static 'img/crnha_logo.png' %}" height="160">
+    <div id="help-contents" class="hidden">
+        <div class="purchase">
+            <div class="container">
+                <div class="row">
+                    <!-- REMOVE LOGO FROM HERE FOR NOW
+                    <div class="col-md-3 animated fadeInRight" style="float:right;margin-left:auto;margin-right:auto;">
+                        <img src="{% static 'img/crnha_logo.png' %}" height="160">
+                    </div>
+                    -->
+                    <div class="col-md-12 animated fadeInLeft" style="float:left;">
+                        <span>How to Explore the Cane River Heritage Inventory & Map</span>
+                        <p>The CRHIM has many uses, and the best use is exploration!  To search for specific resources, start with the SEARCH tab.  All search functions are included in the search box: just begin to type a resource's name, or  has created this database to serve everyone interested in the unique history of the Cane River and its environs.  The inventory includes audio interviews, historic maps, photos, and information on local historic resources.  Support for the ongoing maintenance of the inventory comes from the <a href="http://ncptt.nps.gov/" target="_blank">National Center for Preservation Technology and Training</a>.</p>
+                    </div>
+                    <!--Permissions Info Box -->  
+                    {% if request.get_full_path == "/map" %}
+                    <div class="title-box no-border margin-top-minus-10" style="border-bottom-color: #dcdcdc;">
+                        <p>Permissions summary for {{user.username}}
+                        <br>Create new records: {{user_permissions.can_create}}
+                        <br>Access to these resource types:
+                        {% for restype in user_permissions.entities_allowed %}
+                            <br>{{ request.get_full_path }}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    <!-- End Title Box -->
+                    <div class="col-md-12 animated fadeInRight" style="float:left;">
+                        <span>About the Cane River Heritage Inventory & Map</span>
+                        <p>The CRHIM is one of the first deploymenst o <a href="http://www.canerivernha.org" target="_blank">Cane River National Heritage Area</a> has created this database to serve everyone interested in the unique history of the Cane River and its environs.  The inventory includes audio interviews, historic maps, photos, and information on local historic resources.  Support for the ongoing maintenance of the inventory comes from the <a href="http://ncptt.nps.gov/" target="_blank">National Center for Preservation Technology and Training</a>.</p>
+                    </div>            
+                    
+                </div>
             </div>
-            -->
-            <div class="col-md-12 animated fadeInLeft" style="float:left;">
-                <span>How to Explore the Cane River Heritage Inventory & Map</span>
-                <p>The CRHIM has many uses, and the best use is exploration!  To search for specific resources, start with the SEARCH tab.  All search functions are included in the search box: just begin to type a resource's name, or  has created this database to serve everyone interested in the unique history of the Cane River and its environs.  The inventory includes audio interviews, historic maps, photos, and information on local historic resources.  Support for the ongoing maintenance of the inventory comes from the <a href="http://ncptt.nps.gov/" target="_blank">National Center for Preservation Technology and Training</a>.</p>
-            </div>
-            <!--Permissions Info Box -->  
-            {% if request.get_full_path == "/map" %}
-            <div class="title-box no-border margin-top-minus-10" style="border-bottom-color: #dcdcdc;">
-                <p>Permissions summary for {{user.username}}
-                <br>Create new records: {{user_permissions.can_create}}
-                <br>Access to these resource types:
-                {% for restype in user_permissions.entities_allowed %}
-                    <br>{{ request.get_full_path }}
-                {% endfor %}
-            </div>
-            {% endif %}
-            <!-- End Title Box -->
-            <div class="col-md-12 animated fadeInRight" style="float:left;">
-                <span>About the Cane River Heritage Inventory & Map</span>
-                <p>The CRHIM is one of the first deploymenst o <a href="http://www.canerivernha.org" target="_blank">Cane River National Heritage Area</a> has created this database to serve everyone interested in the unique history of the Cane River and its environs.  The inventory includes audio interviews, historic maps, photos, and information on local historic resources.  Support for the ongoing maintenance of the inventory comes from the <a href="http://ncptt.nps.gov/" target="_blank">National Center for Preservation Technology and Training</a>.</p>
-            </div>            
-            
         </div>
     </div>
 </div>
