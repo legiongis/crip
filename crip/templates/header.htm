@@ -19,7 +19,7 @@
             <!-- Topbar Navigation -->
             <ul class="loginbar pull-right">
                 <li id="help-button">
-                    <a href="javascript:void(0);">HELP</a>
+                    <a href="javascript:void(0);">SHOW HELP</a>
                 </li>
                 <li class="topbar-devider"></li>   
                 <li>
@@ -140,13 +140,22 @@
     <div id="help-contents" style="display: none">
         <div class="purchase">
             <div class="container">
-                <div id="hide-help-button">
+                <div id="hide-help-button" style="float:right">
                     <h6><a href="javascript:void(0);">HIDE HELP</a></h6>
                 </div>
                 <div class="row">
+                    {% if active_page = 'Search' %}
                     <div class="col-md-12" style="float:left;">
-                        <span>How to Explore the Cane River Heritage Inventory & Map</span>
-                        <p>The CRHIM has many uses, and the best use is exploration!  To search for specific resources, start with the SEARCH tab.  All search functions are included in the search box: just begin to type a resource's name, or  has created this database to serve everyone interested in the unique history of the Cane River and its environs.  The inventory includes audio interviews, historic maps, photos, and information on local historic resources.  Support for the ongoing maintenance of the inventory comes from the <a href="http://ncptt.nps.gov/" target="_blank">National Center for Preservation Technology and Training</a>.</p>
+                        <span>Using the SEARCH Tab</span>
+                        <h6 style="color: #555">Basic Searching</h6>
+                        <p>All resources in the inventory can be found using a variety of different sorting and filtering methods, all of which are accessed right here on the SEARCH tab. To make a general search for a word--"church", for example--type the word and hit Enter. This will return any resources that are associated with the word "church". To make the search more specific, instead of hitting Enter, select a term from the dropdown list that is provided when you type the word church. You will see a number of options, which should be interpreted like this: "'church' as a Heritage Resource Type", "'church' as a Keyword", etc.</p>
+                        <p>You can narrow your search by adding as many additional search terms to the search bar as necessary. Each new search term will combine with any existing terms to create a combined filter. You can remove a search term by clicking the 'x', or you can <em>reverse</em> a search--for all resources that <em>do not</em> include the word 'church'--by clicking on the existing search term in the box.</p>
+                        <h6 style="color: #555">Advanced Searching</h6>
+                        <p>In addition to combining multiple search terms, you can apply the Location Filter and/or Time Filter to add location or temporal filters to your search. Once enabled, these filters are added to the search bar just like keyword search terms.
+                        <ul>
+                            <li>With the Location Filter enabled, you'll see a map of the area with all resources shown: red if they fit the current search filters, gray if they don't.  To create a filter based on location, use the "Map Tools".  You can create a point, line, or polygon, and then apply a buffer to show resources that fit within a given distance of the shape.  To create a line or polygon, click to create each new vertex, and double-click to finish the shape.</li>
+                            <li>The Time Filter allows you to only show results that fit within a given range of dates.  Use the slider to narrow or broaden the date range you are interested in viewing</li>
+                        </ul>
                     </div>
                     <!--Permissions Info Box -->  
                     {% if active_page = 'Map' %}
