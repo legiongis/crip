@@ -47,7 +47,7 @@ define([
         icon: arches.urls.media + 'img/map/thb_san1892.png',
         layer: sanborn1892black_Lyr,
         altlayer: sanborn1892red_Lyr,
-        showInfo: 'Sanborn\u00A9 maps were created to assist fire insurance companies with risk assessment for certain properties.  In this application, the original map sheets for the city of Natchitoches have been stitched together to show a single seamless layer for the year of 1892.  Special permission was granted by <a href="http://edrnet.com/">EDR</a> for use of their scans of these maps.',
+        showInfo: 'Sanborn\u00A9 maps were created to assist fire insurance companies with risk assessment for certain properties.  In this application, the original map sheets for the city of Natchitoches have been stitched together to show a single seamless layer.  Special permission was granted by <a href="http://edrnet.com/">EDR</a> for use of their scans of these maps.',
     }
     sanborn1892.layer.matchid = sanborn1892.id;
     sanborn1892.altlayer.matchid = sanborn1892.id;
@@ -94,7 +94,7 @@ define([
         icon: arches.urls.media + 'img/map/thb_san1914.png',
         layer: sanborn1914black_Lyr,
         altlayer: sanborn1914red_Lyr,
-        showInfo: 'Sanborn\u00A9 maps were created to assist fire insurance companies with risk assessment for certain properties.  In this application, the original map sheets for the city of Natchitoches have been stitched together to show a single seamless layer for the year of 1914.  Special permission was granted by <a href="http://edrnet.com/">EDR</a> for use of their scans of these maps.',
+        showInfo: 'Sanborn\u00A9 maps were created to assist fire insurance companies with risk assessment for certain properties.  In this application, the original map sheets for the city of Natchitoches have been stitched together to show a single seamless layer.  Special permission was granted by <a href="http://edrnet.com/">EDR</a> for use of their scans of these maps.',
     }
     sanborn1914.layer.matchid = sanborn1914.id;
     sanborn1914.altlayer.matchid = sanborn1914.id;
@@ -131,11 +131,11 @@ define([
 
     var confed = {
         id: 'confed',
-        name: 'Captured Confederate Map',
+        name: 'Confederate Maps',
         icon: arches.urls.media + 'img/map/thb_confed_clr.png',
         layer: confed_fullLyr,
         altlayer: confed_transLyr,
-        showInfo: 'This map is from the <a href="http://research.archives.gov/description/305566" target="_blank">Civil Works Map File</a>.  The record group contains many Civil War era maps that were purportedly captured from the confederate army.',
+        showInfo: 'This layer comprises five separate maps from the <a href="http://research.archives.gov/description/305566" target="_blank">Civil Works Map File</a> in the National Archives, which contains many Civil War era maps.  These maps were purportedly captured from the confederate army, but little research has been done on them.',
     }
     confed.layer.matchid = confed.id;
     confed.altlayer.matchid = confed.id;
@@ -166,7 +166,7 @@ define([
         icon: arches.urls.media + 'img/map/thb_plats.png',
         layer: platmaps_transLyr,
         altlayer: false,
-        showInfo: 'This layer comprises many historic township plat maps, all acquired through the Louisiana State Land Office <a href="https://wwwslodms.doa.la.gov/" target="_blank">Historical Documents</a> database.  These plat maps are not all from the same year, so the date has been added in the top right/northeast corner of each township.',
+        showInfo: 'This layer comprises many historic township plat maps, all acquired through the Louisiana State Land Office <a href="https://wwwslodms.doa.la.gov/" target="_blank">Historical Documents</a> database.  These plat maps are not all from the same year, so the date of each has been added in the northeast corner of the township.',
     }
     platmaps.layer.matchid = platmaps.id;
 
