@@ -81,6 +81,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
         <dd class="txt-color-blue arches-map-panel-list" data-bind="text:selectedResource() ? selectedResource().publication_date : ''"></dd>
         <dd class="txt-color-blue arches-map-panel-list" data-bind="text:selectedResource() ? selectedResource().publication_date : ''"></dd>
     </div>
-    selectedResource().file_path
+    <div data-bind="text: selectedResource().file_path"></div>
     <div><a href="{{MEDIA_URL}}selectedResource().file_path" title="hope">this might work?</a><div>
 </dl>
