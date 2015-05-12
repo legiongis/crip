@@ -215,6 +215,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                                                         {% if 'INFORMATION_CARRIER_E84' in report_info.source.graph %}
                                                             {% for INFORMATION_CARRIER_E84 in report_info.source.graph.INFORMATION_CARRIER_E84 %}
                                                                 {% for INFORMATION_CARRIER_FORMAT_TYPE_E55 in INFORMATION_CARRIER_E84.INFORMATION_CARRIER_FORMAT_TYPE_E55 %}
+                                                                    {% if INFORMATION_CARRIER_FORMAT_TYPE_E55.INFORMATION_CARRIER_FORMAT_TYPE_E55__value == "MP3" %}
                                                                     <dd class="arches-report-subsection-item">
                                                                         <div class="audioplayer">
                                                                             <audio controls>
@@ -222,6 +223,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                                                                             </audio>
                                                                         </div>
                                                                     </dd>
+                                                                    {% endif %}
                                                                 {% endfor %}
                                                             {% endfor %}            
 
