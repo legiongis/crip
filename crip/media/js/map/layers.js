@@ -54,7 +54,6 @@ define([
                 url: 'http://54.148.201.140:8080/geoserver/vect/wms/',
                 params: {
                     'LAYERS': 'vect:amcem_shrubs',
-                    'TILED': true,
                 },
                 serverType: 'geoserver'
             })
@@ -72,7 +71,6 @@ define([
                 url: 'http://54.148.201.140:8080/geoserver/vect/wms/',
                 params: {
                     'LAYERS': 'vect:amcem_grass',
-                    'TILED': true,
                 },
                 serverType: 'geoserver'
             })
@@ -91,7 +89,6 @@ define([
                 url: 'http://54.148.201.140:8080/geoserver/vect/wms/',
                 params: {
                     'LAYERS': 'vect:amcem_stumps',
-                    'TILED': true,
                 },
                 serverType: 'geoserver'
             })
@@ -110,7 +107,6 @@ define([
                 url: 'http://54.148.201.140:8080/geoserver/vect/wms/',
                 params: {
                     'LAYERS': 'vect:amcem_trees',
-                    'TILED': true,
                 },
                 serverType: 'geoserver'
             })
@@ -129,7 +125,6 @@ define([
                 url: 'http://54.148.201.140:8080/geoserver/vect/wms/',
                 params: {
                     'LAYERS': 'vect:amcem_vines',
-                    'TILED': true,
                 },
                 serverType: 'geoserver'
             })
@@ -148,7 +143,6 @@ define([
                 url: 'http://54.148.201.140:8080/geoserver/vect/wms/',
                 params: {
                     'LAYERS': 'vect:amcem_bulbs',
-                    'TILED': true,
                 },
                 serverType: 'geoserver'
             })
