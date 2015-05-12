@@ -75,7 +75,7 @@ def RESOURCE_TYPE_CONFIGS():
             'resourcetypeid': 'HERITAGE_RESOURCE_GROUP.E27',
             'name': _('Historic District'),
             'icon_class': 'fa fa-th',
-            'default_page': 'summary',
+            'default_page': 'heritage-group-summary',
             'default_description': 'No description available',
             'description_node': _('REASONS.E62'),
             'categories': [_('Resource')],
