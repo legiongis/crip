@@ -74,18 +74,6 @@
                         </a>
                     </li>
                     <!-- End Map-->
-                    
-                    <!-- Map  THIS WAS AN OLD IDEA TO HAVE A DROPDOWN FOR 2 DIFFERENT MAP VIEWS
-                    <li class="dropdown {% if active_page = 'Map' %}active{% endif %}">
-                        <a href="{% url 'map' %}">
-                            {% trans "Map" %}
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{% url 'map' %}"><i class="fa fa-tasks"></i>Full</a></li>
-                            <li><a href="{% url 'search_home' %}"><i class="fa fa-tasks"></i>Cemetery</a></li>
-                        </ul>
-                    </li>
-                    End Map-->
 
                     {% if user_can_edit %}
                     <!-- Resource Editor-->
@@ -144,17 +132,50 @@
                     <h6><a href="javascript:void(0);">HIDE HELP</a></h6>
                 </div>
                 <div class="row">
+                    {% if active_page = 'Home' %}
+                    <!--Permissions Info Box -->  
+                    <div class="col-md-12" style="float:left;">
+                        <span>Get Started!</span>
+                    </div>
+                    <div>
+                        <h6 style="color: #555">Use the navigation tabs above to search and view the inventory.  Click SHOW HELP on each page and this dropdown will appear again with useful information about that page.  Need to login? Use the LOGIN link at the top right corner.</h6>
+                    </div>
+                    {% if not user.is_anonymous %}
+                    <hr class="arches-layer-divider" style="border-top: 0px; margin-top: 5px;">
+                    <div class="col-md-12 animated fadeInLeft" style="border-bottom-color: #dcdcdc; text-align: left">
+                        <span>Permissions summary for this account ('{{user.username}}'):</span>
+                        {% if user.is_superuser %}
+                            <p>You <b>can</b> access the Reference Data Manager (RDM).<p>
+                        {% else %}
+                            <p>You <b>cannot</b> access the Reference Data Manager (RDM).<p>
+                        {% endif %}
+                        {% if user_permissions.can_create %}
+                            <p>You can <b>create</b> new resources of the following types:<p>
+                            
+                        {% else %}
+                            <p>You can <b>edit</b> existing resources of the following types:<p>
+                        {% endif %}
+                        <ul>
+                        {% for restype in user_permissions.entities_allowed %}
+                            <li>{{restype}}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                    
+                    {% endif %}
+                    <!-- End Title Box -->
                     {% if active_page = 'Search' %}
                     <div class="col-md-12" style="float:left;">
                         <span>Using the SEARCH Tab</span>
                     </div>
                     <div>
                         <h6 style="color: #555">Basic Searching</h6>
-                        <p>   All resources in the inventory can be found using a variety of different sorting and filtering methods, all of which are accessed right here on the SEARCH tab.</p>
-                        <p>   To make a general search for a word--"church", for example--type the word and hit Enter. This will return any resources that are associated with the word "church". To make the search more specific, instead of hitting Enter, select a term from the dropdown list that is provided as you type the word. You will see a number of options, which should be interpreted like this: "'church' as a Heritage Resource Type", "'church' as a Keyword", etc.</p>
-                        <p>   You can narrow your search by adding as many additional search terms to the search bar as necessary. Each new search term will combine with any existing terms to create a combined filter. You can remove a search term by clicking the 'x', or you can <em>reverse</em> a search--for all resources that <em>do not</em> include the word 'church'--by clicking on the existing search term in the box.</p>
+                        <p>All resources in the inventory can be found using a variety of different sorting and filtering methods, all of which are accessed right here on the SEARCH tab.</p>
+                        <p>To make a general search for a word--"church", for example--type the word and hit Enter. This will return any resources that are associated with the word "church". To make the search more specific, instead of hitting Enter, select a term from the dropdown list that is provided as you type the word. You will see a number of options, which should be interpreted like this: "'church' as a Heritage Resource Type", "'church' as a Keyword", etc.</p>
+                        <p>You can narrow your search by adding as many additional search terms to the search bar as necessary. Each new search term will combine with any existing terms to create a combined filter. You can remove a search term by clicking the 'x', or you can <em>reverse</em> a search--for all resources that <em>do not</em> include the word 'church'--by clicking on the existing search term in the box.</p>
                         <h6 style="color: #555">Advanced Searching</h6>
-                        <p>   In addition to combining multiple search terms, you can apply the Location Filter and/or Time Filter to add location or temporal filters to your search. Once enabled, these filters are added to the search bar just like keyword search terms.</p>
+                        <p>In addition to combining multiple search terms, you can apply the Location Filter and/or Time Filter to add location or temporal filters to your search. Once enabled, these filters are added to the search bar just like keyword search terms.</p>
                         <ul>
                             <li>The Location Filter shows you a map of the area with all resources shown: red if they fit the current search filters, gray if they don't. To create a filter based on location, use the "Map Tools" to create a point, line, or polygon, and then apply a buffer to show resources that fit within a given distance of the shape. To create a line or polygon, click to create each new vertex, and double-click to finish the shape.</li>
                             <li>The Time Filter allows you to only show results that fit within a given range of dates. Use the slider to narrow or broaden the date range you are interested in viewing</li>
@@ -168,7 +189,7 @@
                     </div>
                     <div>
                         <h6 style="color: #555">Navigation</h6>
-                        <p>   The MAP tab allows the viewer to see all resources that are associated with a specific location. To navigate the map:
+                        <p>The MAP tab allows the viewer to see all resources that are associated with a specific location. To navigate the map:
                         <ul>
                             <li>Click and drag the map to move the view area</li>
                             <li>To zoom in and out, you can use the +/- buttons in the top-left corner, or double-click to zoom in and hold shift and double-click to zoom out</li>
@@ -176,18 +197,18 @@
                         </ul>
                         </p>
                         <h6 style="color: #555">Basemaps</h6>
-                        <p>   The map has a single "basemap" layer underneath anything else in the view.  The standard Roads and Satellite layers are available, as well as two "non-standard" basemaps.
+                        <p>The map has a single "basemap" layer underneath anything else in the view.  The standard Roads and Satellite layers are available, as well as two "non-standard" basemaps.
                         <ul>
                             <li>The USGS basemap is great for finding features from the past that do not show up on current online maps, like Mink, or the old Red Dirt Lookout Tower.</li>
                             <li>The Shaded Relief basemap shows a high-level of detail for all topographical features in Natchitoches Parish. This layer can be viewed in color or in black and white (click the blue circle next to it to switch color schemes).</li>
                         </ul>
                         It's important to note that not all basemaps are supported at the highest zoom levels, and they will turn on and off accordingly. You can also remove the basemap altogether.</p>
                         <h6 style="color: #555">Historic Maps</h6>
-                        <p>   One of the most exciting parts of using the map viewer is ability to view a number of historic maps. These maps are presented here for research and general interest purposes, but the viewer must understand that the CRNHA makes no guarantee of their accuracy.  It is easy to overinterpret historic maps, especially when they are presented on top of present-day maps as they are here.  Information about each historic map can be found by clicking on the info icon.</p>
-                        <p>   When a historic map layer is turned on, it is added as a "layer" on top of the current basemap.  You can "stack" multiple historic maps on top of each other by activating more than one.  The most recently activated map will be pushed to top of any other historic maps.  To further accommodate overlay comparisons, the background of the confederate map can be removed, and the color of the Sanborn\u00A9 maps can be changed.  Click the blue circle next to each map to use these options.</p>
+                        <p>One of the most exciting parts of using the map viewer is ability to view a number of historic maps. These maps are presented here for research and general interest purposes, but the viewer must understand that the CRNHA makes no guarantee of their accuracy.  It is easy to overinterpret historic maps, especially when they are presented on top of present-day maps as they are here.  Information about each historic map can be found by clicking on the info icon.</p>
+                        <p>When a historic map layer is turned on, it is added as a "layer" on top of the current basemap.  You can "stack" multiple historic maps on top of each other by activating more than one.  The most recently activated map will be pushed to top of any other historic maps.  To further accommodate overlay comparisons, the background of the confederate map can be removed, and the color of the Sanborn\u00A9 maps can be changed.  Click the blue circle next to each map to use these options.</p>
                         <h6 style="color: #555">Overlays</h6>
-                        <p>   In the Overlays tab, you can add resources from the inventory.  By default, a layer showing all database resources is present, but that could be replaced with one that shows only Historic Resources, or Historic Districts.  Once you have added a layer, you can adjust its transparency.</p>
-                        <p>   In addition to the resource overlays, a couple of reference overlays have been included: One to show private property boundaries in Kisatchie National Forest, and one to show PLSS (Township/Range) reference lines for Natchitoches Parish.</p>
+                        <p>In the Overlays tab, you can add resources from the inventory.  By default, a layer showing all database resources is present, but that could be replaced with one that shows only Historic Resources, or Historic Districts.  Once you have added a layer, you can adjust its transparency.</p>
+                        <p>In addition to the resource overlays, a couple of reference overlays have been included: One to show private property boundaries in Kisatchie National Forest, and one to show PLSS (Township/Range) reference lines for Natchitoches Parish.</p>
                     </div>
                     {% endif %}
                     {% if active_page = 'RDM' %}
@@ -196,8 +217,9 @@
                     </div>
                     <div>
                         <h6 style="color: #555">Introduction</h6>
-                        <p>   The Reference Data Manager is where you can manage the concepts that are used behind the scenes to categorize all of the information captured in the database. While creating new resources, or editing existing resources, you will notice that most data entry is done by selecting "concepts" from predetermined dropdown lists.  The reference data manager is where you can modify those dropdowns menus, and add new concepts to the database.</p>
-                        <p>   In the panel on the left, you can see the 'Arches' menu, and below it, the 'Dropdown Lists' menu. The 'Arches' menu shows all of the concept schemes in the database, and the 'Dropdown Lists' menu holds the "controlled vocabularies" (groups of concepts) that are passed to the data input forms. These two menus will be used in the following process, which is an illustration of how to add a new "Keyword" concept to the Cane River Heritage Inventory & Map:
+                        <p>The Reference Data Manager is where you can manage the concepts that are used behind the scenes to categorize all of the information captured in the database. While creating new resources, or editing existing resources, you will notice that most data entry is done by selecting "concepts" from predetermined dropdown lists.  The reference data manager is where you can modify those dropdowns menus, and add new concepts to the database.</p>
+                        <p>In the panel on the left, you can see the 'Arches' menu, and below it, the 'Dropdown Lists' menu. The 'Arches' menu shows all of the concept schemes in the database, and the 'Dropdown Lists' menu holds the "controlled vocabularies" (groups of concepts) that are passed to the data input forms. These two menus will be used in the following guide, which is an illustration of how to add a new "Keyword" concept to the Cane River Heritage Inventory & Map.</p>
+                        <h6 style="color: #555">Adding a New Concept</h6>
                         <ol>
                             <li>Open the 'Arches' menu, scroll down and select the Keyword concept scheme. In the right panel, you can see all of the existing concepts in the Keyword concept scheme.</li>
                             <li>Click the Manage menu, and select Add Child.</li>
