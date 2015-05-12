@@ -2,26 +2,27 @@ require([
     'jquery',
     'backbone',
 ], function($, Backbone, arches) {
-    console.log("first print");
+    var help_on = false;
     function showHelp() {
         $("#help-button").click(function(){
-            if (this.hasClass("help-shown")){
-                $(this).removeClass("help-shown");
-                $(this).text("SHOW HELP");
-                $("#help-contents").hide();
-                console.log("hide");
+            if (help_on == true){
+                $("#help-contents").slideUp();
             } else {
-                $(this).addClass("help-shown");
-                $(this).text("HIDE HELP");
-                $("#help-contents").show();
-                console.log("show");
+                $("#help-contents").slideDown();
             }
+            help_on = !help_on
+        });
+    };
+    
+    function hideHelp() {
+        $("#hide-help-button").click(function(){
+            $("#help-contents").slideUp();
+            help_on = false
         });
     };
     
     $(document).ready(function() {
-    
-        console.log("document ready");
+        hideHelp()
         showHelp()
     });
 });
