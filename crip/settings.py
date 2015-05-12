@@ -73,7 +73,7 @@ def RESOURCE_TYPE_CONFIGS():
         },
         'HERITAGE_RESOURCE_GROUP.E27': {
             'resourcetypeid': 'HERITAGE_RESOURCE_GROUP.E27',
-            'name': _('Historic District'),
+            'name': _('Historic Area'),
             'icon_class': 'fa fa-th',
             'default_page': 'area-summary',
             'default_description': 'No description available',
