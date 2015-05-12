@@ -219,7 +219,8 @@ class Resource(ArchesResource):
             document_data['resource_type'] = get_entity_data('INFORMATION_RESOURCE_TYPE.E55', get_label=True)
             document_data['creation_date'] = get_entity_data('DATE_OF_CREATION.E50')
             document_data['publication_date'] = get_entity_data('DATE_OF_PUBLICATION.E50')
-
+            document_data['file_path'] = get_entity_data('FILE_PATH_E62')
+            
         if self.entitytypeid == 'HISTORICAL_EVENT.E5' or self.entitytypeid == 'ACTIVITY.E7' or self.entitytypeid == 'ACTOR.E39':
             document_data['start_date'] = get_entity_data('BEGINNING_OF_EXISTENCE.E63')
             document_data['end_date'] = get_entity_data('END_OF_EXISTENCE.E64')
