@@ -211,8 +211,24 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
                                                     <!-- Links for Image Gallery Supply Image in the href, thumbnails in the img tags -->
                                                     {% for FILE_PATH_E62 in report_info.source.graph.FILE_PATH_E62 %}
+                                                    
+                                                        {% if 'INFORMATION_CARRIER_E84' in report_info.source.graph %}
+                                                            {% for INFORMATION_CARRIER_E84 in report_info.source.graph.INFORMATION_CARRIER_E84 %}
+                                                                {% for INFORMATION_CARRIER_FORMAT_TYPE_E55 in INFORMATION_CARRIER_E84.INFORMATION_CARRIER_FORMAT_TYPE_E55 %}
+                                                                    <dd class="arches-report-subsection-item">
+                                                                        <div class="audioplayer">
+                                                                            <audio controls>
+                                                                                <source src="{{MEDIA_URL}}{{FILE_PATH_E62.FILE_PATH_E62__label}}" type="audio/mpeg" /><a href="{{MEDIA_URL}}{{FILE_PATH_E62.FILE_PATH_E62__label}}"></a>
+                                                                            </audio>
+                                                                        </div>
+                                                                    </dd>
+                                                                        {{if INFORMATION_CARRIER_FORMAT_TYPE_E55.INFORMATION_CARRIER_FORMAT_TYPE_E55__value }}
+                                                                    </dd>
+                                                                {% endfor %}
+                                                            {% endfor %}            
+                                                        {% endif %}    
 
-                                                        {% if 'THUMBNAIL_E62' in report_info.source.graph %}
+                                                        {% elseif 'THUMBNAIL_E62' in report_info.source.graph %}
 
                                                             <dd class="arches-report-subsection-item">
                                                                 <div id="" style="margin-top: 5px;">
