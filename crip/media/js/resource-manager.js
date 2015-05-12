@@ -3,7 +3,6 @@ require([
     'arches',
     "bootstrap", 
     "moment",
-    "header",
     "bootstrap-datetimepicker"
 ], function($, arches, showHelp) {
     $(document).ready(function() {
