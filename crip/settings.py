@@ -50,9 +50,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'crip.utils.context_processors.user_groups',
 )
 
-#def RESOURCE_TYPE_CONFIGS():
-#    return {
-RESOURCE_TYPE_CONFIGS = {
+def RESOURCE_TYPE_CONFIGS():
+    return {
+#RESOURCE_TYPE_CONFIGS = {
         'HERITAGE_RESOURCE.E18': {
             'resourcetypeid': 'HERITAGE_RESOURCE.E18',
             'name': _('Historic Resource'),
