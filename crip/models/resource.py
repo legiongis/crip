@@ -182,6 +182,7 @@ class Resource(ArchesResource):
         def get_entity_data(entitytypeid, get_label=False):
             entity_data = _('None specified')
             entity_nodes = self.find_entities_by_type_id(entitytypeid)
+            print entity_nodes
             if len(entity_nodes) > 0:
                 entity_data = []
                 for node in entity_nodes:
