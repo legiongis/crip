@@ -62,7 +62,8 @@ define([
     var amcem_grass = new LayerModel({
         name: 'American Cemetery Veg: Ornamental Grass',
         categories: ["Vegetation"],
-        icon: 'fa fa-bookmark-o',
+        icon: 'fa fa-circle',
+        iconColor: '#5EB5B4',
         infoContent: "Vegetation data for the American Cemetery.  Mapped in the fall of 2014 by Laura Bradford.",
         layer: new ol.layer.Tile({
             is_arches_layer: "nobutclose",
