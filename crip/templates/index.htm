@@ -111,84 +111,13 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 <div class="purchase">
     <div class="container">
         <div class="row">
-            <!-- REMOVE LOGO FROM HERE FOR NOW
-            <div class="col-md-3 animated fadeInRight" style="float:right;margin-left:auto;margin-right:auto;">
-                <img src="{% static 'img/crnha_logo.png' %}" height="160">
-            </div>
-            -->
             <div class="col-md-12 animated fadeInLeft" style="float:left;">
-                <span>How to Explore the Cane River Heritage Inventory & Map</span>
-                <p>The CRHIM has many uses, and the best use is exploration!  To search for specific resources, start with the SEARCH tab.  All search functions are included in the search box: just begin to type a resource's name, or  has created this database to serve everyone interested in the unique history of the Cane River and its environs.  The inventory includes audio interviews, historic maps, photos, and information on local historic resources.  Support for the ongoing maintenance of the inventory comes from the <a href="http://ncptt.nps.gov/" target="_blank">National Center for Preservation Technology and Training</a>.</p>
+                <span>Welcome to the Cane River Heritage Inventory & Map!</span>
+                <p>The <a href="http://www.canerivernha.org" target="_blank">Cane River National Heritage Area</a> presents the Cane River Heritage Inventory & Map to promote knowledge, understanding, and interest in the history of the Cane River and its surroundings. The CRHIM has many uses, and the best use is exploration... To look for specific resources, start exploring with the SEARCH tab, or to browse the whole inventory (and view some truly unique historic maps) check out the MAP tab. The inventory includes audio interviews, buildings, photos, and more, and it is growing everyday. Support for the ongoing maintenance of the inventory comes from the <a href="http://ncptt.nps.gov/" target="_blank">National Center for Preservation Technology and Training</a>.</p>
             </div>
-            <div class="col-md-12 animated fadeInRight" style="float:left;">
-                <span>About the Cane River Heritage Inventory & Map</span>
-                <p>The CRHIM is one of the first deploymenst o <a href="http://www.canerivernha.org" target="_blank">Cane River National Heritage Area</a> has created this database to serve everyone interested in the unique history of the Cane River and its environs.  The inventory includes audio interviews, historic maps, photos, and information on local historic resources.  Support for the ongoing maintenance of the inventory comes from the <a href="http://ncptt.nps.gov/" target="_blank">National Center for Preservation Technology and Training</a>.</p>
-            </div> 
-            <!--Permissions Info Box -->  
-            {% if not user.is_anonymous %}
-            <hr class="arches-layer-divider" style="border-top: 0px; margin-top: 5px;">
-            <div class="col-md-12 animated fadeInLeft" style="border-bottom-color: #dcdcdc; text-align: left">
-                <span>Permissions summary for this account ('{{user.username}}'):</span>
-                {% if user.is_superuser %}
-                    <p>You <b>can</b> access the Reference Data Manager (RDM).<p>
-                {% else %}
-                    <p>You <b>cannot</b> access the Reference Data Manager (RDM).<p>
-                {% endif %}
-                {% if user_permissions.can_create %}
-                    <p>You can <b>create</b> new resources of the following types:<p>
-                    
-                {% else %}
-                    <p>You can <b>edit</b> existing resources of the following types:<p>
-                {% endif %}
-                <ul>
-                {% for restype in user_permissions.entities_allowed %}
-                    <li>{{restype}}</li>
-                {% endfor %}
-                </ul>
-            </div>
-            {% endif %}
-            <!-- End Title Box -->
         </div>
     </div>
 </div><!--/row-->
-<!-- End HIP Title Block -->
-
-<!-- don't really need this content at this point -->
-<!--=== Content Part === -->
-
-        <!-- Promo Box   
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="servive-block servive-block-default" style="background: #ffffff;">
-                    <i class="icon-custom rounded-x icon-bg-dark fa fa-trophy"></i>
-                    <a class="" href="javascript:void(0);"><h2 class="txt-color-blue">Street Cars and Suburbanization</h2></a>
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium qui officia deserunt mollitia anim</p>                        
-                </div>
-            </div>
-
-            <div class="col-sm-4">
-                <div class="servive-block servive-block-default" style="background: #ffffff;">
-                    <i class="icon-custom rounded-x icon-bg-dark fa fa-trophy"></i>
-                    <a class="" href="javascript:void(0);"><h2 class="txt-color-blue">The Entertainment Industry 1908-1928</h2></a>
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium qui officia deserunt mollitia anim</p>                        
-                </div>
-            </div>
-
-            <div class="col-sm-4">
-                <div class="servive-block servive-block-default" style="background: #ffffff;">
-                    <i class="icon-custom rounded-x icon-bg-dark fa fa-camera"></i>
-                    <a class="" href="javascript:void(0);"><h2 class="txt-color-blue">A Visual History of West LA 1900-1945</h2></a>
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium qui officia deserunt mollitia anim</p>                        
-                </div>
-            </div>
-        </div>
-        <!-- End Promo Box -->
-
-
-
-
-    </div>
-</div>
 <!-- End Content Part -->
 
 {% endblock %}
