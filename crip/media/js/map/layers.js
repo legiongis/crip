@@ -59,7 +59,7 @@ define([
             })
         })
     });
-    var amcem_shrubs = new LayerModel({
+    var amcem_grass = new LayerModel({
         name: 'American Cemetery Veg: Ornamental Grass',
         categories: ["Vegetation"],
         icon: 'fa fa-bookmark-o',
