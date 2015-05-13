@@ -171,3 +171,7 @@ cf https://github.com/summernote/summernote/issues/187
 #help-contents {
     background-color:#C4C4C4;
 }
+
+.ls-inner {
+    margin-left: 56px;
+}
