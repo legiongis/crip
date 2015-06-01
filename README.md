@@ -20,6 +20,6 @@ You can install this app just like any other arches app; it is just a modified v
 
         git clone https://github.com/mradamcox/crip.git
         
-Now just continue with the installation instructions, substituting `my_hip_app` with `crip`, because that is now the name of your app.
+Now just continue with the installation instructions, substituting `crip` for `my_hip_app` wherever it occurs, because that is now the name of your app.
 
-Questions, feedback, or help: mr.adamcox@gmail.com
+Questions, feedback, or (limited!) help: mr.adamcox@gmail.com
