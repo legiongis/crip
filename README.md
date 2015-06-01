@@ -4,24 +4,20 @@ The Cane River Inventory Package (CRIP) is an adaptation of the Heritage Invento
 
 Some of the changes made in the CRIP are as follows:
 
-- General rebranding to suit the Cane River National Heritage Area.
+- General rebranding to suit the Cane River National Heritage Area
 
-- A template for adding historic map overlays has been added (see media/js/map/historic-layers.js) as well as a few extra basemaps.
+- Unique help documentation built into each separate webpage
 
-- The ability to add an "alternate" color scheme to any layer instance.  This was added to support the ability to toggle transparent backgrounds on some historic maps, and allow alternate colors for Sanborn map overlays and the relief basemap.  It is achieved by allowing any map.layer object to contain a second ol.layer instance.
+- A template for adding historic map overlays has been added (see media/js/map/historic-layers.js) as well as a few extra basemaps
 
-- A utility for converting shapefiles to .arches pipe-delimited .csv files in preparation for loading existing spatial data.  This utility is called "shp2arches".  It has extended support for authority document validation, so the user's shapefile may list a value's "conceptid" or "Preflabel".  It's a python script in the main app folder, and can be run from the command line like so:
-
-        $: python shp2arches.py path/to/shapefile.shp
+- The ability to add an "alternate" color scheme to any layer instance.  This was added to support the ability to toggle transparent backgrounds on some historic maps, and allow alternate colors for Sanborn map overlays and the relief basemap.  It is achieved by allowing any map.layer object to contain a second ol.layer instance, which can be swapped in for the original ol.layer instance.
 
 - Basic modifications to authority documents to reflect the types of heritage resources found in the CRNHA
 
-###Installation (on top of Arches v3):
+###Installation:
 
-1. Follow the normal Arches HIP installation instructions (link coming soon)
-
-2. At the point where you can create a new app, just clone this repository instead
-
-3. Install the package and you'll be ready to go
+You can install this app just like any other arches app; it is just a modified version of the HIP app used for historicplacesla.org.  Begin by following the normal Arches HIP installation [instructions](http://arches-hip.readthedocs.org/en/latest/getting-started/#installating-arches-hip).  At step #5, where you must create a new app, just clone this repository instead, using the following command:
+        git clone https://github.com/mradamcox/crip.git
+Now just continue with the installation instructions, substituting `my_hip_app` with `crip`, because that is now the name of your app.
 
 Questions, feedback, or help: mr.adamcox@gmail.com
