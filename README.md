@@ -1,6 +1,6 @@
 ##Cane River Inventory Package
 
-The Cane River Inventory Package (CRIP) is an adaptation of the Heritage Inventory Package (HIP), which was originally developed for [Historic Places LA](http://www.historicplacesla.org).  It is an app that functions on top of [Arches, v3.0](http://www.archesproject.org).  The CRIP is the outcome of a project for the [Cane River National Heritage Area](http://www.canerivernha.org) to create an inventory of historic resources (and more!) in and around historic Natchitoches, LA.  The resulting implementation of the CRIP can be seen at work in the [Cane River Heritage Inventory & Map](http://crhim.canerivernha.org).
+The Cane River Inventory Package (CRIP) is an adaptation of the Heritage Inventory Package (HIP), which was originally developed for [Historic Places LA](http://www.historicplacesla.org).  It is an app that functions on top of [Arches, v3.0](http://www.archesproject.org).  The CRIP is the outcome of a project for the [Cane River National Heritage Area](http://www.canerivernha.org) to create an inventory of historic resources (and more!) in and around historic Natchitoches, Louisiana (USA).  The resulting implementation of the CRIP can be seen at work in the [Cane River Heritage Inventory & Map](http://crhim.canerivernha.org).
 
 Some of the changes made in the CRIP are as follows:
 
