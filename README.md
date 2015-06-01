@@ -12,9 +12,9 @@ Some of the changes made in the CRIP are as follows:
 
 - The ability to add an "alternate" color scheme to any layer instance.  This was added to support the ability to toggle transparent backgrounds on some historic maps, and allow alternate colors for Sanborn map overlays and the relief basemap.  It is achieved by allowing any map.layer object to contain a second ol.layer instance, which can be swapped in for the original ol.layer instance.
 
-- Basic modifications to authority documents to reflect the types of heritage resources found in the CRNHA
+- Modifications to some resource graphs and CRUD forms, and rewrite of most authority documents to reflect the types of heritage resources found in the CRNHA
 
-###Installation:
+####Installation:
 
 You can install this app just like any other arches app; it is just a modified version of the HIP app used for historicplacesla.org.  Begin by following the normal Arches HIP installation [instructions](http://arches-hip.readthedocs.org/en/latest/getting-started/#installating-arches-hip).  At step #5, where you must create a new app, just clone this repository instead, using the following command:
 
