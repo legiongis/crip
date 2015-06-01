@@ -16,10 +16,10 @@ Some of the changes made in the CRIP are as follows:
 
 ####Installation:
 
-You can install this app just like any other arches app; it is just a modified version of the HIP app used for historicplacesla.org.  Begin by following the normal Arches HIP installation [instructions](http://arches-hip.readthedocs.org/en/latest/getting-started/#installating-arches-hip).  At step #5, where you must create a new app, just clone this repository instead, using the following command (you may need to install git first):
+You can install this app just like any other arches app; it is a modified version of the HIP app used for historicplacesla.org.  Begin by following the normal Arches HIP installation [instructions](http://arches-hip.readthedocs.org/en/latest/getting-started/#installating-arches-hip).  At step #5, where you must create a new app, clone this repository instead, using the following command (you may need to install git first):
 
         git clone https://github.com/mradamcox/crip.git
         
-Now just continue with the installation instructions, substituting `crip` for `my_hip_app` wherever the latter occurs, because "crip" is now the name of your app.
+Now continue with the installation instructions, substituting `crip` for `my_hip_app` wherever the latter occurs, because "crip" is now the name of your app.
 
 Questions, feedback, or (limited!) help: mr.adamcox@gmail.com
