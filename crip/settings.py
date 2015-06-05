@@ -1,5 +1,3 @@
-he = "hello"
-
 import os
 import inspect
 from arches_hip.settings import *
@@ -12,6 +10,9 @@ ROOT_URLCONF = '%s.urls' % (PACKAGE_NAME)
 INSTALLED_APPS = INSTALLED_APPS + (PACKAGE_NAME,)
 STATICFILES_DIRS = (os.path.join(PACKAGE_ROOT, 'media'),) + STATICFILES_DIRS
 TEMPLATE_DIRS = (os.path.join(PACKAGE_ROOT, 'templates'),os.path.join(PACKAGE_ROOT, 'templatetags')) + TEMPLATE_DIRS
+ELASTICSEARCH_HTTP_PORT = 9200
+ELASTICSEARCH_HOSTS = [{'host': 'localhost', 'port': ELASTICSEARCH_HTTP_PORT}]
+SESSION_COOKIE_NAME = PACKAGE_NAME
 
 RESOURCE_MODEL = {'default': 'crip.models.resource.Resource'}
 
@@ -31,7 +32,8 @@ extent_coords = [
 
 # URL that handles the media served from MEDIA_ROOT, used for managing 
 # stored files. It must end in a slash if set to a non-empty value.
-MEDIA_URL = os.path.join(PACKAGE_ROOT, 'uploads/')
+MEDIA_ROOT =  os.path.join('/home/ubuntu/Projects/crip/crip/uploads')
+MEDIA_URL = os.path.join('/uploads/')
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
@@ -53,6 +55,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 def RESOURCE_TYPE_CONFIGS():
     return {
+#RESOURCE_TYPE_CONFIGS = {
         'HERITAGE_RESOURCE.E18': {
             'resourcetypeid': 'HERITAGE_RESOURCE.E18',
             'name': _('Historic Resource'),
@@ -74,9 +77,9 @@ def RESOURCE_TYPE_CONFIGS():
         },
         'HERITAGE_RESOURCE_GROUP.E27': {
             'resourcetypeid': 'HERITAGE_RESOURCE_GROUP.E27',
-            'name': _('Historic District'),
+            'name': _('Historic Area'),
             'icon_class': 'fa fa-th',
-            'default_page': 'summary',
+            'default_page': 'area-summary',
             'default_description': 'No description available',
             'description_node': _('REASONS.E62'),
             'categories': [_('Resource')],

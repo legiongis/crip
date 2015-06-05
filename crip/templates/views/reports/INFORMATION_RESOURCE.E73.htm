@@ -25,77 +25,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 <div id="report-body" class="report-body">
     
      {% if geometry != 'null' %}
-        <!--=== Map Block ===-->
-        <div id="map-container">
-
-            <div id="map" class="map map-report-panel" style="display: block;">
-                <div id="olmap" class="fill"></div>
-                <div style="display:none;" id="map-data">
-                    <input type="hidden" id="resource_geometry" value='{{ geometry }}' />
-                </div>
-            </div>
-
-            <!-- Map: Project Info Panel -->
-            <div class="container">
-                
-                <!-- Map Tools Panel -->
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6" style="">
-
-                        <div id="basemaps-panel" class="tools-panel hidden" style="overflow-y: scroll; border-top-left-radius: 5px; border-top-right-radius: 5px; margin-top: -408px; height: 332px; width: 290px; margin-left: 0px;">
-                            <div class="modal-header arches-modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                    ×
-                                </button>
-                                <h4 class="modal-title">
-                                    {% trans "Basemaps" %}
-                                </h4>
-                            </div>
-
-                            <!-- Body Content -->
-                            <div class="modal-body padding-top-0 padding-bottom-0" data-bind='foreach: baseLayers'>
-
-                                <div class="row">
-                                    <hr class="arches-layer-divider" style="border-top: 0px; margin-top: 5px;">
-
-                                    <div class="arches-basemap-entry" style="margin-right: 7px;">
-                                        
-                                        <div class="" style="">
-                                            <a data-bind="attr: { id: id, title: name }" class="basemap info-click" data-rel="" href="javascript:void(0);">
-                                                <span class="">  
-                                                    <img data-bind="attr: { src: icon }" class="arches-basemap-thumbnail" alt="" />
-                                                    <span class="zoom-icon"></span>                   
-                                                </span>                                              
-                                            </a>                    
-                                            <span class="arches-basemap-caption-search">
-                                                <a data-bind="attr: { id: id }, text: name" class="caption-text-search hover-effect basemap info-click" href="javascript:void(0);"> </a>
-                                            </span>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </div>
-                            <!-- End Body Content -->
-
-                        </div>
-                    </div>
-                </div>
-                <!-- End Map Tools Panel -->
-
-                <!-- Map Tools -->
-                <div class="row">
-                    <div class="col-xs-12 col-sm-7 col-md-5 col-lg-4" style="margin-top: -77px;">
-                        <div class="btn-group">
-                            <button id="inventory-basemaps" type="button" class="btn btn-primary arches-map-tools" style="width:290px;"><i class="fa fa-globe"></i> {% trans "Basemaps" %}
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Map Tools -->
-            </div>
-        </div>
-        <!--=== End Map Block ===-->
+        {% include 'views/reports/sections/map_section.htm' %}
     {% endif %}
 
 
@@ -281,8 +211,23 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
                                                     <!-- Links for Image Gallery Supply Image in the href, thumbnails in the img tags -->
                                                     {% for FILE_PATH_E62 in report_info.source.graph.FILE_PATH_E62 %}
+                                                    
+                                                        {% if 'INFORMATION_CARRIER_E84' in report_info.source.graph %}
+                                                            {% for INFORMATION_CARRIER_E84 in report_info.source.graph.INFORMATION_CARRIER_E84 %}
+                                                                {% for INFORMATION_CARRIER_FORMAT_TYPE_E55 in INFORMATION_CARRIER_E84.INFORMATION_CARRIER_FORMAT_TYPE_E55 %}
+                                                                    {% if INFORMATION_CARRIER_FORMAT_TYPE_E55.INFORMATION_CARRIER_FORMAT_TYPE_E55__value == "MP3" %}
+                                                                    <dd class="arches-report-subsection-item">
+                                                                        <div class="audioplayer">
+                                                                            <audio controls>
+                                                                                <source src="{{MEDIA_URL}}{{FILE_PATH_E62.FILE_PATH_E62__label}}" type="audio/mpeg" /><a href="{{MEDIA_URL}}{{FILE_PATH_E62.FILE_PATH_E62__label}}"></a>
+                                                                            </audio>
+                                                                        </div>
+                                                                    </dd>
+                                                                    {% endif %}
+                                                                {% endfor %}
+                                                            {% endfor %}            
 
-                                                        {% if 'THUMBNAIL_E62' in report_info.source.graph %}
+                                                        {% elif 'THUMBNAIL_E62' in report_info.source.graph %}
 
                                                             <dd class="arches-report-subsection-item">
                                                                 <div id="" style="margin-top: 5px;">

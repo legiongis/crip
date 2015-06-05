@@ -44,6 +44,8 @@ define([
                 layers.push(historicLayer.layer);
             });
 
+            console.log("pushed layers");
+
             dragAndDropInteraction.on('addfeatures', function(event) {
                 var vectorSource = new ol.source.Vector({
                     features: event.features,
@@ -113,7 +115,6 @@ define([
                         })];
                     }
                 });
-
                 this.map.addInteraction(this.select);
             }
 
@@ -122,7 +123,24 @@ define([
                 var extent = view.calculateExtent(self.map.getSize());
                 self.trigger('viewChanged', view.getZoom(), extent);
             });
+            
+            // turn off basemap if max zoom level is exceeded, important to allow
+            // the viewing of certain historic maps without the bad basemap underneath
+            var switched = '';
+            this.map.getView().on('change:resolution', function() {
+                var zoomlevel = self.map.getView().getZoom()
+                _.each(self.baseLayers, function(baseLayer){
+                    if (baseLayer.layer.getVisible() == true && zoomlevel > baseLayer.maxzoom){
+                        switched = baseLayer.id
+                        baseLayer.layer.setVisible(false);
+                    }
+                    if (switched == baseLayer.id){
+                        baseLayer.layer.setVisible(zoomlevel <= baseLayer.maxzoom);
+                        self.baseLayers[6].layer.setVisible(zoomlevel > baseLayer.maxzoom);
+                    }
 
+                });
+            });
 
             this.map.on('click', function(e) {
                 var clickFeature = self.map.forEachFeatureAtPixel(e.pixel, function (feature, layer) {

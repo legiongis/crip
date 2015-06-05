@@ -29,6 +29,7 @@ from django.forms.models import model_to_dict
 from django.utils.translation import ugettext as _
 from django.forms.models import model_to_dict
 from datetime import datetime
+from django.conf import settings
 
 def datetime_nodes_to_dates(branch_list):
     for branch in branch_list:
@@ -46,7 +47,7 @@ class SummaryForm(ResourceForm):
         return {
             'id': 'summary',
             'icon': 'fa-tag',
-            'name': _('Resource Summary'),
+            'name': _('Summary'),
             'class': SummaryForm
         }
 
@@ -90,6 +91,183 @@ class SummaryForm(ResourceForm):
                     'branch_lists': self.get_nodes('RESOURCE_TYPE_CLASSIFICATION.E55'),
                     'domains': {'RESOURCE_TYPE_CLASSIFICATION.E55' : Concept().get_e55_domain('RESOURCE_TYPE_CLASSIFICATION.E55')}
                 }
+
+            self.data['NAME.E41'] = {
+                'branch_lists': self.get_nodes('NAME.E41'),
+                'domains': {'NAME_TYPE.E55' : Concept().get_e55_domain('NAME_TYPE.E55')}
+                # 'defaults': {
+                #     'NAME_TYPE.E55': default_name_type['id'],
+                #     'NAME.E41': ''
+                # }
+            }
+
+            self.data['KEYWORD.E55'] = {
+                'branch_lists': self.get_nodes('KEYWORD.E55'),
+                'domains': {'KEYWORD.E55' : Concept().get_e55_domain('KEYWORD.E55')}
+            }
+
+            try:
+                self.data['primaryname_conceptid'] = self.data['NAME.E41']['domains']['NAME_TYPE.E55'][3]['id']
+            except IndexError:
+                pass
+                
+class AreaSummaryForm(ResourceForm):
+    @staticmethod
+    def get_info():
+        return {
+            'id': 'area-summary',
+            'icon': 'fa-tag',
+            'name': _('Summary'),
+            'class': AreaSummaryForm
+        }
+
+    def update(self, data, files):
+        self.update_nodes('NAME.E41', data)
+        self.update_nodes('KEYWORD.E55', data)
+        self.update_nodes('HERITAGE_RESOURCE_GROUP_TYPE.E55', data)
+
+        beginning_of_existence_nodes = []
+        end_of_existence_nodes = []
+        for branch_list in data['important_dates']:
+            for node in branch_list['nodes']:
+                if node['entitytypeid'] == 'BEGINNING_OF_EXISTENCE_TYPE.E55':
+                    beginning_of_existence_nodes.append(branch_list)
+                if node['entitytypeid'] == 'END_OF_EXISTENCE_TYPE.E55':
+                    end_of_existence_nodes.append(branch_list)
+
+        for branch_list in beginning_of_existence_nodes:
+            for node in branch_list['nodes']:        
+                if node['entitytypeid'] == 'START_DATE_OF_EXISTENCE.E49,END_DATE_OF_EXISTENCE.E49':
+                    node['entitytypeid'] = 'START_DATE_OF_EXISTENCE.E49'
+
+        for branch_list in end_of_existence_nodes:
+            for node in branch_list['nodes']:        
+                if node['entitytypeid'] == 'START_DATE_OF_EXISTENCE.E49,END_DATE_OF_EXISTENCE.E49':
+                    node['entitytypeid'] = 'END_DATE_OF_EXISTENCE.E49'
+
+        self.update_nodes('BEGINNING_OF_EXISTENCE.E63', {'BEGINNING_OF_EXISTENCE.E63':beginning_of_existence_nodes})
+        self.update_nodes('END_OF_EXISTENCE.E64', {'END_OF_EXISTENCE.E64':end_of_existence_nodes})
+
+    def load(self, lang):
+        self.data['important_dates'] = {
+            'branch_lists': datetime_nodes_to_dates(self.get_nodes('BEGINNING_OF_EXISTENCE.E63') + self.get_nodes('END_OF_EXISTENCE.E64')),
+            'domains': {'important_dates' : Concept().get_e55_domain('BEGINNING_OF_EXISTENCE_TYPE.E55') + Concept().get_e55_domain('END_OF_EXISTENCE_TYPE.E55')}
+        }
+
+        if self.resource:
+         
+            self.data['HERITAGE_RESOURCE_GROUP_TYPE.E55'] = {
+                'branch_lists': self.get_nodes('HERITAGE_RESOURCE_GROUP_TYPE.E55'),
+                'domains': {'HERITAGE_RESOURCE_GROUP_TYPE.E55' : Concept().get_e55_domain('HERITAGE_RESOURCE_GROUP_TYPE.E55')}
+            }
+
+            self.data['NAME.E41'] = {
+                'branch_lists': self.get_nodes('NAME.E41'),
+                'domains': {'NAME_TYPE.E55' : Concept().get_e55_domain('NAME_TYPE.E55')}
+                # 'defaults': {
+                #     'NAME_TYPE.E55': default_name_type['id'],
+                #     'NAME.E41': ''
+                # }
+            }
+
+            self.data['KEYWORD.E55'] = {
+                'branch_lists': self.get_nodes('KEYWORD.E55'),
+                'domains': {'KEYWORD.E55' : Concept().get_e55_domain('KEYWORD.E55')}
+            }
+
+            try:
+                self.data['primaryname_conceptid'] = self.data['NAME.E41']['domains']['NAME_TYPE.E55'][3]['id']
+            except IndexError:
+                pass
+
+class HeritageGroupSummaryForm(ResourceForm):
+    @staticmethod
+    def get_info():
+        return {
+            'id': 'heritage-group-summary',
+            'icon': 'fa-tag',
+            'name': _('Summary'),
+            'class': HeritageGroupSummaryForm
+        }
+
+    def update(self, data, files):
+        self.update_nodes('NAME.E41', data)
+        self.update_nodes('KEYWORD.E55', data)
+        self.update_nodes('HERITAGE_RESOURCE_GROUP_TYPE.E55', data)
+        
+        # production_entities = self.resource.find_entities_by_type_id('PRODUCTION.E12')
+        
+        # phase_type_node_id = ''
+        # for value in data['PHASE_TYPE_ASSIGNMENT.E17']:
+            # for node in value['nodes']:
+                # if node['entitytypeid'] == 'PHASE_TYPE_ASSIGNMENT.E17' and node['entityid'] != '':
+                    # remove the node
+                    # phase_type_node_id = node['entityid']
+                    # self.resource.filter(lambda entity: entity.entityid != node['entityid'])
+                    
+        # for entity in self.baseentity.find_entities_by_type_id('PHASE_TYPE_ASSIGNMENT.E17'):
+            # entity.entityid = phase_type_node_id
+
+        # if len(production_entities) > 0:
+            # self.resource.merge_at(self.baseentity, 'PRODUCTION.E12')
+        # else:
+            # self.resource.merge_at(self.baseentity, self.resource.entitytypeid)
+
+        # self.resource.trim()
+
+        beginning_of_existence_nodes = []
+        end_of_existence_nodes = []
+        for branch_list in data['important_dates']:
+            for node in branch_list['nodes']:
+                if node['entitytypeid'] == 'BEGINNING_OF_EXISTENCE_TYPE.E55':
+                    beginning_of_existence_nodes.append(branch_list)
+                if node['entitytypeid'] == 'END_OF_EXISTENCE_TYPE.E55':
+                    end_of_existence_nodes.append(branch_list)
+
+        for branch_list in beginning_of_existence_nodes:
+            for node in branch_list['nodes']:        
+                if node['entitytypeid'] == 'START_DATE_OF_EXISTENCE.E49,END_DATE_OF_EXISTENCE.E49':
+                    node['entitytypeid'] = 'START_DATE_OF_EXISTENCE.E49'
+
+        for branch_list in end_of_existence_nodes:
+            for node in branch_list['nodes']:        
+                if node['entitytypeid'] == 'START_DATE_OF_EXISTENCE.E49,END_DATE_OF_EXISTENCE.E49':
+                    node['entitytypeid'] = 'END_DATE_OF_EXISTENCE.E49'
+
+        self.update_nodes('BEGINNING_OF_EXISTENCE.E63', {'BEGINNING_OF_EXISTENCE.E63':beginning_of_existence_nodes})
+        self.update_nodes('END_OF_EXISTENCE.E64', {'END_OF_EXISTENCE.E64':end_of_existence_nodes})
+
+    def load(self, lang):
+
+        # self.data['PHASE_TYPE_ASSIGNMENT.E17'] = {
+            # 'branch_lists': self.get_nodes('PHASE_TYPE_ASSIGNMENT.E17'),
+            # 'domains': {
+                # 'HERITAGE_RESOURCE_GROUP_TYPE.E55': Concept().get_e55_domain('HERITAGE_RESOURCE_GROUP_TYPE.E55'),
+                # 'HERITAGE_RESOURCE_GROUP_USE_TYPE.E55' : Concept().get_e55_domain('HERITAGE_RESOURCE_GROUP_USE_TYPE.E55')
+            # }
+        # }
+    
+        self.data['important_dates'] = {
+            'branch_lists': datetime_nodes_to_dates(self.get_nodes('BEGINNING_OF_EXISTENCE.E63') + self.get_nodes('END_OF_EXISTENCE.E64')),
+            'domains': {'important_dates' : Concept().get_e55_domain('BEGINNING_OF_EXISTENCE_TYPE.E55') + Concept().get_e55_domain('END_OF_EXISTENCE_TYPE.E55')}
+        }
+        
+        
+
+        if self.resource:
+            # if self.resource.entitytypeid in ('HERITAGE_RESOURCE.E18', 'HERITAGE_RESOURCE_GROUP.E27'):            
+                # self.data['RESOURCE_TYPE_CLASSIFICATION.E55'] = {
+                    # 'branch_lists': self.get_nodes('RESOURCE_TYPE_CLASSIFICATION.E55'),
+                    # 'domains': {'RESOURCE_TYPE_CLASSIFICATION.E55' : Concept().get_e55_domain('RESOURCE_TYPE_CLASSIFICATION.E55')}
+                # }
+                
+            self.data['HERITAGE_RESOURCE_GROUP_TYPE.E55'] = {
+                'branch_lists': self.get_nodes('HERITAGE_RESOURCE_GROUP_TYPE.E55'),
+                'domains': {
+                    'HERITAGE_RESOURCE_GROUP_TYPE.E55' : Concept().get_e55_domain('HERITAGE_RESOURCE_GROUP_TYPE.E55'),
+                    'HERITAGE_RESOURCE_GROUP_USE_TYPE.E55': Concept().get_e55_domain('HERITAGE_RESOURCE_GROUP_USE_TYPE.E55')
+                }
+            }
 
             self.data['NAME.E41'] = {
                 'branch_lists': self.get_nodes('NAME.E41'),
@@ -731,7 +909,7 @@ class LocationForm(ResourceForm):
         self.data['ADMINISTRATIVE_SUBDIVISION.E48'] = {
             'branch_lists': self.get_nodes('ADMINISTRATIVE_SUBDIVISION.E48'),
             'domains': {
-                'ADMINISTRATIVE_SUBDIVISION_TYPE.E55': Concept().get_e55_domain('ADMINISTRATIVE_SUBDIVISION_TYPE.E55')
+                'ADMINISTRATIVE_SUBDIVISION_NAME.E55': Concept().get_e55_domain('ADMINISTRATIVE_SUBDIVISION_NAME.E55')
             }
         }
 

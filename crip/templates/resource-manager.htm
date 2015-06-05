@@ -202,9 +202,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
             <div class="modal-footer" style="text-align:center">
                 <button class="btn-u nav-away" type="button" href="#" onClick="history.go(-1)">{% trans "go back" %}</button>
-                <button class="btn-u nav-away" type="button" href="{% url 'home' %}">{% trans "HOME" %}</button>
-                <button class="btn-u nav-away" type="button" href="{% url 'search_home' %}">{% trans "SEARCH" %}</button>
-                <button class="btn-u nav-away" type="button" href="{% url 'map' %}">{% trans "MAP" %}</button>               
             </div>
           </div>
     </div>
@@ -225,13 +222,13 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
             <!-- Form -->
             <div class="modal-body">
                 <div class="alert alert-warning" role="alert">
-                    {% trans 'This account has permission to edit or create the following resource types:' %}
+                    {% trans 'This account has permission to edit or create only the following resource types:' %}
                     {% for name in user_permissions.entities_allowed %}
                         <ul>
                         <li>{{name}}</li>
                         </ul>
                     {% endfor %}
-                    {% trans 'You are trying to edit or create a ' %}{{resource_type_name}}{% trans ' resource.' %}
+                    <br>{% trans 'You are trying to edit or create a ' %}{{resource_type_name}}
                 </div>
                 
             </div>

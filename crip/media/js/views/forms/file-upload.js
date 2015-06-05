@@ -23,7 +23,7 @@ define(['jquery',
                 this.dropzoneInstance = new dropzone(dropzoneEl[0], {
                     url: 'we dont submit via dropzone',
                     maxFiles: 1,
-                    acceptedFiles: 'image/*, application/pdf, text/*, .doc, .docx, .jpg',
+                    acceptedFiles: 'image/*, application/pdf, text/*, .doc, .docx, .jpg, .mp3, .mp4',
                     addRemoveLinks: true,
                     autoProcessQueue: false
                 });

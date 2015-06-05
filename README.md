@@ -1,27 +1,25 @@
 ##Cane River Inventory Package
 
-The Cane River Inventory Package (CRIP) is an adaptation of the Heritage Inventory Package (HIP), which was originally developed for [Historic Places LA](http://www.historicplacesla.org).  It is an app that functions on top of [Arches, v3.0](http://www.archesproject.org).  The CRIP is the outcome of a project for the [Cane River National Heritage Area](http://www.canerivernha.org) to create an inventory of historic resources (and more!) in and around historic Natchitoches, LA.  The resulting implementation of the CRIP can be seen at work in the [Cane River Heritage Inventory and Map](http://crhim.canerivernha.org).
+The Cane River Inventory Package (CRIP) is an adaptation of the Heritage Inventory Package (HIP), which was originally developed for [Historic Places LA](http://www.historicplacesla.org).  It is an app that functions on top of [Arches, v3.0](http://www.archesproject.org).  The CRIP is the outcome of a project for the [Cane River National Heritage Area](http://www.canerivernha.org) to create an inventory of historic resources (and more!) in and around historic Natchitoches, Louisiana (USA).  The resulting implementation of the CRIP can be seen at work in the [Cane River Heritage Inventory & Map](http://crhim.canerivernha.org).
 
 Some of the changes made in the CRIP are as follows:
 
-- General rebranding to suit the Cane River National Heritage Area.
+- General rebranding to suit the Cane River National Heritage Area
 
-- A template for adding historic map overlays has been added (see media/js/map/historic-layers.js) as well as a few extra basemaps.
+- Unique help documentation built into each separate webpage
 
-- The ability to add an "alternate" color scheme to any layer instance.  This was added to support the ability to toggle transparent backgrounds on some historic maps, and allow alternate colors for Sanborn map overlays and the relief basemap.  It is achieved by allowing any map.layer object to contain a second ol.layer instance.
+- A new template for adding historic map overlays (see media/js/map/historic-layers.js) as well as a few extra basemaps
 
-- A utility for converting shapefiles to .arches pipe-delimited .csv files in preparation for loading existing spatial data.  This utility is called "shp2arches".  It has extended support for authority document validation, so the user's shapefile may list a value's "conceptid" or "Preflabel".  It's a python script in the main app folder, and can be run from the command line like so:
+- The ability to add an "alternate" color scheme to any layer instance.  This was added to support the ability to toggle transparent backgrounds on some historic maps, and allow alternate colors for Sanborn map overlays and the relief basemap.  It is achieved by allowing any map.layer object to contain a second ol.layer instance, which can be swapped in for the original ol.layer instance.
 
-        $: python shp2arches.py path/to/shapefile.shp
+- Modifications to some resource graphs and CRUD forms, and rewrite of most authority documents to reflect the types of heritage resources found in the CRNHA
 
-- Basic modifications to authority documents to reflect the types of heritage resources found in the CRNHA
+####Installation:
 
-###Installation (on top of Arches v3):
+You can install this app just like any other arches app; it is a modified version of the HIP app used for historicplacesla.org.  Begin by following the normal Arches HIP installation [instructions](http://arches-hip.readthedocs.org/en/latest/getting-started/#installating-arches-hip).  At step #5, where you must create a new app, clone this repository instead, using the following command (you may need to install git first):
 
-1. Follow the normal Arches HIP installation instructions (link coming soon)
+        git clone https://github.com/mradamcox/crip.git
+        
+Now continue with the installation instructions, substituting `crip` for `my_hip_app` wherever the latter occurs, because "crip" is now the name of your app.
 
-2. At the point where you can create a new app, just clone this repository instead
-
-3. Install the package and you'll be ready to go
-
-Questions, feedback, or help: mr.adamcox@gmail.com
+Questions, feedback, or (limited!) help: mr.adamcox@gmail.com

@@ -92,7 +92,7 @@ class ResourceLoader(object):
             if count >= progress_interval and count % progress_interval == 0:
                 print count, 'of', len(resource_list), 'loaded'
                 print " flushing memory"
-                call("echo 3 | sudo tee /proc/sys/vm/drop_caches")
+                call("sync && echo 3 | sudo tee /proc/sys/vm/drop_caches")
 
             masterGraph = None
             entityData = []

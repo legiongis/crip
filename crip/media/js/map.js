@@ -30,7 +30,14 @@ require([
             var mapLayers = [];
             var elevateArchesResourceLayers = function () {
                 map.map.getLayers().forEach(function(layer, index) {
-                    if (layer.get('is_arches_layer')) {
+                    if (layer.get('is_arches_layer') == "nobutclose") {
+                        console.log("elevate " + layer.get('name'));
+                        map.map.removeLayer(layer);
+                        map.map.addLayer(layer);
+                    }
+                });
+                map.map.getLayers().forEach(function(layer, index) {
+                    if (layer.get('is_arches_layer') == true) {
                         map.map.removeLayer(layer);
                         map.map.addLayer(layer);
                     }
@@ -109,6 +116,8 @@ require([
             self.map = map;
             var clusterFeaturesCache = {};
             var archesFeaturesCache = {};
+            
+            console.log("1");
 
             var selectDeafultFeature = function (features) {
                 var feature = _.find(features, function (feature) {
@@ -130,7 +139,7 @@ require([
                     selectDeafultFeature(features);
                 });
             }
-
+            console.log("2");
             self.viewModel.filterTerms.subscribe(function () {
                 var terms = self.viewModel.filterTerms()
                 _.each(self.viewModel.layers(), function(layer) {
@@ -149,7 +158,7 @@ require([
                     layer.filtered(filtered)
                 });
             });
-
+            console.log("3");
             map.on('layerDropped', function (layer, name) {
                 var layerModel = new LayerModel({
                       name: name,
@@ -186,7 +195,7 @@ require([
                 $(".knob").css("font-weight", 200);
                 $('[data-toggle="popover"]').popover();
             });
-
+            console.log("4");
             map.on('viewChanged', function (zoom, extent) {
                 self.viewModel.zoom(zoom);
             });
@@ -404,32 +413,6 @@ require([
                 $("#inventory-historicmaps").addClass("arches-map-tools");
                 //$("#inventory-historicmaps").css("border-bottom-right-radius", "1px");
             };
-            
-            // if the zoom goes too far in, switch from relief or usgs basemap to
-            // the basic roads basemap. switch back when zoomed back out.
-            var switched = 'undefined';
-            map.map.getView().on('change:resolution', function() {
-                if (map.map.getView().getZoom() > 18) {
-                    _.each(map.baseLayers, function(baseLayer){
-                        if (baseLayer.id == 'relief' || baseLayer.id == 'usgs'){
-                            if (baseLayer.layer.getVisible() == true){
-                                baseLayer.layer.setVisible(false);
-                                map.baseLayers[0].layer.setVisible(true);
-                                switched = baseLayer.id;
-                            }
-                        }                
-                    });
-                } else {
-                    if (switched != 'undefined'){
-                        _.each(map.baseLayers, function(baseLayer){
-                            if (baseLayer.id == switched){
-                                baseLayer.layer.setVisible(true);
-                                switched = 'undefined';
-                            }                
-                        });
-                    }
-                }    
-            });
 
             ko.applyBindings(self.viewModel, $('body')[0]);
 
@@ -440,10 +423,8 @@ require([
                     baseLayer.layer.setVisible(basemap == baseLayer.id);
                     if (basemap == baseLayer.id){
                         $('#'+baseLayer.id).css("background","#eaeaea"); 
-                        console.log(baseLayer.id+" set grey");                       
                     } else {
                         $('#'+baseLayer.id).css("background","");
-                        console.log(baseLayer.id+" no bg");  
                     }   
                 });
                 hideAllPanels();
@@ -471,6 +452,7 @@ require([
                         }
                     }                
                 });
+                elevateArchesResourceLayers();
             });
 
             //swaps the .altlayer with the .layer in a map.layer object

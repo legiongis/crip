@@ -65,7 +65,6 @@ def user_permissions(request):
     
     can_create = False
     resource_types = [v['name'] for v in settings.RESOURCE_TYPE_CONFIGS().values()]
-    print resource_types
 
     # get all group names for user
     group_names = [i.name for i in request.user.groups.all()]

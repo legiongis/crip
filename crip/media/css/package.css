@@ -156,3 +156,22 @@ cf https://github.com/summernote/summernote/issues/187
 .note-editor .note-dropzone {
     opacity: 0 !important;
 }
+
+.location-form-panel {
+    height: 416px;
+    margin-top : -440px !important;
+    margin-left: -42px;
+}
+
+.location-form-panel-body {
+    height: 313px;
+    overflow-y: scroll;
+}
+
+#help-contents {
+    background-color:#C4C4C4;
+}
+
+.ls-inner {
+    margin-left: 56px;
+}

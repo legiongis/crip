@@ -47,7 +47,6 @@ class Resource(ArchesResource):
                 forms.ResourceDescriptionForm.get_info(),
                 forms.ClassificationForm.get_info(),
                 forms.FormDimensionForm.get_info(),
-                #forms.MeasurementForm.get_info(),
                 forms.ComponentForm.get_info(),
                 forms.LocationForm.get_info(),
                 forms.ConditionForm.get_info(),
@@ -66,9 +65,11 @@ class Resource(ArchesResource):
 
         elif self.entitytypeid == 'HERITAGE_RESOURCE_GROUP.E27':
             description_group['forms'][:0] = [
-                forms.SummaryForm.get_info(),
+                forms.AreaSummaryForm.get_info(),
+                #forms.SummaryForm.get_info(),
+                #forms.HeritageGroupSummaryForm.get_info(),
                 forms.DescriptionForm.get_info(),
-                forms.DistrictClassificationForm.get_info(),
+                #forms.DistrictClassificationForm.get_info(),
                 forms.MeasurementForm.get_info(),
                 forms.LocationForm.get_info(),
                 forms.ConditionForm.get_info(),
@@ -181,6 +182,7 @@ class Resource(ArchesResource):
         def get_entity_data(entitytypeid, get_label=False):
             entity_data = _('None specified')
             entity_nodes = self.find_entities_by_type_id(entitytypeid)
+            print entity_nodes
             if len(entity_nodes) > 0:
                 entity_data = []
                 for node in entity_nodes:
@@ -218,7 +220,9 @@ class Resource(ArchesResource):
             document_data['resource_type'] = get_entity_data('INFORMATION_RESOURCE_TYPE.E55', get_label=True)
             document_data['creation_date'] = get_entity_data('DATE_OF_CREATION.E50')
             document_data['publication_date'] = get_entity_data('DATE_OF_PUBLICATION.E50')
-
+            document_data['file_path'] = get_entity_data('FILE_PATH.E62', get_label=True)
+            print get_entity_data('FILE_PATH.E62')
+            
         if self.entitytypeid == 'HISTORICAL_EVENT.E5' or self.entitytypeid == 'ACTIVITY.E7' or self.entitytypeid == 'ACTOR.E39':
             document_data['start_date'] = get_entity_data('BEGINNING_OF_EXISTENCE.E63')
             document_data['end_date'] = get_entity_data('END_OF_EXISTENCE.E64')

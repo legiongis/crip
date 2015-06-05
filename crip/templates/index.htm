@@ -29,31 +29,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
     <div id="layerslider-container-fw">        
         <div id="layerslider" style="width: 100%; height: 500px; margin: 0px auto; ">
             
-            <!--First Slide
-            <div class="ls-layer" style="">
-
-                <!-- Background 
-                <img src="{% static 'img/arches_splash/CANEslide03.jpg' %}" class="ls-s1" style="top: 0px; left: 0px; durationin: 0;" alt="Slide background">
-
-                <!-- Text 
-                <span class="ls-s-1" style="line-height: 42px; font-size:22px; font-weight: 200; color:#fff; top:100px; left: 10px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;">
-                Arches Includes
-                </span>
-
-                <span class="ls-s-1" style="line-height: 42px; font-size:42px; font-weight: 200; color:#fff; top:140px; left: 10px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;">
-                Activities and </br>
-                Important Historic Events
-                </span>
-
-                <!-- Photo Credit 
-                <span class="ls-s-1" style="line-height: 16px; font-size:12px; color:#fff; top:470px; left: 750px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;">
-                Photo: Image Caption, <a href="javascript:void(0);">Photographer Name</a>
-                </span>
-
-             </div>
-            <!--End First Slide-->
-
-            <!--Second Slide-->
+            <!--First Slide-->
             <div class="ls-layer" style="">
 
                 <!-- Background -->
@@ -66,7 +42,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
                 <!-- Text -->
                 <span class="ls-s-1" style="line-height: 42px; font-size:42px; font-weight: 200; color:#fff; top:140px; left: 10px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;">
-                Historic Plantations and Homesteads
+                Historic plantations and Homesteads
                 </span>
 
                 <!-- Photo Credit -->
@@ -75,9 +51,9 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                 </span>
 
              </div>
-            <!--End Second Slide-->
+            <!--End First Slide-->
 
-            <!--Third Slide-->
+            <!--Second Slide-->
             <div class="ls-layer" style="">
 
                 <!-- Background -->
@@ -99,9 +75,9 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                 </span>
 
              </div>
-            <!--End Third Slide-->
+            <!--End Second Slide-->
 
-            <!--Fourth Slide-->
+            <!--Third Slide-->
             <div class="ls-layer" style="">
 
                 <!-- Background -->
@@ -123,7 +99,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                 </span>
 
              </div>
-            <!--End Fourth Slide-->
+            <!--End Third Slide-->
 
         </div>         
     </div>
@@ -135,72 +111,13 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 <div class="purchase">
     <div class="container">
         <div class="row">
-            <!-- REMOVE LOGO FROM HERE FOR NOW
-            <div class="col-md-3 animated fadeInRight" style="float:right;margin-left:auto;margin-right:auto;">
-                <img src="{% static 'img/crnha_logo.png' %}" height="160">
-            </div>
-            -->
             <div class="col-md-12 animated fadeInLeft" style="float:left;">
-                <span>Cane River Heritage Inventory and Map</span>
-                <p>The <a href="http://www.canerivernha.org" target="_blank">Cane River National Heritage Area</a> has created this database to serve everyone interested in the unique history of the Cane River and its environs.  The inventory includes audio interviews, historic maps, photos, and information on local historic resources.  Support for the ongoing maintenance of the inventory comes from the <a href="http://ncptt.nps.gov/" target="_blank">National Center for Preservation Technology and Training</a>.</p>
-            </div>  
-            <!-- DONT THINK I NEED THIS
-            <div class="col-md-3 btn-buy animated fadeInRight">
-                <a href="javascript:void(0);" class="btn-u btn-u-lg"><i class="fa fa-plus-square"></i> Learn More</a>
+                <span>Welcome to the Cane River Heritage Inventory & Map!</span>
+                <p>The <a href="http://www.canerivernha.org" target="_blank">Cane River National Heritage Area</a> presents the Cane River Heritage Inventory & Map to promote knowledge, understanding, and interest in the history of the Cane River and its surroundings. The inventory has many uses, and the best use is exploration. To look for specific resources, start exploring with the SEARCH tab, or to check out the MAP tab to explore the history of Natchitoches Parish, and view some truly unique historic maps!  If at any point you need help with the database, just click the SHOW HELP link at the top of the page. The inventory includes audio interviews, buildings, photos, and more, and it is growing everyday.</p>
             </div>
-            -->
-            
         </div>
     </div>
 </div><!--/row-->
-<!-- End HIP Title Block -->
-
-<!-- don't really need this content at this point -->
-<!--=== Content Part === -->
-<div class="block-description">
-    <div class="container content padding-top-20">
-
-        <!--Title Box -->     
-        <div class="title-box no-border margin-top-minus-10" style="border-bottom-color: #dcdcdc;">
-            {{ user_permissions.can_create }}
-            {{ user_permissions.entities_allowed }}
-            <p>These are some of the interesting cultural heritage stories in Los Angeles</p>
-        </div>
-        <!-- End Title Box --> 
-
-        <!-- Promo Box   
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="servive-block servive-block-default" style="background: #ffffff;">
-                    <i class="icon-custom rounded-x icon-bg-dark fa fa-trophy"></i>
-                    <a class="" href="javascript:void(0);"><h2 class="txt-color-blue">Street Cars and Suburbanization</h2></a>
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium qui officia deserunt mollitia anim</p>                        
-                </div>
-            </div>
-
-            <div class="col-sm-4">
-                <div class="servive-block servive-block-default" style="background: #ffffff;">
-                    <i class="icon-custom rounded-x icon-bg-dark fa fa-trophy"></i>
-                    <a class="" href="javascript:void(0);"><h2 class="txt-color-blue">The Entertainment Industry 1908-1928</h2></a>
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium qui officia deserunt mollitia anim</p>                        
-                </div>
-            </div>
-
-            <div class="col-sm-4">
-                <div class="servive-block servive-block-default" style="background: #ffffff;">
-                    <i class="icon-custom rounded-x icon-bg-dark fa fa-camera"></i>
-                    <a class="" href="javascript:void(0);"><h2 class="txt-color-blue">A Visual History of West LA 1900-1945</h2></a>
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium qui officia deserunt mollitia anim</p>                        
-                </div>
-            </div>
-        </div>
-        <!-- End Promo Box -->
-
-
-
-
-    </div>
-</div>
 <!-- End Content Part -->
 
 {% endblock %}

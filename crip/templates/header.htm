@@ -1,5 +1,6 @@
 {% load staticfiles %}
 {% load i18n %}
+
 <div class="header">
 
     <!-- Topbar -->
@@ -17,19 +18,9 @@
 
             <!-- Topbar Navigation -->
             <ul class="loginbar pull-right">
-                <li>
-                    <!-- REMOVE LITTLE GLOBE ICON FOR NOW
-                    <i class="fa fa-globe"></i>
-                    -->
-                    <a>{% trans "Languages" %}</a>
-                    <ul class="lenguages">
-                        <li class="active">
-                            <a href="javascript:void(0);">{% trans "English" %} <i class="fa fa-check"></i></a> 
-                        </li>
-                    </ul>
+                <li id="help-button">
+                    <a href="javascript:void(0);">SHOW HELP</a>
                 </li>
-                <li class="topbar-devider"></li>   
-                <li><a href="javascript:void(0);" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="{% trans 'Documentation coming soon.' %}">{% trans "Help" %}</a></li>
                 <li class="topbar-devider"></li>   
                 <li>
                     <a id="auth-link" href="{% url 'auth' %}?next={{ request.get_full_path }}{% if user.is_anonymous %}">{% trans "Login" %}{% else %}&logout=true">Welcome {{ user.username }} - {% trans "Logout" %}{% endif %}</a>
@@ -83,18 +74,6 @@
                         </a>
                     </li>
                     <!-- End Map-->
-                    
-                    <!-- Map  THIS WAS AN OLD IDEA TO HAVE A DROPDOWN FOR 2 DIFFERENT MAP VIEWS
-                    <li class="dropdown {% if active_page = 'Map' %}active{% endif %}">
-                        <a href="{% url 'map' %}">
-                            {% trans "Map" %}
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{% url 'map' %}"><i class="fa fa-tasks"></i>Full</a></li>
-                            <li><a href="{% url 'search_home' %}"><i class="fa fa-tasks"></i>Cemetery</a></li>
-                        </ul>
-                    </li>
-                    End Map-->
 
                     {% if user_can_edit %}
                     <!-- Resource Editor-->
@@ -146,5 +125,152 @@
         </div>    
     </div>            
     <!-- End Navbar -->
-
+    <div id="help-contents" style="display: none">
+        <div class="purchase">
+            <div class="container">
+                <div id="hide-help-button">
+                    <h6><a href="javascript:void(0);">HIDE HELP</a></h6>
+                </div>
+                <div class="row">
+                    {% if active_page = 'Home' %}
+                    <!--Permissions Info Box -->  
+                    <div class="col-md-12" style="float:left;">
+                        <span>Get Started!</span>
+                    </div>
+                    <div class="col-md-12">
+                        <ul style="font-weight:bold">
+                            <li>Use the navigation tabs above to search and view the inventory.</li>
+                            <li>Click SHOW HELP on each page to show useful information about that page.</li>
+                            <li>Need to login? Use the LOGIN link at the top right corner.</li>
+                            <li>When you are logged in, a summary of your account permissions will appear here (HOME tab help).</li>
+                        </ul>
+                    </div>
+                    {% if not user.is_anonymous %}
+                    <hr class="arches-layer-divider" style="border-top: 0px; margin-top: 5px;">
+                    <div class="col-md-12" style="border-bottom-color: #dcdcdc; text-align: left">
+                        <span>Permissions summary for this account ('{{user.username}}'):</span>
+                        {% if user.is_superuser %}
+                            <p>You <b>can</b> access the Reference Data Manager (RDM).<p>
+                        {% else %}
+                            <p>You <b>cannot</b> access the Reference Data Manager (RDM).<p>
+                        {% endif %}
+                        {% if user_permissions.can_create %}
+                            <p>You can <b>create</b> new resources of the following types:<p>
+                            
+                        {% else %}
+                            <p>You can <b>edit</b> existing resources of the following types:<p>
+                        {% endif %}
+                        <ul>
+                        {% for restype in user_permissions.entities_allowed %}
+                            <li>{{restype}}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                    
+                    {% endif %}
+                    <!-- End Title Box -->
+                    {% if active_page = 'Search' %}
+                    <div class="col-md-12" style="float:left;">
+                        <span>Using the SEARCH Tab</span>
+                    </div>
+                    <div class="col-md-12">
+                        <h6 style="color: #555">Basic Searching</h6>
+                        <p>All resources in the inventory can be found using a variety of different sorting and filtering methods, all of which are accessed right here on the SEARCH tab.</p>
+                        <p>To make a general search for a word--"church", for example--type the word and hit Enter. This will return any resources that are associated with the word "church". To make the search more specific, instead of hitting Enter, select a term from the dropdown list that is provided as you type the word. You will see a number of options, which should be interpreted like this: "'church' as a Heritage Resource Type", "'church' as a Keyword", etc.</p>
+                        <p>You can narrow your search by adding as many additional search terms to the search bar as necessary. Each new search term will combine with any existing terms to create a combined filter. You can remove a search term by clicking the 'x', or you can <em>reverse</em> a search--for all resources that <em>do not</em> include the word 'church'--by clicking on the existing search term in the box.</p>
+                        <h6 style="color: #555">Advanced Searching</h6>
+                        <p>In addition to combining multiple search terms, you can apply the Location Filter and/or Time Filter to add location or temporal filters to your search. Once enabled, these filters are added to the search bar just like keyword search terms.</p>
+                        <ul>
+                            <li>The Location Filter shows you a map of the area with all resources shown: red if they fit the current search filters, gray if they don't. To create a filter based on location, use the "Map Tools" to create a point, line, or polygon, and then apply a buffer to show resources that fit within a given distance of the shape. To create a line or polygon, click to create each new vertex, and double-click to finish the shape.</li>
+                            <li>The Time Filter allows you to only show results that fit within a given range of dates. Use the slider to narrow or broaden the date range you are interested in viewing</li>
+                        </ul>
+                        <h6 style="color: #555">Exporting Search Results</h6>
+                        <p>Once you have created a subset of resources by using various search filters, you can export the results to a few different formats.</p>
+                        <ul>
+                            <li>.SHP: Shapefiles are the "industry standard" format for the exchange of spatial data, and can be viewed with all standard GIS software, such as <a href="http://www.qgis.org">Quantum GIS</a> (free), or any ESRI GIS products, like <a href="http://www.esri.com/software/arcgis/arcgis-for-desktop">ArcGIS Desktop</a> (not free).</li>
+                            <li>.KML: This is the spatial data format used and created by <a href="https://www.google.com/earth/">Google Earth</a>, an easy-to-use free mapping program.  Google Earth includes 3-dimensional elevation data, so if you are interested in seeing resources in a 3-dimensional environment, just export your results and open the output file in Google Earth.</li>
+                            <li>.CSV: A Comma Separated Values file is a simple text file that can be opened as a spreadsheet in Excel, or read as a text file in any text editing software.</li>
+                        </ul>
+                    </div>
+                    {% endif %}
+                    <!--Permissions Info Box -->  
+                    {% if active_page = 'Map' %}
+                    <div class="col-md-12" style="float:left;">
+                        <span>Viewing the MAP</span>
+                    </div>
+                    <div class="col-md-12">
+                        <h6 style="color: #555">Navigation</h6>
+                        <p>The MAP tab allows the viewer to see all resources that are associated with a specific location. To navigate the map:
+                        <ul>
+                            <li>Click and drag the map to move the view area</li>
+                            <li>To zoom in and out, you can use the +/- buttons in the top-left corner, or double-click to zoom in and hold shift and double-click to zoom out</li>
+                            <li>Use the search bar to find an address</li>
+                        </ul>
+                        </p>
+                        <h6 style="color: #555">Basemaps</h6>
+                        <p>The map has a single "basemap" layer underneath anything else in the view.  The standard Roads and Satellite layers are available, as well as two "non-standard" basemaps.
+                        <ul>
+                            <li>The USGS basemap is great for finding features from the past that do not show up on current online maps, like Mink, or the old Red Dirt Lookout Tower.</li>
+                            <li>The Shaded Relief basemap shows a high-level of detail for all topographical features in Natchitoches Parish. This layer can be viewed in color or in black and white (click the blue circle next to it to switch color schemes).</li>
+                        </ul>
+                        It's important to note that not all basemaps are supported at the highest zoom levels, and they will turn on and off accordingly. You can also remove the basemap altogether.</p>
+                        <h6 style="color: #555">Historic Maps</h6>
+                        <p>One of the most exciting parts of using the map viewer is ability to view a number of historic maps. These maps are presented here for research and general interest purposes, but the viewer must understand that the CRNHA makes no guarantee of their accuracy.  It is easy to overinterpret historic maps, especially when they are presented on top of present-day maps as they are here.  Information about each historic map can be found by clicking on the info icon.</p>
+                        <p>When a historic map layer is turned on, it is added as a "layer" on top of the current basemap.  You can "stack" multiple historic maps on top of each other by activating more than one.  The most recently activated map will be pushed to top of any other historic maps.  To further accommodate overlay comparisons, the background of the confederate map can be removed, and the color of the Sanborn&copy; maps can be changed.  Click the blue circle next to each map to explore these options.</p>
+                        <h6 style="color: #555">Overlays</h6>
+                        <p>In the Overlays tab, you can add resources from the inventory.  By default, a layer showing all database resources is present, but that could be replaced with one that shows only Historic Resources, or Historic Districts.  Once you have added a layer, you can adjust its transparency.</p>
+                        <p>In addition to the resource overlays, a couple of reference overlays have been included: One to show private property boundaries in Kisatchie National Forest, and one to show PLSS (Township/Range) reference lines for Natchitoches Parish.</p>
+                    </div>
+                    {% endif %}
+                    {% if active_page = 'ResourceManger' %}
+                    <div class="col-md-12" style="float:left;">
+                        <span>Using the Resource Manager</span>
+                    </div>
+                    <div class="col-md-12">
+                        <h6 style="color: #555">General Procedures for Creating/Editing Resources</h6>
+                        <p>This is where you can edit existing resources, or create new resources if your account had the permissions to do so.  On the left, you will see the Resource Description panel, which lists all the different forms that are available for adding information to a resource.  Each form has a different set of information that it is "responsible for", and together all of the information entered in these forms create a "resource".</p>
+                        <p>Creating a new resource is very easy. Here's a short guide for adding the Lemee House to the database:</h6>
+                        <ol>
+                            <li>From the Resource Manager dropdown menu, choose Historic Resource. You are now looking at an empty form, ready to record a new resource.</li>
+                            <li>Enter "Lemee House" in the Name box, and select what type of name this is. Select 'Primary'. Though you don't need to have one, it's best to make sure that every resource has a Primary name.  You can add as many Alternative Names as you like.</li>
+                            <li>The next step is the most important: before you click Save, be sure to click Add.  You will see that the name you entered get added to the list of existing names.</li>
+                            <li>Now click 'Save edits'. The new resource has been created, and so far the only information attached to it is a Primary Name of 'Lemee House'.</li>
+                            <li>Next, add some geometry to it. Only once a resource has geometry attached to it will you be able to see it on the map. Navigate to the Location section.</li>
+                            <li>Below the map, you'll see a number of descriptive location types that could be added, such as Addresses or Administrative Areas. However, to add proper geometry to the resource we must use the map.</li>
+                            <li>Zoom into Natchitoches to locate the Lemee House on Jefferson St.  )If you are looking for a historic resource, you can turn on any of the historic basemaps too!)</li>
+                            <li>Once you are close enough to see the location that you want to map, click the Add Geometry button, and choose what type you'd like to draw.  To make lines or polygons, just click once for each new vertex, and double-click to finish the shape.</li>
+                            <li>When your geometry is complete, you can select a qualifier for it if you like.</li>
+                            <li>Click 'Save edits', and then go check out the MAP tab to see your handiwork!</li>
+                        </ol>
+                        <h6 style="color: #555">More Info</h6>
+                        </p>Some of the input forms have a more advanced setup, in order to guide you through slightly more complex data collection.  Try out the Condition Assessment form or the Evaluation form to see a few different ways that the database will collect information for the resource.  Always be sure to click 'Add' before trying to save your edits.  Once you've filled in some information, you'll begin to get a better understanding of how the bar in the SEARCH tab works: each keyword that shows up in the dropdown while you type a search term is one that you can find in these forms.</p>
+                    </div>
+                    {% endif %}
+                    {% if active_page = 'RDM' %}
+                    <div class="col-md-12" style="float:left;">
+                        <span>Using the Reference Data Manager</span>
+                    </div>
+                    <div class="col-md-12">
+                        <h6 style="color: #555">Introduction</h6>
+                        <p>The Reference Data Manager is where you can manage the concepts that are used behind the scenes to categorize all of the information captured in the database. While creating new resources, or editing existing resources, you will notice that most data entry is done by selecting "concepts" from predetermined dropdown lists.  The reference data manager is where you can modify those dropdowns menus, and add new concepts to the database.</p>
+                        <p>In the panel on the left, you can see the 'Arches' menu, and below it, the 'Dropdown Lists' menu. The 'Arches' menu shows all of the concept schemes in the database, and the 'Dropdown Lists' menu holds the "controlled vocabularies" (groups of concepts) that are passed to the data input forms. These two menus will be used in the following guide, which is an illustration of how to add a new "Keyword" concept to the Cane River Heritage Inventory & Map.</p>
+                        <h6 style="color: #555">Adding a New Concept</h6>
+                        <ol>
+                            <li>Open the 'Arches' menu, scroll down and select the Keyword concept scheme. In the right panel, you can see all of the existing concepts in the Keyword concept scheme.</li>
+                            <li>Click the Manage menu, and select Add Child.</li>
+                            <li>Create a new keyword ("Logging", for example) by entering it in the Label box. You can add a note to this concept if you like; it will be visible to anyone who views the concept in the RDM later.</li>
+                            <li>Click 'Save Changes'. You have now added a new Keyword, and you'll see "Logging" in the list of Keyword concepts.</li>
+                            <li>Too add this new Keyword to the Keywords dropdown list (so it can be used in the creation of new resources), close the 'Arches' menu, and open the 'Dropdown Lists' menu.</li>
+                            <li>Scroll down to Keyword.E55 entry, and open that collection. You'll see the list of concepts that already exist in the dropdown.</li>
+                            <li>Click on 'Add dropdown entry', and search for "Logging". The new keyword will appear in the search bar, now that it has been added to the database (steps 1-4).</li>
+                            <li>Select the concept, and Save. The new concept "Logging" will now be available to any Keyword dropdowns.</li>
+                        </ol>
+                        </p>For more detailed information on the RDM and how to use it, see the official Arches <a href="http://arches3.readthedocs.org/en/latest/rdm/">documentation</a>.</p>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

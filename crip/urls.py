@@ -18,9 +18,15 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 from arches_hip import urls as arches_hip_urls
 from django.conf.urls import patterns, url, include
+from django.conf import settings
 
 uuid_regex = '[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}'
 
 urlpatterns = patterns('',
     url(r'', include(arches_hip_urls)),
 )
+
+if settings.DEBUG:
+    # static files (images, css, javascript, etc.)
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

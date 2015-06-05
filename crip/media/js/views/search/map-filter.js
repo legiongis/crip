@@ -213,6 +213,22 @@ define(['jquery',
                         }                
                     });
                 });
+                
+                // show disclaimer modal first time the historic map button is clicked
+                $("#inventory-historicmaps").click(function (){
+                    if(typeof(Storage) !== "undefined") {
+                        if (sessionStorage.clickcount) {
+                        } else {
+                            $("#historic-disclaimer-modal").modal({
+                                'show':'true',
+                                'backdrop':'static'
+                            });
+                            sessionStorage.clickcount = 1;
+                        }
+                     } else {
+                        console.log("Sorry, your browser does not support web storage...");
+                    }
+                });
 
                 //Close Button
                 $(".close").click(function (){ 
