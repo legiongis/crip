@@ -14,6 +14,9 @@ ELASTICSEARCH_HTTP_PORT = 9200
 ELASTICSEARCH_HOSTS = [{'host': 'localhost', 'port': ELASTICSEARCH_HTTP_PORT}]
 SESSION_COOKIE_NAME = PACKAGE_NAME
 
+STATIC_ROOT = os.path.join(PACKAGE_ROOT, 'static')
+STATIC_URL = "/static/"
+
 RESOURCE_MODEL = {'default': 'crip.models.resource.Resource'}
 
 DEFAULT_MAP_X = -10362191
