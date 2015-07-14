@@ -234,8 +234,10 @@
                 $("#help-button").click(function(){
                     if (help_on == true){
                         $("#help-contents").slideUp();
+                        $("#help-button").html("SHOW HELP");
                     } else {
                         $("#help-contents").slideDown();
+                        $("#help-button").html("HIDE HELP");
                     }
                     help_on = !help_on
                 });
@@ -243,12 +245,19 @@
             
             function hideHelp() {
                 $("#hide-help-button").click(function(){
+                    $(this).html("SHOW HELP");
                     $("#help-contents").slideUp();
                     help_on = false
                 });
             };
             
-            function expandTopic() {
+            function hideHelp() {
+                $("#hide-help-button").click(function(){
+                    $("#help-contents").slideToggle();
+                });
+            };
+            
+            function toggleTopic() {
                 $(".topic-button").click(function(){
                     $(".topic-content#"+this.id).slideToggle();
                     if ($(".expand-symbol#"+this.id).hasClass("fa-chevron-right")) {
@@ -262,9 +271,10 @@
             };
             
             $(document).ready(function() {
-                hideHelp()
-                showHelp()
-                expandTopic()
+                //hideHelp()
+                //showHelp()
+                toggleHelp()
+                toggleTopic()
             });
         });
     </script>

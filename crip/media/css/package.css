@@ -183,13 +183,13 @@ cf https://github.com/summernote/summernote/issues/187
     color #555;
 }
 
-.topic-button i {
-    color #555;
-}
-
 .topic-button h6 {
     color: #555;
     display: inline;
+}
+
+.expand-symbol {
+    color #555;
 }
 
 .topic-content {
