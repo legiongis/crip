@@ -175,16 +175,18 @@
                         <span>Using the SEARCH Tab</span></a></div>
                     </div>
                     <div class="col-md-12">
-                        <div class="topic-button" id="topic1" href="javascript:void(0);">
-                            <h6>Basic Searching</h6>
+                        <div class="topic-button" id="topic1">
+                            <h6><a href="javascript:void(0);">Basic Searching</a></h6>
+                            <i class="expand-symbol fa fa-chevron-right" id="topic1"></i>
                         </div>
                         <div class="topic-content" id="topic1">
                             <p>All resources in the inventory can be found using a variety of different sorting and filtering methods, all of which are accessed right here on the SEARCH tab.</p>
                             <p>To make a general search for the word "church", type the word and hit Enter. This will return any resources that are associated with the word "church". To make the search more specific, instead of hitting Enter, select a term from the dropdown list that is provided as you type the word. You will see a number of options, which should be interpreted like this: "'church' as a Heritage Resource Type", "'church' as a Keyword", etc.</p>
                             <p>You can narrow your search by adding as many additional search terms to the search bar as necessary. Each new search term will be combined with any existing terms. You can remove a search term by clicking the 'x', or you can <em>reverse</em> a search--for all resources that <em>do not</em> fit the criteria--by clicking on an existing search term (it will turn red).</p>
                         </div>
-                        <div class="topic-button" id="topic2" href="javascript:void(0);">
-                            <h6>Advanced Searching</h6>
+                        <div class="topic-button" id="topic2">
+                            <h6><a href="javascript:void(0);">Advanced Searching</a></h6>
+                            <i class="expand-symbol fa fa-chevron-right" id="topic2"></i>
                         </div>
                         <div class="topic-content" id="topic2">
                             <p>In addition to combining multiple search terms, you can apply the Location Filter and/or Time Filter. Once enabled, these filters are added to the search bar.</p>
@@ -193,13 +195,18 @@
                                 <li>The Time Filter allows you to only show results that fit within a given range of dates. Use the slider to narrow or broaden the date range you are interested in viewing</li>
                             </ul>
                         </div>
-                        <h6>Exporting Search Results</h6>
-                        <p>Once you have created a subset of resources by using various search filters, you can export the results to a few different formats.</p>
-                        <ul>
-                            <li>.SHP: Shapefiles are the "industry standard" format for the exchange of spatial data, and can be viewed with all standard GIS software, such as <a href="http://www.qgis.org">Quantum GIS</a> (free), or any ESRI GIS products, like <a href="http://www.esri.com/software/arcgis/arcgis-for-desktop">ArcGIS Desktop</a> (not free).</li>
-                            <li>.KML: This is the spatial data format used and created by <a href="https://www.google.com/earth/">Google Earth</a>, an easy-to-use free mapping program.  Google Earth includes 3-dimensional elevation data, so if you are interested in seeing resources in a 3-dimensional environment, just export your results and open the output file in Google Earth.</li>
-                            <li>.CSV: A Comma Separated Values file is a simple text file that can be opened as a spreadsheet in Excel, or read as a text file in any text editing software.</li>
-                        </ul>
+                        <div class="topic-button" id="topic3">
+                            <h6><a href="javascript:void(0);">Exporting Search Results</a></h6>
+                            <i class="expand-symbol fa fa-chevron-right" id="topic3"></i>
+                        </div>
+                        <div class="topic-content" id="topic3">
+                            <p>Once you have created a subset of resources by using various search filters, you can export the results to a few different formats.</p>
+                            <ul>
+                                <li>.SHP: Shapefiles are the "industry standard" format for the exchange of spatial data, and can be viewed with all standard GIS software, such as <a href="http://www.qgis.org">Quantum GIS</a> (free), or any ESRI GIS products, like <a href="http://www.esri.com/software/arcgis/arcgis-for-desktop">ArcGIS Desktop</a> (not free).</li>
+                                <li>.KML: This is the spatial data format used and created by <a href="https://www.google.com/earth/">Google Earth</a>, an easy-to-use free mapping program.  Google Earth includes 3-dimensional elevation data, so if you are interested in seeing resources in a 3-dimensional environment, just export your results and open the output file in Google Earth.</li>
+                                <li>.CSV: A Comma Separated Values file is a simple text file that can be opened as a spreadsheet in Excel, or read as a text file in any text editing software.</li>
+                            </ul>
+                        </div>
                     </div>
                     {% endif %}
                     <!--Permissions Info Box -->  
@@ -208,27 +215,51 @@
                         <span>Viewing the MAP</span>
                     </div>
                     <div class="col-md-12">
-                        <h6 style="color: #555">Navigation</h6>
-                        <p>The MAP tab allows the viewer to see all resources that are associated with a specific location. To navigate the map:
-                        <ul>
-                            <li>Click and drag the map to move the view area</li>
-                            <li>To zoom in and out, you can use the +/- buttons in the top-left corner, or double-click to zoom in and hold shift and double-click to zoom out</li>
-                            <li>Use the search bar to find an address</li>
-                        </ul>
-                        </p>
-                        <h6 style="color: #555">Basemaps</h6>
-                        <p>The map has a single "basemap" layer underneath anything else in the view.  The standard Roads and Satellite layers are available, as well as two "non-standard" basemaps.
-                        <ul>
-                            <li>The USGS basemap is great for finding features from the past that do not show up on current online maps, like Mink, or the old Red Dirt Lookout Tower.</li>
-                            <li>The Shaded Relief basemap shows a high-level of detail for all topographical features in Natchitoches Parish. This layer can be viewed in color or in black and white (click the blue circle next to it to switch color schemes).</li>
-                        </ul>
-                        It's important to note that not all basemaps are supported at the highest zoom levels, and they will turn on and off accordingly. You can also remove the basemap altogether.</p>
-                        <h6 style="color: #555">Historic Maps</h6>
-                        <p>One of the most exciting parts of using the map viewer is ability to view a number of historic maps. These maps are presented here for research and general interest purposes, but the viewer must understand that the CRNHA makes no guarantee of their accuracy.  It is easy to overinterpret historic maps, especially when they are presented on top of present-day maps as they are here.  Information about each historic map can be found by clicking on the info icon.</p>
-                        <p>When a historic map layer is turned on, it is added as a "layer" on top of the current basemap.  You can "stack" multiple historic maps on top of each other by activating more than one.  The most recently activated map will be pushed to top of any other historic maps.  To further accommodate overlay comparisons, the background of the confederate map can be removed, and the color of the Sanborn&copy; maps can be changed.  Click the blue circle next to each map to explore these options.</p>
-                        <h6 style="color: #555">Overlays</h6>
-                        <p>In the Overlays tab, you can add resources from the inventory.  By default, a layer showing all database resources is present, but that could be replaced with one that shows only Historic Resources, or Historic Districts.  Once you have added a layer, you can adjust its transparency.</p>
-                        <p>In addition to the resource overlays, a couple of reference overlays have been included: One to show private property boundaries in Kisatchie National Forest, and one to show PLSS (Township/Range) reference lines for Natchitoches Parish.</p>
+                        <div class="topic-button" id="topic4">
+                            <h6><a href="javascript:void(0);">Navigation</a></h6>
+                            <i class="expand-symbol fa fa-chevron-right" id="topic4"></i>
+                        </div>
+                        <div class="topic-content" id="topic4">
+                            <p>The MAP tab allows the viewer to see all resources that are associated with a specific location. To navigate the map:
+                            <ul>
+                                <li>Click and drag the map to move the view area</li>
+                                <li>To zoom in and out, you can use the +/- buttons in the top-left corner, or double-click to zoom in and hold shift and double-click to zoom out</li>
+                                <li>Use the search bar to find an address</li>
+                            </ul>
+                            </p>
+                        </div>
+                        <div class="topic-button" id="topic5">
+                            <h6><a href="javascript:void(0);">Basemaps</a></h6>
+                            <i class="expand-symbol fa fa-chevron-right" id="topic5"></i>
+                        </div>
+                        <div class="topic-content" id="topic5">
+                            <p>The map has a single "basemap" layer underneath anything else in the view.  The standard Roads and Satellite layers are available, as well as two "non-standard" basemaps.
+                            <ul>
+                                <li>The USGS basemap is great for finding features from the past that do not show up on current online maps, like Mink, or the old Red Dirt Lookout Tower.</li>
+                                <li>The Shaded Relief basemap shows a high-level of detail for all topographical features in Natchitoches Parish. This layer can be viewed in color or in black and white (click the blue circle next to it to switch color schemes).</li>
+                            </ul>
+                            It's important to note that not all basemaps are supported at the highest zoom levels, and they will turn on and off accordingly. You can also remove the basemap altogether.</p>
+                        </div>
+                        <div class="topic-button" id="topic6">
+                            <a href="javascript:void(0);">
+                                <h6>Historic Maps</h6>
+                                <i class="expand-symbol fa fa-chevron-right" id="topic6"></i>
+                            </a>
+                        </div>
+                        <div class="topic-content" id="topic6">
+                            <p>One of the most exciting parts of using the map viewer is ability to view a number of historic maps. These maps are presented here for research and general interest purposes, but the viewer must understand that the CRNHA makes no guarantee of their accuracy.  It is easy to overinterpret historic maps, especially when they are presented on top of present-day maps as they are here.  Information about each historic map can be found by clicking on the info icon.</p>
+                            <p>When a historic map layer is turned on, it is added as a "layer" on top of the current basemap.  You can "stack" multiple historic maps on top of each other by activating more than one.  The most recently activated map will be pushed to top of any other historic maps.  To further accommodate overlay comparisons, the background of the confederate map can be removed, and the color of the Sanborn&copy; maps can be changed.  Click the blue circle next to each map to explore these options.</p>
+                        </div>
+                        <div class="topic-button" id="topic7">
+                            <a href="javascript:void(0);">
+                                <h6>Historic Maps</h6>
+                                <i class="expand-symbol fa fa-chevron-right" id="topic7"></i>
+                            </a>
+                        </div>
+                        <div class="topic-content" id="topic7">
+                            <p>In the Overlays tab, you can add resources from the inventory.  By default, a layer showing all database resources is present, but that could be replaced with one that shows only Historic Resources, or Historic Districts.  Once you have added a layer, you can adjust its transparency.</p>
+                            <p>In addition to the resource overlays, a couple of reference overlays have been included: One to show private property boundaries in Kisatchie National Forest, and one to show PLSS (Township/Range) reference lines for Natchitoches Parish.</p>
+                        </div>
                     </div>
                     {% endif %}
                     {% if active_page = 'ResourceManger' %}
