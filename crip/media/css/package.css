@@ -181,4 +181,8 @@ cf https://github.com/summernote/summernote/issues/187
 .topic-button h6 {
     color: #555;
 }
+
+.topic-content {
+    display: none;
+}
     
