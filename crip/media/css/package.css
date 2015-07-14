@@ -175,3 +175,10 @@ cf https://github.com/summernote/summernote/issues/187
 .ls-inner {
     margin-left: 56px;
 }
+
+/* HELP MENUS */
+
+.topic-button h6 {
+    color: #555;
+}
+    
