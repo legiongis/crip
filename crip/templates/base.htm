@@ -250,7 +250,7 @@
             
             function expandTopic() {
                 $(".topic-button").click(function(){
-                    $(this).toggle();
+                    $(".topic-content#"+this.id).toggle();
                 });
             };
             
