@@ -178,11 +178,21 @@ cf https://github.com/summernote/summernote/issues/187
 
 /* HELP MENUS */
 
+.topic-button a {
+    text-decoration: none;
+    color #555;
+}
+
 .topic-button h6 {
     color: #555;
+    display: inline;
 }
 
 .topic-content {
     display: none;
+}
+
+.topic-content  p {
+    padding: 2px 0px 2px 0px;
 }
     
