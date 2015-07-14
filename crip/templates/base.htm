@@ -248,6 +248,12 @@
                 });
             };
             
+            function expandTopic() {
+                $(".topic-button").click(function(){
+                    $(this).toggle();
+                });
+            };
+            
             $(document).ready(function() {
                 hideHelp()
                 showHelp()
