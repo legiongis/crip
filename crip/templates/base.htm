@@ -250,7 +250,7 @@
             
             function expandTopic() {
                 $(".topic-button").click(function(){
-                    $(".topic-content#"+this.id).toggle();
+                    $(".topic-content#"+this.id).slideToggle();
                     if ($(".topic-content#"+this.id).is(":visible")) {
                         $(".expand-symbol#"+this.id).removeClass("fa-chevron-right");
                         $(".expand-symbol#"+this.id).addClass("fa-chevron-down");
