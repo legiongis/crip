@@ -230,7 +230,7 @@
             });
             
             var help_on = false;
-            function showHelp() {
+            function toggleHelp() {
                 $("#help-button").click(function(){
                     if (help_on == true){
                         $("#help-contents").slideUp();
@@ -240,20 +240,6 @@
                         $("#help-button").html("HIDE HELP");
                     }
                     help_on = !help_on
-                });
-            };
-            
-            function hideHelp() {
-                $("#hide-help-button").click(function(){
-                    $(this).html("SHOW HELP");
-                    $("#help-contents").slideUp();
-                    help_on = false
-                });
-            };
-            
-            function hideHelp() {
-                $("#hide-help-button").click(function(){
-                    $("#help-contents").slideToggle();
                 });
             };
             
@@ -271,9 +257,7 @@
             };
             
             $(document).ready(function() {
-                //hideHelp()
-                showHelp()
-                //toggleHelp()
+                toggleHelp()
                 toggleTopic()
             });
         });

@@ -168,15 +168,15 @@ cf https://github.com/summernote/summernote/issues/187
     overflow-y: scroll;
 }
 
-#help-contents {
-    background-color:#C4C4C4;
-}
-
 .ls-inner {
     margin-left: 56px;
 }
 
 /* HELP MENUS */
+
+#help-contents {
+    background-color:#C4C4C4;
+}
 
 .topic-button a {
     text-decoration: none;
@@ -188,7 +188,7 @@ cf https://github.com/summernote/summernote/issues/187
     display: inline;
 }
 
-.expand-symbol {
+.expand-symbol i {
     color #555;
 }
 
