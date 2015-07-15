@@ -4,7 +4,7 @@
   padding-top: 0px !important;
 }
 
-.purchase p {
+.purchase p  li{
   font-size: larger;
 }
 
@@ -184,6 +184,10 @@ cf https://github.com/summernote/summernote/issues/187
 #help-contents {
     background-color:#C4C4C4;
 }
+
+.help-page {
+  margin-top: 20px;
+  margin-bottom: 20px;
 
 .topic-button a {
     text-decoration: none;

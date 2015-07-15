@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <!-- this is the help that will be shown on the home page when help is shown -->
 
-<div class="col-md-12" style="float:left;">
-    <span>Get Started!</span>
+<div class="help-page">
+    <div class="col-md-12" style="float:left;">
+        <span>General Help</span>
+    </div>
+    <div class="col-md-12" style="margin-bottom:10px">
+        <div class="topic-button" id="topic1">
+            <a href="javascript:void(0);">
+                <h5>Get Started!</h5>
+                <i class="expand-symbol fa fa-chevron-right" id="topic1"></i>
+            </a>
+        </div>
+        <div class="topic-content" id="topic1">
+            <ul>
+                <li>Use the SEARCH and MAP pages to explore the inventory.</li>
+                <li>Click SHOW HELP on each page to get more information about that page.</li>
+                <li>To login, use the LOGIN link at the top right of your screen.</li>
+                <li>Once logged in, you can view a summary of your account permissions here.</li>
+                <li>The Cane River Heritage Inventory & Map functions best in a modern browser, like Chrome, Firefox, or Internet Explorer 8 and above.</li>
+            </ul>
+        </div>
+        {% if not user.is_anonymous %}
+        <div class="topic-button" id="topic2">
+            <a href="javascript:void(0);">
+                <h5>Your Account Summary</h5>
+                <i class="expand-symbol fa fa-chevron-right" id="topic2"></i>
+            </a>
+        </div>
+        <div class="topic-content" id="topic2">
+            {% if user.is_superuser %}
+                <p>You <b>can</b> access the Reference Data Manager (RDM).<p>
+            {% else %}
+                <p>You <b>cannot</b> access the Reference Data Manager (RDM).<p>
+            {% endif %}
+            {% if user_permissions.can_create %}
+                <p>You can <b>create</b> new resources of the following types:<p>
+                
+            {% else %}
+                <p>You can <b>edit</b> existing resources of the following types:<p>
+            {% endif %}
+            <ul>
+            {% for restype in user_permissions.entities_allowed %}
+                <li>{{restype}}</li>
+            {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
 </div>
-<div class="col-md-12">
-    <ul style="font-weight:bold">
-        <li>Use the navigation tabs above to search and view the inventory.</li>
-        <li>Click SHOW HELP on each page to show useful information about that page.</li>
-        <li>Use the LOGIN link at the top right corner.</li>
-        <li>Once logged in you can view you account permissions here.</li>
-    </ul>
-</div>
-{% if not user.is_anonymous %}
-<hr class="arches-layer-divider" style="border-top: 0px; margin-top: 5px;">
-<div class="col-md-12" style="border-bottom-color: #dcdcdc; text-align: left">
-    <span>Permissions summary for this account ('{{user.username}}'):</span>
-    {% if user.is_superuser %}
-        <p>You <b>can</b> access the Reference Data Manager (RDM).<p>
-    {% else %}
-        <p>You <b>cannot</b> access the Reference Data Manager (RDM).<p>
-    {% endif %}
-    {% if user_permissions.can_create %}
-        <p>You can <b>create</b> new resources of the following types:<p>
-        
-    {% else %}
-        <p>You can <b>edit</b> existing resources of the following types:<p>
-    {% endif %}
-    <ul>
-    {% for restype in user_permissions.entities_allowed %}
-        <li>{{restype}}</li>
-    {% endfor %}
-    </ul>
-</div>
-{% endif %}
