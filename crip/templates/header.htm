@@ -126,6 +126,7 @@
     </div>            
     <!-- End Navbar -->
     <div id="help-contents" style="display: none">
+        {% if not active_page = 'Login' %}
         <div class="purchase">
             <div class="container">
                 <div class="row">
@@ -360,5 +361,6 @@
                 </div>
             </div>
         </div>
+        {% endif %}
     </div>
 </div>
