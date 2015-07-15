@@ -217,7 +217,7 @@ cf https://github.com/summernote/summernote/issues/187
 
 /* miscellaneous */
 
-.active {
+.nav>li.active {
    border: none;
    font-weight: bold;
 }
