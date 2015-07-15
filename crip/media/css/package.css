@@ -1,5 +1,9 @@
 /*put package specific styles here...*/
 
+.purchase {
+  padding-top: 0px !important;
+}
+
 .headline {
   display: block;
   margin: 10px 0 25px 0;
@@ -90,7 +94,6 @@
     font-weight: 400;
 }
 
-
 .main-logo {
     height: 50px;
     margin-top: -10px;
@@ -169,7 +172,7 @@ cf https://github.com/summernote/summernote/issues/187
 }
 
 .ls-inner {
-    margin-left: 56px;
+    margin-left: 0px;
 }
 
 /* HELP MENUS */
