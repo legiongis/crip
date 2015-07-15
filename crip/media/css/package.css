@@ -186,15 +186,17 @@ cf https://github.com/summernote/summernote/issues/187
 }
 
 .help-page {
-  margin-top: 20px;
-  margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
 .topic-button a {
     text-decoration: none;
     color #555;
 }
 
-.topic-button h6 {
+.topic-button h5 {
+    font-weight: bold;
     color: #555;
     display: inline;
 }
