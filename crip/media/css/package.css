@@ -2,7 +2,7 @@
 
 .purchase {
   padding-top: 0px !important;
-  border: none;
+  border: none !important;
 }
 
 .purchase p  li{
