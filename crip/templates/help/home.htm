@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- this is the help that will be shown on the main home page when help is shown -->
+
+<div class="col-md-12" style="float:left;">
+    <span>Get Started!</span>
+</div>
+<div class="col-md-12">
+    <ul style="font-weight:bold">
+        <li>Use the navigation tabs above to search and view the inventory.</li>
+        <li>Click SHOW HELP on each page to show useful information about that page.</li>
+        <li>Use the LOGIN link at the top right corner.</li>
+        <li>Once logged in you can view you account permissions here.</li>
+    </ul>
+</div>
+{% if not user.is_anonymous %}
+<hr class="arches-layer-divider" style="border-top: 0px; margin-top: 5px;">
+<div class="col-md-12" style="border-bottom-color: #dcdcdc; text-align: left">
+    <span>Permissions summary for this account ('{{user.username}}'):</span>
+    {% if user.is_superuser %}
+        <p>You <b>can</b> access the Reference Data Manager (RDM).<p>
+    {% else %}
+        <p>You <b>cannot</b> access the Reference Data Manager (RDM).<p>
+    {% endif %}
+    {% if user_permissions.can_create %}
+        <p>You can <b>create</b> new resources of the following types:<p>
+        
+    {% else %}
+        <p>You can <b>edit</b> existing resources of the following types:<p>
+    {% endif %}
+    <ul>
+    {% for restype in user_permissions.entities_allowed %}
+        <li>{{restype}}</li>
+    {% endfor %}
+    </ul>
+</div>
