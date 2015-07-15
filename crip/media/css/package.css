@@ -4,6 +4,10 @@
   padding-top: 0px !important;
 }
 
+.purchase p {
+  font-size: larger;
+}
+
 .headline {
   display: block;
   margin: 10px 0 25px 0;
