@@ -227,6 +227,10 @@ cf https://github.com/summernote/summernote/issues/187
     border-bottom: solid 3px #4765a0;
 }
 
+.header .navbar-default .navbar-nav > li > a, .header .navbar-default .navbar-nav > li > a:focus {
+  border-bottom: solid 3px transparent;
+}
+
 .header {
     border: none;
 }
