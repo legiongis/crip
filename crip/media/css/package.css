@@ -1,13 +1,6 @@
 /*put package specific styles here...*/
 
-.header {
-    border: none;
-}
 
-.purchase {
-  padding-top: 0px !important;
-  border: none !important;
-}
 
 .purchase p  li{
   font-size: larger;
@@ -45,6 +38,7 @@
     font-size: 125%;
 }
 
+/* Inventory Map Tools Buttons and panels*/
 .arches-map-tools {
     width: 165px;
     height: 46px;
@@ -81,7 +75,6 @@
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-/* Inventory Map Tools Buttons and panels*/
 .arches-map-tools {
     width: 150px;
     height: 46px;
@@ -220,9 +213,25 @@ cf https://github.com/summernote/summernote/issues/187
     padding: 2px 0px 2px 0px;
 }
 
-/* miscellaneous */
+/* DEALING WITH THE BORDER UNDER THE NAVBAR AND BUTTONS */
 
-.nav>li.active a {
-   border: none;
-   font-weight: bold;
+.map {
+    border: none;
+}
+
+.nav .navbar-nav {
+    top: 3px;
+}
+
+.header .navbar-default .navbar-nav > li > a:hover, .header .navbar-default .navbar-nav > .active > a {
+  border-bottom: solid 3px #4765a0;
+}
+
+.header {
+    border: none;
+}
+
+.purchase {
+  padding-top: 0px !important;
+  border: none !important;
 }
