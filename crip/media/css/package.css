@@ -182,6 +182,7 @@ cf https://github.com/summernote/summernote/issues/187
 #help-contents {
     background-color:#C4C4C4;
     border-bottom: #ccc solid 3px;
+    border-radius: none;
 }
 
 .help-page {
@@ -211,6 +212,11 @@ cf https://github.com/summernote/summernote/issues/187
 
 .topic-content  p {
     padding: 2px 0px 2px 0px;
+}
+
+.header .navbar-default {
+  border-bottom: #ccc solid 3px;
+  border-radius: 0px;
 }
 
 /* DEALING WITH THE BORDER UNDER THE NAVBAR AND BUTTONS */
