@@ -184,6 +184,7 @@ cf https://github.com/summernote/summernote/issues/187
 
 #help-contents {
     background-color:#C4C4C4;
+    border-bottom: #ccc solid 3px;
 }
 
 .help-page {
@@ -217,7 +218,7 @@ cf https://github.com/summernote/summernote/issues/187
 
 /* miscellaneous */
 
-.nav>li.active {
+.nav>li.active a {
    border: none;
    font-weight: bold;
 }
