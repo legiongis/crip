@@ -1,5 +1,9 @@
 /*put package specific styles here...*/
 
+.header {
+    border: none;
+}
+
 .purchase {
   padding-top: 0px !important;
   border: none !important;
