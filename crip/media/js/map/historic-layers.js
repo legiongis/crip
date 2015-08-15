@@ -102,7 +102,7 @@ define([
     // full confederate map
     var confed_fullLyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
-            //url: 'http://199.184.68.66:8080/geoserver/confed_parish/wms/',
+            //url: 'http://localhost:8080/geoserver/confed_parish/wms/',
             url: 'http://54.148.201.140:8080/geoserver/raster/wms/',
             params: {
                 //'LAYERS': 'confed_parish:sheet42_full',
@@ -117,7 +117,7 @@ define([
     // transparent confederate map (for altlayer)
     var confed_transLyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
-            //url: 'http://199.184.68.66:8080/geoserver/confed_parish/wms/',
+            //url: 'http://localhost:8080/geoserver/confed_parish/wms/',
             url: 'http://54.148.201.140:8080/geoserver/raster/wms/',
             params: {
                 //'LAYERS': 'confed_parish:sheet42_trans',
@@ -154,7 +154,7 @@ define([
     var platmaps_fullLyr = new ol.layer.Tile({
         name: "platmaps_fullLyr",
         source: new ol.source.XYZ({
-            url: 'http://199.184.68.66/tiles/platmaps_white/{z}/{x}/{y}.png'
+            url: 'http://localhost/tiles/platmaps_white/{z}/{x}/{y}.png'
             //url: 'https://s3-us-west-2.amazonaws.com/natchdata/tiles/historictownplats/{z}/{x}/{y}.png'
         }),
         visible: false,
@@ -174,7 +174,7 @@ define([
     var roadmapLyr = new ol.layer.Tile({
         name: "roadmapLyr",
         source: new ol.source.XYZ({
-            url: 'http://199.184.68.66/tiles/civilwarroadmap/{z}/{x}/{y}.png'
+            url: 'http://localhost/tiles/civilwarroadmap/{z}/{x}/{y}.png'
             //url: 'https://s3-us-west-2.amazonaws.com/natchdata/tiles/historictownplats/{z}/{x}/{y}.png'
         }),
         visible: false,
@@ -193,7 +193,7 @@ define([
     var map174Lyr = new ol.layer.Tile({
         name: "map174Lyr",
         source: new ol.source.TileWMS({
-            //url: 'http://199.184.68.66:8080/geoserver/natchcity/wms/',
+            //url: 'http://localhost:8080/geoserver/natchcity/wms/',
             url: 'http://54.148.201.140:8080/geoserver/raster/wms/',
             params: {
                 //'LAYERS': 'natchcity:map174',
