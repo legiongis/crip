@@ -144,7 +144,7 @@ define([
     var platmaps_transLyr = new ol.layer.Tile({
         name: "platmaps_transLyr",
         source: new ol.source.XYZ({
-            url: 'http://199.184.68.66/tiles/platmaps_trans/{z}/{x}/{y}.png'
+            url: 'http://localhost/tiles/platmaps_trans/{z}/{x}/{y}.png'
             //url: 'https://s3-us-west-2.amazonaws.com/natchdata/tiles/historictownplats/{z}/{x}/{y}.png'
         }),
         visible: false,
