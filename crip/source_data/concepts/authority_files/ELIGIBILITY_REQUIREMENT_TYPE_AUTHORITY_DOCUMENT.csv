@@ -1,5 +1,5 @@
 conceptid,PrefLabel,AltLabels,ParentConceptid,ConceptType,Provider
-ELIGIBILITY TYPE:1,Criterion A - Association with historic events,,ELIGIBILITY_REQUIREMENT_TYPE_AUTHORITY_DOCUMENT.csv,index,CRNHA
-ELIGIBILITY TYPE:2,Criterion B - Association with significant persons,,ELIGIBILITY_REQUIREMENT_TYPE_AUTHORITY_DOCUMENT.csv,index,CRNHA
-ELIGIBILITY TYPE:3,Criterion C - Embodies characteristics of an era or style,,ELIGIBILITY_REQUIREMENT_TYPE_AUTHORITY_DOCUMENT.csv,index,CRNHA
-ELIGIBILITY TYPE:4,Criterion D - May yield historic or prehistoric information,,ELIGIBILITY_REQUIREMENT_TYPE_AUTHORITY_DOCUMENT.csv,index,CRNHA
+Eligibility Type:1,Criterion A - Association with historic events,,ELIGIBILITY_REQUIREMENT_TYPE_AUTHORITY_DOCUMENT.csv,index,CRNHA
+Eligibility Type:2,Criterion B - Association with significant persons,,ELIGIBILITY_REQUIREMENT_TYPE_AUTHORITY_DOCUMENT.csv,index,CRNHA
+Eligibility Type:3,Criterion C - Embodies characteristics of an era or style,,ELIGIBILITY_REQUIREMENT_TYPE_AUTHORITY_DOCUMENT.csv,index,CRNHA
+Eligibility Type:4,Criterion D - May yield historic or prehistoric information,,ELIGIBILITY_REQUIREMENT_TYPE_AUTHORITY_DOCUMENT.csv,index,CRNHA
