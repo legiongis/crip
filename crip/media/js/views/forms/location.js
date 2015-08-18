@@ -21,10 +21,6 @@ define([
 
             BaseForm.prototype.initialize.apply(this);
 
-            //_.each(this.data["ADMINISTRATIVE_SUBDIVISION.E48"].domains["ADMINISTRATIVE_SUBDIVISION_NAME.E55"], function (typeRecord) {
-            //    adminAreaTypeLookup[typeRecord.text] = typeRecord.id;
-            //});
-
             if (includeAdminAreas) {
                 var adminAreaBranchList = new BranchList({
                     el: this.$el.find('#admin-area-section')[0],
