@@ -86,6 +86,8 @@ define(['jquery',
                     if (!self.cancelFitBaseLayer){
                         setTimeout(function() {
                               self.zoomToExtent(self.vectorLayer.getSource().getExtent());
+                              console.log(self.vectorLayer.getSource().getExtent())
+                              //self.vectorLayer.getSource().getExtent()
                         }, 500);                        
                     }
                 }).layer();
