@@ -64,13 +64,10 @@
                                                                 {% trans "No conditions recorded" %}
                                                             </dd>
                                                         {% else %}
-                                                            {% for CONDITION_TYPE_E55 in CONDITION_STATE_E3 %}
-                                                                {% for CONDITION_TYPE_E55 in CONDITION_STATE_E3.CONDITION_TYPE_E55 %}
-                                                                    <p>this should be a condition type</p>
-                                                                    <dd class="arches-report-subsection-item">
-                                                                        {{CONDITION_TYPE_E55.CONDITION_TYPE_E55__value}} 
-                                                                    </dd>
-                                                                {% endfor %}
+                                                            {% for CONDITION_TYPE_E55 in CONDITION_STATE_E3.CONDITION_TYPE_E55 %}
+                                                                <dd class="arches-report-subsection-item">
+                                                                    {{CONDITION_TYPE_E55.CONDITION_TYPE_E55__value}} 
+                                                                </dd>
                                                             {% endfor %}
                                                         {% endif %}
 
