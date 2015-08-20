@@ -31,7 +31,6 @@
                     <div class="right-inner arches-box-grey-border">
                         
                         {% for CONDITION_ASSESSMENT_E14 in report_info.source.graph.CONDITION_ASSESSMENT_E14 %}
-                            <p>yes there is one condition assessment at least</p>
                             {% for CONDITION_STATE_E3 in CONDITION_ASSESSMENT_E14.CONDITION_STATE_E3 %}
                                 <!-- Resource Summary Info -->
                                 <div class="row">
@@ -83,14 +82,14 @@
                                                             <h5 id="" class="arches-report-subsection-title">{% trans "Description" %}</h5>
                                                         </dt>
 
-                                                        {% if 'CONDITION_DESCRIPTIONS_E62' not in CONDITION_STATE_E3 %}
+                                                        {% if 'CONDITION_DESCRIPTION_E62' not in CONDITION_STATE_E3 %}
                                                             <dd class="arches-report-subsection-item">
                                                                 {% trans "No descriptions recorded" %}
                                                             </dd>
                                                         {% else %}
-                                                            {% for CONDITION_DESCRIPTIONS_E62 in CONDITION_STATE_E3 %}
+                                                            {% for CONDITION_DESCRIPTION_E62 in CONDITION_STATE_E3 %}
                                                                 <dd class="arches-report-subsection-item">
-                                                                    {{CONDITION_DESCRIPTIONS_E62.CONDITION_DESCRIPTIONS_E62__value | safe}} 
+                                                                    {{CONDITION_DESCRIPTION_E62.CONDITION_DESCRIPTION_E62__value | safe}} 
                                                                 </dd> 
                                                             {% endfor %}
                                                         {% endif %}
