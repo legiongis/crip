@@ -38,7 +38,6 @@
                                     <!-- Section sub-header -->
                                     <div class="col-sm-4">
                                         {% for DATE_CONDITION_ASSESSED_E49 in CONDITION_STATE_E3.DATE_CONDITION_ASSESSED_E49 %}
-                                            <p>this should be a date</p>
                                             <h3 class="arches-report-subsection">{{DATE_CONDITION_ASSESSED_E49.DATE_CONDITION_ASSESSED_E49__value}}</h3>
                                         {% endfor %}
                                     </div>
@@ -240,7 +239,7 @@
                                                             {% for MANAGEMENT_RECOMMENDATION_E89 in CONDITION_STATE_E3.MANAGEMENT_RECOMMENDATION_E89 %}
                                                                 {% if 'RECOMMENDATION_TYPE_E55' not in MANAGEMENT_RECOMMENDATION_E89 %}
                                                                     <dd class="arches-report-subsection-item">
-                                                                        {% trans "No recommendations recorded" %}
+                                                                        {% trans "No recommendations recorded second line" %}
                                                                     </dd>
                                                                 {% else %}
                                                                     {% for RECOMMENDATION_TYPE_E55 in MANAGEMENT_RECOMMENDATION_E89.RECOMMENDATION_TYPE_E55 %}
