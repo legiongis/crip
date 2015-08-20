@@ -12,10 +12,10 @@
 
             {% if 'PLACE_E53' in report_info.source.graph %}
                 {% for PLACE_E53 in report_info.source.graph.PLACE_E53 %}
-                    {% if 'ADMINISTRATIVE_SUBDIVISION_E55' in PLACE_E53 %}
-                        {% for ADMINISTRATIVE_SUBDIVISION_E55 in PLACE_E53.ADMINISTRATIVE_SUBDIVISION_E55 %}
+                    {% if 'ADMINISTRATIVE_SUBDIVISION_NAME_E55' in PLACE_E53 %}
+                        {% for ADMINISTRATIVE_SUBDIVISION_NAME_E55 in PLACE_E53.ADMINISTRATIVE_SUBDIVISION_NAME_E55 %}
                             <dd class="arches-report-subsection-item report-list-item">
-                                {{ADMINISTRATIVE_SUBDIVISION_E55}}
+                                {{ADMINISTRATIVE_SUBDIVISION_NAME_E55.ADMINISTRATIVE_SUBDIVISION_NAME_E55__value}}
                                 <!--<span class="arches-report-subsection-item-type">
                                     ({{ADMINISTRATIVE_SUBDIVISION_E48.ADMINISTRATIVE_SUBDIVISION_TYPE_E55__value}})
                                 </span>-->
