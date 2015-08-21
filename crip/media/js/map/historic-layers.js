@@ -174,7 +174,7 @@ define([
     var roadmapLyr = new ol.layer.Tile({
         name: "roadmapLyr",
         source: new ol.source.XYZ({
-            url: 'http://localhost/tiles/civilwarroadmap/{z}/{x}/{y}.png'
+            url: 'http://localhost:80/tiles/civilwarroadmap/{z}/{x}/{y}.png'
             //url: 'https://s3-us-west-2.amazonaws.com/natchdata/tiles/historictownplats/{z}/{x}/{y}.png'
         }),
         visible: false,
