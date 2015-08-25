@@ -19,7 +19,6 @@
             <!-- Anchor for in=page navigation from "report options" menu -->
             <a href="assessment" id="assessment" style=""></a>
 
-
             <!-- Resource Description Content -->
             <div class="row">
                 
@@ -31,9 +30,10 @@
                     <div class="right-inner arches-box-grey-border">
                         
                         {% for CONDITION_ASSESSMENT_E14 in report_info.source.graph.CONDITION_ASSESSMENT_E14 %}
+                            <div class="row">
                             {% for CONDITION_STATE_E3 in CONDITION_ASSESSMENT_E14.CONDITION_STATE_E3 %}
                                 <!-- Resource Summary Info -->
-                                <div class="row">
+                                
 
                                     <!-- Section sub-header -->
                                     <div class="col-sm-4">
@@ -259,7 +259,7 @@
                                     </div>
                                     <!-- End Section Content-->
 
-                                </div>
+                                
                                 <!-- End Names/Type Section -->
 
                                 {% if not forloop.last %}
@@ -267,6 +267,7 @@
                                 {% endif %}
 
                             {% endfor %}
+                            </div>
                         {% endfor %}
 
                     </div>
