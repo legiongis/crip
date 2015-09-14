@@ -1,7 +1,7 @@
 
 {
     "csv": {
-        "NAME": "HistoricPlacesLA_Search_Results_Export",
+        "NAME": "CRHIM_export",
         "SCHEMA": [
             {"field_name":"PRIMARY NAME", "source":"primaryname"},
             {"field_name":"OTHER NAMES", "source":"alternatename"},
