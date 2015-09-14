@@ -217,7 +217,11 @@ cf https://github.com/summernote/summernote/issues/187
 }
 
 .topic-content  p {
-    padding: 2px 0px 2px 0px;
+    margin: 2px 0px 2px 0px;
+}
+
+.topic-content  ul, ol {
+    margin: 2px 0px 2px 0px;
 }
 
 .header .navbar-default {
