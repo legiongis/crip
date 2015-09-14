@@ -89,7 +89,7 @@ define([
             //url: 'https://s3-us-west-2.amazonaws.com/natchdata/tiles/drg/{z}/{x}/{y}.png',
             attributions: [
                 new ol.Attribution({
-                    html: '<a href="http://www.usgs.gov/"><img src="'+arches.urls.media + 'img/icons/USGS_trans.png"/></a> All U.S. Geological Survey maps are in the public domain.'
+                    html: '<a href="http://www.usgs.gov/" target="_blank"><img src="'+arches.urls.media + 'img/icons/USGS_trans.png"/></a> All U.S. Geological Survey maps are in the public domain.'
                 })
             ],
         }),
@@ -102,7 +102,7 @@ define([
         layer: usgsLyr,
         altlayer: false,
         alttext: 'USGS Digital Raster Graphics, 1:24,000',
-        showInfo: 'This is a seamless mosaic of 24k USGS Quads from <a href="http://datagateway.nrcs.usda.gov/" target="_blank">NRCS</a>.',
+        showInfo: 'This is a seamless mosaic of 24k USGS Quads, obtained through the NRCS <a href="http://datagateway.nrcs.usda.gov/" target="_blank">Geospatial Data Gateway</a>.',
     };
     usgs.layer.matchid = usgs.id;
     usgs.maxzoom = 17;
@@ -115,13 +115,14 @@ define([
             //url: 'https://s3-us-west-2.amazonaws.com/natchdata/tiles/relief_basemap/{z}/{x}/{y}.png',
             attributions: [
                 new ol.Attribution({
-                    html: '<a href="http://atlas.lsu.edu">Atlas: The Louisiana Statewide GIS</a>. LSU Department of Geography and Anthropology, Baton Rouge, LA.'
+                    html: '<a href="http://atlas.lsu.edu" target="_blank">Atlas: The Louisiana Statewide GIS</a>. LSU Department of Geography and Anthropology, Baton Rouge, LA.'
                 })
             ],
         }),
         opacity: .95,
         visible: false,
     });
+    
     // b/w altlayer for hillshade
     var hillshadeLyr = new ol.layer.Tile({
         name: "relief",
@@ -130,7 +131,7 @@ define([
             //url: 'https://s3-us-west-2.amazonaws.com/natchdata/tiles/relief_basemap/{z}/{x}/{y}.png',
             attributions: [
                 new ol.Attribution({
-                    html: '<a href="http://atlas.lsu.edu">Atlas: The Louisiana Statewide GIS</a>. LSU Department of Geography and Anthropology, Baton Rouge, LA.'
+                    html: '<a href="http://atlas.lsu.edu" target="_blank">Atlas: The Louisiana Statewide GIS</a>. LSU Department of Geography and Anthropology, Baton Rouge, LA.'
                 })
             ],
         }),
@@ -143,7 +144,7 @@ define([
         layer: reliefLyr,
         altlayer: hillshadeLyr,
         alttext: 'Shaded Relief from Louisiana Statewide LiDAR Project',
-        showInfo: 'This layer is a hillshade derivative of LiDAR data distributed by <a href="http://atlas.lsu.edu">Atlas: The Louisiana Statewide GIS</a>, which was produced for the <a href="http://atlas.lsu.edu/central/la_lidar_project.pdf" target="_blank">Louisiana State LiDAR Project</a>, LSU Department of Geography and Anthropology, Baton Rouge, LA.',
+        showInfo: 'This layer is a hillshade derivative of LiDAR data distributed by <a href="http://atlas.lsu.edu" target="_blank">Atlas: The Louisiana Statewide GIS</a>, which was produced for the <a href="http://atlas.lsu.edu/central/la_lidar_project.pdf" target="_blank">Louisiana State LiDAR Project</a>, LSU Department of Geography and Anthropology, Baton Rouge, LA.',
     };
 
     relief.layer.matchid = relief.id;
@@ -165,7 +166,7 @@ define([
         layer: blankLyr,
         altlayer: false,
         alttext: 'Click to remove basemap',
-        showInfo: 'When viewing historic maps, it may be useful to remove the basemap altogether.',
+        showInfo: 'When viewing some historic maps, it may be useful to remove the basemap altogether.',
     };
     blank.layer.matchid = blank.id;
     blank.maxzoom = 20;
@@ -190,7 +191,7 @@ define([
         layer: amcemLyr,
         altlayer: false,
         alttext: 'Click to remove basemap',
-        showInfo: 'When viewing historic maps, it may be useful to remove the basemap altogether.',
+        showInfo: 'When viewing some historic maps, it may be useful to remove the basemap altogether.',
     };
     blank.layer.matchid = blank.id;
     blank.maxzoom = 20;
