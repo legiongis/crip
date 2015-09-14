@@ -187,11 +187,19 @@ cf https://github.com/summernote/summernote/issues/187
     border-radius: none;
 }
 
+#help-section .purchase {
+    text-align: left;
+}
+
 .help-page {
     margin-top: 20px;
     margin-bottom: 20px;
     display: inline-block;
     font-family: 'Open Sans', sans-serif;
+}
+
+.help-header {
+    display:block;
 }
 
 .topic-button a {
@@ -217,11 +225,11 @@ cf https://github.com/summernote/summernote/issues/187
 }
 
 .topic-content  p {
-    margin: 2px 0px 2px 0px;
+    margin: 3px 0px 3px 0px;
 }
 
 .topic-content  ul, ol {
-    margin: 2px 0px 2px 0px;
+    margin: 3px 0px 3px 0px;
 }
 
 .header .navbar-default {
