@@ -211,6 +211,8 @@ cf https://github.com/summernote/summernote/issues/187
 
 .topic-content {
     display: none;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .topic-content  p {
