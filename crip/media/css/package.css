@@ -191,6 +191,7 @@ cf https://github.com/summernote/summernote/issues/187
     margin-top: 20px;
     margin-bottom: 20px;
     display: inline-block;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .topic-button a {
