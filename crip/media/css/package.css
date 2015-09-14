@@ -1,6 +1,8 @@
 /*put package specific styles here...*/
 
-
+.body p {
+    font-family: 'Open Sans', sans-serif;
+}
 
 .purchase p  li{
   font-size: larger;
@@ -25,7 +27,7 @@
 .modal-subtitle {
     padding-top: 10px;
     padding-bottom: 10px;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0px;
 } 
 
