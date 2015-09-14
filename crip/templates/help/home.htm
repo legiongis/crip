@@ -2,7 +2,7 @@
 <!-- this is the help that will be shown on the home page when help is shown -->
 
 <div class="help-page">
-    <div class="col-md-12" style="float:left;">
+    <div class="col-md-12 help-header" style="float:left;">
         <span>General Help</span>
     </div>
     <div class="col-md-12">
@@ -15,10 +15,9 @@
         <div class="topic-content" id="topic1">
             <ul>
                 <li>Use the SEARCH and MAP pages to explore the inventory.</li>
-                <li>Click SHOW HELP on each page to get more information about that page.</li>
-                <li>To login, use the LOGIN link at the top right of your screen.</li>
-                <li>Once logged in, you can view a summary of your account permissions here.</li>
-                <li>The Cane River Heritage Inventory & Map functions best in a modern browser, like Chrome, Firefox, or Internet Explorer 8 and above.</li>
+                <li>Click SHOW HELP on each page to get more information.</li>
+                <li>To login, use the LOGIN link at the top right of your screen, and view your account info here.</li>
+                <li>Bad page display or layout? The CRHIM functions best in a modern browser, like Chrome, Firefox, or Internet Explorer 8 and above.</li>
             </ul>
         </div>
         {% if not user.is_anonymous %}
@@ -30,9 +29,9 @@
         </div>
         <div class="topic-content" id="topic2">
             {% if user.is_superuser %}
-                <p>You <b>can</b> access the Reference Data Manager (RDM).<p>
+                <p>You <b>do</b> have access to the Reference Data Manager (RDM).<p>
             {% else %}
-                <p>You <b>cannot</b> access the Reference Data Manager (RDM).<p>
+                <p>You <b>do not</b> have access to the Reference Data Manager (RDM).<p>
             {% endif %}
             {% if user_permissions.can_create %}
                 <p>You can <b>create</b> new resources of the following types:<p>
