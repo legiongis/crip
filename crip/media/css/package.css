@@ -54,6 +54,10 @@ p {
 }
 
 /* Inventory Map Tools Buttons and panels*/
+.modal-title {
+    font-weight: 500;
+}
+
 .arches-map-tools {
     width: 165px;
     height: 46px;
@@ -75,6 +79,11 @@ p {
     border-top-left-radius: 3px; 
     border-top-right-radius: 3px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.tools-panel a {
+    font-weight: normal;
 }
 
 .tools-panel-filter {
