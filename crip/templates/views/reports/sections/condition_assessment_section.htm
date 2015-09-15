@@ -30,8 +30,9 @@
                     <div class="right-inner arches-box-grey-border">
                         
                         {% for CONDITION_ASSESSMENT_E14 in report_info.source.graph.CONDITION_ASSESSMENT_E14 %}
-                            <div class="row">
+                            
                             {% for CONDITION_STATE_E3 in CONDITION_ASSESSMENT_E14.CONDITION_STATE_E3 %}
+                            <div class="row">
                                 <!-- Resource Summary Info -->
                                 
 
@@ -147,7 +148,7 @@
                                                                 </div>
 
                                                             </div>
-
+{% comment %}
                                                             <!-- Links for Image Gallery Supply Image in the href, thumbnails in the img tags -->
                                                             <div id="links" style="margin-left: 10px; margin-top: 5px;">
 
@@ -165,7 +166,7 @@
 
                                                             </div>
                                                             <!-- End Links for Image Gallery -->
-
+{% endcomment %}
                                                         </dd>
 
                                                     </dl>
@@ -265,23 +266,18 @@
                                 {% if not forloop.last %}
                                     <hr class="devider margin-top-10" style="margin-bottom: 5px;"></hr>
                                 {% endif %}
-
-                            {% endfor %}
+                                
                             </div>
+                            {% endfor %}
+                            
                         {% endfor %}
 
                     </div>
-                    <div>do we get to here?</div>
                 </div>
                 <!-- End Project Information -->
-                <div>do we get to here 2?</div>
             </div>   
-            <div>do we get to here 3?</div>
         </div>
         <!-- End Project Summary -->
-        <div>do we get to here 4?</div>
     </div>
-    <div>do we get to here 5?</div>
 </div>
-<div>at the end?</div>
 <!-- End Condition Assessment Section -->
