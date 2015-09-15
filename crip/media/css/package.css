@@ -12,24 +12,29 @@ p {
 }
 
 .purchase p  li{
-  font-size: larger;
+    font-size: larger;
 }
 
+.topbar ul.loginbar > li {
+    font-family: 'Open Sans', sans-serif;
+}
+  
+
 .headline {
-  display: block;
-  margin: 10px 0 25px 0;
-  border-bottom: 1.5px dotted white;
-  font-family: 'Open Sans', sans-serif;
+    display: block;
+    margin: 10px 0 25px 0;
+    border-bottom: 1.5px dotted white;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .headline h2, 
 .headline h3, 
 .headline h4 {
-  margin: 0 0 -2px 0;
-  padding-bottom: 3px;
-  display: inline-block;
-  color: white;
-  border-bottom: 0px;
+    margin: 0 0 -2px 0;
+    padding-bottom: 3px;
+    display: inline-block;
+    color: white;
+    border-bottom: 0px;
 }
 
 .modal-subtitle {
@@ -243,6 +248,7 @@ cf https://github.com/summernote/summernote/issues/187
 .header .navbar-default {
   border-bottom: #ccc solid 3px;
   border-radius: 0px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* DEALING WITH THE BORDER UNDER THE NAVBAR AND BUTTONS */
