@@ -3,6 +3,10 @@ p {
     font-family: 'Open Sans', sans-serif;
 }
 
+.btn {
+    font-family: 'Open Sans', sans-serif;
+}
+
 .purchase p {
     font-family: 'Open Sans', sans-serif;
 }
@@ -151,6 +155,10 @@ p {
     font-weight: 400;
     margin-top: 8px;
     color: #000000;
+}
+
+.arches-layer-library {
+    font-family: 'Open Sans', sans-serif;
 }
 
 /*Footer
