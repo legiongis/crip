@@ -3,6 +3,10 @@ p {
     font-family: 'Open Sans', sans-serif;
 }
 
+.body {
+    font-family: 'Open Sans', sans-serif;
+}
+
 .btn {
     font-family: 'Open Sans', sans-serif;
 }
@@ -14,6 +18,24 @@ p {
 .body p {
     font-family: 'Open Sans', sans-serif;
 }
+
+.popover-content {
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul.select2-results {
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul.select2-choices {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.layerfilter {
+    font-family: 'Open Sans';
+}
+
+
 
 .purchase p  li{
     font-size: larger;
