@@ -51,10 +51,12 @@ p {
 /* Disclaimer Modal*/
 #disclaimer-title {
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #disclaimer-body {
     font-size: 125%;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* Inventory Map Tools Buttons and panels*/
