@@ -1,4 +1,11 @@
-/*put package specific styles here...*/
+/*change all fonts to 'Open Sans', sans-serif*/
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.purchase p {
+    font-family: 'Open Sans', sans-serif;
+}
 
 .body p {
     font-family: 'Open Sans', sans-serif;
@@ -12,6 +19,7 @@
   display: block;
   margin: 10px 0 25px 0;
   border-bottom: 1.5px dotted white;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .headline h2, 
