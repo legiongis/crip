@@ -652,7 +652,7 @@ require([
                         })
                     };
                 },
-                placeholder: "Filter Layer List",
+                placeholder: "find layers",
                 multiple: true,
                 maximumSelectionSize: 5
             });

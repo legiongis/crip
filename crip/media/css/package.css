@@ -4,7 +4,7 @@ p {
 }
 
 .body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif !important;
 }
 
 .btn {
@@ -28,6 +28,10 @@ ul.select2-results {
 }
 
 ul.select2-choices {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.layerfilter {
     font-family: 'Open Sans', sans-serif;
 }
 
