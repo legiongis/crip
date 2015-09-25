@@ -102,7 +102,7 @@ define([
     // full confederate map
     var confed_fullLyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
-            url: 'http://199.184.68.66:8080/geoserver/raster/wms/',
+            url: 'http://localhost:8080/geoserver/raster/wms/',
             //url: 'http://54.148.201.140:8080/geoserver/raster/wms/',
             params: {
                 //'LAYERS': 'confed_parish:sheet42_full',
@@ -117,7 +117,7 @@ define([
     // transparent confederate map (for altlayer)
     var confed_transLyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
-            url: 'http://199.184.68.66:8080/geoserver/raster/wms/',
+            url: 'http://crhim.canerivernha.org:8080/geoserver/raster/wms/',
             //url: 'http://54.148.201.140:8080/geoserver/raster/wms/',
             params: {
                 //'LAYERS': 'confed_parish:sheet42_trans',
