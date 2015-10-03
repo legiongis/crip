@@ -104,7 +104,7 @@ define([
         source: new ol.source.TileWMS({
             url: 'http://crhim.canerivernha.org:8080/geoserver/confed_maps/wms/',
             params: {
-                'LAYERS': 'confed_full',
+                'LAYERS': 'confed_maps:confed_full',
                 'TILED': true,
                 },
             serverType: 'geoserver'   
@@ -117,7 +117,7 @@ define([
         source: new ol.source.TileWMS({
             url: 'http://crhim.canerivernha.org:8080/geoserver/confed_maps/wms/',
             params: {
-                'LAYERS': 'confed_trans',
+                'LAYERS': 'confed_maps:confed_trans',
                 'TILED': true,
                 },
             serverType: 'geoserver'   
