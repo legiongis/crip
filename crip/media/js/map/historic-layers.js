@@ -57,10 +57,11 @@ define([
     // sanborn map 1914
     var sanborn1914black_Lyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
-            url: 'http://54.148.201.140:8080/geoserver/raster/wms/',
+            url: 'http://crhim.canerivernha.org:8080/geoserver/sanborn/wms/',
             params: {
-                'LAYERS': 'raster:sanborn1914_blk',
+                'LAYERS': 'sanborn:sanborn_1914',
                 'TILED': true,
+                'STYLES': 'BlackToDarkGrey170',
                 },
             serverType: 'geoserver',
             attributions: [
@@ -75,10 +76,11 @@ define([
     // sanborn 1914 in red (for overlays?)
     var sanborn1914red_Lyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
-            url: 'http://54.148.201.140:8080/geoserver/raster/wms/',
+            url: 'http://crhim.canerivernha.org:8080/geoserver/sanborn/wms/',
             params: {
-                'LAYERS': 'raster:sanborn1914_red',
+                'LAYERS': 'sanborn:sanborn_1914',
                 'TILED': true,
+                'STYLES': 'RedToTrans170',
                 },
             serverType: 'geoserver',
             attributions: [
