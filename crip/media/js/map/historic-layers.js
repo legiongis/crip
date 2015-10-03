@@ -13,7 +13,7 @@ define([
                 'LAYERS': 'sanborn:sanborn_1892',
                 'TILED': true,
                 'STYLES': 'BlackToDarkGrey170',
-                },
+            },
             serverType: 'geoserver',
             attributions: [
                 new ol.Attribution({
@@ -32,7 +32,7 @@ define([
                 'LAYERS': 'sanborn:sanborn_1892',
                 'TILED': true,
                 'STYLES': 'RedToTrans170',
-                },
+            },
             serverType: 'geoserver',
             attributions: [
                 new ol.Attribution({
@@ -62,7 +62,7 @@ define([
                 'LAYERS': 'sanborn:sanborn_1914',
                 'TILED': true,
                 'STYLES': 'BlackToDarkGrey170',
-                },
+            },
             serverType: 'geoserver',
             attributions: [
                 new ol.Attribution({
@@ -81,7 +81,7 @@ define([
                 'LAYERS': 'sanborn:sanborn_1914',
                 'TILED': true,
                 'STYLES': 'RedToTrans170',
-                },
+            },
             serverType: 'geoserver',
             attributions: [
                 new ol.Attribution({
@@ -110,7 +110,7 @@ define([
             params: {
                 'LAYERS': 'confed_maps:confed_full',
                 'TILED': true,
-                },
+            },
             serverType: 'geoserver'   
         }),
         visible: false,
@@ -123,7 +123,7 @@ define([
             params: {
                 'LAYERS': 'confed_maps:confed_trans',
                 'TILED': true,
-                },
+            },
             serverType: 'geoserver'   
         }),
         visible: false,
@@ -144,7 +144,7 @@ define([
     var platmaps_transLyr = new ol.layer.Tile({
         name: "platmaps_transLyr",
         source: new ol.source.XYZ({
-            url: 'http://199.184.68.66/tiles/platmaps_trans/{z}/{x}/{y}.png'
+            url: 'http://crhim.canerivernha.org/tiles/platmaps_trans/{z}/{x}/{y}.png'
         }),
         visible: false,
     });   
@@ -153,7 +153,7 @@ define([
     var platmaps_fullLyr = new ol.layer.Tile({
         name: "platmaps_fullLyr",
         source: new ol.source.XYZ({
-            url: 'http://199.184.68.66/tiles/platmaps_white/{z}/{x}/{y}.png'
+            url: 'http://crhim.canerivernha.org/tiles/platmaps_white/{z}/{x}/{y}.png'
         }),
         visible: false,
     });
@@ -172,8 +172,7 @@ define([
     var roadmapLyr = new ol.layer.Tile({
         name: "roadmapLyr",
         source: new ol.source.XYZ({
-            url: 'http://199.184.68.66/tiles/civilwarroadmap/{z}/{x}/{y}.png'
-            //url: 'https://s3-us-west-2.amazonaws.com/natchdata/tiles/historictownplats/{z}/{x}/{y}.png'
+            url: 'http://crhim.canerivernha.org/tiles/civilwarroadmap/{z}/{x}/{y}.png'
         }),
         visible: false,
     });
