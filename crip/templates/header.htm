@@ -75,7 +75,7 @@
                     </li>
                     <!-- End Map-->
 
-                    {% if user.user_permissions.user_can_edit %}
+                    {% if user_permissions.user_can_edit %}
                     <!-- Resource Editor-->
                     <li class="dropdown {% if active_page = 'ResourceManger' %}active{% endif %}">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
@@ -83,7 +83,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             {% for type, type_data in resource_types %}
-                                {% if type_data.name in user.user_permissions.entities_allowed %}
+                                {% if type_data.name in user_permissions.entities_allowed %}
                                     <li><a href="{% url 'resource_manager' type type_data.default_page '' %}"><i class="{{type_data.icon_class}}"></i>{{type_data.name}}</a></li>
                                 {% endif %}
                             {% endfor %}
@@ -92,7 +92,7 @@
                     <!-- End Resource Editor -->
 
                      <!-- RDM-->
-                    {% if user.user_permissions.user_can_rdm %}
+                    {% if user_permissions.user_can_rdm %}
                     <li class="{% if user.is_anonymous %}{% endif %} {% if active_page = 'RDM' %}active{% endif %}">
                         <a href="{% url 'rdm' '' %}">
                             {% trans "RDM" %}
