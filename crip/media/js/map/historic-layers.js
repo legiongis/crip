@@ -8,7 +8,7 @@ define([
     // sanborn map 1892
     var sanborn1892black_Lyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
-            url: 'http://crhim.canerivernha.org:8080/geoserver/sanborn/wms/',
+            url: 'http://crhim.canerivernha.org/geoserver/sanborn/wms/',
             params: {
                 'LAYERS': 'sanborn:sanborn_1892',
                 'TILED': true,
@@ -27,7 +27,7 @@ define([
     // sanborn 1892 in red (for overlays?)
     var sanborn1892red_Lyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
-            url: 'http://crhim.canerivernha.org:8080/geoserver/sanborn/wms/',
+            url: 'http://crhim.canerivernha.org/geoserver/sanborn/wms/',
             params: {
                 'LAYERS': 'sanborn:sanborn_1892',
                 'TILED': true,
@@ -57,7 +57,7 @@ define([
     // sanborn map 1914
     var sanborn1914black_Lyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
-            url: 'http://crhim.canerivernha.org:8080/geoserver/sanborn/wms/',
+            url: 'http://crhim.canerivernha.org/geoserver/sanborn/wms/',
             params: {
                 'LAYERS': 'sanborn:sanborn_1914',
                 'TILED': true,
@@ -76,7 +76,7 @@ define([
     // sanborn 1914 in red (for overlays?)
     var sanborn1914red_Lyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
-            url: 'http://crhim.canerivernha.org:8080/geoserver/sanborn/wms/',
+            url: 'http://crhim.canerivernha.org/geoserver/sanborn/wms/',
             params: {
                 'LAYERS': 'sanborn:sanborn_1914',
                 'TILED': true,
@@ -106,7 +106,7 @@ define([
     // full confederate map
     var confed_fullLyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
-            url: 'http://crhim.canerivernha.org:8080/geoserver/confed_maps/wms/',
+            url: 'http://crhim.canerivernha.org/geoserver/confed_maps/wms/',
             params: {
                 'LAYERS': 'confed_maps:confed_full',
                 'TILED': true,
@@ -119,7 +119,7 @@ define([
     // transparent confederate map (for altlayer)
     var confed_transLyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
-            url: 'http://crhim.canerivernha.org:8080/geoserver/confed_maps/wms/',
+            url: 'http://crhim.canerivernha.org/geoserver/confed_maps/wms/',
             params: {
                 'LAYERS': 'confed_maps:confed_trans',
                 'TILED': true,

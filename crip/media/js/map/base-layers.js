@@ -85,8 +85,7 @@ define([
     //USGS Topo from CRNHA server
     var usgsLyr = new ol.layer.Tile({
         source: new ol.source.XYZ({
-            url: 'http://199.184.68.66/tiles/drg/{z}/{x}/{y}.png',
-            //url: 'https://s3-us-west-2.amazonaws.com/natchdata/tiles/drg/{z}/{x}/{y}.png',
+            url: 'http://crhim.canerivernha.org/tiles/drg/{z}/{x}/{y}.png',
             attributions: [
                 new ol.Attribution({
                     html: '<a href="http://www.usgs.gov/" target="_blank"><img src="'+arches.urls.media + 'img/icons/USGS_trans.png"/></a> All U.S. Geological Survey maps are in the public domain.'
@@ -111,8 +110,7 @@ define([
     var reliefLyr = new ol.layer.Tile({
         name: "relief",
         source: new ol.source.XYZ({
-            url: 'http://199.184.68.66/tiles/relief_basemap/{z}/{x}/{y}.png',
-            //url: 'https://s3-us-west-2.amazonaws.com/natchdata/tiles/relief_basemap/{z}/{x}/{y}.png',
+            url: 'http://crhim.canerivernha.org/tiles/relief_basemap/{z}/{x}/{y}.png',
             attributions: [
                 new ol.Attribution({
                     html: '<a href="http://atlas.lsu.edu" target="_blank">Atlas: The Louisiana Statewide GIS</a>. LSU Department of Geography and Anthropology, Baton Rouge, LA.'
@@ -127,8 +125,7 @@ define([
     var hillshadeLyr = new ol.layer.Tile({
         name: "relief",
         source: new ol.source.XYZ({
-            url: 'http://199.184.68.66/tiles/hillshade/{z}/{x}/{y}.png',
-            //url: 'https://s3-us-west-2.amazonaws.com/natchdata/tiles/relief_basemap/{z}/{x}/{y}.png',
+            url: 'http://crhim.canerivernha.org/tiles/hillshade/{z}/{x}/{y}.png',
             attributions: [
                 new ol.Attribution({
                     html: '<a href="http://atlas.lsu.edu" target="_blank">Atlas: The Louisiana Statewide GIS</a>. LSU Department of Geography and Anthropology, Baton Rouge, LA.'
@@ -175,7 +172,7 @@ define([
     var amcemLyr = new ol.layer.Tile({
         name: "amcem",
         source: new ol.source.TileWMS({
-            url: 'http://54.148.201.140:8080/geoserver/raster/wms/',
+            url: 'http://crhim.canerivernha.org/geoserver/raster/wms/',
             params: {
                 'LAYERS': 'raster:basemap_image',
                 'TILED': true,
@@ -207,7 +204,7 @@ define([
         amcem,
     ];  
 
-    //set default map style to Open Street Map
+    //set default map style to Bing
     baseLayers[0].layer.setVisible(true);
     
     return baseLayers;
