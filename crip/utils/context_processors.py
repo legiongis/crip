@@ -94,7 +94,6 @@ def user_permissions(request):
         'user_permissions': {
             'can_rdm': rdm_access,
             'can_create': can_create,
-            'can_edit': can_edit,
             'entities_allowed': entities_allowed
         }
     }
