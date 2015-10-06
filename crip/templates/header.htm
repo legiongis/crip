@@ -75,7 +75,7 @@
                     </li>
                     <!-- End Map-->
 
-                    {% if user_permissions.can_edit %}
+                    {% if not len(user_permissions.entities_allowed) == 0 %}
                     <!-- Resource Editor-->
                     <li class="dropdown {% if active_page = 'ResourceManger' %}active{% endif %}">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
