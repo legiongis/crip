@@ -14,7 +14,7 @@ define([
         layer: new ol.layer.Tile({
             is_arches_layer: "nobutclose",
             source: new ol.source.TileWMS({
-                url: 'http://54.148.201.140:8080/geoserver/vect/wms/',
+                url: 'http://crhim.canerivernha.org/geoserver/vect/wms/',
                 params: {
                     'LAYERS': 'vect:kisatchie_private_land',
                     'TILED': true,
@@ -32,7 +32,7 @@ define([
         layer: new ol.layer.Tile({
             is_arches_layer: "nobutclose",
             source: new ol.source.TileWMS({
-                url: 'http://54.148.201.140:8080/geoserver/vect/wms/',
+                url: 'http://crhim.canerivernha.org/geoserver/vect/wms/',
                 params: {
                     'LAYERS': 'vect:PLSS_towns',
                     'TILED': true,
@@ -51,7 +51,7 @@ define([
         layer: new ol.layer.Tile({
             is_arches_layer: "nobutclose",
             source: new ol.source.TileWMS({
-                url: 'http://54.148.201.140:8080/geoserver/vect/wms/',
+                url: 'http://crhim.canerivernha.org/geoserver/vect/wms/',
                 params: {
                     'LAYERS': 'vect:amcem_shrubs',
                 },
