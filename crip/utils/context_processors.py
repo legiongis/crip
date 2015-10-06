@@ -52,13 +52,6 @@ def app_settings(request):
         'GOOGLE_ANALYTICS_TRACKING_ID': settings.GOOGLE_ANALYTICS_TRACKING_ID
     }
 
-def user_can_edit(request):
-    # need to implement proper permissions check here...
-    # for now allowing all logged in users to be 'editors'
-    return {
-        'user_can_edit': request.user.is_authenticated()
-    }
-    
 def user_can_rdm(request):
     # check for RDM privileges
     group_names = [i.name for i in request.user.groups.all()]
@@ -72,26 +65,34 @@ def user_can_rdm(request):
     }
 
 def user_permissions(request):
-    # define which resource types a user can edit/create
+    '''defines all user permissions'''
     
-    can_create = False
-    resource_types = [v['name'] for v in settings.RESOURCE_TYPE_CONFIGS().values()]
-
     # get all group names for user
     group_names = [i.name for i in request.user.groups.all()]
+    resource_types = [v['name'] for v in settings.RESOURCE_TYPE_CONFIGS().values()]
+
+    # these are the entities that a user is allowed to edit
+    entities_allowed = [i for i in group_names if i in resource_types]
     
-    # if user is part of the data creators group, they can create new resources
+    # check whether user can create new resources
+    can_create = False
     if "DATA CREATORS" in group_names:
         can_create = True
-    
-    entities_allowed = [i for i in group_names if i in resource_types]
 
+    # if user is part of the data creators group, they can create new resources
+    rdm_access = False
+    if "RDM ACCESS" in group_names:
+        rdm_access = True
+
+    # give superuser all access
     if request.user.is_superuser:
+        rdm_access = True
         can_create = True
         entities_allowed = resource_types
 
     return {
         'user_permissions': {
+            'rdm_access': rdm_access
             'can_create': can_create,
             'entities_allowed': entities_allowed
         }
