@@ -72,7 +72,10 @@ def user_permissions(request):
     resource_types = [v['name'] for v in settings.RESOURCE_TYPE_CONFIGS().values()]
 
     # these are the entities that a user is allowed to edit
+    can_edit = False
     entities_allowed = [i for i in group_names if i in resource_types]
+    if len(entities_allow) > 0:
+        can_edit = True
     
     # check whether user can create new resources
     can_create = False
@@ -94,6 +97,7 @@ def user_permissions(request):
         'user_permissions': {
             'can_rdm': rdm_access,
             'can_create': can_create,
+            'can_edit': can_edit,
             'entities_allowed': entities_allowed
         }
     }
