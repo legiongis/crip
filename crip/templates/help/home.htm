@@ -47,7 +47,7 @@
             </a>
         </div>
         <div class="topic-content" id="topic3">
-            {% if user.is_superuser %}
+            {% if user_permissions.can_rdm %}
                 <p>You <b>do</b> have access to the Reference Data Manager (RDM).<p>
             {% else %}
                 <p>You <b>do not</b> have access to the Reference Data Manager (RDM).<p>
