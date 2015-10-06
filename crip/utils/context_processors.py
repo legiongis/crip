@@ -58,10 +58,21 @@ def user_can_edit(request):
     return {
         'user_can_edit': request.user.is_authenticated()
     }
+    
+def user_can_rdm(request):
+    # check for RDM privileges
+    group_names = [i.name for i in request.user.groups.all()]
+    
+    can_rdm = False
+    if "RDM ACCESS" in group_names or request.user.is_superuser:
+        can_rdm = True
+        
+    return {
+        'user_can_rdm': can_rdm
+    }
 
 def user_permissions(request):
-    # need to implement proper permissions check here...
-    # for now allowing all logged in users to be 'editors'
+    # define which resource types a user can edit/create
     
     can_create = False
     resource_types = [v['name'] for v in settings.RESOURCE_TYPE_CONFIGS().values()]
