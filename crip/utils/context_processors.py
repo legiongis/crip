@@ -52,7 +52,7 @@ def app_settings(request):
         'GOOGLE_ANALYTICS_TRACKING_ID': settings.GOOGLE_ANALYTICS_TRACKING_ID
     }
 
-def user_can_rdm(request):
+def user_can_edit(request):
     # check for RDM privileges
     group_names = [i.name for i in request.user.groups.all()]
     
@@ -61,7 +61,7 @@ def user_can_rdm(request):
         can_rdm = True
         
     return {
-        'user_can_rdm': can_rdm
+        'user_can_edit': can_rdm
     }
 
 def user_permissions(request):
@@ -72,7 +72,10 @@ def user_permissions(request):
     resource_types = [v['name'] for v in settings.RESOURCE_TYPE_CONFIGS().values()]
 
     # these are the entities that a user is allowed to edit
+    user_can_edit = False
     entities_allowed = [i for i in group_names if i in resource_types]
+    if len(entities_allowed) > 0:
+        user_can_edit = True
     
     # check whether user can create new resources
     can_create = False
@@ -87,10 +90,12 @@ def user_permissions(request):
     # give superuser all access
     if request.user.is_superuser:
         rdm_access = True
+        user_can_edit = True
         can_create = True
         entities_allowed = resource_types
 
     return {
+        'user_can_edit': user_can_edit,
         'user_permissions': {
             'can_rdm': rdm_access,
             'can_create': can_create,
