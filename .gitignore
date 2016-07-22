@@ -1,8 +1,8 @@
 *.pyc
 *.egg*
 *.log
-afrh/logs
-afrh/elasticsearch
-afrh/uploadedfiles
-afrh/static
+crip/logs
+crip/elasticsearch
+crip/uploadedfiles
+crip/static
 settings_local.py
