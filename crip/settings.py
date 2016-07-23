@@ -52,7 +52,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'crip.utils.context_processors.map_info',
     'crip.utils.context_processors.app_settings',
     'crip.utils.context_processors.user_can_edit',
-    'crip.utils.context_processors.user_can_rdm',
     'crip.utils.context_processors.user_permissions',
     'crip.utils.context_processors.user_groups',
 )
