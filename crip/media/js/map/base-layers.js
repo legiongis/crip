@@ -172,7 +172,8 @@ define([
     var amcemLyr = new ol.layer.Tile({
         name: "amcem",
         source: new ol.source.TileWMS({
-            url: 'http://crhim.canerivernha.org/geoserver/raster/wms/',
+            //url: 'http://crhim.canerivernha.org/geoserver/raster/wms/',
+            url: 'http://www.adamcfcox.com:8080/geoserver/raster/wms/',
             params: {
                 'LAYERS': 'raster:basemap_image',
                 'TILED': true,
