@@ -4,5 +4,6 @@
 crip/logs
 crip/elasticsearch
 crip/uploadedfiles
+crip/uploads
 crip/static
 settings_local.py
