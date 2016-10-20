@@ -23,7 +23,7 @@
                 </li>
                 <li class="topbar-devider"></li>   
                 <li>
-                    <a id="auth-link" href="{% url 'auth' %}?next={{ request.get_full_path }}{% if user.is_anonymous %}">{% trans "Login" %}{% else %}&logout=true">Welcome {{ user.username }} - {% trans "Logout" %}{% endif %}</a>
+                    <a id="auth-link" href="{% url 'auth' %}?next={{ request.get_full_path }}{% if user.username == 'anonymous' %}">{% trans "Login" %}{% else %}&logout=true">Welcome {{ user.username }} - {% trans "Logout" %}{% endif %}</a>
                 </li>
                 
             </ul>

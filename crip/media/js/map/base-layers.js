@@ -4,6 +4,12 @@ define([
     'underscore',
     'arches'
 ], function($, ol, _, arches) {
+    
+    // make variables for all recurring urls
+    var gswms_crnha = 'http://crhim.canerivernha.org/geoserver/wms/';
+    var tiles_crnha = 'http://crhim.canerivernha.org/tiles/';
+    var gswms_legion = 'http://legiongis.com/geoserver/wms/';
+    
     var bingLayers = arches.bingLayers;
 
     //get bing baselayers as an array
@@ -85,7 +91,7 @@ define([
     //USGS Topo from CRNHA server
     var usgsLyr = new ol.layer.Tile({
         source: new ol.source.XYZ({
-            url: 'http://crhim.canerivernha.org/tiles/drg/{z}/{x}/{y}.png',
+            url: tiles_crnha + 'drg/{z}/{x}/{y}.png',
             attributions: [
                 new ol.Attribution({
                     html: '<a href="http://www.usgs.gov/" target="_blank"><img src="'+arches.urls.media + 'img/icons/USGS_trans.png"/></a> All U.S. Geological Survey maps are in the public domain.'
@@ -110,7 +116,7 @@ define([
     var reliefLyr = new ol.layer.Tile({
         name: "relief",
         source: new ol.source.XYZ({
-            url: 'http://crhim.canerivernha.org/tiles/relief_basemap/{z}/{x}/{y}.png',
+            url: tiles_crnha + 'relief_basemap/{z}/{x}/{y}.png',
             attributions: [
                 new ol.Attribution({
                     html: '<a href="http://atlas.lsu.edu" target="_blank">Atlas: The Louisiana Statewide GIS</a>. LSU Department of Geography and Anthropology, Baton Rouge, LA.'
@@ -125,7 +131,7 @@ define([
     var hillshadeLyr = new ol.layer.Tile({
         name: "relief",
         source: new ol.source.XYZ({
-            url: 'http://crhim.canerivernha.org/tiles/hillshade/{z}/{x}/{y}.png',
+            url: tiles_crnha + 'hillshade/{z}/{x}/{y}.png',
             attributions: [
                 new ol.Attribution({
                     html: '<a href="http://atlas.lsu.edu" target="_blank">Atlas: The Louisiana Statewide GIS</a>. LSU Department of Geography and Anthropology, Baton Rouge, LA.'
@@ -155,7 +161,9 @@ define([
             url: arches.urls.media + 'img/map/white_256x256.png',
         }),
         visible: false
-    });  
+    });
+    
+    
     var blank = {
         id: 'blank',
         name: 'None',
@@ -168,11 +176,11 @@ define([
     blank.layer.matchid = blank.id;
     blank.maxzoom = 20;
     
-    //Make blank base layer in order to show no basemap
+    // create basemap for am cem plot layout (this automatically turns on when zoomed way in)
     var amcemLyr = new ol.layer.Tile({
         name: "amcem",
         source: new ol.source.TileWMS({
-            url: 'http://crhim.canerivernha.org/geoserver/raster/wms/',
+            url: gswms_crnha,
             params: {
                 'LAYERS': 'raster:basemap_image',
                 'TILED': true,

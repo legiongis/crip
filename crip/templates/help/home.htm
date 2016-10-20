@@ -39,7 +39,7 @@
             </ul>
             <p>These categories each hold different sets of information, and resources in any category may be related to those in any other category.   Furthermore, any resource may include spatial coordinates, to give it a location on the earth. That's where the <b>MAP</b> comes in, a way to view the resources spatially as they exist in the real world.  To enhance the map, we've added a number of overlays made from historic maps of the area--some of which have never been published before!</p>
         </div>
-        {% if not user.is_anonymous %}
+        {% if not user.username == 'anonymous' %}
         <div class="topic-button" id="topic3">
             <a href="javascript:void(0);">
                 <h5>Your Account Summary</h5>

@@ -1,0 +1,8 @@
+*.pyc
+*.egg*
+*.log
+crip/logs
+crip/elasticsearch
+crip/uploadedfiles
+crip/static
+settings_local.py
