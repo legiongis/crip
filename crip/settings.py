@@ -3,6 +3,8 @@ import inspect
 from arches_hip.settings import *
 from django.utils.translation import ugettext as _
 
+DEBUG = True
+
 PACKAGE_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 PACKAGE_NAME = PACKAGE_ROOT.split(os.sep)[-1]
 DATABASES['default']['NAME'] = 'arches_%s' % (PACKAGE_NAME)
@@ -35,7 +37,7 @@ extent_coords = [
 
 # URL that handles the media served from MEDIA_ROOT, used for managing 
 # stored files. It must end in a slash if set to a non-empty value.
-MEDIA_ROOT =  os.path.join('/home/ubuntu/Projects/crip/crip/uploads')
+MEDIA_ROOT =  os.path.join('/srv/crhim/crip/crip/uploads')
 MEDIA_URL = os.path.join('/uploads/')
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -51,8 +53,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'crip.utils.context_processors.resource_types',
     'crip.utils.context_processors.map_info',
     'crip.utils.context_processors.app_settings',
-    'crip.utils.context_processors.user_can_edit',
-    'crip.utils.context_processors.user_can_rdm',
     'crip.utils.context_processors.user_permissions',
     'crip.utils.context_processors.user_groups',
 )
@@ -178,6 +178,7 @@ def RESOURCE_TYPE_CONFIGS():
 
 GEOCODING_PROVIDER = 'arches.app.utils.bing_geocoder'
 BING_KEY = "AlBL1IuDdvcboF7cWajeIchjXkr7j2sA_oTYElH_ooYyx6115-GoenKljGJfDopa"
+GOOGLE_ANALYTICS_TRACKING_ID = "UA-66914064-1"
 
 RESOURCE_GRAPH_LOCATIONS = (
      # Put strings here, like "/home/data/resource_graphs" or "C:/data/resource_graphs".
