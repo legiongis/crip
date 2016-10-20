@@ -143,7 +143,8 @@ define([
             });
 
             this.map.on('click', function(e) {
-                var clickFeature = self.map.forEachFeatureAtPixel(e.pixel, function (feature, layer) {
+                var pixels = [e.originalEvent.layerX,e.originalEvent.layerY];
+                var clickFeature = self.map.forEachFeatureAtPixel(pixels, function (feature, layer) {
                     return feature;
                 });
                 self.trigger('mapClicked', e, clickFeature);
