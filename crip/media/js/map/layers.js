@@ -5,6 +5,11 @@ define([
     'layers-i18n'
 ], function(ol, resourceLayers, LayerModel, layerI18n) {
     var layers = resourceLayers.layers;
+    
+    // make variables for all recurring urls
+    var gswms_crnha = 'http://crhim.canerivernha.org/geoserver/wms/';
+    var tiles_crnha = 'http://crhim.canerivernha.org/tiles/';
+    var gswms_legion = 'http://legiongis.com/geoserver/wms/';
 
     var priv_prop = new LayerModel({
         name: 'Private Land in Kisatchie NF',
@@ -14,7 +19,7 @@ define([
         layer: new ol.layer.Tile({
             is_arches_layer: "nobutclose",
             source: new ol.source.TileWMS({
-                url: 'http://crhim.canerivernha.org/geoserver/vect/wms/',
+                url: gswms_crnha,
                 params: {
                     'LAYERS': 'vect:kisatchie_private_land',
                     'TILED': true,
@@ -32,7 +37,7 @@ define([
         layer: new ol.layer.Tile({
             is_arches_layer: "nobutclose",
             source: new ol.source.TileWMS({
-                url: 'http://crhim.canerivernha.org/geoserver/vect/wms/',
+                url: gswms_crnha,
                 params: {
                     'LAYERS': 'vect:PLSS_towns',
                     'TILED': true,
@@ -51,7 +56,7 @@ define([
         layer: new ol.layer.Tile({
             is_arches_layer: "nobutclose",
             source: new ol.source.TileWMS({
-                url: 'http://crhim.canerivernha.org/geoserver/vect/wms/',
+                url: gswms_crnha,
                 params: {
                     'LAYERS': 'vect:amcem_shrubs',
                 },
@@ -68,7 +73,7 @@ define([
         layer: new ol.layer.Tile({
             is_arches_layer: "nobutclose",
             source: new ol.source.TileWMS({
-                url: 'http://crhim.canerivernha.org/geoserver/vect/wms/',
+                url: gswms_crnha,
                 params: {
                     'LAYERS': 'vect:amcem_grass',
                 },
@@ -86,7 +91,7 @@ define([
         layer: new ol.layer.Tile({
             is_arches_layer: "nobutclose",
             source: new ol.source.TileWMS({
-                url: 'http://crhim.canerivernha.org/geoserver/vect/wms/',
+                url: gswms_crnha,
                 params: {
                     'LAYERS': 'vect:amcem_stumps',
                 },
@@ -104,7 +109,7 @@ define([
         layer: new ol.layer.Tile({
             is_arches_layer: "nobutclose",
             source: new ol.source.TileWMS({
-                url: 'http://crhim.canerivernha.org/geoserver/vect/wms/',
+                url: gswms_crnha,
                 params: {
                     'LAYERS': 'vect:amcem_trees',
                 },
@@ -122,7 +127,7 @@ define([
         layer: new ol.layer.Tile({
             is_arches_layer: "nobutclose",
             source: new ol.source.TileWMS({
-                url: 'http://crhim.canerivernha.org/geoserver/vect/wms/',
+                url: gswms_crnha,
                 params: {
                     'LAYERS': 'vect:amcem_vines',
                 },
@@ -140,7 +145,7 @@ define([
         layer: new ol.layer.Tile({
             is_arches_layer: "nobutclose",
             source: new ol.source.TileWMS({
-                url: 'http://crhim.canerivernha.org/geoserver/vect/wms/',
+                url: gswms_crnha,
                 params: {
                     'LAYERS': 'vect:amcem_bulbs',
                 },
