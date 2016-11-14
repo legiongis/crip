@@ -119,7 +119,7 @@ define([
             url: tiles_crnha + 'relief_basemap/{z}/{x}/{y}.png',
             attributions: [
                 new ol.Attribution({
-                    html: '<a href="http://atlas.lsu.edu" target="_blank">Atlas: The Louisiana Statewide GIS</a>. LSU Department of Geography and Anthropology, Baton Rouge, LA.'
+                    html: '<a href="https://maps.ga.lsu.edu/lidar/" target="_blank">Atlas: The Louisiana Statewide GIS</a>. LSU Department of Geography and Anthropology, Baton Rouge, LA.'
                 })
             ],
         }),
@@ -134,7 +134,7 @@ define([
             url: tiles_crnha + 'hillshade/{z}/{x}/{y}.png',
             attributions: [
                 new ol.Attribution({
-                    html: '<a href="http://atlas.lsu.edu" target="_blank">Atlas: The Louisiana Statewide GIS</a>. LSU Department of Geography and Anthropology, Baton Rouge, LA.'
+                    html: '<a href="https://maps.ga.lsu.edu/lidar/" target="_blank">Atlas: The Louisiana Statewide GIS</a>. LSU Department of Geography and Anthropology, Baton Rouge, LA.'
                 })
             ],
         }),
@@ -147,7 +147,7 @@ define([
         layer: reliefLyr,
         altlayer: hillshadeLyr,
         alttext: 'Shaded Relief from Louisiana Statewide LiDAR Project',
-        showInfo: 'This layer is a hillshade derivative of LiDAR data distributed by <a href="http://atlas.lsu.edu" target="_blank">Atlas: The Louisiana Statewide GIS</a>, which was produced for the <a href="http://atlas.lsu.edu/central/la_lidar_project.pdf" target="_blank">Louisiana State LiDAR Project</a>, LSU Department of Geography and Anthropology, Baton Rouge, LA.',
+        showInfo: 'This layer is a hillshade derivative of LiDAR data distributed by <a href="https://maps.ga.lsu.edu/lidar/" target="_blank">Atlas: The Louisiana Statewide GIS</a>, which was produced for the <a href="http://atlas.lsu.edu/central/la_lidar_project.pdf" target="_blank">Louisiana State LiDAR Project</a>, LSU Department of Geography and Anthropology, Baton Rouge, LA.',
     };
 
     relief.layer.matchid = relief.id;

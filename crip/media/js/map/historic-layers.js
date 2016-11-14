@@ -140,7 +140,7 @@ define([
         icon: arches.urls.media + 'img/map/thb_confed_clr.png',
         layer: confed_fullLyr,
         altlayer: confed_transLyr,
-        showInfo: 'This layer comprises five separate maps from the <a href="http://research.archives.gov/description/305566" target="_blank">Civil Works Map File</a> in the National Archives, which contains many Civil War era maps.  These maps were purportedly captured from the confederate army, but little research has been done on them.',
+        showInfo: 'This layer comprises five separate maps from the <a href="https://research.archives.gov/id/5900024" target="_blank">Civil Works Map File, Record Group 77, Z-33</a>, in the National Archives. Maps in this record group are described on the index sheet as "Parish maps of Louisiana that were captured from the Confederates."',
     }
     confed.layer.matchid = confed.id;
     confed.altlayer.matchid = confed.id;
@@ -183,11 +183,11 @@ define([
     });
     var roadmap = {
         id: 'roadmap',
-        name: 'Confederate Road Map',
+        name: 'Confederate Road Survey',
         icon: arches.urls.media + 'img/map/thb_roadmap.png',
         layer: roadmapLyr,
         altlayer: false,
-        showInfo: 'This is a captured confederate map showing the road between Natchitoches and Alexandria (only the portions within Natchitoches Parish are shown here).  It was originally drawn in many segments on both sides of a single piece of paper.',
+        showInfo: 'This map, full title: <em>Natchitoches and Alexandria Survey West of Red River, Mershon</em> is from the <a href="https://research.archives.gov/id/5900024" target="_blank">Civil Works Map File, Record Group 77, Z-33</a>, in the National Archives. Maps in this record group are described on the index sheet as "Parish maps of Louisiana that were captured from the Confederates." The map shows the road between Natchitoches and Alexandria (only the portion within Natchitoches Parish is displayed here), and it was originally drawn in many segments on both sides of a single piece of paper.',
     }
     roadmap.layer.matchid = roadmap.id;
 
