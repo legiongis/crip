@@ -22,7 +22,7 @@ define([
             serverType: 'geoserver',
             attributions: [
                 new ol.Attribution({
-                    html: 'Sanborn\u00A9 Maps used here with special permission from <a href="http://edrnet.com/">EDR</a>.'
+                    html: 'Sanborn Maps\u00A9 used here with special permission from <a href="http://edrnet.com/">EDR</a>.'
                 })
             ],
         }),
@@ -41,7 +41,7 @@ define([
             serverType: 'geoserver',
             attributions: [
                 new ol.Attribution({
-                    html: 'Sanborn\u00A9 Maps used here with special permission from <a href="http://edrnet.com/">EDR</a>.'
+                    html: 'Sanborn Maps\u00A9 used here with special permission from <a href="http://edrnet.com/">EDR</a>.'
                 })
             ],            
         }),
@@ -50,11 +50,11 @@ define([
 
     var sanborn1892 = {
         id: 'sanborn1892',
-        name: 'Sanborn\u00A9 Maps (1892)',
+        name: 'Sanborn Maps\u00A9 (1892)',
         icon: arches.urls.media + 'img/map/thb_san1892.png',
         layer: sanborn1892black_Lyr,
         altlayer: sanborn1892red_Lyr,
-        showInfo: 'Sanborn\u00A9 maps were created to assist fire insurance companies with risk assessment for certain properties.  In this application, the original map sheets for the city of Natchitoches have been stitched together to show a single seamless layer.  Special permission was granted by <a href="http://edrnet.com/">EDR</a> for use of their scans of these maps.',
+        showInfo: 'Sanborn Maps\u00A9 were created to assist fire insurance companies with risk assessment for certain properties.  In this application, the original map sheets for the city of Natchitoches have been stitched together to show a single seamless layer.  Special permission was granted by <a href="http://edrnet.com/">EDR</a> for use of their scans of these maps.',
     }
     sanborn1892.layer.matchid = sanborn1892.id;
     sanborn1892.altlayer.matchid = sanborn1892.id;
@@ -71,7 +71,7 @@ define([
             serverType: 'geoserver',
             attributions: [
                 new ol.Attribution({
-                    html: 'Sanborn\u00A9 Maps used here with special permission from <a href="http://edrnet.com/">EDR</a>.'
+                    html: 'Sanborn Maps\u00A9 used here with special permission from <a href="http://edrnet.com/">EDR</a>.'
                 })
             ],
         }),
@@ -90,7 +90,7 @@ define([
             serverType: 'geoserver',
             attributions: [
                 new ol.Attribution({
-                    html: 'Sanborn\u00A9 Maps used here with special permission from <a href="http://edrnet.com/">EDR</a>.'
+                    html: 'Sanborn Maps\u00A9 used here with special permission from <a href="http://edrnet.com/">EDR</a>.'
                 })
             ],
         }),
@@ -99,11 +99,11 @@ define([
     
     var sanborn1914 = {
         id: 'sanborn1914',
-        name: 'Sanborn\u00A9 Maps (1914)',
+        name: 'Sanborn Maps\u00A9 (1914)',
         icon: arches.urls.media + 'img/map/thb_san1914.png',
         layer: sanborn1914black_Lyr,
         altlayer: sanborn1914red_Lyr,
-        showInfo: 'Sanborn\u00A9 maps were created to assist fire insurance companies with risk assessment for certain properties.  In this application, the original map sheets for the city of Natchitoches have been stitched together to show a single seamless layer.  Special permission was granted by <a href="http://edrnet.com/">EDR</a> for use of their scans of these maps.',
+        showInfo: 'Sanborn Maps\u00A9 were created to assist fire insurance companies with risk assessment for certain properties.  In this application, the original map sheets for the city of Natchitoches have been stitched together to show a single seamless layer.  Special permission was granted by <a href="http://edrnet.com/">EDR</a> for use of their scans of these maps.',
     }
     sanborn1914.layer.matchid = sanborn1914.id;
     sanborn1914.altlayer.matchid = sanborn1914.id;
