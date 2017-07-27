@@ -9,6 +9,7 @@ define([
     var gswms_crnha = 'http://crhim.canerivernha.org/geoserver/wms/';
     var tiles_crnha = 'http://crhim.canerivernha.org/tiles/';
     var gswms_legion = 'http://legiongis.com/geoserver/wms/';
+    var tiles_ac = 'https://s3-us-west-2.amazonaws.com/natchdata/tiles/';
     
     var bingLayers = arches.bingLayers;
 
@@ -91,7 +92,7 @@ define([
     //USGS Topo from CRNHA server
     var usgsLyr = new ol.layer.Tile({
         source: new ol.source.XYZ({
-            url: tiles_crnha + 'drg/{z}/{x}/{y}.png',
+            url: tiles_ac + 'drg/{z}/{x}/{y}.png',
             attributions: [
                 new ol.Attribution({
                     html: '<a href="http://www.usgs.gov/" target="_blank"><img src="'+arches.urls.media + 'img/icons/USGS_trans.png"/></a> All U.S. Geological Survey maps are in the public domain.'
@@ -116,7 +117,7 @@ define([
     var reliefLyr = new ol.layer.Tile({
         name: "relief",
         source: new ol.source.XYZ({
-            url: tiles_crnha + 'relief_basemap/{z}/{x}/{y}.png',
+            url: tiles_ac + 'relief_basemap/{z}/{x}/{y}.png',
             attributions: [
                 new ol.Attribution({
                     html: '<a href="https://maps.ga.lsu.edu/lidar/" target="_blank">Atlas: The Louisiana Statewide GIS</a>. LSU Department of Geography and Anthropology, Baton Rouge, LA.'
@@ -131,7 +132,7 @@ define([
     var hillshadeLyr = new ol.layer.Tile({
         name: "relief",
         source: new ol.source.XYZ({
-            url: tiles_crnha + 'hillshade/{z}/{x}/{y}.png',
+            url: tiles_ac + 'hillshade/{z}/{x}/{y}.png',
             attributions: [
                 new ol.Attribution({
                     html: '<a href="https://maps.ga.lsu.edu/lidar/" target="_blank">Atlas: The Louisiana Statewide GIS</a>. LSU Department of Geography and Anthropology, Baton Rouge, LA.'

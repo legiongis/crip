@@ -8,16 +8,17 @@ define([
     // make variables for all recurring urls
     var gswms_crnha = 'http://crhim.canerivernha.org/geoserver/wms/';
     var tiles_crnha = 'http://crhim.canerivernha.org/tiles/';
-    var gswms_legion = 'http://legiongis.com/geoserver/wms/';
+    var gswms_legion = 'https://db.legiongis.com/geoserver/wms/';
+    var tiles_ac = 'https://s3-us-west-2.amazonaws.com/natchdata/tiles/';
     
     // sanborn map 1892
     var sanborn1892black_Lyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
-            url: gswms_crnha,
+            url: gswms_legion,
             params: {
-                'LAYERS': 'sanborn:sanborn_1892',
+                'LAYERS': 'crnha:natchitoches_sanborn1892',
                 'TILED': true,
-                'STYLES': 'BlackToDarkGrey170',
+                'STYLES': 'ras_Black0Trans170',
             },
             serverType: 'geoserver',
             attributions: [
@@ -32,11 +33,11 @@ define([
     // sanborn 1892 in red (for overlays?)
     var sanborn1892red_Lyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
-            url: gswms_crnha,
+            url: gswms_legion,
             params: {
-                'LAYERS': 'sanborn:sanborn_1892',
+                'LAYERS': 'crnha:natchitoches_sanborn1892',
                 'TILED': true,
-                'STYLES': 'RedToTrans170',
+                'STYLES': 'ras_Red0Trans170',
             },
             serverType: 'geoserver',
             attributions: [
@@ -62,11 +63,11 @@ define([
     // sanborn map 1914
     var sanborn1914black_Lyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
-            url: gswms_crnha,
+            url: gswms_legion,
             params: {
-                'LAYERS': 'sanborn:sanborn_1914',
+                'LAYERS': 'crnha:natchitoches_sanborn1914',
                 'TILED': true,
-                'STYLES': 'BlackToDarkGrey170',
+                'STYLES': 'ras_Black0Trans170',
             },
             serverType: 'geoserver',
             attributions: [
@@ -81,11 +82,11 @@ define([
     // sanborn 1914 in red (for overlays?)
     var sanborn1914red_Lyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
-            url: gswms_crnha,
+            url: gswms_legion,
             params: {
-                'LAYERS': 'sanborn:sanborn_1914',
+                'LAYERS': 'crnha:natchitoches_sanborn1914',
                 'TILED': true,
-                'STYLES': 'RedToTrans170',
+                'STYLES': 'ras_Red0Trans170',
             },
             serverType: 'geoserver',
             attributions: [
@@ -111,9 +112,9 @@ define([
     // full confederate map
     var confed_fullLyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
-            url: gswms_crnha,
+            url: gswms_legion,
             params: {
-                'LAYERS': 'confed_maps:confed_full',
+                'LAYERS': 'crnha:confedmaps_full',
                 'TILED': true,
             },
             serverType: 'geoserver'   
@@ -124,9 +125,9 @@ define([
     // transparent confederate map (for altlayer)
     var confed_transLyr = new ol.layer.Tile({
         source: new ol.source.TileWMS({
-            url: gswms_crnha,
+            url: gswms_legion,
             params: {
-                'LAYERS': 'confed_maps:confed_trans',
+                'LAYERS': 'crnha:confedmaps_trans',
                 'TILED': true,
             },
             serverType: 'geoserver'   
@@ -149,7 +150,7 @@ define([
     var platmaps_transLyr = new ol.layer.Tile({
         name: "platmaps_transLyr",
         source: new ol.source.XYZ({
-            url: tiles_crnha + 'platmaps_trans/{z}/{x}/{y}.png'
+            url: tiles_ac + 'historictownplats/{z}/{x}/{y}.png'
         }),
         visible: false,
     });   
@@ -177,7 +178,7 @@ define([
     var roadmapLyr = new ol.layer.Tile({
         name: "roadmapLyr",
         source: new ol.source.XYZ({
-            url: tiles_crnha + 'civilwarroadmap/{z}/{x}/{y}.png'
+            url: tiles_ac + 'civilwarroadmap/{z}/{x}/{y}.png'
         }),
         visible: false,
     });
