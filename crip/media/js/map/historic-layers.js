@@ -9,6 +9,7 @@ define([
     var gswms_crnha = 'http://crhim.canerivernha.org/geoserver/wms/';
     var tiles_crnha = 'http://crhim.canerivernha.org/tiles/';
     var gswms_legion = 'http://legiongis.com/geoserver/wms/';
+    var tiles_legion = 'http://db.legiongis.com/tiles/';
     
     // sanborn map 1892
     var sanborn1892black_Lyr = new ol.layer.Tile({
@@ -149,19 +150,19 @@ define([
     var platmaps_transLyr = new ol.layer.Tile({
         name: "platmaps_transLyr",
         source: new ol.source.XYZ({
-            url: tiles_crnha + 'platmaps_trans/{z}/{x}/{y}.png'
+            url: tiles_legion + 'historictownplats/{z}/{x}/{y}.png'
         }),
         visible: false,
     });   
 
     // DO NOT ACTIVATE FULL LAYER (altlayer) AT THIS TIME
-    var platmaps_fullLyr = new ol.layer.Tile({
-        name: "platmaps_fullLyr",
-        source: new ol.source.XYZ({
-            url: tiles_crnha + 'platmaps_white/{z}/{x}/{y}.png'
-        }),
-        visible: false,
-    });
+    // var platmaps_fullLyr = new ol.layer.Tile({
+        // name: "platmaps_fullLyr",
+        // source: new ol.source.XYZ({
+            // url: tiles_legion + 'platmaps_white/{z}/{x}/{y}.png'
+        // }),
+        // visible: false,
+    // });
 
     var platmaps = {
         id: 'platmaps',
@@ -177,7 +178,7 @@ define([
     var roadmapLyr = new ol.layer.Tile({
         name: "roadmapLyr",
         source: new ol.source.XYZ({
-            url: tiles_crnha + 'civilwarroadmap/{z}/{x}/{y}.png'
+            url: tiles_legion + 'civilwarroadmap/{z}/{x}/{y}.png'
         }),
         visible: false,
     });

@@ -117,7 +117,7 @@ define([
     var reliefLyr = new ol.layer.Tile({
         name: "relief",
         source: new ol.source.XYZ({
-            url: tiles_crnha + 'relief_basemap/{z}/{x}/{y}.png',
+            url: tiles_legion + 'relief_basemap/{z}/{x}/{y}.png',
             attributions: [
                 new ol.Attribution({
                     html: '<a href="https://maps.ga.lsu.edu/lidar/" target="_blank">Atlas: The Louisiana Statewide GIS</a>. LSU Department of Geography and Anthropology, Baton Rouge, LA.'
@@ -132,7 +132,7 @@ define([
     var hillshadeLyr = new ol.layer.Tile({
         name: "relief",
         source: new ol.source.XYZ({
-            url: tiles_crnha + 'hillshade/{z}/{x}/{y}.png',
+            url: tiles_legion + 'hillshade/{z}/{x}/{y}.png',
             attributions: [
                 new ol.Attribution({
                     html: '<a href="https://maps.ga.lsu.edu/lidar/" target="_blank">Atlas: The Louisiana Statewide GIS</a>. LSU Department of Geography and Anthropology, Baton Rouge, LA.'
