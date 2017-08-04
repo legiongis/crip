@@ -9,19 +9,19 @@ define([
     // make variables for all recurring urls
     var gswms_crnha = 'http://crhim.canerivernha.org/geoserver/wms/';
     var tiles_crnha = 'http://crhim.canerivernha.org/tiles/';
-    var gswms_legion = 'http://legiongis.com/geoserver/wms/';
+    var gswms_legion = 'https://db.legiongis.com/geoserver/wms/';
 
     var priv_prop = new LayerModel({
-        name: 'Private Land in Kisatchie NF',
+        name: 'Public/Private Land, Kisatchie NF',
         categories: ["Reference"],
         icon: 'fa fa-bookmark-o',
-        infoContent: "This layer is provided to encourage responsible exploration in Kisatchie National Forest.  The dataset was downloaded from the <a href='http://www.fs.usda.gov/main/kisatchie/landmanagement/gis'>USFS</a> on 5-4-15.  All boundaries marked on the ground take precedence over those displayed on this map.",
+        infoContent: "Public land shown in green, private land in red. This layer is provided to encourage responsible exploration in Kisatchie National Forest. The dataset was downloaded from the <a href='http://www.fs.usda.gov/main/kisatchie/landmanagement/gis'>USFS</a> on 8/4/17. Any property boundaries observed on the ground take precedence over those displayed on this map. Use the transparency dial at left to improve the view of this layer.",
         layer: new ol.layer.Tile({
             is_arches_layer: "nobutclose",
             source: new ol.source.TileWMS({
-                url: gswms_crnha,
+                url: gswms_legion,
                 params: {
-                    'LAYERS': 'vect:kisatchie_private_land',
+                    'LAYERS': 'crnha:fedland_ownership',
                     'TILED': true,
                 },
                 serverType: 'geoserver'
@@ -37,9 +37,9 @@ define([
         layer: new ol.layer.Tile({
             is_arches_layer: "nobutclose",
             source: new ol.source.TileWMS({
-                url: gswms_crnha,
+                url: gswms_legion,
                 params: {
-                    'LAYERS': 'vect:PLSS_towns',
+                    'LAYERS': 'crnha:PLSS_towns',
                     'TILED': true,
                 },
                 serverType: 'geoserver'
@@ -48,7 +48,7 @@ define([
     });
     
     var amcem_shrubs = new LayerModel({
-        name: 'American Cemetery Veg: Shrubs',
+        name: 'American Cemetery Shrubs',
         categories: ["Vegetation"],
         icon: 'fa fa-circle',
         iconColor: '#A8302E',
@@ -56,16 +56,16 @@ define([
         layer: new ol.layer.Tile({
             is_arches_layer: "nobutclose",
             source: new ol.source.TileWMS({
-                url: gswms_crnha,
+                url: gswms_legion,
                 params: {
-                    'LAYERS': 'vect:amcem_shrubs',
+                    'LAYERS': 'crnha:amcem_shrubs',
                 },
                 serverType: 'geoserver'
             })
         })
     });
     var amcem_grass = new LayerModel({
-        name: 'American Cemetery Veg: Ornamental Grass',
+        name: 'American Cemetery Ornamental Grass',
         categories: ["Vegetation"],
         icon: 'fa fa-circle',
         iconColor: '#5EB5B4',
@@ -73,9 +73,9 @@ define([
         layer: new ol.layer.Tile({
             is_arches_layer: "nobutclose",
             source: new ol.source.TileWMS({
-                url: gswms_crnha,
+                url: gswms_legion,
                 params: {
-                    'LAYERS': 'vect:amcem_grass',
+                    'LAYERS': 'crnha:amcem_grass',
                 },
                 serverType: 'geoserver'
             })
@@ -83,7 +83,7 @@ define([
     });
     
     var amcem_stumps = new LayerModel({
-        name: 'American Cemetery Veg: Stumps',
+        name: 'American Cemetery Stumps',
         categories: ["Vegetation"],
         icon: 'fa fa-circle',
         iconColor: '#533D31',
@@ -91,9 +91,9 @@ define([
         layer: new ol.layer.Tile({
             is_arches_layer: "nobutclose",
             source: new ol.source.TileWMS({
-                url: gswms_crnha,
+                url: gswms_legion,
                 params: {
-                    'LAYERS': 'vect:amcem_stumps',
+                    'LAYERS': 'crnha:amcem_stumps',
                 },
                 serverType: 'geoserver'
             })
@@ -101,7 +101,7 @@ define([
     });
     
     var amcem_trees = new LayerModel({
-        name: 'American Cemetery Veg: Trees',
+        name: 'American Cemetery Trees',
         categories: ["Vegetation"],
         icon: 'fa fa-circle',
         iconColor: '#5CBF4E',
@@ -109,9 +109,9 @@ define([
         layer: new ol.layer.Tile({
             is_arches_layer: "nobutclose",
             source: new ol.source.TileWMS({
-                url: gswms_crnha,
+                url: gswms_legion,
                 params: {
-                    'LAYERS': 'vect:amcem_trees',
+                    'LAYERS': 'crnha:amcem_trees',
                 },
                 serverType: 'geoserver'
             })
@@ -119,7 +119,7 @@ define([
     });
     
     var amcem_vines = new LayerModel({
-        name: 'American Cemetery Veg: Vines',
+        name: 'American Cemetery Vines',
         categories: ["Vegetation"],
         icon: 'fa fa-circle',
         iconColor: '#B5AB50',
@@ -127,9 +127,9 @@ define([
         layer: new ol.layer.Tile({
             is_arches_layer: "nobutclose",
             source: new ol.source.TileWMS({
-                url: gswms_crnha,
+                url: gswms_legion,
                 params: {
-                    'LAYERS': 'vect:amcem_vines',
+                    'LAYERS': 'crnha:amcem_vines',
                 },
                 serverType: 'geoserver'
             })
@@ -137,7 +137,7 @@ define([
     });
     
     var amcem_bulbs = new LayerModel({
-        name: 'American Cemetery Veg: Bulbs',
+        name: 'American Cemetery Bulbs',
         categories: ["Vegetation"],
         icon: 'fa fa-circle',
         iconColor: '#9C7ABF',
@@ -145,9 +145,9 @@ define([
         layer: new ol.layer.Tile({
             is_arches_layer: "nobutclose",
             source: new ol.source.TileWMS({
-                url: gswms_crnha,
+                url: gswms_legion,
                 params: {
-                    'LAYERS': 'vect:amcem_bulbs',
+                    'LAYERS': 'crnha:amcem_bulbs',
                 },
                 serverType: 'geoserver'
             })

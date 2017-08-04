@@ -8,7 +8,7 @@ define([
     // make variables for all recurring urls
     var gswms_crnha = 'http://crhim.canerivernha.org/geoserver/wms/';
     var tiles_crnha = 'http://crhim.canerivernha.org/tiles/';
-    var gswms_legion = 'http://legiongis.com/geoserver/wms/';
+    var gswms_legion = 'https://db.legiongis.com/geoserver/wms/';
     var tiles_legion = 'https://db.legiongis.com/tiles/';
     
     var bingLayers = arches.bingLayers;
@@ -89,7 +89,7 @@ define([
         // layer: hybridLyr
     // };
     
-    //USGS Topo from CRNHA server
+    //USGS Topo from Legion DB server
     var usgsLyr = new ol.layer.Tile({
         source: new ol.source.XYZ({
             url: tiles_legion + 'drg/{z}/{x}/{y}.png',
@@ -113,7 +113,7 @@ define([
     usgs.layer.matchid = usgs.id;
     usgs.maxzoom = 17;
      
-    //Shaded Relief basemap from CRNHA server  
+    //Shaded Relief basemap from Legion DB server  
     var reliefLyr = new ol.layer.Tile({
         name: "relief",
         source: new ol.source.XYZ({
@@ -181,9 +181,9 @@ define([
     var amcemLyr = new ol.layer.Tile({
         name: "amcem",
         source: new ol.source.TileWMS({
-            url: gswms_crnha,
+            url: gswms_legion,
             params: {
-                'LAYERS': 'raster:basemap_image',
+                'LAYERS': 'crnha:AmCem_basemap',
                 'TILED': true,
             },
             serverType: 'geoserver'   
