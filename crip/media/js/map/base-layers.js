@@ -7,7 +7,7 @@ define([
     
     // make variables for all recurring urls
     var gswms_legion = 'https://db.legiongis.com/geoserver/wms/';
-    var tiles_legion = 'https://db.legiongis.com/tiles/';
+    var tiles_legion = 'https://tiles.legiongis.com/';
     
     var bingLayers = arches.bingLayers;
 
