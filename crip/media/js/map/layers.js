@@ -7,8 +7,6 @@ define([
     var layers = resourceLayers.layers;
     
     // make variables for all recurring urls
-    var gswms_crnha = 'http://crhim.canerivernha.org/geoserver/wms/';
-    var tiles_crnha = 'http://crhim.canerivernha.org/tiles/';
     var gswms_legion = 'https://db.legiongis.com/geoserver/wms/';
 
     var priv_prop = new LayerModel({
